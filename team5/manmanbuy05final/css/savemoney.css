@@ -1,0 +1,185 @@
+html {
+  font-size: 37px;
+}
+html,
+body {
+  width: 100%;
+}
+.header {
+  height: 1.35135135rem;
+  background: #FF841D;
+  position: relative;
+}
+.header .logo {
+  position: absolute;
+  left: 0.54054054rem;
+  top: 0.27027027rem;
+}
+.header .logo a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  transform: translate(-0.13513514rem, -0.24324324rem);
+}
+.header .logo a .glyphicon {
+  display: inline-block;
+  font-size: 0.59459459rem;
+  color: #FFF;
+  height: 1.35135135rem;
+  line-height: 1.35135135rem;
+}
+.header p {
+  text-align: center;
+  height: 1.35135135rem;
+  line-height: 1.35135135rem;
+  font-size: 0.48648649rem;
+  color: #FFF;
+  font-family: 'microsoft YaHei';
+}
+.header .appdown {
+  position: absolute;
+  width: 1.35135135rem;
+  height: 1.35135135rem;
+  right: 0;
+  top: 0;
+  padding: 0.18918919rem;
+}
+.header .appdown a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.header .appdown a img {
+  width: 100%;
+  height: 100%;
+}
+.mmb_save {
+  background-color: #fff;
+}
+.mmb_save .product_content {
+  display: block;
+  height: 3.48648649rem;
+  padding-top: 0.43243243rem;
+}
+.mmb_save .product_content .product_img {
+  width: 2.97297297rem;
+  height: 2.97297297rem;
+  overflow: hidden;
+  float: left;
+}
+.mmb_save .product_content .product_img div {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.mmb_save .product_content .product_img div img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+}
+.mmb_save .product_content .product_intro {
+  overflow: hidden;
+  padding-left: 0.27027027rem;
+  padding-right: 0.27027027rem;
+}
+.mmb_save .product_content .product_intro .product_name {
+  display: block;
+  font-size: 0.40540541rem;
+}
+.mmb_save .product_content .product_intro .product_name .spec {
+  color: #FF9E1F;
+}
+.mmb_save .product_content .product_intro .product_time {
+  margin-top: 0.54054054rem;
+  color: #A1A3A3;
+  position: relative;
+}
+.mmb_save .product_content .product_intro .product_time .ping {
+  color: #A1A3A3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  vertical-align: top;
+}
+.mmb_save .product_content .product_intro .product_time .ping i {
+  display: inline-block;
+  width: 0.62162162rem;
+  height: 0.37837838rem;
+  background: url("../images/r2_c2.png");
+  background-size: 0.62162162rem 0.37837838rem;
+  vertical-align: top;
+}
+.mmb_save .save_page {
+  height: 2.48648649rem;
+  padding-top: 0.75675676rem;
+  padding-bottom: 0.75675676rem;
+  padding-left: 0.54054054rem;
+  padding-right: 0.54054054rem;
+}
+.mmb_save .save_page .w33 {
+  display: inline-block;
+  width: 2.2972973rem;
+  height: 0.94594595rem;
+  line-height: 0.94594595rem;
+  border: 1px solid #BABABA;
+  text-align: center;
+  border-radius: 0.13513514rem;
+  background-color: #E5E5E5;
+}
+.mmb_save .save_page .selectPage {
+  margin-left: 0.67567568rem;
+  margin-right: 0.67567568rem;
+  width: 2.56756757rem;
+  height: 0.94594595rem;
+  font-size: 0.43243243rem;
+  text-align: center;
+  background-color: #ffffff;
+  padding-left: 0.54054054rem;
+}
+.mmb_save .save_page .selectPage option {
+  font-size: 0.13513514rem;
+  text-align: center;
+}
+.mmb_footer .footer_top {
+  height: 0.89189189rem;
+  line-height: 0.89189189rem;
+  border-top: 1px solid #C4C4C4;
+  border-bottom: 1px solid #C4C4C4;
+  font-size: 0.35135135rem;
+}
+.mmb_footer .footer_top .w1 {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  color: #000;
+}
+.mmb_footer .footer_top .w2 {
+  display: inline-block;
+  width: 30%;
+  color: #000;
+  text-align: center;
+  border-left: 1px solid #C4C4C4;
+  border-right: 1px solid #C4C4C4;
+}
+.mmb_footer .footer_top .w3 {
+  display: inline-block;
+  text-align: center;
+  width: 35%;
+  color: #000;
+}
+.mmb_footer .footer_top .w3 img {
+  width: 0.37837838rem;
+  height: 0.43243243rem;
+}
+.mmb_footer .footer_content {
+  text-align: center;
+  margin-top: 0.40540541rem;
+  font-size: 0.35135135rem;
+}
+.mmb_footer .footer_content p a {
+  color: #000;
+}
+.mmb_footer .footer_content p a:first-child {
+  color: #FF0000;
+}

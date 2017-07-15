@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="libs/flexible.js"></script>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<div class="layout">
+    <!-- 顶部通栏-->
+    <div class="top" id="top">
+        <div class="topban">
+            <span></span>
+            <a href="#"></a>
+        </div>
+        <div class="topSearch">
+            <form>
+                <input class="search fs12" type="search" placeholder="请输入你想比价的商品"/>
+            </form>
+            <input class="search_btn fs16" type="button" value="搜索"/>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <div class="nav">
+    </div>
+    <!-- 折扣推荐 -->
+    <div class="discount">
+        <div class="disct_top clearfix">
+            <span class="fs18">超值折扣推荐</span>
+            <i class="iconfont icon-jiantou2 fs20"></i>
+        </div>
+        <div class="goods_list">
+
+        </div>
+        <div class="more">
+            <a class="more_info fs14">更多优惠信息 <span class="fs12">&gt;&gt;</span></a>
+        </div>
+    </div>
+    <!-- 品牌排行 -->
+    <div class="disct_top clearfix">
+        <span class="fs18">品牌排行</span>
+        <i class="iconfont icon-jiantou2 fs20"></i>
+    </div>
+    <!-- 底部 -->
+    <div class="foot">
+        <div>
+            <a href="#" class="fs14">登录</a>
+            <a href="#" class="fs14">注册</a>
+            <a href="#top" class="fs14"><i class="iconfont icon-xiangshangjiantou fs16"></i>返回顶部</a>
+        </div>
+        <p class="fs12">
+            <span>手机APP下载</span>
+            慢慢买手机版
+            <span>-- 掌上比价平台</span>
+        </p>
+        <p class="fs12">m.manmanbuy.com</p>
+    </div>
+</div>
+</body>
+<!-- 导航栏的模板对象 -->
+<script id="navLis" type="text/html">
+{{if result}}
+<ul class="clearfix">
+{{each result as value i}}
+<li>
+    <a href="{{value.titlehref}}" id="{{value.indexmenuId}}">
+        {{#value.img}}
+        <p class="fs12">{{value.name}}</p>
+    </a>
+</li>
+{{/each}}
+</ul>
+{{/if}}
+</script>
+<!-- 折扣推荐模板对象 -->
+<script id="discount" type="text/html">
+    {{if result}}
+    <ul>
+        {{each result as value}}
+        <li id="{{value.productId}}" class="clearfix">
+            <div class="list_left">
+                <a href="#">
+                    {{#value.productImgSm}}
+                </a>
+            </div>
+            <div class="list_right">
+                <a class="goods_title fs14" href="moneyproduct.html?productid={{value.productId}}">{{value.productName}}<span>{{value.productPinkage}}</span></a>
+                <div class="goods_detail fs14 clearfix">
+                    <div class="detail_left fs12">{{value.productFrom}}|{{value.productTime}}</div>
+                    <div class="detail_right fs12">
+                        <i class="iconfont icon-pinglun fs16"></i>
+                        <span class="fs12">{{value.productComCount}}</span>
+                    </div>
+                </div>
+                {{#value.productComment}}
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</script>
+<script src="libs/jquery.min.js"></script>
+<script src="libs/template.js"></script>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+</html>

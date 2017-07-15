@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>凑单品</title>
+    <script src="libs/flexible.js"></script>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/gsproduct.css"/>
+</head>
+<body>
+<div class="layout">
+    <!--凑单品头部-->
+    <header id="header">
+        <a href="javascript:history.go(-1)" class="icon-back fs24 iconfont icon-jiantouyoujiantou1"></a>
+        <h3 class="fs20">凑单品</h3>
+        <a href="#" class="app-download"><img src="images/header_app.png" alt="#"/></a>
+    </header>
+    <!--凑单品头部-->
+    <!--商品主体部分-->
+    <main class="gsProduct">
+        <div class="hd">
+            <!--筛选-->
+            <div class="filter">
+                <div class="search fr"><i class="iconfont icon-sousuocaidan fs24"></i></div>
+                <ul class="clearfix filterBox"></ul>
+            </div>
+            <!--筛选-->
+            <!--下拉列表-->
+            <div class="popShop popBox hide" id="shop"></div>
+            <div class="popBox popArea hide" id="area"></div>
+            <!--下拉列表-->
+        </div>
+        <!--商品详细列表-->
+        <div class="gsProductList"></div>
+        <!--商品详细列表-->
+    </main>
+    <!--商品主体部分-->
+    <!--凑单品底部-->
+    <div class="foot">
+        <div>
+            <a href="#" class="fs14">登录</a>
+            <a href="#" class="fs14">注册</a>
+            <a href="#top" class="fs14"><i class="iconfont icon-xiangshangjiantou fs16"></i>返回顶部</a>
+        </div>
+        <p class="fs12">
+            <span>手机APP下载</span>
+            慢慢买手机版
+            <span>-- 掌上比价平台</span>
+        </p>
+        <p class="fs12">m.manmanbuy.com</p>
+    </div>
+    <!--凑单品底部-->
+</div>
+<!--art模板-->
+<script type="text/html" id="gsFilter">
+    {{each result as value}}
+    <li>
+        <a href="javascript:void (0);" class="{{value.selectName}}" data-id="0">{{value.selected}}</a>
+        <i class="iconfont icon-xiajiantou fs14"></i>
+    </li>
+    {{/each}}
+</script>
+<script type="text/html" id="gsShop">
+    <ul>
+        {{each result as value}}
+        <li class="">
+            <a href="javascript:getShopProduct('{{value.shopId}}','{{value.shopName}}')" data-shopId="{{value.shopId}}">
+                {{value.shopName}}<i class="iconfont icon-dagou"></i>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<script type="text/html" id="gsArea">
+    <ul>
+        {{each result as value}}
+        <li class="">
+            <a href="javascript:getAreaProduct('{{value.areaId}}','{{value.areaName.split('（')[0]}}')" data-shopId="{{value.areaId}}">
+                {{value.areaName}}<i class="iconfont icon-dagou"></i>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<script type="text/html" id="gsProductList">
+    <ul class="clearfix">
+        {{each result as value}}
+        <li>
+            <a href="http://item.m.jd.com/ware/view.action?wareId=1274360">
+                <div class="pic">
+                    <img src="{{value.productImg}}" alt="#"/>
+                </div>
+                <div class="title fs12">{{value.productName}}</div>
+                <div class="other clearfix">
+                    <div class="price fl">{{value.productPrice}}</div>
+                    <div class="btn fr fs12">去凑单</div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<!--art模板-->
+<script src="libs/template.js"></script>
+<script src="libs/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/gsproduct.js"></script>
+</body>
+</html>

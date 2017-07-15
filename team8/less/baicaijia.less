@@ -1,0 +1,184 @@
+/*顶部通栏S*/
+.topHeader {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  .topHeaderBox {
+    position: relative;
+    width: 100%;
+    height: 96/75rem;
+    background: #f4483e;
+  }
+}
+/*顶部通栏E*/
+
+/*导航栏S*/
+.cab_nav {
+  position: fixed;
+  top: 96/75rem;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 96/75rem;
+  overflow: hidden;
+  .cab_nav_box {
+    position: relative;
+    width: 130%;
+    height: 100%;
+    background: white;
+
+    ul {
+      width: 100%;
+      height: 100%;
+
+      li {
+        height: 100%;
+        float: left;
+        padding: 10/75rem 10/75rem;
+        a {
+          display: block;
+          height: 100%;
+          font-size: 30/75rem;
+          line-height: 76/75rem;
+          color: black;
+        }
+        a:hover {
+          color: red;
+          border-bottom: 6/75rem solid red;
+        }
+      }
+    }
+  }
+}
+
+
+/*导航栏E*/
+
+/*商品类S*/
+.cab_shop {
+  margin-top: 192/75rem;
+  width: 100%;
+  background: #f7f7f7;
+  padding: 20/75rem;
+  .cab_shop_box {
+    width: 100%;
+    height: 300/75rem;
+    background: white;
+    margin-bottom: 20/75rem;
+    overflow: hidden;
+    .cab_shop_picture {
+      width: 260/75rem;
+      height: 260/75rem;
+      margin: 20/75rem 0 20/75rem 20/75rem;
+      img {
+        width: 260/75rem;
+        height: 260/75rem;
+      }
+    }
+    .cab_shop_text {
+      width: 420/75rem;
+      height: 260/75rem;
+      margin: 20/75rem 0;
+      position: relative;
+      .cab_shop_productName {
+        width: 100%;
+        height: 70/75rem;
+        font-size: 32/75rem;
+        font-weight: normal;
+        .b {
+          font-size: 20/75rem;
+          color: red;
+        }
+      }
+      .cab_shop_productPrice {
+        color: red;
+        font-size: 40/75rem;
+        height: 80/75rem;
+        line-height: 80/75rem;
+        em {
+          font-size: 30/75rem;
+        }
+        del {
+          font-size: 30/75rem;
+          color: gray;
+          margin-left: 20/75rem;
+        }
+        i {
+          font-style: normal;
+        }
+      }
+      .cab_shop_productCouponRemain {
+        height: 60/75rem;
+        .bar {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          .goquan {
+            display: block;
+            width: 170/75rem;
+            height: 30/75rem;
+            background: #ffb7b7;
+            border-radius: 20/75rem;
+            border: 2/75rem solid #fc353a;
+            position: absolute;
+            left: 0;
+            top: 5/75rem;
+          }
+          i {
+            position: absolute;
+            top: 10/75rem;
+            left: 66/75rem;
+            font-size: 16/75rem;
+            span {
+              color: white;
+              font-style: normal;
+              font-weight: bold;
+            }
+          }
+          b {
+            font-size: 28/75rem;
+            position: absolute;
+            top: 6/75rem;
+            left: 206/75rem;
+            color: #fc353a;
+          }
+        }
+      }
+      .cab_shop_productCoupon {
+        a {
+          display: block;
+          width: 240/75rem;
+          height: 50/75rem;
+          border: 2/75rem dotted #e4393c;
+          font-size: 24/75rem;
+          line-height: 50/75rem;
+          text-align: center;
+          color: #e4393c;
+        }
+      }
+      .cab_shop_download {
+        width: 120/75rem;
+        height: 50/75rem;
+        z-index: 100;
+        position: absolute;
+        right: 20/75rem;
+        bottom: 0;
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          font-size: 26/75rem;
+          text-align: center;
+          line-height: 50/75rem;
+          color: white;
+          background: #ff5e5d;
+          border-radius: 8/75rem;
+        }
+      }
+    }
+  }
+}
+
+/*商品类E*/

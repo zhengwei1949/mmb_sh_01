@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>国内折扣</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../less/inlandGoods.css"/>
+    <script src="../lib/flexible/flexible.js"></script>
+    <script src='../lib/zepto/zepto.min.js'></script>
+    <script src='../lib/artTemplate/template.js'></script>
+    <script type='text/html' id='result'>
+        {{if result}}
+        {{each result as value}}
+        <!--页面主题-->
+        <div class="domestic_content clearfix">
+            <p class="content_productName">{{value.productName}}</p>
+
+            <p class="content_productPrice">{{value.productPrice}}</p>
+
+            <p class="content_productFrom">{{value.productFrom}} {{value.productTime}} {{value.productTips}}</p>
+
+            <div class="content_box clearfix">
+                <div class="content-right fr"></div>
+                <div class="content-left">
+                    <p>{{value.productInfo}}</p>
+                    {{#value.productImg}}
+                </div>
+            </div>
+        </div>
+        <!--全国货源-->
+        <ul class="domestic_buy">
+            <li class="buy_center clearfix">
+                <span class="buy_city">北京</span>
+                <span class="buy_tip">有货</span>
+            </li>
+            <li class="buy_center">
+                <span class="buy_city clearfix">上海</span>
+                <span class="buy_tip">有货</span>
+            </li>
+            <li class="buy_center">
+                <span class="buy_city clearfix">广东</span>
+                <span class="buy_tip">有货</span>
+            </li>
+            <li class="buy_center">
+                <span class="buy_city clearfix">浙江</span>
+                <span class="buy_tip">江苏</span>
+            </li>
+            <li class="buy_center">
+                <span class="buy_city clearfix">福建</span>
+                <span class="buy_tip">有货</span>
+            </li>
+            <li class="buy_center clearfix">
+                <span class="buy_city">天津</span>
+                <span class="buy_tip">有货</span>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">山东</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">河南</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">重庆</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">四川</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">河北</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">湖北</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">湖南</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">内蒙古</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">云南</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">安徽</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">江西</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">西藏</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">吉林</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">沈阳</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">新疆</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">云南</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">广西</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">甘肃</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+            <li class="buy_center">
+                <div class="buy_box">
+                    <span class="buy_city">宁夏</span>
+                    <span class="buy_tip">有货</span>
+                </div>
+            </li>
+        </ul>
+        <!--前往购买点击栏-->
+        <div class="buy_goumai">前往购买</div>
+        <!--评论模块-->
+        <div class="domestic_message">
+            <img src="../images/mmbweixin2.png" alt=""/>
+        </div>
+        <div class="domestic_productComment">{{#value.productComment}}</div>
+        {{/each}}
+        {{/if}}
+    </script>
+</head>
+<body>
+<div class='domestic_layout'>
+    <header class="colorB">
+        <a href="./inlanddiscount.html" class="fl">
+            <span class="iconfont icon-fanhui"></span>
+        </a>
+        <h4>国内折扣</h4>
+        <a href="javascript:;" class="fr">
+            <img src="../images/header_app.png" alt=""/>
+        </a>
+    </header>
+    <div class="domestic_main">
+
+    </div>
+    <footer>
+        <div class="operate clearfix">
+            <ul>
+                <li>
+                    <span>登录</span>
+                </li>
+                <li><span>注册</span></li>
+                <li id="reTop"><span class="iconfont icon-xiangshang-copy"></span><span>返回顶部</span></li>
+            </ul>
+        </div>
+        <div class="introduce">
+            <p><span class="colorRed">手机APP下载</span>
+                <span>慢慢买手机版</span>
+                <span class="colorGray">-- 掌上比价平台</span>
+            </p>
+
+            <p class="colorGray">m.manmanbuy.com</p>
+        </div>
+    </footer>
+</div>
+</body>
+<script src='../js/base.js'></script>
+<script src='../js/inlandGoods.js'></script>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="../lib/flexible/flexible.js"></script>
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="../css/l.css"/>
+    <link rel="stylesheet" href="../fonts/iconfont.css"/>
+    <link rel="stylesheet" href="../less/base.css"/>
+    <link rel="stylesheet" href="../less/brandlist.css"/>
+    <script src="../lib/template/template.js"></script>
+
+</head>
+<body>
+<!--顶部通栏start-->
+<div class="top_header">
+    <div class="logo">
+        <h1>慢慢买</h1>
+        <img src="../images/header_logo.png" alt=""/>
+    </div>
+    <div class="app_download">
+        <img src="../images/header_app.png" alt=""/>
+    </div>
+</div>
+<!--顶部通栏end-->
+
+<!--搜索栏start-->
+<div class="top_search">
+    <form action="#">
+        <input type="search" placeholder="请输入你想比价的商品" class="search_content"/>
+        <input type="button" value="搜索" class="search_btn"/>
+    </form>
+</div>
+<!--搜索栏end-->
+
+<!--导航栏start-->
+<div class="nav">
+    <ul>
+        <li><a href="index1.html">首页&gt;</a></li>
+        <li><a href="brandTitle.html">全部分类&gt;</a></li>
+    </ul>
+</div>
+<!--导航end-->
+
+<!--品牌排行start-->
+
+<!--品牌排行-->
+<div class="navTitle">平板电视哪个牌子好</div>
+<div class="wrap">
+    <ul>
+       <!-- <li>
+            <a href="#">
+                <span class="listnum">1</span>
+                <span class="fl brand">
+                    <span>三星平板电视</span>
+                    <span>30天全网销售：242408件</span>
+                </span>
+                <span class="iconfont icon-xiangyou1 arrow fr"></span>\
+            </a>
+        </li>-->
+    </ul>
+</div>
+<!--品牌排行end-->
+
+<!--底部区域start-->
+<footer>
+    <ul class="clearfix">
+        <li>登录</li>
+        <li>注册</li>
+        <li id="toTop"><span class="iconfont icon-xiangshang4"></span>返回顶部</li>
+    </ul>
+    <div class="footer_info">
+        <p><a href="#">手机APP下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<!--底部区域end-->
+</body>
+<script src="../lib/jQuery/jquery-1.12.2.js"></script>
+<script id="brandlist" type="text/html">
+    {{if result}}
+    {{each result as value}}
+    <li>
+        <a href={{value.skipUrl}}>
+            <span class="listnum">{{value.listId}}</span>
+                <span class="fl brand">
+                    <span>{{value.brandName}}</span>
+                    <span>{{value.brandInfo}}</span>
+                </span>
+            <span class="iconfont icon-xiangyou1 arrow fr"></span>
+        </a>
+    </li>
+    {{/each}}
+    {{/if}}
+</script>
+<script src="../js/common.js"></script>
+<script src="../js/brandlist.js"></script>
+</html>

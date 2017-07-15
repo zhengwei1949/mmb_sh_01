@@ -1,0 +1,11 @@
+@charset "utf-8";
+@mainColor: #FF841C;
+@bgc:#f1f1f1;
+.dpr-cal(@size){
+    [data-dpr="2"] & {
+        font-size:unit(@size*2,px) ;
+    }
+    [data-dpr="3"] & {
+        font-size:unit(@size*3,px) ;
+    }
+}

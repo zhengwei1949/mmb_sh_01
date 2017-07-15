@@ -1,0 +1,109 @@
+@maincolor:#ff841d;
+// 顶部通栏
+.top {
+  .topban {
+    height: 96/75rem;
+    width: 100%;
+    background: @maincolor;
+    span {
+      display: block;
+      float: left;
+      width: 600/75rem;
+      height: 100%;
+      background: url("../images/header_logo.png") no-repeat 0.48rem 0.34666667rem;
+      background-size: 371/75rem 50/75rem;
+    }
+    a {
+      display: block;
+      float: right;
+      height: 100%;
+      width: 120/75rem;
+      background: url("../images/header_app.png") no-repeat 16/75rem;
+      margin-right: 10/75rem;
+      background-size: 68/75rem 68/75rem;
+    }
+  }
+  .topSearch {
+    margin-top: -2/75rem;
+    width: 100%;
+    height: 96/75rem;
+    border: 6/75rem solid @maincolor;
+    border-left-width: 4/75rem;
+    border-right-width: 4/75rem;
+    padding: 16/75rem;
+    position: relative;
+    form {
+      width: 100%;
+      height: 100%;
+      padding-right: 126/75rem;
+      float: left;
+      .search {
+        height: 100%;
+        width: 100%;
+        background-color: #f1f1f1;
+        border: none;
+        border-radius: 22/75rem;
+        padding-left: 42/75rem;
+      }
+    }
+    .search_btn {
+      height: 54/75rem;
+      width: 126/75rem;
+      background: @maincolor;
+      border: none;
+      color: #fff;
+      border-radius: 24/75rem;
+      position: absolute;
+      right: 10/75rem;
+    }
+  }
+}
+// 商品分类
+.catalogry {
+  margin-top: 20/75rem;
+  ul {
+    li {
+      width: 100%;
+      position: relative;
+      h3 {
+        height: 80/75rem;
+        background-color: #ededed;
+        line-height: 80/75rem;
+        font-weight: normal;
+        padding-left: 32/75rem;
+        border-bottom: 2/75rem solid #ccc;
+        float: left;
+        width: 100%;
+        padding-right: 40/75rem;
+      }
+      i {
+        width: 40/75rem;
+        height: 100%;
+        line-height: 80/75rem;
+        position: absolute;
+        right: 30/75rem;
+        color: #888;
+      }
+      .lists {
+        border-top: 2/75rem solid #ccc;
+        border-left: 2/75rem solid #ccc;
+        margin-top: -2/75rem;
+        li {
+          float: left;
+          width: 33.333%;
+          height: 84/75rem;
+          line-height: 84/75rem;
+          text-align: center;
+          border-bottom: 2/75rem solid #ccc;
+          border-right: 2/75rem solid #ccc;
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        
+      }
+    }
+  }
+}

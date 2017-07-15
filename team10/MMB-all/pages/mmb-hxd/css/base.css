@@ -1,0 +1,225 @@
+@charset "UTF-8";
+/*css初始化*/
+html, body, div, ul, ol, li, dl, dt, dd, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*各浏览器显示不同，去掉蓝色边框*/
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+body {
+    font: 14px/150% "Microsoft yahei", Arial, Verdana, "\5b8b\4f53"; /*宋体 unicode */
+    color: #666;
+    background: #fff;
+}
+
+/*防止拖动 影响布局*/
+textarea {
+    resize: none;
+}
+
+/*去掉行内替换元素空白缝隙*/
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 14px;
+    margin: 0;
+}
+
+/*a标签*/
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #666;
+}
+
+/*去除文本标签样式*/
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+/*清除浮动*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: block;
+    line-height: 0;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+
+
+
+
+
+/* 公用 样式 */
+.container {
+    padding: 15px;
+}
+html,body {
+    width: 100%;
+    height: 90%;
+
+}
+.page {
+    margin: 0 auto;
+    min-width: 300px;
+    min-height: 100%;
+    position: relative;
+}
+/* 顶部通栏 */
+.topBar {
+    width: 100%;
+    background: #FF841D;
+    color: white;
+    line-height:2rem;
+}
+
+.topBar .logo {
+    float: left;
+}
+.topBar .logo img{
+    height: 2rem;
+}
+.topBar .app {
+    float: right;
+}
+.topBar .app img{
+    height: 2rem;
+}
+.topBar .return ,.topBar .title {
+    font-size: 1.5rem;
+}
+
+
+
+/* 搜索栏 */
+.search {
+    width: 100%;
+}
+.search > input {
+    width: 70%;
+    float: left;
+    height: 2.0rem;
+    background: #F1F1F1;
+    color: #A9A9A9;
+    padding-left: 1.5rem;
+    border-radius: 1.5rem;
+}
+.search > button {
+    width: 20%;
+    height: 2.0rem;
+    float: right;
+    color: white;
+    font-size: 1.0rem;
+    border-radius: 1.5rem;
+    background: #FF841D;
+}
+/* 底部 */
+.footer {
+    width: 100%;
+    min-width: 300px;
+    margin-top: 20px;
+    background: #F1F1F1;
+    position: relative;
+    bottom: 0;
+}
+/* 排行 */
+.footer .top {
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
+    background: #FF841D;
+    color: white;
+    margin-bottom: 50px;
+}
+.footer .top .info {
+    float: left;
+}
+.footer .top .more {
+    margin-top: 7px;
+    width: 25px;
+    height: 25px;
+    line-height: 22px;
+    text-align: center;
+    float: right;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+/* 登陆条 */
+.footer ul {
+    display: flex;
+    justify-content: space-between;
+}
+.footer ul li {
+    width: 33.333%;
+}
+.footer ul li a {
+    display: block;
+    text-align: center;
+    font-size: 1.0rem;
+    height: 40px;
+    line-height: 40px;
+    border-right: 1px solid #C4C4C4;
+    border-top: 1px solid #C4C4C4;
+    border-bottom: 1px solid #C4C4C4;
+}
+.footer ul .goTop > a {
+    border-right: none;
+}
+.footer ul .goTop span {
+    font-size: 18px;
+}
+/* 其他 */
+.footer .copyright {
+    text-align: center;
+    padding: 30px 0;
+}
+.footer .copyright .tips span:nth-child(1) {
+    color: red;
+}
+.footer .copyright .tips span:nth-child(2) {
+    color: black;
+}
+
+.aa{
+    border-bottom:none ;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.5)
+}

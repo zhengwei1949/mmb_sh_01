@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/inlanddiscount.css"/>
+</head>
+<body>
+<!--顶部通栏-->
+<header class="MMB_topBar" id="top">
+        <a href="#" class=" MMB_icon MMB_icon_back"></a>
+        <h3>国内折扣</h3>
+        <a href="#" class="download"><img src="../images/header_app.png" alt="手机APP下载"/></a>
+</header>
+
+    <!-- product-->
+
+    <div class="product">
+       <!-- <ul class="clearfix">
+            <li class="product_box">
+                <a href="#">
+                    <img src="" alt=""/>
+                    <p class="name"></p>
+                    <p class="price"></p>
+                    <p class="info"></p>
+                </a>
+            </li>
+        </ul>-->
+    </div>
+
+<!--底部-->
+<footer class="footer">
+    <div class="btn clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#top">
+            <span></span>
+            <span>返回顶部</span>
+        </a>
+    </div>
+    <div class="version">
+        <p><a href="#" class="app">手机APP下载</a><a href="#" class="telv">慢慢买手机版</a><span>--掌上比价平台</span></p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+
+
+
+
+<script src="../js/template-native.js"></script>
+<script src="../js/jquery-1.12.2.min.js"></script>
+<script src="../js/inlanddiscount.js"></script>
+<script type="text/template" id="tpl">
+    <ul class="clearfix">
+        <% for(var i=0;i<result.length;i++){ %>
+        <li class="product_box">
+            <a href="detailA.html?productid=<%= result[i]['productId'] %>" title="<% result[i]['productName'] %>">
+                <%=# result[i]['productImg'] %>
+                <p class="name"><%= result[i]['productName'] %></p>
+                <p class="price"><%= result[i]['productPrice'] %></p>
+                <p class="info">
+                    <span><%= result[i]['productFrom'] %></span>
+                    <span><%= result[i]['productTime'] %></span>
+                </p>
+            </a>
+        </li>
+        <% } %>
+    </ul>
+</script>
+</body>
+</html>

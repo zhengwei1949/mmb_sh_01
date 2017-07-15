@@ -1,0 +1,235 @@
+.layout {
+  width: 100%;
+  min-width: 5rem;
+  max-width: 10rem;
+  margin: 0 auto;
+  border: 1px solid #E2E2E3;
+  /*-----����----*/
+  /*----����----*/
+  /*��Ʒ����ҳ ����ҳ*/
+}
+.layout header {
+  height: 1.375rem;
+  background-color: #FF841D;
+  position: relative;
+}
+.layout header .mm_logo a {
+  display: block;
+  height: 100%;
+  width: 5.46875rem;
+}
+.layout header .mm_logo a img {
+  height: 0.671875rem;
+  width: 4.953125rem;
+  margin-top: 0.3125rem;
+  margin-left: 0.4375rem;
+}
+.layout header .mm_download {
+  background: url("../images/header_app.png") no-repeat;
+  width: 0.90625rem;
+  height: 0.90625rem;
+  position: absolute;
+  top: 0.1875rem;
+  right: 0.1875rem;
+  background-size: cover;
+}
+.layout .mm_search {
+  width: 10rem;
+  height: 1.40625rem;
+  padding-top: 0.3125rem;
+  padding-left: 0.25rem;
+  border: 2px solid #F1F1F1;
+}
+.layout .mm_search .search_box {
+  position: relative;
+}
+.layout .mm_search .search_box .inp1 {
+  width: 9.453125rem;
+  height: 0.8125rem;
+  background-color: #F1F1F1;
+  border-radius: 0.359375rem;
+  font-size: 0.4375rem;
+  line-height: 0.4375rem;
+}
+.layout .mm_search .search_box .inp2 {
+  background-color: #FF841D;
+  width: 1.6875rem;
+  height: 0.8125rem;
+  position: absolute;
+  top: 0;
+  right: 0.234375rem;
+  border-radius: 0.359375rem;
+  font-size: 0.4375rem;
+  color: white;
+  font-family: "microsoft yahei", "sans-serif";
+}
+.layout .sort {
+  height: 0.875rem;
+  padding-top: 0.15625rem;
+  padding-left: 0.125rem;
+  border: 1px solid #fff7f0;
+  background-image: linear-gradient(#FFFFFF, #EEEEEE);
+}
+.layout .sort a {
+  color: #000;
+  font-size: 0.4375rem;
+}
+.layout .mm_hot {
+  margin-top: 0.3125rem;
+  width: 98%;
+  height: 0.875rem;
+  line-height: 0.875rem;
+  padding-left: 0.234375rem;
+  background-color: #EEEEEE;
+  border: 0.015625rem solid #CCCCCC;
+  font-size: 0.4375rem;
+  color: #874604;
+}
+.layout .mm_brandBox {
+  margin-top: 0.3125rem;
+}
+.layout .mm_brandBox li:nth-child(1) {
+  border-top: 0.015625rem solid #CCCCCC;
+}
+.layout .mm_brandBox li {
+  position: relative;
+  background-color: #EEEEEE;
+  border-bottom: 0.015625rem solid #CCCCCC;
+  padding-left: 0.3125rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  font-size: 0.4375rem;
+}
+.layout .mm_brandBox li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #000;
+}
+.layout .mm_brandBox li .iconfont_z {
+  position: absolute;
+  top: 23%;
+  right: 0.46875rem;
+  font-size: 0.5625rem;
+}
+.layout .mm_brandBox li b {
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: #C9C9C9;
+  text-align: center;
+  color: #fff;
+}
+.layout .mm_brandBox li .mm_t_box {
+  padding-left: 0.9375rem;
+}
+.layout .mm_brandBox li .mm_t_box .mm_tv {
+  font-size: 14px;
+}
+.layout .mm_brandBox li .mm_t_box .thirty {
+  color: #999999;
+  font-size: 12px;
+}
+.layout .mm_brand .mm_goodsbox {
+  padding-top: 0.234375rem;
+  padding-bottom: 0.234375rem;
+  font-size: 0.21875rem;
+  /*����ҳ����*/
+  border-bottom: 1px solid #CCCCCC;
+}
+.layout .mm_brand .mm_goodsbox a.mm_img {
+  padding-left: 0.15625rem;
+  display: block;
+  float: left;
+  border: none;
+}
+.layout .mm_brand .mm_goodsbox p {
+  margin-top: 0.15625rem;
+}
+.layout .mm_brand .mm_goodsbox .mm_goodstxt {
+  padding-left: 0.15625rem;
+  overflow: hidden;
+}
+.layout .mm_brand .mm_goodsbox .mm_goodstext2 span:nth-child(1) {
+  color: red;
+}
+.layout .mm_brand .mm_goodsbox .mm_goodstext2 span:nth-child(2) {
+  margin-left: 0.703125rem;
+}
+.layout .mm_brand .mm_goodsbox .mm_goodstext2 span:nth-child(n+2) {
+  color: #FF9000;
+}
+.layout .mm_brand .mm_goodsbox .mm_goodstext3 {
+  color: #A1A1A1;
+}
+.layout .mm_brand .mm_goods_com::before {
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 1px;
+  display: block;
+  border-style: solid;
+  border-color: transparent transparent #E7E7E7 transparent;
+  border-width: 10px 10px 10px 10px;
+  left: 0.546875rem;
+  top: -0.5rem;
+}
+.layout .mm_brand .mm_goods_com {
+  background: #F8F8F8;
+  position: relative;
+  margin: 0.234375rem;
+  padding: 0.15625rem;
+  border: 1px solid #E7E7E7;
+  font-size: 0.234375rem;
+}
+.layout .mm_brand .mm_goods_com .icon-biaoxingfill {
+  color: #FF9000;
+}
+.layout .mm_brand .mm_goods_com b {
+  float: right;
+  font-weight: normal;
+}
+.layout footer {
+  width: 100%;
+  height: 2.625rem;
+  background-color: #EFEFEF;
+}
+.layout footer .operate {
+  width: 100%;
+  line-height: 0.953125rem;
+  border-top: 1px solid #C4C4C4;
+  border-bottom: 1px solid #C4C4C4;
+}
+.layout footer .operate ul li {
+  float: left;
+  width: 30%;
+  text-align: center;
+  border-right: 1px solid #C4C4C4;
+}
+.layout footer .operate ul li:last-child {
+  width: 40%;
+  border-right: none;
+}
+.layout footer .operate ul li span {
+  font-size: 13px;
+}
+[data-dpr="2"] .layout footer .operate ul li span {
+  font-size: 25px;
+}
+[data-dpr="2.5"] .layout footer .operate ul li span {
+  font-size: 31px;
+}
+[data-dpr="2.75"] .layout footer .operate ul li span {
+  font-size: 34px;
+}
+[data-dpr="3"] .layout footer .operate ul li span {
+  font-size: 38px;
+}
+[data-dpr="4"] .layout footer .operate ul li span {
+  font-size: 50px;
+}
+.layout footer .introduce {
+  width: 100%;
+  height: 1.671875rem;
+  text-align: center;
+  padding-top: 0.46875rem;
+}

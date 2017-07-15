@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>优惠券详情</title>
+    <link rel="stylesheet" href="css/yhq_list.css"/>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/base.css"/>
+    <script src="js/base.js"></script>
+    <script src="lib/flexible.js"></script>
+    <script src="lib/template.js"></script>
+    <script type="text/html" id="tem">
+        <div class="prompt">--点餐前出示手机中的优惠券，即可享受优惠--</div>
+        {{each result as value i}}
+       <div class="box">
+           <div class="top">
+               <div class="img" id={{i}}>{{#value.couponProductImg}}</div>
+               <div class="name">{{value.couponProductName}}</div>
+               <div class="price">{{value.couponProductPrice}}</div>
+           </div>
+           <div class="bom">{{value.couponProductTime}}</div>
+           <div class="glyphicon glyphicon-chevron-right"></div>
+       </div>
+       {{/each}}
+    </script>
+</head>
+<body>
+<!-- 顶部-->
+<header class="top_nav">
+    <div class="left_logo f_left">
+        <a onclick="javascript:history.go(-1)" class='glyphicon glyphicon-menu-left m_l10'></a>
+    </div>
+    <div class='center_word'><p>优惠券</p></div>
+    <div class="right_logo f_right ">
+        <a href="#"><img class='m_r10' src="./images/header_app.png" alt=""></a>
+    </div>
+</header>
+<!--头部E-->
+
+<section></section>
+
+
+<!--底部部分B-->
+<!--使用bootstrap栅格系统          底部写死-->
+<footer>
+    <div class="row">
+        <div class="col-xs-4 col-sm-4">
+            <p>登录</p>
+        </div>
+        <div class="col-xs-4 col-sm-4">
+            <p>注册</p>
+        </div>
+        <div class=" bottom_right col-xs-4 col-sm-4">
+            <a href="#" class="up glyphicon glyphicon-arrow-up"><img src="" alt=""/></a>
+
+            <p>返回顶部</p>
+        </div>
+    </div>
+    <div class="bottom_bar">
+        <p>手机APP下载&nbsp;<span>慢慢买手机版</span><b>—掌上比价平台</b></p>
+
+        <p><b>m.manmanbuy.com</b></p>
+    </div>
+</footer>
+<!--底部部分E-->
+
+
+<!--zhenzhao-->
+<div class="zhezhao">
+    <div class="currentImg"></div>
+    <div class="toleft"></div>
+    <div class="toright"></div>
+</div>
+
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/yhq_list.js"></script>
+</body>
+</html>

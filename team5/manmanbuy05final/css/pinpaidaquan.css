@@ -1,0 +1,285 @@
+@charset "utf-8";
+/*-转换rem单位-*/
+/*开始*/
+body {
+  background-color: #fff;
+}
+/*----------私有头部header样式----------*/
+.pp-header {
+  height: 1.35135135rem;
+}
+/*--搜索部分--*/
+.pp-search {
+  height: 1.35135135rem;
+}
+/*----------main主体部分----------*/
+.pp-main {
+  font-size: 0.37837838rem;
+  /*第一个ｂｏｘ*/
+  /*第二个ｂｏｘ*/
+  /*第三个ｂｏｘ*/
+  /*第四个ｂｏｘ*/
+}
+.pp-main div {
+  line-height: 1.08108108rem;
+}
+.pp-main .options {
+  background-color: #EEEEEE;
+  height: 1.08108108rem;
+  font-size: 0.37837838rem;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  padding: 0 0.27027027rem;
+}
+.pp-main .order-box {
+  font-size: 0.43243243rem;
+}
+.pp-main .order-box .pp-title {
+  background-color: #EEEEEE;
+  height: 1.08108108rem;
+  margin: 0.13513514rem 0;
+  color: brown;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  padding: 0 0.27027027rem;
+}
+.pp-main .order-box .order-ul li:first-child {
+  border-top: 1px solid #999;
+}
+.pp-main .order-box .order-ul li {
+  font-weight: bolder;
+  font-size: 0.21621622rem;
+  background-color: #EEEEEE;
+  height: 1.08108108rem;
+  border-bottom: 1px solid #999;
+  padding: 0 0.27027027rem;
+}
+.pp-main .order-box .order-ul li:last-child {
+  border: none;
+}
+.pp-main .order-box2 .pp-title2 {
+  height: 1.08108108rem;
+  color: brown;
+  padding: 0 0.13513514rem;
+}
+.pp-main .order-box2 .order-ul2 li:first-child {
+  border-top: 1px solid #999;
+}
+.pp-main .order-box2 .order-ul2 li {
+  height: 1.62162162rem;
+  border-bottom: 1px solid #999;
+  padding: 0.27027027rem 0 0.27027027rem 1.08108108rem;
+  position: relative;
+}
+.pp-main .order-box2 .order-ul2 li p {
+  height: 0.54054054rem;
+  line-height: 0.54054054rem;
+  overflow: hidden;
+}
+.pp-main .order-box2 .order-ul2 li p:last-child {
+  color: #C9C9C9;
+}
+.pp-main .order-box2 .order-ul2 li span {
+  position: absolute;
+}
+.pp-main .order-box2 .order-ul2 li .num {
+  left: 0.13513514rem;
+  top: 0.27027027rem;
+  width: 0.54054054rem;
+  height: 0.54054054rem;
+  line-height: 0.54054054rem;
+  background-color: #C9C9C9;
+  color: #fff;
+  text-align: center;
+}
+.pp-main .order-box2 .order-ul2 li:nth-child(1) .num {
+  background-color: #F10E0E;
+}
+.pp-main .order-box2 .order-ul2 li:nth-child(2) .num {
+  background-color: #FF9314;
+}
+.pp-main .order-box2 .order-ul2 li:nth-child(3) .num {
+  background-color: #8ADF5B;
+}
+.pp-main .order-box2 .order-ul2 li .skip2 {
+  right: 0.13513514rem;
+  top: 0.27027027rem;
+  font-size: 0.54054054rem;
+}
+.pp-main .order-box3 {
+  font-size: 0.37837838rem;
+}
+.pp-main .order-box3 .pp-title2 {
+  color: brown;
+  padding-left: 0.27027027rem;
+  background-color: #F3F3F3;
+}
+.pp-main .order-box3 .pro-order {
+  border-top: 1px solid #333;
+  height: 3.24324324rem;
+  padding: 0.40540541rem 0.27027027rem;
+}
+.pp-main .order-box3 .pro-order .img-box {
+  width: 2.7027027rem;
+  height: 2.43243243rem;
+}
+.pp-main .order-box3 .pro-order .img-box img {
+  width: 100%;
+  height: 100%;
+}
+.pp-main .order-box3 .pro-order .pro-desc {
+  height: 2.43243243rem;
+  width: 6.48648649rem;
+  overflow: hidden;
+}
+.pp-main .order-box3 .pro-order .pro-desc .pro-name {
+  height: 1.08108108rem;
+  line-height: 0.54054054rem;
+}
+.pp-main .order-box3 .pro-order .pro-desc .pr {
+  height: 0.94594595rem;
+  line-height: 0.94594595rem;
+}
+.pp-main .order-box3 .pro-order .pro-desc .pr .price {
+  color: red;
+  font-size: 0.43243243rem;
+}
+.pp-main .order-box3 .pro-order .pro-desc .pr span {
+  float: right;
+  font-size: 0.43243243rem;
+  color: #FF9000;
+}
+.pp-main .order-box3 .pro-order .pro-desc .pro-f {
+  height: 0.43243243rem;
+  line-height: 0.43243243rem;
+}
+.pp-main .order-box4 {
+  font-size: 0.37837838rem;
+}
+.pp-main .order-box4 .pp-title2 {
+  color: brown;
+  padding-left: 0.27027027rem;
+  background-color: #F3F3F3;
+}
+.pp-main .order-box4 .pro-box {
+  margin-bottom: 0.27027027rem;
+}
+.pp-main .order-box4 .pro-box .pro-order {
+  height: 3.24324324rem;
+  padding: 0.40540541rem 0.27027027rem;
+}
+.pp-main .order-box4 .pro-box .pro-order .img-box {
+  width: 2.7027027rem;
+  height: 2.43243243rem;
+}
+.pp-main .order-box4 .pro-box .pro-order .img-box img {
+  width: 100%;
+  height: 100%;
+}
+.pp-main .order-box4 .pro-box .pro-order .pro-desc {
+  height: 2.43243243rem;
+  width: 6.48648649rem;
+}
+.pp-main .order-box4 .pro-box .pro-order .pro-desc .pro-name {
+  height: 1.08108108rem;
+  line-height: 0.54054054rem;
+}
+.pp-main .order-box4 .pro-box .comment {
+  position: relative;
+  border: 1px solid #666;
+  margin: 0 0.13513514rem;
+  padding: 0.13513514rem;
+}
+.pp-main .order-box4 .pro-box .comment:before {
+  content: "";
+  position: absolute;
+  left: 1.08108108rem;
+  top: -0.21621622rem;
+  width: 0.40540541rem;
+  height: 0.40540541rem;
+  border: 1px solid #333;
+  transform: rotate(45deg);
+}
+.pp-main .order-box4 .pro-box .comment:after {
+  content: "";
+  position: absolute;
+  left: 1.02702703rem;
+  top: -0.02702703rem;
+  width: 0.52702703rem;
+  height: 0.40540541rem;
+  background-color: #fff;
+}
+.pp-main .order-box4 .pro-box .comment .comment-top b {
+  color: #FF9000;
+}
+.pp-main .order-box4 .pro-box .comment .comment-top .date {
+  font-size: 0.37837838rem;
+  opacity: 0.5;
+}
+.pp-main .order-box4 .pro-box .comment .comFrom {
+  font-size: 0.21621622rem;
+  opacity: 0.5;
+}
+.pp-main .order-box4 .pro-box .comment p {
+  font-size: 0.32432432rem;
+}
+/*----------footer部分----------*/
+footer {
+  margin: 0;
+}
+/*头部*/
+header {
+  background: #FF841D;
+  height: 1.35135135rem;
+  position: relative;
+}
+header .logo {
+  padding: 0.32432432rem;
+  height: 100%;
+  float: left;
+}
+header .logo a img {
+  max-height: 0.67567568rem;
+  overflow: hidden;
+}
+header .appdown {
+  position: absolute;
+  width: 1.35135135rem;
+  height: 1.35135135rem;
+  right: 0;
+  top: 0;
+  padding: 0.18918919rem;
+}
+header .appdown a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+header .appdown a img {
+  width: 100%;
+  height: 100%;
+}
+/*搜索*/
+.form-search form {
+  position: relative;
+  padding: 10px;
+  text-align: center;
+}
+.form-search form input {
+  border-radius: 0.40540541rem;
+  height: 0.81081081rem;
+  line-height: 0.81081081rem;
+  font-size: 0.35135135rem;
+}
+.form-search form input[type="search"] {
+  background: #F1F1F1;
+  width: 6.75675676rem;
+  font-size: 0.35135135rem;
+  padding-right: 1.35135135rem;
+  padding-left: 0.54054054rem;
+}
+.form-search form input[type="button"] {
+  background: #FF841D;
+  width: 1.62162162rem;
+  margin-left: 0.27027027rem;
+}

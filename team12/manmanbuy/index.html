@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title>慢慢买首页</title>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" type="text/less" href="./less/index.less"/>
+    <!--<link rel="stylesheet" href="./less/index.css">-->
+    <script src="./lib/artTemplate/template.js"></script>
+    <script id="category1" type="text/html">
+        {{each result as value i}}
+        <li>
+            <a href="javascript:;">
+                {{=value.img}}
+                <p>{{value.name}}</p>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script id="product" type="text/html">
+        {{each result as value i}}
+        <div class="product_box clearfix">
+            <a href="pages/monerctrlGoods.html?productId={{value.productId}}">
+                {{#value.productImgSm}}
+                <div class="info_box">
+                    <div class="info_title">
+                        <span>{{value.productName}}</span>
+                        <span class="color">{{value.productPinkage}}</span>
+                    </div>
+                    <div class="product_info">
+                        <span>{{value.productFrom}}</span>
+                        <span>|</span>
+                        <span>{{value.productTime}}</span>
+                        <a href="#" class="message fr">
+                            <span></span>
+                            <span>{{((/\d+/g).exec(value.productComCount))[0]}}</span>
+                        </a>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {{/each}}
+    </script>
+</head>
+<body>
+<div class="mmb_load">
+   <div class="fixbox">
+       <!--********** 头部---start **********-->
+       <header class="colorB clearfix">
+           <a href="javascript:;" class="fl">
+               <img src="./images/header_logo.png" alt=""/>
+           </a>
+           <a href="javascript:;" class="fr">
+               <img src="./images/header_app.png" alt=""/>
+           </a>
+       </header>
+       <!--***** 头部---end *****-->
+       <!--********** 搜索栏---start **********-->
+       <div class="search">
+           <form action="#">
+               <input class="s-ser" type="search" placeholder="请输入你想比价的商品"/>
+               <input class="s-btn" type="button" value="搜索"/>
+           </form>
+       </div>
+       <!--***** 搜索栏---end *****-->
+   </div>
+    <!--  主体部分start -->
+    <main class="mmb_main">
+        <!-- 分类start -->
+        <div class="category">
+            <ul class="clearfix" id="category"></ul>
+        </div>
+        <!-- 分类end -->
+        <!-- 超值折扣推荐start -->
+        <div class="mmb_recommend clearfix">
+            <div class="recommend_title clearfix">
+                <h4>超值折扣推荐</h4>
+                <a href="#">
+                    <img src="./images/arrow-right.svg" alt="">
+                </a>
+            </div>
+            <div class="recommend_con" id="recommendCon"></div>
+            <div class="get_more">
+                <a href="#" class="get_info">更多优惠信息&gt;&gt;</a>
+            </div>
+        </div>
+        <!-- 超值折扣推荐end -->
+    </main>
+    <!--  主体部分end -->
+    <!-- 底部---start -->
+    <footer>
+        <div class="operate clearfix">
+            <ul>
+                <li><span>登录</span></li>
+                <li><span>注册</span></li>
+                <li id="reTop"><span class="iconfont icon-xiangshang-copy"></span><span>返回顶部</span></li>
+            </ul>
+        </div>
+        <div class="introduce">
+            <p><span class="colorRed">手机APP下载</span>
+                <span>慢慢买手机版</span>
+                <span class="colorGray">-- 掌上比价平台</span>
+            </p>
+            <p class="colorGray">m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 底部---end -->
+</div>
+</body>
+
+<!--引入less-->
+<script src="./lib/less/less.min.js"></script>
+<script src="./js/base.js"></script>
+<script src="./js/index.js"></script>
+</html>
+

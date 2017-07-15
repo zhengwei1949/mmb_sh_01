@@ -1,0 +1,139 @@
+html,body{
+  height: 100%;
+  width: 100%;
+}
+//头部
+.MMB_category{
+  .topHeader{
+    background-color: #f4483e;
+    color: white;
+    position: relative;
+    .back{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      margin-left: 0.2rem;
+      a{
+        display: inline-block;
+        font-size: 40/75rem;
+        line-height: 96/75rem;
+        height: 100%;
+        color: white;
+        width: .8rem;
+      }
+    }
+    h1{
+      line-height: 96/75rem;
+      font-size: 30/75rem;
+      text-align: center;
+    }
+    .appdown{
+      position: absolute;
+      top:0;
+      right: 0;
+    }
+  }
+}
+//主体部分
+main{
+  width: 100%;
+  .tishi{
+    margin-top: 10/75rem;
+    text-align: center;
+    color: #cccccc;
+    font-size: 18/75rem;
+  }
+  ul{
+    width: 100%;
+    li {
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      a{
+        position: relative;
+        display: block;
+        padding: 20/75rem;
+        width: 100%;
+        height: 240/75rem;
+        overflow: hidden;
+        img{
+          height: 200/75rem;
+          float: left;
+          margin-right: 10/75rem;
+        }
+        p{
+          font-size: 16/75rem;
+          text-align: left;
+          color: #0f0f0f;
+        }
+        span{
+          font-size: 14/75rem;
+          color: #EE7700;
+        }
+        strong{
+          font-size: 14/75rem;
+        }
+        .right{
+          position: absolute;
+          top:0;
+          right: 0;
+          height: 100%;
+          margin-right: 10/75rem;
+          i{
+            line-height: 240/75rem;
+          }
+        }
+
+      }
+    }
+  }
+
+}
+//遮罩层
+.zhezhao{
+  display:none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  .tupian{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 160px;
+    width: 200px;
+    span{
+     i{
+       font-size: 75/75rem;
+       float: left;
+     }
+    }
+    span:nth-child(1){
+      color: #fff;
+      display: block;
+      position: absolute;
+      top:50%;
+      left: 0;
+      transform: translateX(-100%) translateY(-50%);
+    }
+    span:nth-child(2){
+      color: #fff;
+      display: block;
+      position: absolute;
+      top:50%;
+      right: 0;
+      transform: translateX(100%) translateY(-50%);
+
+    }
+    #juti{
+      width: 100%;
+      height: 100%;
+      img{
+        width: inherit;
+      }
+    }
+  }
+}

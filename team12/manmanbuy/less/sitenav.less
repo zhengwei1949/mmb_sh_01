@@ -1,0 +1,133 @@
+.font-size(@px) {
+  font-size: round(@px / 2) * 1px;
+  [data-dpr="2"] & {
+    font-size: @px * 1px;
+  }
+  [data-dpr="2.5"] & {
+    font-size: round(@px * 2.5 / 2) * 1px;
+  }
+  [data-dpr="2.75"] & {
+    font-size: round(@px * 2.75 / 2) * 1px;
+  }
+  [data-dpr="3"] & {
+    font-size: round(@px * 3 / 2) * 1px;
+  }
+  [data-dpr="4"] & {
+    font-size: @px * 2px;
+  }
+}
+
+@a: 64rem;
+@cc: #FF841D;
+
+.layout {
+  width: 100%;
+  min-width: 5rem;
+  max-width: 10rem;
+  margin: 0 auto;
+  border: 1px solid #E2E2E3;
+  /*-----头部----*/
+  header {
+    height: 88/@a;
+    background-color: #FF841D;
+    position: relative;
+    .mm_toleft {
+      font-size: 34/@a;
+      color: #fff;
+      position: absolute;
+      top: 27/@a;
+      left: 20/@a;
+    }
+    .mm_marketnav {
+      width: 100%;
+      height: 88/@a;
+      line-height: 88/@a;
+      text-align: center;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: normal;
+    }
+    .mm_download {
+      background: url("../images/header_app.png") no-repeat;
+      width: 58/@a;
+      height: 58/@a;
+      position: absolute;
+      top: 12/@a;
+      right: 12/@a;
+      background-size: cover;
+    }
+  }
+
+  /*-----section----*/
+  .mm_sitenav {
+    //padding-left: 40/@a;
+    ul {
+      padding: 10/@a;
+      border: 1px solid #CCCCCC;
+      li {
+        float: left;
+        width: 50%;
+        padding: 20/@a;
+        text-align: center;
+        border-top: 1px solid @cc;
+        border-left: 1px solid @cc;
+        a {
+          //text-decoration: none;
+          display: block;
+          width: 100%;
+          height: 100%;
+          font-size: 25/@a;
+          padding-left: 10/@a;
+          span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: block;
+          }
+          //img {
+          //  display: block;
+          //}
+        }
+      }
+      li:nth-child(2n) {
+        border-right: 1px solid @cc;
+      }
+    }
+  }
+
+  footer {
+    width: 100%;
+    height: 168/64rem;
+    background-color: #EFEFEF;
+    .operate {
+      width: 100%;
+      line-height: 61/64rem;
+      border-top: 1px solid #C4C4C4;
+      border-bottom: 1px solid #C4C4C4;
+      ul {
+        li {
+          float: left;
+          width: 30%;
+          text-align: center;
+          border-right: 1px solid #C4C4C4;
+          &:last-child {
+            width: 40%;
+            border-right: none;
+          }
+          span {
+            .font-size(25);
+          }
+        }
+      }
+    }
+    .introduce {
+      width: 100%;
+      height: 107/64rem;
+      text-align: center;
+      padding-top: 30/64rem;
+    }
+  }
+
+}
+
+

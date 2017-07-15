@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="./css/ziti1/iconfont.css">
+    <link rel="stylesheet" href="./less/baicai1.css">
+</head>
+
+<script src="./js/jquery.min.js"></script>
+<!--................导航栏的动态渲染......star..........................-->
+<script type='text/html' id='result'>
+    {{if result}}
+    {{each result as value i}}
+    <li id="{{value.titleId}}" class={{i==0?'active':''}}><a href="#">{{value.title}}</a></li>
+    {{/each}}
+    {{/if}}
+</script>
+<!--................导航栏的动态渲染......end..........................-->
+
+<!--................商品列表渲染..........star.........................-->
+<script type='text/html' id='result1'>
+    {{if result}}
+    {{each result as value i}}
+    <div class="category">
+        <a class="category_l" href="#">{{=value.productImg}}</a>
+
+        <div class="category_r">
+            <p>{{#value.productName}}</p>
+            <span>{{#value.productPrice}}</span>
+            {{=value.productCouponRemain}}
+            <i>{{=value.productCoupon}}</i>
+            <button>{{#value.productHref}}</button>
+        </div>
+    </div>
+    {{/each}}
+    {{/if}}
+</script>
+<!--................商品列表渲染..........end.........................-->
+<body>
+<!--................顶部下载和返回部分.....star...........................-->
+<header class="tops">
+    <a href="#" class="icon iconfont tops_l">&#xe609;</a>
+
+    <a href="#" class="tops_r">
+        <s class="icon iconfont">&#xe646;</s>
+        <i>App下载</i>
+    </a>
+</header>
+<!--................顶部下载和返回部分.....end...........................-->
+
+<!--导航栏渲染的区域.....star-->
+<nav class="product clearfix">
+    <ul class="nav-tabs clearfix" id="info">
+
+    </ul>
+</nav>
+<!--导航栏渲染的区域.....end-->
+
+<!--商品列表渲染的区域...star-->
+<section class="bigg">
+    <main id="info1">
+
+    </main>
+</section>
+<!--商品列表渲染的区域...end-->
+
+
+<!--返回顶部的按键......star-->
+<aside>
+    <i id="jian" class="icon iconfont">&#xe602;</i>
+</aside>
+<!--返回顶部的按键......end-->
+
+<!--页面底部START-->
+<div class="MMB_foot">
+    <div class="footTop clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a id="fan"><i class="icon iconfont"></i><span>返回顶部</span></a>
+    </div>
+    <div class="footBottom">
+        <p>
+            <a href="#" class="mob">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+
+        <p>m.mananbuy.com</p>
+    </div>
+</div>
+<!--页面底部END-->
+</body>
+<!-- template是渲染模板的库 -->
+<script src="./js/template.js"></script>
+<script src="./less/less.min.js"></script>
+<!-- flexble是淘宝的库用做rem -->
+<script src="./js/flexible.js"></script>
+<!-- 导航tab点击的封装数据  自己封装 -->
+<script src="./js/common.js"></script>
+<!-- swipe是导航上下滑动的插件 -->
+<script src="./js/swipe.js"></script>
+<script src="./js/js.js"></script>
+</html>

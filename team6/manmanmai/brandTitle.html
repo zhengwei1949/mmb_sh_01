@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>品牌大全</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/brand.css">
+</head>
+<body>
+	<!-- 头部部分 -->
+	<header class="brand-header">
+		<div class="logo fl">
+			<a href="index.html" title='慢慢买'>
+				<img src="images/header_logo.png" alt="">
+			</a>
+		</div>
+		<div class="appdown fr" >
+			<a href="javascript:">
+				<img src="images/header_app.png" alt="">
+			</a>
+		</div>
+	</header>
+	<!-- 搜索部分 -->
+	<div class="search">
+		<form>
+			
+				<input type="text" placeholder="请输入你想比价的商品" name="product" id="product">
+				<input type="button" value="搜索" name='btn' id='btn'>
+			
+		</form>
+	</div>
+	<!--分类部分 -->
+	<div class="brand-catrgory">
+		<div class="catrgory-title">
+			 <a href="index.html">首页&gt;</a>
+			 <a href="category.html">全部分类&gt;</a>
+		</div>
+	</div>
+	<!-- 品牌排行部分 -->
+	<div class="brand-ranking">
+		<div class="ranking-title">
+			热门品牌排行
+		</div>
+		<!-- 热门品牌排行 -->
+		<div class="brand-hot">
+			<div class="items">
+				
+			</div>
+			
+			<!-- <p class='loading tips'>正在加载...</p> -->
+		</div>
+ </div>
+ <!-- 底部部分 -->
+ <footer>
+ 	<div class='footer-ranking'>
+ 		<p>品牌排行</p>
+ 		<span></span>
+ 	</div>
+ 	<div class='info clearfix'>
+ 	<a href="#">登录</a>
+ 	<a href="#">注册</a>
+
+ 	<a href="#">返回底部</a>
+   </div>
+   <div class='mobile'>
+   	 	<a href="#">手机APP下载</a>
+   	 	<a href="#">慢慢买手机版</a>、
+   	 	<a href="#">--掌上比价平台</a>
+   	 	<p class='net'>m.manmanbuy.com</p>
+   </div>
+ 	
+ </footer>
+
+	<script src='lib/zepto/zepto.min.js'></script>
+	<script src='lib/zepto/touch.js'></script>
+	<script src='lib/zepto/selector.js'></script>
+	<script src='lib/zepto/fx.js'></script>
+	
+	<script src='lib/template-native.js'></script>
+	<script src='js/url.js'></script>
+	<script src='js/brand.js'></script>
+	<script type='text/template' id='tpl'>
+		<% for(var i = 0;i<result.length;i++) { %>
+			<div class="brand-item">
+				<a href="brandRanking.html?brandTitleId=<%= result[i].brandTitleId%>" data-id="<%= result[i].brandTitleId%>"><%= result[i].brandTitle%></a>
+				
+			</div>
+		<% } %>
+	</script>
+</body>
+</html>

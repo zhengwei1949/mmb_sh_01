@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <title></title>
+    <!-- [if lt IE 9]> -->
+    <script src="lib/html5shiv/html5shiv.min.js"></script>
+    <!--   <![endif] -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/couponproduct.css">
+</head>
+<body>
+
+<div class="all">
+
+    <!-- 顶部通栏111 -->
+    <header id="header" class="header">
+        <a class="iconfonts icon-xiangzuo1" href=""></a>
+        <a href="#" class="header_right">
+            <img src="images/header_app.png" alt=""/>
+        </a>
+
+        <p>优惠券</p>
+    </header>
+    <!-- 优惠券信息说明222 -->
+    <div class="dinner">
+        <p>--点餐前出示手机中的优惠券,即可享受优惠--</p>
+    </div>
+
+
+    <!-- 优惠券列表信息333 -->
+    <div class="discount-all clearfix">
+        <div class="discount_list">
+            <ul>
+                <li id="">
+                    <!-- 左边部分 -->
+                    <div class="list_left fl">
+                        <a href="#">
+                            <img src="" alt="">
+                        </a>
+                    </div>
+                    <!-- 右面部分 -->
+                    <div class="list_right ">
+                        <!-- 右上面 -->
+                        <a class="list_title fs14">
+                            C27 两人小食组 新奥尔良烤翅2块+薯</br>
+                            条(中)+黄金鸡块5块+劲爆鸡米花(小)</br>
+                            2016年10月凭肯德基优惠券</br>
+                            <span>￥28</span>
+                            <span>有效期至10月31日</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 箭头 -->
+<div class="foot">
+    <a href="#top" class="fs14"><i class="iconfonts icon-xiangshang4"></i></a>
+</div>
+
+<!-- 优惠券弹出框 -->
+<div class="lay">
+    <ul>
+        <li>
+
+        </li>
+    </ul>
+</div>
+
+
+<!-- 优惠券列表信息对象模板 -->
+<script id="discount-all" type="text/html">
+    {{if result}}
+    <ul>
+        {{each result as value}}
+        <li id="{{value.couponProductId}}" class="clearfix">
+            <!-- 左边部分 -->
+            <div class="list_left fl">
+                <a href="#">
+                    {{#value.couponProductImg}}
+                </a>
+            </div>
+            <!-- 右面部分 -->
+            <div class="list_right ">
+                <!-- 右上面 -->
+                <a class="list_title fs14">
+                    {{value.couponProductName}}
+                    <span>{{value.couponProductPrice}}</span>
+                    <span>{{value.couponProductTime}}</span>
+                </a>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</script>
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="js/template.js"></script>
+<script src="js/couponproduct.js"></script>
+</body>
+</html>

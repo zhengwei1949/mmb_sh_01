@@ -1,0 +1,144 @@
+/*根字体函数*/
+@baseFontSize: 75;
+/*混合函数使用*/
+.px2rem(@name,@px) {
+    @{name}: @px/@baseFontSize *1rem;
+}
+
+/*基本颜色*/
+@bodyBGColor: #f7f7f7;
+@mainColor: #ff841d;
+@borderColor: #c4c4c4;
+@fontColor: #ff6c00;
+@fontColor1: #a1a1a1;
+
+/*字体设置*/
+.font-size(@px) {
+  font-size: round(@px /2)*1px;
+  [data-dpr="2"] & {
+    font-size: @px *1px;
+  }
+  /*for mx3*/
+  [data-dpr="2.5"] & {
+    font-size: round(@px *2.5/2)*1px;
+  }
+  /*for小米node*/
+  [data-dpr="2.75"] & {
+    font-size: round(@px *2.75/2)*1px;
+  }
+  [data-dpr="3"] & {
+    font-size: round(@px /2*3)*1px;
+  }
+  /*for 三星note4*/
+  [data-dpr="4"] & {
+    font-size: @px *2px;
+  }
+}
+
+/*字体图标使用*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../font/iconfont.woff') format('woff'),
+  url('../font/iconfont.ttf') format('truetype'),
+  url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*主页设置*/
+html, body {
+  background: @bodyBGColor;
+}
+/*页面菜单显示栏start*/
+.classify {
+  .px2rem(margin-top, 20rem);
+  .px2rem(margin-bottom, 10rem);
+  padding: 14/75rem 0 18/75rem;
+  width: 100%;
+  background: #FFFFFF;
+  .area-item {
+    .px2rem(height, 120rem);
+    float: left;
+    .px2rem(margin-top, 20rem);
+    width: 25%;
+    text-align: center;
+    img {
+      margin: 0 auto;
+      .px2rem(height, 86rem);
+    }
+    div {
+      .font-size(24px);
+      color: #000;
+      margin: 5/75rem 0;
+    }
+  }
+}
+/*页面菜单显示栏end*/
+/*超值折扣推荐start*/
+.discount {
+  background: #ffffff;
+}
+.MMB_Nav {
+  .px2rem(height, 60rem);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fec273), to(#ff960d));
+  width: 100%;
+}
+.navTxt {
+  .px2rem(padding-left, 10rem);
+  .px2rem(height, 60rem);
+  .px2rem(line-height, 60rem);
+  .font-size(30px);
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+}
+.navRight {
+  .px2rem(margin, 10rem);
+  .px2rem(height, 40rem);
+  .px2rem(width, 40rem);
+}
+
+/*产品展示部分start*/
+.product {
+  display: block;
+  list-style: none;
+  padding: 28/75rem 20/75rem;
+  width: 100%;
+  border-bottom: 1/72rem solid @borderColor;
+  img {
+    float: left;
+    width: 25%;
+  }
+  .allInfo {
+    overflow: hidden;
+    .px2rem(padding-left, 20rem);
+  }
+  p {
+    .px2rem(margin-top, 20rem);
+    .font-size(26px);
+    color: #000;
+    span {
+      color: @fontColor;
+    }
+  }
+  .txt {
+    .px2rem(margin-top, 45rem);
+    .font-size(24px);
+    color: @fontColor1;
+    i{
+      .font-size(20px);
+    }
+  }
+}
+/*产品展示部分end*/
+/*超值折扣推荐end*/
+

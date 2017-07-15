@@ -1,0 +1,98 @@
+//设计图 750 使用 flexible
+// px => rem 设计稿尺寸除以75 单位rem
+// 使用例如： height: 40*@base
+@base: round(1/75 ,6)*1rem; //基准值 保留6位小数
+
+//less写一个mixin
+//使用例如： .px2rem(height,40);
+.px2rem(@name,@px) {
+    @{name}: round(@px/75,6)*1rem;
+}
+
+//字体不可以用 rem 因为误差太大了 且不能满足任何屏幕下字体大小相同
+//为了方便 我们也会用less写一个mixin
+//使用例如 ： .font_size(32);
+
+.font-size(@px) {
+  font-size: round ( @px / 2 ) * 1px;
+  [data-dpr = '2'] & {
+    font-size: @px * 1px;
+  }
+  //for mx3
+  [data-dpr = '2.5'] & {
+    font-size: round( @px * 2.5 / 2 ) * 1px;
+  }
+  //for 小米note
+  [data-dpr = '2.75'] & {
+    font-size: round( @px * 2.75 / 2) * 1px;
+  }
+  [data-dpr = '3'] & {
+    font-size: round( @px * 3 / 2) * 1px;
+  }
+  //for三星note4
+  [data-dpr = '4'] & {
+    font-size: @px * 2px;
+  }
+}
+
+
+
+//*******************主体内容
+//*******************热门排行
+
+header .top {
+  height: 100*@base;
+  width: 100%;
+  background-color: #FF841D;
+  line-height: 100*@base;
+  text-align: center;
+  color: white;
+  font-size: 22px;
+  font-weight: 900;
+  span {
+    display: block;
+    height: 100*@base;
+    width: 100*@base;
+    //line-height: 100*@base;
+    //text-align: center;
+    transform: rotate(180deg);
+    //color: white;
+    font-size: 22px;
+    font-weight: 100;
+  }
+  a {
+    display: block;
+    height: 100%;
+    width: 1.2rem;
+    background: url("../images/header_app.png") center left no-repeat;
+    background-size: 0.906644rem, 0.906644rem;
+  }
+}
+.main {
+  width: 100%;
+  height: 100%;
+  padding-left: 86*@base;
+  padding-right: 80*@base;
+  div {
+    position: relative;
+    height:80*@base;
+    background-color: #F4F4F4;
+    border: 1px solid #bfbfbf;
+    text-align: center;
+    line-height:80*@base;
+    float: left;
+    padding-left: 68*@base;
+    padding-right: 20*@base;
+    margin-right: 12*@base;
+    margin-top: 12*@base;
+    img {
+      position: absolute;
+      top: 20*@base;
+      left: 20*@base;
+    }
+  }
+}
+
+
+
+

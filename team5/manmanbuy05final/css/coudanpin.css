@@ -1,0 +1,112 @@
+@charset "utf-8";
+/*-转换rem单位-*/
+/*开始*/
+/*----------私有头部header样式----------*/
+.cou-header {
+  background-color: #FF841D;
+}
+.cou-header .back {
+  background-position: -2.18918919rem -0.16216216rem;
+  width: 0.51351351rem;
+  height: 0.62162162rem;
+}
+/*----------main主体部分----------*/
+.main {
+  background-color: #F1F1F1;
+  /*-顶部tab栏-*/
+  /*-商品列表信息-*/
+}
+.main .top {
+  font-size: 0.43243243rem;
+  border-bottom: 1px solid #666;
+  border-top: 1px solid #666;
+  background-color: #fff;
+  position: relative;
+}
+.main .top #store {
+  width: 20%;
+}
+.main .top #area {
+  width: 45%;
+}
+.main .top #price {
+  width: 25%;
+}
+.main .top div {
+  float: left;
+  height: 1.08108108rem;
+  line-height: 1.08108108rem;
+  text-align: center;
+}
+.main .top div + div {
+  border-left: 1px solid #666;
+}
+.main .top .store-drop,
+.main .top .area-drop,
+.main .top .price-drop {
+  position: absolute;
+  left: 0;
+  top: 1.08108108rem;
+  width: 10rem;
+  background-color: #fff;
+}
+.main .top .store-drop li,
+.main .top .area-drop li,
+.main .top .price-drop li {
+  border: 1px solid #000;
+  width: 10rem;
+  height: 1.08108108rem;
+  text-align: center;
+  line-height: 1.08108108rem;
+}
+.main .top .search {
+  border-left: 1px solid #666;
+  width: 10%;
+  height: 1.08108108rem;
+  text-align: center;
+  background: url("../images/cou_search.png") no-repeat center;
+  background-size: 80% 80%;
+}
+.main ul.pro-order {
+  width: 100%;
+  font-size: 0.32432432rem;
+}
+.main ul.pro-order li {
+  height: 6.08108108rem;
+  width: 50%;
+  float: left;
+  padding: 0.27027027rem 0.13513514rem 0 0.13513514rem;
+  margin-bottom: 0.81081081rem;
+}
+.main ul.pro-order li .img-box {
+  background-color: #fff;
+  width: 100%;
+  height: 77%;
+}
+.main ul.pro-order li .img-box img {
+  width: 100%;
+  height: 100%;
+}
+.main ul.pro-order li p {
+  background-color: #fff;
+  height: 23%;
+  overflow: hidden;
+}
+.main ul.pro-order li .pro-order-buttom {
+  background-color: #fff;
+  height: 10%;
+}
+.main ul.pro-order li .pro-order-buttom span {
+  font-size: 0.43243243rem;
+  height: 100%;
+  float: left;
+  color: red;
+}
+.main ul.pro-order li .pro-order-buttom .coudan {
+  float: right;
+  height: 100%;
+  width: 1.75675676rem;
+  text-align: center;
+  background-color: #FF9501;
+  color: #fff;
+}

@@ -1,0 +1,110 @@
+@import "remanddpr.less";
+//主题色橘黄色
+@color: #FF841D;
+//底部灰色
+@footColor:#EFEFEF;
+//黑色
+@black:#000;
+.wrap{
+
+}
+//头部
+.header{
+  .px2rem(height,90);
+  width: 100%;
+  background-color: @color;
+  .px2rem(line-height,90);
+  //position: relative;
+  a:nth-of-type(1){
+    //background-color:red;
+    float: left;
+    width: 10%;
+    .font-size(50);
+    i{
+      margin-left: 45%;
+      color: #FFF;
+    }
+  }
+  p{
+    width: 75%;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    .font-size(36);
+    color: #FFF;
+  }
+  a:nth-of-type(2){
+    display: block;
+    .px2rem(height,70);
+    float: left;
+    width: 15%;
+    background: url("../images/header_app.png") no-repeat;
+    position: relative;
+    top:50%;
+    .px2rem(margin-top, -30);
+    background-size: 60*@base 60*@base;
+  }
+}
+//脚部
+.footer{
+  background-color:@footColor;
+  width: 100%;
+  .px2rem(height,180);
+  .px2rem(margin-top,80);
+  //脚部上半部分注册登录
+  .footer-top{
+    .px2rem(height,66);
+    border-top:1px solid #c4c4c4;
+    border-bottom:1px solid #c4c4c4;
+    a{
+      display: inline-block;
+      float: left;
+      text-align: center;
+      .px2rem(line-height,66);
+      .font-size(30);
+      color:@black;
+      border-right:1px solid #c4c4c4;
+    }
+    a:nth-of-type(1){
+      width: 30%;
+    }
+    a:nth-of-type(2){
+      width: 30%;
+    }
+    a:nth-of-type(3){
+      width: 40%;
+      border-right: none;
+    }
+  }
+  //脚部下半部分链接
+  .footer-bottom {
+    .px2rem(height,86);
+    text-align: center;
+    p:nth-of-type(1){
+      .px2rem(margin-top,28);
+      vertical-align: bottom;
+      a{
+        .font-size(28);
+
+      }
+      a:nth-of-type(1){
+        color: #FF0000;
+      }
+      a:nth-of-type(2){
+        color: #000000;
+      }
+      a:nth-of-type(3){
+        color: #666;
+      }
+    }
+    p:nth-of-type(2){
+      .px2rem(height,50);
+
+      a{
+        .font-size(26);
+        color: #6a6666;
+      }
+    }
+  }
+
+}

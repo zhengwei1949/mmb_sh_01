@@ -1,0 +1,123 @@
+html {
+  font-size: 37px;
+}
+html,
+body {
+  width: 100%;
+}
+header {
+  width: 100%;
+}
+.top_nav {
+  height: 1.27027027rem;
+  background-color: #FF841D;
+  position: relative;
+}
+.top_nav .left_logo a.glyphicon {
+  display: inline-block;
+  font-size: 0.67567568rem;
+  color: #FFF;
+  line-height: 1.27027027rem;
+}
+.top_nav .center_word p {
+  text-align: center;
+  height: 1.27027027rem;
+  line-height: 1.27027027rem;
+  font-size: 0.64864865rem;
+  color: #FFF;
+  font-family: 'microsoft YaHei';
+}
+.top_nav .right_logo a img {
+  display: inline-block;
+  width: 0.97297297rem;
+  height: 0.97297297rem;
+  padding-top: 0.13513514rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.up_all_product {
+  width: 100%;
+}
+.up_all_product .left_product {
+  display: inline-block;
+  width: 50%;
+  border-right: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
+  padding: 0.27027027rem;
+  float: left;
+}
+.up_all_product .left_product .one_img {
+  height: 4.86486486rem;
+  width: 100%;
+}
+.up_all_product .left_product .one_img img {
+  width: 100%;
+  height: 100%;
+}
+.up_all_product .left_product .two_title {
+  font-size: 0.37837838rem;
+  height: 1.02702703rem;
+  font-weight: bold;
+  overflow: hidden;
+}
+.up_all_product .left_product .three_price {
+  color: #FF6C00;
+  height: 0.48648649rem;
+  font-size: 0.32432432rem;
+  display: block;
+  font-weight: bold;
+  overflow: hidden;
+}
+.up_all_product .left_product .four {
+  font-size: 0.32432432rem;
+  color: #A1A1A1;
+}
+section {
+  width: 100%;
+}
+.row {
+  height: 0.89189189rem;
+  line-height: 0.89189189rem;
+  background-color: #EFEFEF;
+  border: 1px solid #C4C4C4;
+  margin-top: 0.94594595rem;
+}
+.row .bottom_right {
+  position: relative;
+}
+.row p {
+  color: #000000;
+  border-right: 1px solid #C4C4C4;
+  text-align: center;
+  font-size: 0.37837838rem;
+}
+.row a {
+  display: inline-block;
+  font-size: 0.37837838rem;
+  color: #747474;
+  position: absolute;
+  top: 0.21621622rem;
+  left: 0.62162162rem;
+}
+footer .bottom_bar {
+  background-color: #EFEFEF;
+  height: 1.56756757rem;
+  width: 100%;
+  overflow: hidden;
+}
+.bottom_bar p {
+  text-align: center;
+  color: #FF0000;
+  font-size: 0.32432432rem;
+}
+.bottom_bar p span {
+  color: #000000;
+}
+.bottom_bar p b {
+  color: #666666;
+}
+.bottom_bar p p {
+  color: #666666;
+  text-align: center;
+}

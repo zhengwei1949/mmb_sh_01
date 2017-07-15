@@ -1,0 +1,185 @@
+/*根字体函数*/
+@baseFontSize: 75;
+/*混合函数使用*/
+.px2rem(@name,@px) {
+    @{name}: @px/@baseFontSize *1rem;
+}
+
+/*基本颜色*/
+@bodyBGColor: #f7f7f7;
+@mainColor: #ff841d;
+@borderColor: #8c8c8c;
+@fontColor: #ff6c00;
+@fontColor1: #a1a1a1;
+
+/*字体设置*/
+.font-size(@px) {
+  font-size: round(@px /2)*1px;
+  [data-dpr="2"] & {
+    font-size: @px *1px;
+  }
+  /*for mx3*/
+  [data-dpr="2.5"] & {
+    font-size: round(@px *2.5/2)*1px;
+  }
+  /*for小米node*/
+  [data-dpr="2.75"] & {
+    font-size: round(@px *2.75/2)*1px;
+  }
+  [data-dpr="3"] & {
+    font-size: round(@px /2*3)*1px;
+  }
+  /*for 三星note4*/
+  [data-dpr="4"] & {
+    font-size: @px *2px;
+  }
+}
+
+/*产品详情部分start*/
+.detailsPro {
+  .detailsShow {
+    width: 100%;
+    position: relative;
+    h3 {
+      text-align: center;
+      .font-size(36px);
+      width: 90%;
+      margin: 0 auto;
+      .px2rem(margin-top, 20rem);
+    }
+    .detImg {
+      width: 100%;
+      text-align: center;
+      display: block;
+      width: 100%;
+      .px2rem(height, 260rem);
+      margin: 0px auto;
+      img {
+        height: 100% !important;
+        width:35% !important;
+      }
+    }
+    .proCollect {
+      .px2rem(margin-right, 30rem);
+      position: absolute;
+      right: 0px;
+      bottom: 2.2rem;
+      img {
+        .px2rem(height, 70rem);
+        .px2rem(width, 70rem);
+      }
+    }
+  }
+  .detailsTab {
+    width: 100%;
+    .px2rem(margin-top, 20rem);
+    .px2rem(height, 60rem);
+    .px2rem(line-height, 60rem);
+    overflow: hidden;
+    z-index: 0;
+    background-color: #ffbb00;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd050), to(#ffbb00));
+    background: -moz-linear-gradient(top, #ffd050, #ffbb00);
+    background: -o-linear-gradient(top, #ffd050, #ffbb00);
+    border-top: solid 1/75rem #c14d00;
+    border-bottom: 1/75rem solid #c14d00;
+    a {
+      .px2rem(height, 60rem);
+      .px2rem(line-height, 60rem);
+      .font-size(30px);
+      font-weight: 100;
+      width: 33.3333%;
+      color: #fff;
+      text-align: center;
+      border-right: 1px solid #c14d00;
+      &:first-child {
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa632), to(#ff9000));
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  .detList {
+    width: 100%;
+    table {
+      margin: 10/75rem 0;
+    }
+    td:nth-child(2){
+      transform: translate(-0.6rem);
+      vertical-align: middle !important;
+    }
+    img {
+      .px2rem(height, 30rem);
+      display: inline-block;
+      vertical-align: middle;
+    }
+    a {
+      vertical-align: middle;
+      .px2rem(margin-left, 14rem);
+      .font-size(28px);
+      vertical-align: middle !important;
+    }
+    .red {
+      color: #d10311;
+      .px2rem(margin-right, 16rem);
+      .font-size(28px);
+      transform: translate(-0.7rem);
+    }
+    span{
+      display: inline-block !important;
+    .px2rem(height, 45rem) !important;
+    .px2rem(line-height, 45rem) !important;
+    .px2rem(width, 130rem) !important;
+      background: #ff5500 !important;
+      color: #ffffff !important;
+      border-radius: 10/75rem !important;
+      .font-size(24px) !important;
+      text-align: center !important;
+      margin-right: 10/75rem;
+    }
+
+  }
+  .detbot {
+    display: block;
+    .px2rem(padding, 20rem);
+    padding: 10/75rem 20/75rem;
+    .px2rem(line-height, 30rem);
+    .font-size(26px);
+    color: @fontColor1;
+    border-top: 1px solid @borderColor;
+  }
+  .detTitle {
+    margin-top: 5/75rem;
+    > div {
+      .px2rem(height, 60rem);
+      .px2rem(line-height, 60rem);
+      text-align: center;
+      overflow: hidden;
+      background: #dbdbdb;
+      .font-size(24px);
+      border-top: 1/75rem solid #fff;
+      background: #dbdbdb;
+    }
+  }
+  .comContent {
+    li {
+      .px2rem(padding, 16rem);
+      border: 1/75rem solid @borderColor;
+      border-bottom: 1px solid #ccc;
+      div:nth-child(-n+2) {
+        .px2rem(height, 30rem);
+        .px2rem(line-height, 30rem);
+        .font-size(20px);
+        color: #666;
+      }
+      .content {
+        color: #000;
+        .px2rem(line-height, 30rem);
+        .font-size(22px);
+      }
+    }
+  }
+}
+
+/*产品详情部分end*/

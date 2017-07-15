@@ -1,0 +1,105 @@
+@charset "utf-8";
+@import 'color.less';
+
+/*菜单栏样式*/
+.nav {
+  background-color: #fff;
+  .content{
+    flex-wrap: wrap;
+    padding-top: 0.266667rem;
+    padding-bottom: 0.133333rem;
+    .list{
+      width: 25%;
+      a{
+        padding: 0.133333rem 0.32rem;
+        flex-wrap: wrap;
+        img{
+            width: 100%;
+        }
+        p{
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+}
+/*超值折扣样式*/
+.container{
+  background-color: #fff;
+  /*标题样式*/
+  >.listTitle{
+    height: 0.933333rem;
+    background-color: @mainColor;
+    color: #fff;
+    line-height: 0.933333rem;
+    padding:0 0.266667rem 0 0.533333rem;
+    font-weight: 400;
+    a{
+      display: block;
+      border: 1px solid #fff;
+      color: #fff;
+      width: 0.666667rem;
+      height: 0.666667rem;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 0.666667rem;
+      font-family: sisum;
+          margin-top: 0.133333rem;
+    }
+  }
+  /*商品详细样式*/
+  .listItems{
+    .listCont{
+      padding: 0.266667rem;
+      display: block;
+      .listImg{
+        width: 2.666667rem;
+        height: 2.666667rem;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .desc{
+        width: 6.8rem;
+        padding-left: 0.133333rem;
+         .listTitle{
+           font-size: 16px;
+           .dpr-cal(16);
+}
+
+        .price{
+          color: @mainColor;
+        }
+        .other{
+          font-size: 10px;
+          .dpr-cal(10);
+        }
+      }
+    }
+  }
+  /*更多优惠样式*/
+ .preferMore{
+      padding: 0.266667rem 10%;
+      >a{
+          display: block;
+      border: 1px solid #c4c4c4;
+    text-align: center;
+    padding: 0.266667rem 0;
+    border-radius: 0.133333rem;
+      }
+  }
+
+}
+
+
+//[data-dpr="2"] .container .listItems .listCont .desc .other {
+//font-size: 20px;
+//}
+//[data-dpr="3"] .container .listItems .listCont .desc .other {
+//font-size: 30px;
+//}
+
+

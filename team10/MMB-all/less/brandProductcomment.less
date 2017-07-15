@@ -1,0 +1,85 @@
+@fs: 75rem;
+html {
+  font-size: 75px;
+}
+
+html, body {
+  height: 100%;
+}
+
+//公用函数
+.font-size(@size) {
+  [data-dpr="1"] & {
+    font-size: unit(@size, px);
+  }
+;
+  [data-dpr="2"] & {
+    font-size: unit(@size*2, px);
+  }
+;
+  [data-dpr="3"] & {
+    font-size: unit(@size*3, px);
+  }
+}
+
+//销量排行
+.navTitle {
+  margin-top: 20/@fs;
+  background: #F7F7F7;
+  border-bottom: 1/@fs solid #CCC;
+  border-top: 1/@fs solid #CCC;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  padding-left: 20/@fs;
+  .font-size(12px);
+  color: #b81900;
+}
+.comment{
+  width: 100%;
+  .comment_title {
+    width: 100%;
+    img {
+      float: left;
+      width: 180/@fs;
+      height: 150/@fs;
+      margin: 30/@fs 20/@fs 30/@fs;
+    }
+    p {
+      .font-size(14px);
+      color: #AAA;
+      padding-top: 30/@fs;
+      max-height: 100%;
+    }
+  }
+  .comment_content {
+    background: #F7F7F7;
+    border: 1/@fs solid #CCC;
+    margin: 10/@fs;
+    max-height: 100%;
+    padding: 15/@fs;
+    .content_top {
+      margin-bottom: 20/@fs;
+      .user {
+        float: left;
+        span:nth-child(n+3){
+          color: gold;
+          .font-size(14px);
+        }
+      }
+      .comment_time {
+        float: right;
+        padding-top: 5/@fs;
+      }
+    }
+    .content_main {
+      color: #000;
+      .font-size(14px);
+    }
+    .content_bottom {
+      padding-top: 10/@fs;
+      padding-right: 10/@fs;
+      text-align: right;
+    }
+  }
+}
+

@@ -1,0 +1,116 @@
+/*商品信息S*/
+.sv_shop {
+  width: 100%;
+  background: #f7f7f7;
+  padding: 0.26666667rem;
+}
+.sv_shop .sv_shop_box {
+  height: 3.14666667rem;
+  width: 100%;
+  margin-bottom: 0.26666667rem;
+  background: white;
+}
+.sv_shop .sv_shop_box .sv_shop_img {
+  width: 33.3333%;
+  height: 3.14666667rem;
+  float: left;
+  padding: 0.13333333rem;
+}
+.sv_shop .sv_shop_box .sv_shop_img img {
+  width: 100%;
+  height: 100%;
+}
+.sv_shop .sv_shop_box .sv_shop_text {
+  width: 66.6666%;
+  height: 3.14666667rem;
+  float: right;
+  padding-top: 0.13333333rem;
+}
+.sv_shop .sv_shop_box .sv_shop_text a {
+  width: 100%;
+  height: 1.6rem;
+  display: block;
+  font-size: 0.37333333rem;
+  line-height: 0.53333333rem;
+}
+.sv_shop .sv_shop_box .sv_shop_text a span {
+  color: #ff6c17;
+}
+.sv_shop .sv_shop_box .sv_shop_text .sv_shop_comment {
+  width: 100%;
+  height: 0.8rem;
+  margin-top: 0.4rem;
+}
+.sv_shop .sv_shop_box .sv_shop_text .sv_shop_comment .sv_shop_time {
+  width: 66.6666%;
+  height: 100%;
+  float: left;
+  font-size: 0.34666667rem;
+  line-height: 0.8rem;
+  color: #a1a1a1;
+}
+.sv_shop .sv_shop_box .sv_shop_text .sv_shop_comment .sv_shop_ic {
+  width: 33.3333%;
+  height: 100%;
+  float: right;
+  position: relative;
+}
+.sv_shop .sv_shop_box .sv_shop_text .sv_shop_comment .sv_shop_ic span {
+  height: 100%;
+  width: 66.6666%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+  line-height: 0.8rem;
+  color: #a1a1a1;
+  font-size: 0.21333333rem;
+}
+.sv_shop .sv_shop_box .sv_shop_text .sv_shop_comment .sv_shop_ic .iconfont {
+  width: 33.3333%;
+  height: 100%;
+  line-height: 0.8rem;
+  font-size: 0.34666667rem;
+  color: #a1a1a1;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}
+/*商品信息E*/
+/*翻页选择器S*/
+.sv_select {
+  width: 100%;
+  height: 2.13333333rem;
+  position: relative;
+}
+.sv_select .sv_prev {
+  width: 2.26666667rem;
+  height: 0.93333333rem;
+  font-size: 0.4rem;
+  background: #e0e0e0;
+  border-radius: 0.08rem;
+  position: absolute;
+  bottom: 0.6rem;
+  left: 0.4rem;
+}
+.sv_select .sv_next {
+  width: 2.26666667rem;
+  height: 0.93333333rem;
+  font-size: 0.4rem;
+  background: #e0e0e0;
+  border-radius: 0.08rem;
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0.6rem;
+}
+.sv_select #sv_tPage {
+  width: 2.26666667rem;
+  height: 0.93333333rem;
+  font-size: 0.4rem;
+  position: absolute;
+  bottom: 0.6rem;
+  left: 50%;
+  border: 0.01333333rem solid #bababa;
+  margin-left: -1.13333333rem;
+}
+/*翻页选择器E*/

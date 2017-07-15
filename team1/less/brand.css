@@ -1,0 +1,38 @@
+.hot {
+  height: 1.06664rem;
+  line-height: 1.06664rem;
+  width: 100%;
+  margin-top: 0.213328rem;
+  background-color: #eee;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-left: 0.199995rem;
+  font-size: 14px;
+}
+.hot a {
+  color: #874604;
+}
+.main {
+  margin-top: 0.26666rem;
+  background-color: #ededed;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+.main li {
+  line-height: 1.06664rem;
+  width: 100%;
+  text-indent: 0.26666rem;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+}
+.main li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.main li a span {
+  font-size: 14px;
+  color: black;
+  font-weight: 200;
+  margin-right: 0.26666rem;
+}

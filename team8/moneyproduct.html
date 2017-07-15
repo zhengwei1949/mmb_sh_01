@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>moneyproduct</title>
+    <link rel="stylesheet/less" href="less/base.less">
+     <link rel="stylesheet/less" href="less/moneyproduct.less">
+    
+      <script src="js/less.js"></script>
+</head>
+<body>
+<div class="MMB_category">
+    <!--页面头部导航栏START-->
+    <header class="topHeader1 ">
+        <div class=" logo clearfix">
+            <a  class="icon iconfont" href="inlanddiscount.html" title="慢慢买比价网--手机版">
+                &#xe653;
+            </a>
+        </div>
+        <h1 class="">
+            国内折扣
+        </h1>
+        <div class=" appdown1 ">
+            <a href="#" title="慢慢买比价网--手机版">
+                <img src="images/header_app.png" alt="慢慢买比价网--手机版">
+            </a>
+        </div>
+    </header>
+    <!--页面头部导航栏END-->
+    <!--页面内容START-->
+
+    <div class="commodityDetails ">
+        <div id="referral">
+        </div>
+        <div class="purchase"><a href="">前往购买</a></div>
+        <div class="picture">
+            <img src="images/mmbweixin2.png" alt="">
+        </div>
+        <div class="discuss">
+            <div class="tit">发表评论</div>
+
+            <div class="reply">
+                <div  class="form">
+                    <textarea name="text"id="discuss"rows="3"></textarea>
+
+                    <div class="ctrl">
+                        <input type="submit" name="" value="发表评论" id="" class="tjdp" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="tit" >最新评论</div>
+
+            <div class="list">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="thujian" id="recommend">
+        <!--<div class="nav"><a href="index.html">首页</a>&nbsp;&gt;&nbsp;
+                <a href="">超值推荐</a>&nbsp;&gt;&nbsp;冬日美酒暖心价 爆品直降...
+        </div>-->
+    </div>
+
+
+
+
+
+    <!--页面内容END-->
+
+    <!--页面底部START-->
+    <div class="MMB_foot1 clearfix">
+        <div class="footTop clearfix">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a id="backtrack"><i class="iconfont">&#xe668;</i>返回顶部</a>
+        </div>
+        <div class="footBottom1">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="#">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <p>m.mananbuy.com</p>
+        </div>
+    </div>
+</div>
+<!--页面底部END-->
+<!--<script src="../lib/flexible/flexible.js"></script>-->
+<script type="text/html"id="shopinfo">
+    {{each result as value i}}
+    <div class="tradeName">
+        <h6>{{value.productName}}</h6>
+        <p>{{value.productPrice}}</p>
+    </div>
+
+    <div class="source">
+        <p>{{value.productFrom}}  {{value.productTime}} {{value.productTips}}</p>
+    </div>
+
+    <div class="introduce clearfix">
+        {{#value.productImg}}
+        <p >{{value.productInfo}}</p>
+    </div>
+    <div class="imglg">
+        {{#value.productImg}}
+    </div>
+    {{/each}}
+</script>
+<script  type="text/html"id="suggest">
+    {{each result as value i}}
+    <div class="nav">
+        <a href="index.html">首页</a>&nbsp;&gt;&nbsp;<a href="">超值推荐</a>&nbsp;&gt;&nbsp;{{value.productName}}
+    </div>
+    {{/each}}
+</script>
+
+<script src="lib/artTemplate/template.js"></script>
+<script src="lib/jQuery/jquery-1.12.2.js"></script>
+<script src="js/moneyproduct.js"></script>
+<script>
+    (function($) {
+    $.getUrlParam= function(name) {
+        var reg = new RegExp("(^|&)" +
+                name + "=([^&]*)(&|$)");
+        //window.location设置或获取当前页面的URL地址
+        //substr从起始位置
+        //window.location.search获取当前URL中"?"后面的部分，
+        //math()函数用来查找字符串中特定的字符，并且如果找到的话，则返回这个字符。
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return decodeURI(r[2]);//decodeURI函数解码
+        return null;
+    }
+})(jQuery);
+</script>
+
+</body>
+</html>

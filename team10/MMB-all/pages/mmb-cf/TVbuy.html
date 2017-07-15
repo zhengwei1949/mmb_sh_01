@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/TVbuy.css">
+    <script src = 'lib/flexible/flexible.js'></script>
+    <script src = 'lib/less/less.min.js'></script>
+    <script src= 'lib/jquery-1.12.0/jquery-1.12.0.js'></script>
+    <script src = 'js/TVbuy.js'></script>
+</head>
+<body>
+<!-- 头部通栏 -->
+<header class='header'>
+    <div class='logo'>
+        <a href="#" title = '慢慢买'>
+            <img src="img/header_logo.png" alt="">
+        </a>
+    </div>
+    <div class='appdown'>
+        <a href="#"><img src="img/header_app.png" alt=""></a>
+    </div>
+</header>
+<!-- 搜索框 -->
+<section id="form-search">
+    <form action="#" class="search">
+        <input type="search" name="" id="" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+    </form>
+</section>
+<!--商品栏-->
+<main>
+    <div class='nav'>
+            <a href="../index1.html">首页</a>
+    </div>
+    <div class='box'>
+        <ul class="abc">
+            <!--<li>-->
+                <!--<div class='top fl'><img src="img/02.png" alt=""></div>-->
+                <!--<div class='bottom'>-->
+                    <!--<div class='title'>-->
+                        <!--乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视-->
+                        <!--<p class='mon'>￥1999.00</p>-->
+                    <!--</div>-->
+                    <!--<div class='other'>-->
+                        <!--<span>报价() &nbsp 评论()</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+        </ul>
+        <div class='btn clearfix'>
+            <span class='w33'><input type="button" id='btnUp' value='上一页'></span>
+            <span class='w33'>
+                    <select id='option'>
+                       <option value="1/3">1/3</option>
+                    </select>
+                  </span>
+            <span class='w33'><input type="button" id='btnDown' value='下一页'></span>
+        </div>
+    </div>
+    </div>
+</main>
+<!-- 底部通栏 -->
+<footer>
+    <div class='foot_top'>
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" style ="width :40%; border:0";>
+            <img src="img/top.jpg" alt="">返回顶部</a>
+    </div>
+    <div class= 'foot_bottom'>
+        <p>
+            <a href="">手机app下载</a><a href="">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>
+            m.manmanbuy.com
+        </p>
+    </div>
+</footer>
+<script id='test' type="text/html">
+    {{each result as v i }}
+
+        <li productId = "{{v.productId}}">
+            <a href="commodity.html?productId={{v.productId}}">
+            <div class='top fl'><img src="img/02.png" alt=""></div>
+            <div class='bottom'>
+                <div class='title'>
+                    {{ v.productName}}
+                    <p class='mon'>{{v.productPrice}}</p>
+                </div>
+                <div class='other'>
+                    <span>{{v.productQuote}} &nbsp {{v.productCom}}</span>
+                </div>
+            </div>
+          </a>
+        </li>
+
+
+    {{/each}}
+</script>
+<script src='js/template-debug.js'></script>
+</body>
+</html>

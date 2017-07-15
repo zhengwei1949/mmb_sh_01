@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* 头部 */
+#header h3 {
+  font-weight: normal;
+}
+/* 省钱控商品 */
+.moneyProduct li {
+  position: relative;
+  border-bottom: 0.02666667rem solid #e7e7e7;
+  padding: 0.26666667rem 0;
+}
+.moneyProduct li a {
+  color: #333333;
+}
+.moneyProduct li img {
+  float: left;
+  width: 2.66666667rem;
+  height: 2.13333333rem;
+  margin: 0 0.2rem;
+}
+.moneyProduct li .con {
+  overflow: hidden;
+  padding-right: 0.53333333rem;
+}
+.moneyProduct li .con p {
+  line-height: 0.53333333rem;
+  min-height: 1.6rem;
+}
+.moneyProduct li .con p span {
+  color: #ee7700;
+}
+.moneyProduct li .con .shopmsg {
+  color: #a1a1a1;
+}
+.moneyProduct li .con .shopmsg i b {
+  font-weight: normal;
+  display: inline-block;
+  vertical-align: top;
+  height: 0.53333333rem;
+  line-height: 0.53333333rem;
+}
+.moneyProduct li .con .shopmsg i span {
+  vertical-align: top;
+  display: inline-block;
+  height: 0.53333333rem;
+  line-height: 0.53333333rem;
+}
+/* 省钱控商品 */
+/* 分页功能 */
+.paging {
+  padding: 0.66666667rem 0;
+  text-align: center;
+}
+.paging a {
+  display: inline-block;
+  width: 2.26666667rem;
+  height: 0.93333333rem;
+  line-height: 0.93333333rem;
+  border: 0.02666667rem solid #dcdcdc;
+  border-radius: 0.13333333rem;
+  background: #e1e1e1;
+}
+.paging select {
+  width: 2.53333333rem;
+  height: 0.93333333rem;
+  padding-left: 0.4rem;
+  margin: 0 0.93333333rem;
+}
+.paging select option {
+  padding-left: 0;
+}
+.paging select option[selected] {
+  background: #c6e0e7;
+}
+/* 分页功能 */

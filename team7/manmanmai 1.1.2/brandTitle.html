@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>品牌大全</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="less/brandTitle.css"/>
+    <link rel="stylesheet" href="less/sort_syy.css"/>
+    <link rel="stylesheet" href="less/rank_syy.css"/>
+    <link rel="stylesheet" href="less/comment_syy.css"/>
+</head>
+<body>
+<!-- =====顶部通栏start===== -->
+<header id="header">
+    <div class="m_top">
+        <div class="m_left">
+            <a href="index.html"><span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+        </div>
+
+        <h3>商场导航</h3>
+        <div class="m_right">
+            <span class="glyphicon glyphicon-download-alt"></span>
+        </div>
+    </div>
+</header>
+<!-- =====顶部通栏end===== -->
+<!-- =====主体start===== -->
+<main class="layout">
+    <section class="search">
+        <form action="#">
+            <input type="text" placeholder="请输入你想比较的商品"/>
+            <input type="button" class="fr" value="搜索"/>
+        </form>
+    </section>
+    <section>
+        <nav>
+            <a href="index.html">首页</a>&gt;
+            <a href="brandTitle.html">全部分类</a>&gt;
+        </nav>
+    </section>
+    <section class="b_list">
+        <div class="sub_nav">热门品牌排行</div>
+         <!-- 品牌列表-->
+
+    </section>
+</main>
+<!-- =====主体end===== -->
+<!-- =====底部start==== -->
+<footer>
+    <div class="f_middle clearfix">
+        <a class="fl" href="#">登录</a>
+        <a class="fl" href="#">注册</a>
+        <a class="fl" href="javascript:;"><span class="mr_5 glyphicon glyphicon-arrow-up"></span>返回顶部</a>
+    </div>
+    <div class="f_bottom">
+        <i class="mr_5">手机APP下载</i>慢慢买手机版<em class="ml_5">--掌上比价平台</em>
+        <a href="#">m.manmanbuy.com</a>
+    </div>
+</footer>
+<!-- =====底部end==== -->
+<script src="lib/jquery-1.12.2.min.js"></script>
+<script src="lib/template.js"></script>
+<!-- =====各类品牌热门排行===== -->
+<script type="text/html" id="hot">
+{{if result}}
+<div class="sub_nav">热门品牌排行</div>
+<div>
+{{each result as v}}
+<div class="b_sort">
+    {{v["brandTitle"]}}
+    <span class="glyphicon glyphicon-menu-down fr mr_5"></span>
+</div>
+{{/each}}
+</div>
+{{/if}}
+</script>
+
+<!-- =====对应品牌排行前10===== -->
+<script type="text/html" id="top10">
+{{if result}}
+<div class="sub_nav">平板电视哪个牌子好?</div>
+<div>
+{{each result as v,i}}
+    <div class="s_list clearfix">
+    <i class="s_num fl">{{i+1}}</i>
+    <div class="s_right fl">
+        <h5>{{v["brandName"]}}</h5>
+        <p>{{v["brandInfo"]}}</p>
+        </div>
+        <span class="glyphicon glyphicon-menu-right fr"></span>
+    </div>
+{{/each}}
+</div>
+    {{/if}}
+</script>
+
+<!-- =====各产品销量排行===== -->
+<script type="text/html" id="rank">
+{{if result}}
+<div class="sub_nav">平板电视产品销售排行</div>
+<div>
+{{each result as v,i}}
+<div class="r_sort  clearfix" data-productid={{v["productId"]}}>
+    <div class="r_title clearfix">
+        <div class="fl r_left">{{=v["productImg"]}}</div>
+        <div class="fr r_right">
+        <p>{{v["productName"]}}</p>
+        <div class="clearfix price">
+            <i class="fl">{{v["productPrice"]}}</i>
+            <div class="fr start">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+            </div>
+        </div>
+        <div class="comment"><span class="mr_5">{{v["productQuote"]}}</span> <span>{{v["productCom"]}}</span></div>
+        </div>
+    </div>
+    </div>
+{{/each}}
+</div>
+{{/if}}
+</script>
+
+<!-- =====对应产品评价内容===== -->
+<script type="text/html" id="comment">
+    {{if result}}
+    <div class="c_box">
+          {{each result as v}}
+          <div class="c_part ">
+              <div class="clearfix">
+                  <p class="c_left fl">{{v["comName"]}}</p>
+                  <div class="fl ml_5 start">
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                  </div>
+                 <p class="c_right fr">{{v["comTime"]}}</p>
+              </div>
+              <div class="content">
+                  <p>{{v["comContent"]}}</p>
+              </div>
+          </div>
+        {{/each}}
+    </div>
+  {{/if}}
+</script>
+<script src="js/tool.js"></script>
+<script src="js/brandTitle.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

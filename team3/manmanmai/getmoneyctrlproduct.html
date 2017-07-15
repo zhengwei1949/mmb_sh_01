@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/public.css" />
+    <link rel="stylesheet" href="css/getmoneyctrlproduct.css" />
+    <!--<script src="less/less.js"></script>-->
+    <script src="lib/flexible/flexible.js" type="text/javascript"></script>
+    <script src="lib/jQuery/jquery.js"></script>
+    <script src="js/base.js"></script>
+    <script src="lib/template/template.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        //分隔网址url 获取id 
+        function query(url) {
+            //      			酱链接以?分隔成数组    需要？后的数据
+            var str = url.split('?')[1];
+            //      		酱链接?后的数据以&分隔成数组 
+            var array = str.split('&');
+            var obj = {};
+            //      		酱以&分隔成数组后以=分隔成对象   如['productid=1','shopid=11']  
+            //   循环遍历数组['productid=1','shopid=11']  
+            array.forEach(function(v, i) {
+                //   将['productid=1','shopid=11']  以等号分隔  得到{productid:1,shopid:11}	
+                var arr = v.split('=');
+                obj[arr[0]] = arr[1] ? arr[1] : '';
+            });
+            return obj;
+        }
+        //获取本地链接  a标签上的链接
+        var id = query(location.href).productid;
+        queryData({
+                productid: id
+            }, 'http://127.0.0.1:9090/api/getmoneyctrlproduct',
+            function(data) {
+                //      	 	console.log(data);
+                var result = data.result[0];
+                var html = template('product', data);
+                $('.product_box').html(html);
+                //      	 	$('.title').text(result.productName);
+                //      	 	$('.from').text( result.productFrom+' '+result.productTime+' '+result.productTips);
+                ////      	 	console.log($('.title').text());
+                //      	 	$('.desc .info').html(result.productInfo2);
+                //      	 	$('.desc').prepend(result.productImgSm);
+                //      	 	$('.lgPic').html(result.productImgLg);
+                //      	 	$('.productCity').append(result.productCity);
+                //      	 	$('.bjShop').html(result.bjShop);
+                $('.comment').html(result.productComment);
+            });
+
+
+    });
+    </script>
+</head>
+
+<body>
+    <!--头部-->
+    <header class="flexBox ac">
+        <div>
+            <a href="" class="goback icon_navigate_before"></a>
+        </div>
+        <span class="title">省钱控-最新优惠</span>
+        <div class="appDown">
+            <a href="index.html"><img src="images/header_app.png" /></a>
+        </div>
+    </header>
+    <!--内容主体-->
+    <main class="main">
+        <section class="product_box">
+            <!--家模板-->
+            <script type="text/html" id="product">
+                <h3 class="title">{{result[0].productName}}</h3>
+                <p class="from">{{result[0].productFrom+' '+result[0].productTime+' '+result[0].productTips}}</p>
+                <div class="desc clearfix">
+                    {{#result[0].productImgSm}}
+                    <p class="info">{{#result[0].productInfo2}}</p>
+                </div>
+                <div class="lgPic flexBox jcc ac">
+                    {{#result[0].productImgLg}}
+                </div>
+                <div class="productCity br bl">
+                    {{#result[0].bjShop}}
+                </div>
+                <button>前往购买</button>
+            </script>
+        </section>
+        <section class="code">
+            <img src="images/mmbweixin2.png" />
+        </section>
+        <!--评论区-->
+        <section class="comment">
+            <!--<h5>发表评论</h5>
+             	<div class="write">
+             		<textarea name="" rows="" cols="">
+             		
+             	</textarea>
+             	<button>发表评论</buttom>
+             	</div>
+             	
+             	<h5>最新评论</h5>-->
+        </section>
+    </main>
+    <script src="js/footer.js"></script>
+</body>
+
+</html>

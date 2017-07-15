@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="less/base.css">
+    <link rel="stylesheet" href="less/moneyctrl.css">
+    <script src="lib/jQuery/jquery-1.12.2.js"></script>
+    <script src="lib/artTemplate/template.js"></script>
+</head>
+<body>
+<!--页面头部导航栏START-->
+<header class="topHeader">
+    <div class="f_left logo">
+        <a href="index.html" title="慢慢买比价网--手机版">
+            <i class="iconfont icon-xiangzuo1"></i>
+        </a>
+    </div>
+    <div class="topTitle">
+        <h1>省钱控</h1>
+    </div>
+    <div class="f_right appdown">
+        <a href="#" title="慢慢买比价网--手机版">
+            <img src="images/header_app.png" alt="慢慢买比价网--手机版">
+        </a>
+    </div>
+</header>
+<!--页面头部导航栏END-->
+
+<!--商品信息页面S-->
+<script type="text/html" id="sv_shop_art">
+    {{if result}}
+    {{each result as value i}}
+    <div class="sv_shop_box">
+        <div class="sv_shop_img">{{#value.productImgSm}}</div>
+        <div class="sv_shop_text">
+            <a href="moneyproduct.html?productid={{value.productId}}">{{value.productName}}<span>{{value.productPinkage}}</span></a>
+            <div class="sv_shop_comment">
+                <div class="sv_shop_ic"><i class="iconfont">&#xe623;</i><span>{{value.productComCount}}</span></div>
+                <div class="sv_shop_time">{{value.productFrom}}|{{value.productTime}}</div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    {{/if}}
+</script>
+<div class="sv_shop"></div>
+<!--商品信息页面E-->
+<!--翻页选择器S-->
+<div class="sv_select">
+    <input class="sv_prev" type="button" value="上一页">
+    <select name="" id="sv_tPage">
+        <option value="0">1/14</option>
+        <option value="1">2/14</option>
+        <option value="2">3/14</option>
+        <option value="3">4/14</option>
+        <option value="4">5/14</option>
+        <option value="5">6/14</option>
+        <option value="6">7/14</option>
+        <option value="7">8/14</option>
+        <option value="8">9/14</option>
+        <option value="9">10/14</option>
+        <option value="10">11/14</option>
+        <option value="11">12/14</option>
+        <option value="12">13/14</option>
+        <option value="13">14/14</option>
+    </select>
+    <input class="sv_next" type="button" value="下一页">
+</div>
+<!--翻页选择器E-->
+<!--页面底部S-->
+<div class="MMB_foot">
+    <div class="footTop clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="javascript:scroll(0,0)"><i class="iconfont">&#xe668;</i>返回顶部</a>
+    </div>
+    <div class="footBottom">
+        <p>
+            <a href="#">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+        <p>m.mananbuy.com</p>
+    </div>
+</div>
+<!--页面底部E-->
+<script src="js/moneyctrl.js"></script>
+</body>
+</html>

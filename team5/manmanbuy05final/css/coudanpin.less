@@ -1,0 +1,114 @@
+@charset "utf-8";
+/*-转换rem单位-*/
+@fz:37rem;
+/*开始*/
+/*----------私有头部header样式----------*/
+.cou-header {
+  background-color: #FF841D;
+  .back {
+    background-position: -81/@fz -6/@fz;
+    width: 19/@fz;
+    height: 23/@fz;
+  }
+}
+/*----------main主体部分----------*/
+.main {
+  //height: 1000/@fz;//临时高度
+  background-color: #F1F1F1;
+  /*-顶部tab栏-*/
+  .top {
+    font-size: 16/@fz;
+    border-bottom: 1px solid #666;
+    border-top: 1px solid #666;
+    background-color: #fff;
+    position: relative;
+    #store{
+      width:20%;
+    }
+    #area{
+      width: 45%;
+    }
+    #price{
+      width: 25%;
+    }
+    div {
+      float: left;
+      height: 40/@fz;
+      line-height: 40/@fz;
+      text-align: center;
+    }
+    div+div{
+      border-left: 1px solid #666;
+    }
+    .store-drop,.area-drop,.price-drop{
+      position: absolute;
+      left: 0;
+      top: 40/@fz;
+      width: 370/@fz;
+      background-color: #fff;
+      li {
+        border: 1px solid #000;
+        width: 370/@fz;
+        height: 40/@fz;
+        text-align: center;
+        line-height: 40/@fz;
+      }
+    }
+    .search {
+      border-left: 1px solid #666;
+      width: 10%;
+      height: 40/@fz;
+      text-align: center;
+      background:url("../images/cou_search.png") no-repeat center ;
+      background-size: 80% 80%;
+    }
+  }
+/*-商品列表信息-*/
+  ul.pro-order {
+    width: 100%;
+    font-size: 12/@fz;
+    li {
+      height: 225/@fz;
+      width: 50%;
+      float: left;
+      padding: 10/@fz 5/@fz 0 5/@fz;
+      margin-bottom: 30/@fz;
+      .img-box {
+        background-color: #fff;
+        width: 100%;
+        height: 77%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      p{
+        background-color: #fff;
+        height: 23%;
+        overflow: hidden;
+
+      }
+      .pro-order-buttom{
+        background-color: #fff;
+        height: 10%;
+        span {
+          font-size: 16/@fz;
+          height: 100%;
+          float: left;
+          color: red;
+        }
+        .coudan{
+          float: right;
+          height: 100%;
+          width: 65/@fz;
+          //height: 25/@fz;
+          //line-height: 25/@fz;
+          text-align: center;
+          background-color: #FF9501;
+          color:#fff;
+        }
+      }
+    }
+  }
+
+}

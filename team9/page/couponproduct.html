@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/couponproduct.css"/>
+</head>
+<body>
+<!--整屏遮罩-->
+<div class="win">
+    <img src="" alt=""/>
+</div>
+<!--顶部通栏-->
+<header class="MMB_topBar" id="top">
+    <a href="#" class=" MMB_icon MMB_icon_back"></a>
+    <h3>肯德基优惠券</h3>
+    <a href="#" class="download"><img src="../images/header_app.png" alt="手机APP下载"/></a>
+</header>
+
+
+
+<!--主体部分-->
+<div class="MMB_main">
+    <div class="discountTip">
+
+        --点餐前出示手机中的优惠券，即可享受优惠--
+    </div>
+    <div class="discountBox">
+
+    </div>
+</div>
+
+
+
+
+
+<!--引用外部js文件-->
+<script src="../js/template.js"></script>
+<script src="../js/jquery-1.12.2.min.js"></script>
+<script src="../js/jquery.waterFall.js"></script>
+<script src="../js/couponproduct.js"></script>
+<script type="text/template" id="tpl_couponproduct">
+    <ul>
+        {{each result as value i}}
+        <li>
+            <a href="" class="mask_btn"></a>
+            <div class="pic">
+                <a href="javascript:;">
+                    {{#value.couponProductImg}}
+                </a>
+            </div>
+            <div class="info">
+                <p>{{value.couponProductName}}
+                </p>
+                <p>{{value.couponProductPrice}}</p>
+                <p>{{value.couponProductTime}}</p>
+
+            </div>
+            <a href="javascript:;" class="MMB_icon MMB_icon_arrow_right"></a>
+        </li>
+        {{/each}}
+    </ul>
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>省钱控 - 最新优惠</title>
+    <script src="libs/flexible.js"></script>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/moneyctrl.css"/>
+</head>
+<body>
+<div class="layout" style="max-height: 9999px">
+    <!--省钱控商品头部-->
+    <header id="header">
+        <a href="javascript:history.go(-1)" class="icon-back fs24 iconfont icon-jiantouyoujiantou1"></a>
+
+        <h3 class="fs20">省钱控 - 最新优惠</h3>
+        <a href="#" class="app-download"><img src="images/header_app.png" alt="#"/></a>
+    </header>
+    <!--省钱控商品头部-->
+    <!--省钱控商品 -->
+    <main class="moneyProduct fs14"></main>
+    <!--省钱控商品 -->
+    <!--返回首页-->
+    <div class="home fs14">
+        <a href="index.html">首页</a>><a href="javascript:;">省钱控</a>
+    </div>
+    <!--返回首页-->
+    <!--省钱控商品底部-->
+    <div class="foot">
+        <div>
+            <a href="#" class="fs14">登录</a>
+            <a href="#" class="fs14">注册</a>
+            <a href="#top" class="fs14"><i class="iconfont icon-xiangshangjiantou fs16"></i>返回顶部</a>
+        </div>
+        <p class="fs12">
+            <span>手机APP下载</span>
+            慢慢买手机版
+            <span>-- 掌上比价平台</span>
+        </p>
+
+        <p class="fs12">m.manmanbuy.com</p>
+    </div>
+    <!--省钱控商品底部-->
+</div>
+<!--art模板-->
+<script type="text/html" id="moneyProduct">
+    {{each result as value}}
+    <ul>
+        <li class="clearfix">
+            <a href="moneyproduct.html?productid={{value.productId}}">
+                {{#value.productImgSm}}
+                <div class="con">
+                    <p>{{value.productName}}&nbsp;<span>{{value.productPinkage}}</span></p>
+
+                    <div class="shopmsg fs12 clearfix">
+                        <span class="shop">{{value.productFrom}}</span>&nbsp;|&nbsp;<span>{{value.productTime}}</span>
+                        <i class="fr"><b class="iconfont icon-pinglun fs14"></b>&ensp;<span class="num">{{value.productComCount.replace("有","").replace("人评论","")}}</span></i>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    {{/each}}
+    <div class="paging">
+        <a href="moneyctrl.html?pageid={{pageid-1}}">上一页</a>
+        <select class="fs16">
+            {{each page as value i}}
+            {{if value.pageid == pageid}}
+            <option value="{{value.pageid}}" selected="selected">{{value.pageid}}/{{value.pageCount}}</option>
+            {{else}}
+            <option value="{{value.pageid}}">{{value.pageid}}/{{value.pageCount}}</option>
+            {{/if}}
+            {{/each}}
+
+        </select>
+        <a href="moneyctrl.html?pageid={{pageid-1+2}}">下一页</a>
+    </div>
+</script>
+<!--art模板-->
+<script src="libs/template.js"></script>
+<script src="libs/jquery.min.js"></script>
+<script>
+    (function ($) {
+        $.getUrlParam = function (name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+    })(jQuery);
+</script>
+<script src="js/common.js"></script>
+<script src="js/moneyctrl.js"></script>
+</body>
+</html>

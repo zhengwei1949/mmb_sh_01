@@ -1,0 +1,115 @@
+.product {
+  width: 100%;
+}
+.product ul {
+  width: 100%;
+}
+.product ul li {
+  width: 49%;
+  height: 7.19982rem;
+  float: left;
+  border-right: 1px solid #EEE;
+  border-bottom: 1px solid #EEE;
+  padding: 0 2%;
+}
+.product ul li a img {
+  padding: 5%;
+  width: 100%;
+  height: 65%;
+  margin: 0 auto;
+  background-size: 68px 68px;
+}
+.product ul li a .name {
+  height: 1.19997rem;
+  line-height: 0.39999rem;
+  font-weight: 7.9998rem;
+  overflow: hidden;
+}
+[data-dpr="1"] .product ul li a .name {
+  font-size: 15px;
+}
+[data-dpr="2"] .product ul li a .name {
+  font-size: 30px;
+}
+[data-dpr="2.5"] .product ul li a .name {
+  font-size: 38px;
+}
+[data-dpr="2.75"] .product ul li a .name {
+  font-size: 41px;
+}
+[data-dpr="3"] .product ul li a .name {
+  font-size: 45px;
+}
+[data-dpr="4"] .product ul li a .name {
+  font-size: 60px;
+}
+.product ul li a .price {
+  color: #FF6C00;
+  height: 0.66665rem;
+  line-height: 0.66665rem;
+  overflow: hidden;
+}
+[data-dpr="1"] .product ul li a .price {
+  font-size: 13px;
+}
+[data-dpr="2"] .product ul li a .price {
+  font-size: 26px;
+}
+[data-dpr="2.5"] .product ul li a .price {
+  font-size: 33px;
+}
+[data-dpr="2.75"] .product ul li a .price {
+  font-size: 36px;
+}
+[data-dpr="3"] .product ul li a .price {
+  font-size: 39px;
+}
+[data-dpr="4"] .product ul li a .price {
+  font-size: 52px;
+}
+.product ul li a p {
+  bottom: 0.346658rem;
+  height: 0.319992rem;
+}
+.product ul li a p .time {
+  color: #A1A1A1;
+}
+[data-dpr="1"] .product ul li a p .time {
+  font-size: 12px;
+}
+[data-dpr="2"] .product ul li a p .time {
+  font-size: 24px;
+}
+[data-dpr="2.5"] .product ul li a p .time {
+  font-size: 30px;
+}
+[data-dpr="2.75"] .product ul li a p .time {
+  font-size: 33px;
+}
+[data-dpr="3"] .product ul li a p .time {
+  font-size: 36px;
+}
+[data-dpr="4"] .product ul li a p .time {
+  font-size: 48px;
+}
+.product ul li a p .from {
+  color: #A1A1A1;
+}
+[data-dpr="1"] .product ul li a p .from {
+  font-size: 12px;
+}
+[data-dpr="2"] .product ul li a p .from {
+  font-size: 24px;
+}
+[data-dpr="2.5"] .product ul li a p .from {
+  font-size: 30px;
+}
+[data-dpr="2.75"] .product ul li a p .from {
+  font-size: 33px;
+}
+[data-dpr="3"] .product ul li a p .from {
+  font-size: 36px;
+}
+[data-dpr="4"] .product ul li a p .from {
+  font-size: 48px;
+}

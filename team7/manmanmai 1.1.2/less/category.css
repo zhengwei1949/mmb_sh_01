@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* =====比较商品页==== */
+body {
+  font-family: 'arial';
+}
+.m_top .m_left {
+  width: 56%;
+}
+.m_top .m_left span {
+  width: 100%;
+  display: block;
+  height: 50px;
+  padding: 10px;
+}
+.m_top .m_left span a {
+  display: block;
+}
+.m_top .m_left span a img {
+  width: 100%;
+  display: block;
+}
+.layout {
+  padding-top: 50px;
+}
+.layout .b_list .l_sort .l_title {
+  border-top: 1px solid #CCCCCC ;
+  padding: 12px;
+  background: #EDEDED;
+}
+.layout .b_list .l_sort .word {
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+}
+.layout .b_list .l_sort .arrow {
+  color: #888888;
+}
+.layout .b_list ul {
+  width: 100%;
+  background: #F9F9F9;
+  display: none;
+}
+.layout .b_list ul li {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+.layout .b_list ul li a {
+  border-bottom: 1px solid #CCCCCC;
+  border-right: 1px solid #CCCCCC;
+  width: 100%;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+}
+@media screen and (min-width: 321px) and (max-width: 376px) {
+  .layout {
+    min-height: 580px;
+  }
+}
+@media screen and (min-width: 376px) {
+  .layout {
+    min-height: 680px;
+  }
+}

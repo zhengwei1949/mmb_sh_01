@@ -1,0 +1,60 @@
+header .back a {
+  color: #fff;
+  font-family: monospace;
+  margin-left: 10px;
+  margin-top: 0.2rem;
+  font-size: 0.26666667rem;
+  font-weight: 900;
+  float: left;
+}
+header span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 0.66666667rem;
+  color: #fff;
+  padding: 0 0.66666667rem;
+  font-size: 0.4rem;
+}
+header .download {
+  width: 0.45333333rem;
+  height: 100%;
+}
+header .download a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 0.13333333rem;
+}
+header .download a img {
+  display: block;
+  width: 0.45333333rem;
+  height: 0.45333333rem;
+}
+.navlist {
+  width: 80%;
+  margin: 10px auto;
+}
+.navlist ul li {
+  float: left;
+  margin-left: 0.13333333rem;
+  height: 1.06666667rem;
+  border: 1px solid #cccccc;
+  margin-bottom: 0.13333333rem;
+  padding: 20px;
+  text-align: center;
+  vertical-align: center;
+}
+.navlist ul li a {
+  display: block;
+  line-height: 40px;
+}
+.navlist ul li img {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+.navlist ul li span {
+  font-size: 0.6rem;
+}

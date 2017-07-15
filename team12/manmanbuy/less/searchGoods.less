@@ -1,0 +1,212 @@
+//设置字体大小，兼容各种屏幕
+.font-size(@px) {
+  font-size: round(@px / 2) * 1px;
+  [data-dpr="2"] & {
+    font-size: @px * 1px;
+  }
+  [data-dpr="2.5"] & {
+    font-size: round(@px * 2.5 / 2) * 1px;
+  }
+  [data-dpr="2.75"] & {
+    font-size: round(@px * 2.75 / 2) * 1px;
+  }
+  [data-dpr="3"] & {
+    font-size: round(@px * 3 / 2) * 1px;
+  }
+  [data-dpr="4"] & {
+    font-size: @px * 2px;
+  }
+}
+
+@colorO: #FF841D;
+
+.layout {
+  width: 100%;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  border: 1px solid #E2E2E3;
+  //头部
+  header {
+    width: 100%;
+    height: 84/64rem;
+    a {
+      display: block;
+      &:first-child {
+        margin: 19/64rem 0 0 29/64rem;
+        img {
+          width: 315/64rem;
+          height: 43/64rem;
+        }
+      }
+      &:last-child {
+        margin: 11/64rem 12/64rem 0 0;
+        img {
+          width: 58/64rem;
+          height: 58/64rem;
+        }
+      }
+      img {
+        display: block;
+      }
+    }
+  }
+  .search {
+    height: 89/64rem;
+    width: 100%;
+    padding: 19/64rem 17/64rem;
+    border-top: 1px solid #E7E7E7;
+    border-bottom: 1px solid #E7E7E7;
+    form {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .s-ser {
+        width: 100%;
+        height: 100%;
+        .font-size(30);
+        padding-left: 30/64rem;
+        border-radius: 22/64rem;
+        background-color: #F1F1F1;
+      }
+      .s-btn {
+        width: 108/64rem;
+        height: 49/64rem;
+        color: #FFF;
+        .font-size(30);
+        border-radius: 22/64rem;
+        background-color: @colorO;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+  .content {
+    width: 100%;
+    .layer {
+      width: 100%;
+      .font-size(30);
+      line-height: 64/64rem;
+      background-color: pink;
+      padding-left: 14/64rem;
+      background-image: linear-gradient(to bottom, #FFF, #F1F1F1);
+      a{
+        color: #000;
+      }
+      input {
+        .font-size(30);
+        font-weight: bold;
+        line-height: 45/64rem;
+        background-image: linear-gradient(to bottom, #F1F1F1, #FFF);
+        border: 1px solid #D1D1D1;
+        border-radius: 10/64rem;
+        padding: 0 25/64rem;
+        margin-right: 5/64rem;
+      }
+    }
+    .goods {
+      ul {
+        //font-family: 'SimSun';
+        li {
+          width: 100%;
+          padding: 23/64rem 14/64rem;
+          border-bottom: 1px solid #C4C4C4;
+          a {
+            text-decoration: none;
+            color: #000;
+            img {
+              width: 170/64rem;
+              height: 170/64rem;
+              background-color: #00adfe;
+              float: left;
+            }
+            .goods-intro {
+              height: 170/64rem;
+              padding-left: 18/64rem;
+              overflow: hidden;
+              position: relative;
+              h3 {
+                .font-size(28);
+                font-weight: normal;
+                line-height: 35/64rem;
+              }
+              p {
+                color: @colorO;
+                .font-size(40);
+                line-height: 40/64rem;
+              }
+              .comment {
+                position: absolute;
+                left: 18/64rem;
+                bottom: 0;
+                color: #999;
+              }
+            }
+          }
+        }
+      }
+    }
+    .pages{
+      width: 100%;
+      height: 130/64rem;
+      //display: table-cell;
+      //vertical-align: middle;
+      background-color: #F1F1F1;
+      form{
+        width: 100%;
+        height: 84/64rem;
+        padding: 18.3/64rem 37/64rem 5/64rem;
+        background-color: #FFF;
+        text-align: center;
+        margin: 0 auto;
+        input{
+          height: 100%;
+          .font-size(30);
+          padding: 0 36/64rem;
+          border: 1px solid #BABABA;
+          border-radius: 10/64rem;
+        }
+        select{
+          height: 100%;
+          .font-size(30);
+          padding: 0 36/64rem;
+        }
+      }
+    }
+  }
+  footer {
+    width: 100%;
+    height: 168/64rem;
+    background-color: #EFEFEF;
+    .operate {
+      width: 100%;
+      line-height: 61/64rem;
+      border-top: 1px solid #C4C4C4;
+      border-bottom: 1px solid #C4C4C4;
+      ul {
+        li {
+          float: left;
+          width: 30%;
+          text-align: center;
+          border-right: 1px solid #C4C4C4;
+          &:last-child {
+            width: 40%;
+            border-right: none;
+          }
+          span {
+            .font-size(25);
+          }
+        }
+      }
+    }
+    .introduce {
+      width: 100%;
+      height: 107/64rem;
+      text-align: center;
+      padding-top: 30/64rem;
+    }
+  }
+}
+
+

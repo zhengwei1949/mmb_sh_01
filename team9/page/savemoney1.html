@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/savemoney1.css"/>
+</head>
+<body>
+<div class="detailA">
+    <!--顶部通栏-->
+    <header class="MMB_topBar" id="too">
+        <a href="#" class=" MMB_icon MMB_icon_back"></a>
+        <h3>国内折扣</h3>
+        <a href="#" class="download"><img src="../images/header_app.png" alt="手机APP下载"/></a>
+    </header>
+    <!--主体部分-->
+    <div class="MMB_main">
+        <!-- <div class="content">
+             <h3></h3>
+             <h4></h4>
+             <div class="shop">
+                 <span>京东商城</span>
+                 <span>1i-22 13:28</span>
+                 <span>chenjin\n / 慢慢买</span>
+             </div>
+             <div class="des clearfix">
+                 <p></p>
+                 <div class="pic">
+                     <img src="" alt=""/>
+                 </div>
+             </div>
+             <div class="cc_picture">
+                 <img src="" alt=""/>
+             </div>
+            <div class="cc_city">
+                 ul >li
+            </div>
+             <div class="goBuy">
+                 <a href="#">前往购买</a>
+             </div>
+         </div>
+         <div class="city">
+         </div>
+         <div class="link">
+             <img src="../images/mmbweixin2.png" alt=""/>
+         </div>
+         <div class="comment">
+             <div class="tit">发表评论</div>
+             <div class="reply">
+                <div class="form">
+                    <textarea name="" id=""></textarea>
+                    <input type="hidden"/>
+                    <div class="ctrl">
+                        <input type="submit" value="发表评论"/>
+                    </div>
+                </div>
+             </div>
+             <div class="tit" id="newcomment">最新评论</div>
+             <div class="list">
+                 <ul>
+                     <li>
+                         <div class="userImg">
+                             <img src="" alt=""/>
+                         </div>
+                         <div class="info">
+                             <div class="user_tit">
+                                 <div class="user_name"></div>
+                                 <div class="user_timer"></div>
+                             </div>
+                             <div class="user_content"></div>
+                         </div>
+                     </li>
+                 </ul>
+             </div>
+         </div>-->
+    </div>
+
+
+    <!--底部-->
+    <footer class="footer">
+        <div class="btn clearfix">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#top">
+                <span></span>
+                <span>返回顶部</span>
+            </a>
+        </div>
+        <div class="version">
+            <p><a href="#" class="app">手机APP下载</a><a href="#" class="telv">慢慢买手机版</a><span>--掌上比价平台</span></p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+</div>
+<script src="../js/template.js"></script>
+<script src="../js/jquery-1.12.2.min.js"></script>
+<script src="../js/savemoney1.js"></script>
+
+<!--模板-->
+<script type="text/template" id="tpl">
+    <div class="content">
+        <h3>{{ result[0]['productName'] }}  </h3>
+        <div class="shop">
+            <span>{{ result[0]['productFrom'] }}</span> |
+            <span>{{ result[0]['productTime'] }}</span> |
+            <span>{{ result[0]['productTips'] }}</span>
+        </div>
+        <div class="des clearfix">
+            <div class="pic">
+                {{# result[0]['productImgSm'] }}
+            </div>
+            <p>{{ result[0]['productInfo'] }}</p>
+        </div>
+        <div class="cc_picture">
+           {{# result[0]['productImgLg']}}
+        </div>
+        <div class="cc_city">
+            <!--<ul>-->
+                <!--<li class="cc_list">-->
+                    {{# result[0]['productCity']}}
+                    <!--<span class="city_address">北京</span>-->
+                    <!--<span class="city_have">有货</span>-->
+                <!--</li>-->
+            <!--</ul>-->
+        </div>
+
+        <div class="goBuy">
+            <a href="#">前往购买</a>
+        </div>
+    </div>
+
+
+
+    <div class="link">
+        <img src="../images/mmbweixin2.png" alt=""/>
+    </div>
+
+
+    <div class="comment">
+        {{# result[0]['productComment']}}
+    </div>
+
+
+</script>
+</body>
+</html>

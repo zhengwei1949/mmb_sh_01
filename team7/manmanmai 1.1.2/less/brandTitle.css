@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* =====品牌热门排行===== */
+.layout {
+  padding-bottom: 25px;
+}
+.layout .search {
+  height: 50px;
+}
+.layout .search form {
+  width: 100%;
+  height: 100%;
+  padding: 10px 8px;
+}
+.layout .search form [type="text"] {
+  padding-left: 20px;
+  height: 100%;
+  width: 75%;
+  line-height: 30px;
+  border-radius: 30px;
+  background: #F1F1F1;
+}
+.layout .search form [type="button"] {
+  background: #FF841D;
+  color: #ffffff;
+  width: 20%;
+  height: 100%;
+  border-radius: 30px;
+}
+.layout nav {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 8px;
+  border-top: 1px solid #EBEBEB;
+  border-bottom: 1px solid #EBEBEB;
+  background: linear-gradient(#ffffff, #EEEEEE);
+  font-size: 12px;
+}
+.layout .sub_nav {
+  margin: 10px 0px  ;
+  color: #874604;
+  height: 38px;
+  line-height: 38px;
+  padding-left: 10px;
+  border: 1px solid #CCCCCC;
+  background: #EEEEEE;
+  font-size: 12px;
+}
+.layout .b_list .b_sort {
+  padding-left: 15px;
+  border-top: 1px solid #CCCCCC;
+  background: #EDEDED;
+  height: 40px;
+  line-height: 40px;
+  color: #7D0000;
+}
+.layout .b_list .b_sort span {
+  top: 50%;
+  transform: translate(0, -50%);
+  color: #888888;
+}

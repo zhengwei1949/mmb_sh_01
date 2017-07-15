@@ -1,0 +1,187 @@
+@charset "UTF-8";
+html {
+  font-size: 37px;
+}
+.m_top {
+  .m_left {
+    width: 56%;
+    span {
+      width: 100%;
+      display: block;
+      height: 50px;
+      padding: 10px;
+      img {
+        width:100%;
+        display: block;
+      }
+    }
+  }
+}
+.layout {
+  //min-width: 300px;
+  //max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+
+  /* 通栏部分*/
+  .search {
+    //padding-top: 50/37rem;
+  }
+  form {
+    width: 100%;
+    height: 50/37rem;
+    list-style: none;
+    position: relative;
+    padding: 0  10/37rem;
+    input {
+      width: 80%;
+      height: 30/37rem;
+      background: #F1F1F1;
+      border-radius: 10/37rem;
+      padding-left: 5/37rem;
+      border: none;
+      margin-top: 10/37rem;
+      font-size: 14/37rem;
+      float: left;
+    }
+  }
+  button {
+    width: 62/37rem;
+    height: 30/37rem;
+    background: #FF841D;
+    border-radius: 10/37rem;
+    color: white;
+    border: none;
+    font-size: 14/37rem;
+    float: left;
+    margin-top: 10/37rem;
+    margin-left: 5/37rem;
+
+  }
+  .content {
+    width: 100%;
+    .laber {
+      width: 100%;
+      height: 38/37rem;
+      background: #EDEDED;
+      line-height: 38/37rem;
+      padding: 0 10/37rem;
+      font-size: 14/37rem;
+
+      ul {
+        float: left;
+
+        li {
+          float: left;
+          text-align: center;
+          line-height: 38/37rem;
+          padding-left: 5/37rem;
+
+        }
+      }
+      .select {
+        float: right;
+        width: 62/37rem;
+        height: 28/37rem;
+        line-height: 28/37rem;
+        background: #E1E1E1;
+        margin-top: 5/37rem;
+        text-align: center;
+        border-radius: 2/37rem;
+      }
+    }
+    /*主体内容部分*/
+    .product {
+      width: 100%;
+      li {
+        width: 100%;
+        height: 115/37rem;
+        border-bottom: 1px solid #E7E7E7;
+        padding: 5/37rem 10/37rem;
+        a {
+          width: 100%;
+          height: 100%;
+          display: block;
+          .left_pic {
+            display: block;
+            width: 35%;
+            float: left;
+            text-align: center;
+            padding-right: 10/37rem;
+            img {
+              width: 100/37rem;
+              height: 100/37rem;
+            }
+          }
+          /*右边文字部分*/
+          .right_text {
+            display: inline-block;
+            width: 65%;
+            overflow: hidden;
+            line-height: 25/37rem;
+            i {
+              display: block;
+              height: 50/37rem;
+              font-size: 14/37rem;
+              margin-top: 5/37rem;
+              overflow: hidden;
+            }
+            b {
+              display: block;
+              //margin: 20/37rem 0;
+              color: red;
+              font-size: 16/37rem;
+            }
+            span {
+              display: inline-block;
+              font-size: 13/37rem;
+              color: #A1A1A1;
+              margin-right: 10/37rem;
+
+            }
+          }
+        }
+      }
+
+      .page {
+        width: 100%;
+        height: 35/37rem;
+        text-align: center;
+        margin-top: 10/37rem;
+        padding: 0 10/37rem;
+        .pre_page, .next_page, .center_page {
+          width: 85/37rem;
+          height: 35/37rem;
+          line-height: 35/37rem;
+          background: #DDDDDD;
+          text-align: center;
+        }
+        .center_page, .pre_page {
+          float: left;
+        }
+        .center_page {
+          margin-left: 45/37rem;
+          background: white;
+          border: 1px solid #DDDDDD;
+          select{
+            float: right;
+            margin-top: 8/37rem;
+          }
+          a {
+            display: inline-block;
+            width: 20/37rem;
+            height: 20/37rem;
+            color: black;
+            margin-left: 10/37rem;
+          }
+        }
+        .next_page {
+          float: right;
+        }
+      }
+    }
+  }
+
+}
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>比价搜索</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="less/brandTitle.css"/>
+    <link rel="stylesheet" href="less/category.css">
+</head>
+<body>
+<!-- =====顶部通栏start===== -->
+<header id="header">
+    <div class="m_top">
+        <div class="m_left">
+            <span><a href="index.html"><img src="images/header_logo.png" alt=""/></a></span>
+        </div>
+
+        <div class="m_right">
+            <span class="glyphicon glyphicon-download-alt"></span>
+        </div>
+    </div>
+</header>
+<!-- =====顶部通栏end===== -->
+<!-- =====主体start===== -->
+<main class="layout">
+    <section class="search">
+        <form action="#">
+            <input type="text" placeholder="请输入你想比较的商品"/>
+            <input type="button" class="fr" value="搜索"/>
+        </form>
+    </section>
+    <section class="b_list">
+        <!-- 分类列表-->
+    </section>
+</main>
+<!-- =====主体end===== -->
+<!-- =====底部start==== -->
+<footer>
+    <div class="f_middle clearfix">
+        <a class="fl" href="#">登录</a>
+        <a class="fl" href="#">注册</a>
+        <a class="fl" href="javascript:;"><span class="mr_5 glyphicon glyphicon-arrow-up"></span>返回顶部</a>
+    </div>
+    <div class="f_bottom">
+        <i class="mr_5">手机APP下载</i>慢慢买手机版<em class="ml_5">--掌上比价平台</em>
+        <a href="#">m.manmanbuy.com</a>
+    </div>
+</footer>
+<!-- =====底部end==== -->
+<script src="lib/jquery-1.12.2.min.js"></script>
+<script src="lib/template.js"></script>
+<script type="text/html" id="title">
+   {{if result}}
+   <section class="b_list">
+        {{each result as v}}
+        <div class="l_sort clearfix">
+            <div class="l_title clearfix">
+        <span class="word fl">{{v["title"]}}</span>
+        <span class="arrow fr glyphicon glyphicon-menu-down"></span>
+            </div>
+        </div>
+        {{/each}}
+   </section>
+    {{/if}}
+</script>
+<script type="text/html" id="content">
+    {{if result}}
+    <ul class="clearfix">
+    {{each result as v}}
+    <li><a href="good_listing.html?categoryid={{v["categoryId"]}}">{{v["category"]}}</a></li>
+    {{/each}}
+    </ul>
+    {{/if}}
+</script>
+<script src="js/tool.js"></script>
+<script src="js/category.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>

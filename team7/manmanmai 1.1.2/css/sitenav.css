@@ -1,0 +1,13 @@
+/* =====主体start===== */
+.layout{
+    padding: 60px 45px;
+}
+.layout section a{
+    border: 1px solid #BFBFBF;
+    background: #F4F4F4;
+    padding: 10px 8px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+/* =====主体end===== */

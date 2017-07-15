@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>tenpro</title>
+    <script src="../lib/flexible/flexible_css.js" charset="utf-8"></script>
+    <script src="../lib/flexible/flexible.js"></script>
+    <script src="../lib/template/template.js"></script>
+    <link rel="stylesheet" href="../css/basez.css">
+    <link rel="stylesheet" href="../css/base1z.css">
+    <link rel="stylesheet" href="../less/brand.css">
+</head>
+<body>
+<!--页面头部-->
+<header>
+    <div class="top"><a href="#" class="fr"></a></div>
+    <!--搜索栏-->
+    <div class="search">
+        <input type="text" placeholder="请输入你想要比价的商品" class="text">
+        <input type="button" value="搜索" class="btn">
+    </div>
+</header>
+<!--菜单分类-->
+<div class="menu">
+    <a href="#" class="fl">首页></a>
+    <a href="#" class="fl">全部分类></a>
+</div>
+<!--主体内容-->
+<!--热门-->
+<div class="hot"><a href="#">热门品牌排行</a></div>
+<!--品牌-->
+<ul class="main">
+</ul>
+<script type="text/html" id="pro">
+    {{ each result as value }}
+    <li ><a href="ranking%20list.html?brandTitleId={{value.brandTitleId }}&brandTitle={{value.brandTitle}}" >{{ value.brandTitle }}<span
+            class="icon-jiantouyoujiantou iconfont fr"></span>
+        </a></li>
+    {{ /each }}
+</script>
+
+</body>
+<script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+<script src="../js/brand.js"></script>
+</html>

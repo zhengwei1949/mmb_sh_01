@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+
+
+    function get(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+
+//    用一个变量来接受获取的地址
+//    name就是你需要的参数
+
+//    比如 用户点击某个页面后请求到你这个页面，此时，你的页面地址为
+//    http://mmb.ittun.com/api/getgsproduct.html?categoryId=1
+//            你的页面渲染必须是要传  {categoryId: yourId}这个参数的
+
+    /*----- 案例 -----*/
+    /* 假设别人请求你的页面地址后显示的是
+    *  http://mmb.ittun.com/api/getgsproduct.html?categoryId=1
+    * */
+
+
+    /*    步骤如下:    */
+    // 1.通过地址截取你需要的参数，用一个变量来接受
+    var yourId =  get('categoryId');
+    //  此时 yourId的值就是  1
+
+    // 2.放入你自己请求的执行代码中
+    $.ajax({
+        dataType: 'json',
+        type: 'get',
+        data: {categoryId: yourId},
+        success: function(data){
+            //执行代码
+        }
+    });
+    //如果是用 $.getJSON做的
+    $.getJSON('your url',{categoryId: yourId}, function(data){
+            //执行代码
+    } )
+
+
+</script>
+</html>

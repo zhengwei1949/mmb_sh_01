@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script src="../js/template.js"></script>
+<script type="text/template" id="_template">
+    {{if list}}
+    <p>{{name}}</p>
+    <ul>
+        {{each list as value i}}
+            <li>{{list[value}}</li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</script>
+
+
+<script src="../js/jquery-1.12.2.min.js"></script>
+<script>
+    var data={
+        name:'zs',
+        list:['women','money']
+    };
+    var html=template('_template',data);
+    var div=document.createElement('div');
+    $('div').html(html);
+
+</script>
+
+
+</body>
+</html>

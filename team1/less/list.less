@@ -1,0 +1,162 @@
+//设计图 750 使用 flexible
+// px => rem 设计稿尺寸除以75 单位rem
+// 使用例如： height: 40*@base
+@base: round(1/75 ,6)*1rem; //基准值 保留6位小数
+
+//less写一个mixin
+//使用例如： .px2rem(height,40);
+.px2rem(@name,@px) {
+    @{name}: round(@px/75,6)*1rem;
+}
+
+//字体不可以用 rem 因为误差太大了 且不能满足任何屏幕下字体大小相同
+//为了方便 我们也会用less写一个mixin
+//使用例如 ： .font_size(32);
+
+.font-size(@px) {
+  font-size: round ( @px / 2 ) * 1px;
+  [data-dpr = '2'] & {
+    font-size: @px * 1px;
+  }
+  //for mx3
+  [data-dpr = '2.5'] & {
+    font-size: round( @px * 2.5 / 2 ) * 1px;
+  }
+  //for 小米note
+  [data-dpr = '2.75'] & {
+    font-size: round( @px * 2.75 / 2) * 1px;
+  }
+  [data-dpr = '3'] & {
+    font-size: round( @px * 3 / 2) * 1px;
+  }
+  //for三星note4
+  [data-dpr = '4'] & {
+    font-size: @px * 2px;
+  }
+}
+//菜单
+.menu {
+  div {
+    height:60*@base;
+    width: 128*@base;
+    border: 1px solid #ccc;
+    margin-top:10*@base;
+    margin-right:10*@base;
+    border-radius: 20*@base;
+    font-size: 13px;
+    line-height:60*@base;
+    text-align: center;
+    background-image: linear-gradient(to bottom, #ccc 0%, #fff 100%);
+  }
+}
+//主体内容
+
+//主体内容
+.main {
+  ul {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    li {
+      font-size: 12px;
+      width: 100%;
+      height: 240*@base;
+      border-bottom: 1px solid #A1A1A3;
+      img {
+        float: left;
+        height: 100%;
+        width: 240*@base;
+      }
+      .tex {
+        display: block;
+        height: 120*@base;
+        width: 100%;
+        padding-top: 24*@base;
+        line-height: 44*@base;
+        padding-right: 5px;
+      }
+      p {
+        display: block;
+        //float: left;
+        width: 100%;
+        height: 48*@base;
+        line-height: 48*@base;
+        color: red;
+      }
+      span {
+        padding-right: 4px;
+        display: inline-block;
+        height: 56*@base;
+        line-height: 56*@base;
+        font-size: 10px;
+        color: #A1A1A3;
+        a{
+          display: block;
+          height: 100%;
+          width: 100%;
+          color: #A1A1A3;
+        }
+      }
+    }
+  }
+}
+
+//底部
+.bottom {
+  height:88*@base;
+  width: 100%;
+  padding-left: 32*@base;
+  padding-right: 32*@base;
+  padding-top: 10*@base;
+  text-align: center;
+  line-height:68*@base;
+  div {
+    width:170*@base;
+    height:70*@base;
+    border: 1px solid #ccc;
+    border-radius: 20*@base;
+    background-image: linear-gradient(to bottom, #f1f1f1 0%, #ccc 100%);
+  }
+  select {
+    height:68*@base;
+    width:156*@base;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding-left: 30*@base;
+    border-radius: 20*@base;
+    background-color: #f1f1f1;
+  }
+}
+footer {
+  height: 244*@base;
+  background-color: #EFEFEF;
+  padding-top: 52*@base;
+  text-align: center;
+  div{
+    width: 31%;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 66*@base;
+    line-height:66*@base;
+    text-align: center;
+    margin-bottom: 30*@base;
+  }
+  div:nth-child(3) {
+    border-right: none;
+    font-size: 12px;
+    width: 38%;
+  }
+  a {
+    font-size: 10px;
+    color: #ccc;
+  }
+  a:nth-child(4) {
+    color: red;
+  }
+  a:nth-child(5) {
+    color: black;
+  }
+  p {
+    color: #ccc;
+  }
+}

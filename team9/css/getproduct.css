@@ -1,0 +1,152 @@
+#product > .product_title {
+  height: 1.01333333rem;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ccc;
+  line-height: 0.96rem;
+  padding-left: 0.21333333rem;
+  font-size: 0.37333333rem;
+}
+#product > .plist table {
+  margin-top: 0.32rem;
+}
+#product > .plist .red {
+  color: #d10311;
+  text-align: right;
+  padding-right: 0.4rem;
+}
+#product > .plist .p_pic {
+  width: 54;
+  text-align: center;
+  border-bottom: 1px solid #bbb;
+}
+#product > .plist .note {
+  font-size: 0.32rem;
+  color: #888;
+  padding: 0.21333333rem 0.26666667rem;
+  line-height: 0.48rem;
+}
+#product > .tab {
+  width: 100%;
+  margin-top: 0.53333333rem;
+  height: 0.90666667rem;
+  line-height: 0.90666667rem;
+  font-size: 0.4rem;
+  overflow: hidden;
+  z-index: 0;
+  background-color: #ffbb00;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd050), to(#ffbb00));
+  background: -moz-linear-gradient(top, #ffd050, #ffbb00);
+  background: -o-linear-gradient(top, #ffd050, #ffbb00);
+  border-top: solid 1px #c14d00;
+  border-bottom: 1px solid #c14d00;
+}
+#product > .tab ul {
+  width: 100%;
+}
+#product > .tab ul li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 33.33%;
+  height: 0.90666667rem;
+  text-align: center;
+  background-color: #ffbb00;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd050), to(#ffbb00));
+  background: -moz-linear-gradient(top, #ffd050, #ffbb00);
+  background: -o-linear-gradient(top, #ffd050, #ffbb00);
+}
+#product > .tab ul li.cur {
+  background-color: #ffbb00;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa632), to(#ff9000));
+  background: -moz-linear-gradient(top, #ffa632, #ff9000);
+  background: -o-linear-gradient(top, #ffa632, #ff9000);
+}
+#product > .tab ul li.mtab {
+  border-left: solid 1px #c14d00;
+  border-right: solid 1px #c14d00;
+}
+#product > .tab ul li a {
+  color: #fff;
+  display: block;
+  height: 0.90666667rem;
+  width: 100%;
+}
+#product > .product_message .product_name {
+  text-align: center;
+  font-size: 0.45333333rem;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 0.42666667rem;
+}
+#product > .product_message .product_img {
+  display: block;
+  width: 4.53333333rem;
+  height: 4.53333333rem;
+  margin: 0px auto;
+}
+#product > .product_message .product_collect {
+  float: right;
+  margin-right: 48rem;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+#product > .product-com-title {
+  border-top: 0.21333333rem solid #7a7a7a;
+  margin-top: 0.13333333rem;
+}
+#product > .product-com-title > div {
+  height: 0.90666667rem;
+  line-height: 0.90666667rem;
+  text-align: center;
+  overflow: hidden;
+  background: #dbdbdb;
+  font-size: 0.37333333rem;
+  border-top: 1px solid #fff;
+}
+#product > .product-com-list > ul > li {
+  font-size: 0.32rem;
+  color: #666;
+  padding: 0.26666667rem;
+  padding-bottom: 0px;
+  line-height: 0.48rem;
+  margin-top: 0.08rem;
+  border-bottom: 1px solid #ccc;
+}
+#product > .product-com-list > ul > li .pull-left {
+  float: left;
+}
+#product > .product-com-list > ul > li .pull-right {
+  float: right;
+}
+#product > .product-com-list > ul > li .com-content {
+  color: #000;
+  line-height: 0.58666667rem;
+  padding-top: 0.13333333rem;
+}
+#product > .product-com-list > .more {
+  padding: 0 0.21333333rem;
+  margin-top: 0.42666667rem;
+}
+#product > .product-com-list > .more .morein {
+  display: block;
+  height: 0.85333333rem;
+  background-color: #d4d4d4;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+  background: -moz-linear-gradient(top, #f1f1f1, #d4d4d4);
+  background: -o-linear-gradient(top, #f1f1f1, #d4d4d4);
+  border-bottom: 1px solid #bababa;
+  box-shadow: 0 0 1px #666;
+  -webkit-border-radius: 0.13333333rem;
+  -moz-border-radius: 0.13333333rem;
+  -o-border-radius: 0.13333333rem;
+  border-radius: 0.13333333rem;
+  text-align: center;
+  font-size: 0.37333333rem;
+  line-height: 0.85333333rem;
+  overflow: hidden;
+}

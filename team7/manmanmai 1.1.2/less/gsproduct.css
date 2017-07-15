@@ -1,0 +1,86 @@
+@charset "utf-8";
+.layout {
+  /*---- 选择电商  地区 nav ---*/
+}
+.layout .select-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+  width: 100%;
+  -webkit-box-shadow: 0 2px 4px #ddd;
+  -moz-box-shadow: 0 2px 4px #ddd;
+  box-shadow: 0 2px 4px #ddd;
+}
+.layout .select-nav form {
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+}
+.layout .select-nav form select {
+  flex: 1;
+  height: 35px;
+  border: none;
+  text-align: center;
+  background-color: #fff;
+}
+.layout .select-nav form select option {
+  text-align: center;
+}
+.layout .productList {
+  margin-top: 35px;
+  background-color: #f3f3f3;
+}
+.layout .productList ul {
+  width: 100%;
+  padding: 5px 5px 10px 10px;
+}
+.layout .productList ul li {
+  width: 48%;
+  float: left;
+  padding: 5px 5px;
+  background-color: #fff;
+  margin-top: 10px;
+  margin-right: 2%;
+}
+.layout .productList ul li a {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+.layout .productList ul li a img {
+  display: block;
+  width: 100%;
+  height: 150px;
+}
+.layout .productList ul li a p {
+  height: 26px;
+  line-height: 26px;
+  font-size: 14px;
+  overflow: hidden;
+}
+.layout .productList ul li a span {
+  height: 30px;
+  line-height: 30px;
+  display: block;
+}
+.layout .productList ul li a span b {
+  font-weight: normal;
+  float: left;
+  color: #F8611F;
+  font-size: 18px;
+}
+.layout .productList ul li a span i {
+  float: right;
+  display: block;
+  width: 30%;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  border-radius: 2px;
+  background-color: #FF9501;
+  margin-top: 5px;
+}

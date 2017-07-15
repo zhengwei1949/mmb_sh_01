@@ -1,0 +1,321 @@
+
+html,body{
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+}
+
+/*整屏动画*/
+.detailA{
+    width: 100%;
+    min-width: 320px;
+    -webkit-animation: move .8s ease;
+    -o-animation: move .8s ease;
+    animation: move .8s ease;
+
+}
+@-webkit-keyframes move {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes move {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+
+
+
+/*详情页主体*/
+.MMB_main {
+    height: 100%;
+    padding-top: 44px;
+    padding-bottom: 120px;
+}
+
+/*内容部分*/
+.MMB_main .content {
+    padding: 4px 10px;
+}
+
+.MMB_main .content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px auto 5px auto;
+    text-align: left;
+    word-break: break-all;
+    color: #5a5a5a;
+}
+.MMB_main .content h4{
+    font-size: 15px;
+    color: #ff6c00;
+}
+.MMB_main .content .shop{
+    margin: 12px;
+    font-size: 12px;
+    color: #999;
+}
+.MMB_main .content .des{
+
+}
+.MMB_main .content .des .pic{
+    float: right;
+    width: 120px;
+    margin: 12px auto auto 10px;
+    overflow: hidden;
+}
+.MMB_main .content .des .pic img{
+    display: block;
+    width: 100%;
+}
+.MMB_main .goBuy{
+    text-align: center;
+}
+.MMB_main .goBuy a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    margin: 20px 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    background-color: #FF9000;
+}
+/*城市*/
+
+
+
+/*link*/
+.MMB_main .link{
+    margin: 20px 10px;
+    text-align: center;
+}
+.MMB_main .link img{
+    display: block;
+    width: 100%;
+    vertical-align: middle;
+    height: auto;
+    -webkit-animation: bounce .8s .8s ease;
+    -o-animation: bounce 2s .8s ease;
+    animation: bounce 2s .8s ease;
+}
+
+/*图片动画*/
+@keyframes bounce {
+    0%{
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    20%{
+        -webkit-transform: translateX(80%);
+        transform: translateX(80%);
+    }
+    40%{
+        -webkit-transform: translateX(-80%);
+        transform: translateX(-80%);
+    }
+    60%{
+        -webkit-transform: translateX(60%);
+        transform: translateX(60%);
+    }
+    80%{
+        -webkit-transform: translateX(-60%);
+        transform: translateX(-60%);
+    }
+    100%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+}
+
+/*comment*/
+.MMB_main .comment{
+    border-top:1px solid #e0e0e0;
+    border-bottom:1px solid #e0e0e0;
+}
+.MMB_main .comment .tit{
+    font-size: 16px;
+    padding: 6px 8px;
+}
+.MMB_main .comment .reply{
+    padding: 6px 8px;
+}
+.MMB_main .comment .reply .form{
+    width: 98%;
+    margin: 0 auto;
+    padding: 4px 0 0 4px ;
+    position: relative;
+    border:2px solid #ECEAE8 ;
+    border-radius: 2px;
+}
+.MMB_main .comment .reply textarea{
+    width: 100%;
+    border: none;
+    outline: 0;
+    height: 68px;
+    color: #666;
+    font-size: 14px;
+}
+.MMB_main .comment .reply .ctrl{
+    height: 36px;
+    border-top: 1px solid #f2f2f2;
+    background-color: #fbfbfb;
+    margin-left: -4px;
+}
+.MMB_main .comment .reply .ctrl input{
+    position: absolute;
+    width: 100px;
+    height: 39px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid #ff841d;
+    border-bottom: none;
+    border-right: none;
+    font-size: 16px;
+    line-height: 39px;
+    text-align: center;
+    color: #fff;
+    background-color: #ff841d;
+}
+
+/*list*/
+.MMB_main .list{
+
+}
+.MMB_main .list ul{
+    padding-bottom: 20px;
+}
+.MMB_main .list ul li{
+    line-height: 36px;
+    /*padding-left: 50px;*/
+    border-bottom: 1px dashed #efefef;
+}
+.list ul li .userimg{
+    float: left;
+    width: 40px;
+    height: 40px;
+    /*background-color: pink;*/
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.list ul li .userimg img{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-position: top;
+    border-radius: 20px;
+}
+
+.list ul li .info{
+    float: right;
+    padding-left: 10px;
+}
+.list ul li .info .user_tit{
+    float: left;
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+.list ul li .con{
+    display: inline-block;
+    /*float: right;*/
+    margin-left: 60px;
+}
+.list ul li .con .name{
+    position: relative;
+    display: inline-block;
+}
+.list ul li .con .name .username{
+    color: #72a7c9;
+}
+.list ul li .con .name .time{
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: 108px;
+}
+.list ul li .con .content{
+    margin-left: -11px;
+}
+.list ul li .info .user_tit .user_name{
+    float: left;
+    color: #5997c0;
+}
+.list ul li .info .user_tit .user_timer{
+    float: right;
+    color: #999;
+}
+.list ul li .info .user_content{
+    display: inline-block;
+    float: right;
+    font-size: 15px;
+    color: #606060;
+    line-height: 20px;
+    word-break: break-all;
+}
+.MMB_main .cc_picture {
+    width: 100%;
+    border: 1px solid transparent;
+    text-align: center;
+    margin: 20px 0;
+}
+.MMB_main .cc_picture img{
+    width: 200px;
+    height: 300px;
+    /*border: 1px solid red;*/
+}
+.MMB_main .cc_city {
+    border: 1px solid transparent;
+    text-align: center;
+    /*margin: 30px 0;*/
+}
+.MMB_main .cc_city ul{
+    width: 150px;
+    border: 1px solid #e7e7e7;
+    padding: 10px;
+    margin: 0 auto;
+}
+.MMB_main .cc_city ul li{
+    /*width: 150px;*/
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #e7e7e7;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.MMB_main .cc_city ul li span{
+    width: 100px;
+    display: inline-block;
+    vertical-align: bottom;
+    text-align: left;
+    /*float: left;*/
+
+}
+.MMB_main .cc_city ul li span strong{
+    float: right;
+    vertical-align: bottom;
+    /*padding-left: 30px;*/
+    color: red;
+    font-weight: 400;
+}
+/*.MMB_main .comment .lisi ul li{*/
+    /*padding-left: 0;*/
+/*}*/
+/*.comment .lisi ul li .usering{*/
+    /*float: left;*/
+/*}*/
+/*.comment .lisi ul li .con{*/
+    /*float: right;*/
+/*}*/
+

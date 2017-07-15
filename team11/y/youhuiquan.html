@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>优惠券</title>
+    <link rel="stylesheet" href="less/base.css">
+    <link rel="stylesheet" href="less/youhuiquan.css">
+</head>
+<body>
+<div class="MMB_category">
+    <!--页面头部导航栏START-->
+    <header class="topHeader">
+        <div class="back">
+            <a href="../index.html" class="iconfont icon-xiangzuo1"></a>
+        </div>
+        <h1>优惠券</h1>
+        <div class="appdown">
+            <a href="#" title="慢慢买比价网--手机版">
+                <img src="images/header_app.png" alt="慢慢买比价网--手机版">
+            </a>
+        </div>
+    </header>
+    <!--页面头部导航栏END-->
+
+    <!--主体部分-->
+    <main>
+        <ul id="quan" class="clearfix">
+
+        </ul>
+    </main>
+
+    <!--页面底部START-->
+    <div class="MMB_foot">
+        <div class="footTop clearfix">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#"><i class="iconfont">&#xe668;</i>返回顶部</a>
+        </div>
+        <div class="footBottom">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="#">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <p>m.mananbuy.com</p>
+        </div>
+    </div>
+    <!--页面底部END-->
+</div>
+</body>
+<script id="liebiao" type="text/html">
+        {{each result as value i}}
+            <li class="on">
+                <a href="{{value.couponLink}}?couponid={{value.couponId}}">
+                <img src="{{value.couponImg}}" alt=""><br>
+                {{value.couponTitle}}
+                </a>
+            </li>
+        {{/each}}
+</script>
+<script src="lib/flexible/flexible.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="lib/jQuery/jquery-1.12.2.min.js"></script>
+<script>
+    (function($) {
+        $.getUrlParam = function(name) {
+            var reg = new RegExp("(^|&)" +
+                    name + "=([^&]*)(&|$)");
+            //window.location设置或获取当前页面的URL地址
+            //substr从起始位置
+            //window.location.search获取当前URL中"?"后面的部分，
+            //math()函数用来查找字符串中特定的字符，并且如果找到的话，则返回这个字符。
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return decodeURI(r[2]);//decodeURI函数解码
+            return null;
+        }
+    })(jQuery);
+</script>
+<script src="js/youhuiquan.js"></script>
+</html>

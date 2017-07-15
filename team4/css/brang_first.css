@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* ----头部区域------- */
+.yayout {
+  min-width: 8.53333333rem;
+  width: 100%;
+  /* 搜索区域*/
+  /* 分类*/
+  /*热门排行标题*/
+  /* 请求数据*/
+}
+.yayout .head {
+  background: #ff841d;
+  height: 1.33333333rem;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #e6e6e6;
+}
+.yayout .head .head_left {
+  width: 5.33333333rem;
+  height: 0.74666667rem;
+  background-image: url("../images/header_logo.png");
+  background-size: 5.33333333rem 0.74666667rem;
+  display: inline-block;
+  margin-left: 0.26666667rem;
+  margin-top: 0.26666667rem;
+}
+.yayout .head .app_dowload {
+  display: block;
+  width: 1.6rem;
+  height: 1.33333333rem;
+  padding: 0.16rem 0.18666667rem 0.18666667rem 0.50666667rem;
+  background-image: url("../images/header_app.png");
+  background-size: 0.90666667rem 1.01333333rem;
+  background-origin: content-box;
+  background-clip: content-box;
+}
+.yayout .search {
+  width: 100%;
+  height: 1.33333333rem;
+  overflow: hidden;
+  border: 1px solid #E6E6E6;
+  /* 搜索按钮*/
+}
+.yayout .search form {
+  width: 7.6rem;
+  height: 0.8rem;
+  margin-top: 0.26666667rem;
+  margin-left: 0.16rem;
+  display: inline-block;
+}
+.yayout .search form input {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.53333333rem;
+  background-color: #F1F1F1;
+  padding-left: 0.53333333rem;
+  font-size: 0.42666667rem;
+  border-width: 0;
+}
+.yayout .search button {
+  width: 1.68rem;
+  height: 0.77333333rem;
+  background-color: #FF841D;
+  font-size: 0.48rem;
+  border: 1px solid #FF841D;
+  border-radius: 0.4rem;
+  color: #fff;
+  margin-top: 0.26666667rem;
+  margin-right: 0.26666667rem;
+}
+.yayout .scale {
+  height: 0.90666667rem;
+  width: 100%;
+  background-color: #F7F7F7;
+  border: 1px solid #e6e6e6;
+  border-top: none;
+}
+.yayout .scale p {
+  line-height: 1.01333333rem;
+  padding-left: 0.10666667rem;
+}
+.yayout .hot {
+  height: 0.90666667rem;
+  width: 98%;
+  border: 1px solid #e6e6e6;
+  margin-top: 0.21333333rem;
+  background: #ededed;
+}
+.yayout .hot p {
+  line-height: 0.88rem;
+  font-size: 0.21333333rem;
+  color: #874604;
+  padding-left: 0.26666667rem;
+}
+.yayout .sort {
+  width: 100%;
+  background-color: red;
+  margin-top: 0.26666667rem;
+}
+.yayout .sort ul {
+  width: 100%;
+}
+.yayout .sort ul li {
+  border-top: 1px solid #e6e6e6;
+  height: 1.04rem;
+  width: 100%;
+  background-color: #ededed;
+  font-size: 0.24rem;
+  font-weight: 600;
+  line-height: 1.04rem;
+}
+.yayout .sort ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-left: 0.32rem;
+}
+.yayout .sort ul li a span {
+  padding-right: 0.37333333rem;
+  font-size: 0.24rem;
+}

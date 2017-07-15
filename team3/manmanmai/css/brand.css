@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/*页面主内容*/
+
+html {
+    font-size: 75px;
+}
+
+.mian {}
+
+
+/*二三级导航*/
+
+.nav_index {
+    background-color: #F4F4F4;
+    padding-left: 0.4rem;
+    border-bottom: 0.0267rem solid #ccc;
+}
+
+.nav_index a {
+    display: inline-block;
+    line-height: 0.96rem;
+}
+
+[data-dpr="2"] .nav_index a {
+    font-size: 32px;
+}
+
+[data-dpr="3"] .nav_index a {
+    font-size: 48px;
+}
+
+
+/*商品列表主题*/
+
+.product_tlt {
+    margin: 0.3733rem 0.16rem;
+    height: 1.3867rem;
+    padding-left: 0.3733rem;
+    line-height: 1.3867rem;
+    color: #B06A04;
+    border: 0.0267rem solid #ccc;
+    background-color: #EEE;
+}
+
+[data-dpr="2"] .product_tlt {
+    font-size: 36px;
+}
+
+[data-dpr="3"] .product_tlt {
+    font-size: 54px;
+}
+
+
+/*商品列表包裹盒子*/
+
+.product_list {
+    padding: 0 0.4rem 0.6667rem;
+}
+
+.product_list a {
+    display: block;
+    height: 1.3867rem;
+    line-height: 104px;
+    border-bottom: 0.0267rem solid #ccc;
+}
+
+[data-dpr="2"] .product_list a {
+    font-size: 40px;
+}
+
+[data-dpr="3"] .product_list a {
+    font-size: 60px;
+}
+
+.product_list a span {
+    float: right;
+    margin-top: 0.5867rem;
+    margin-right: 0.6667rem;
+    width: 0.4rem;
+    height: 0.2133rem;
+    background-position: -2.4rem -1.2667rem;
+}

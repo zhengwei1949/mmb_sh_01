@@ -1,0 +1,216 @@
+html, body {
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+
+/*整体盒子*/
+.layout {
+  height: 100%;
+  position: relative;
+  color: #5a5a5a;
+  min-width: 320px;
+  /*顶部通栏*/
+  .head {
+    width: 100%;
+    height: 44px;
+    background-color: #ff9501;
+    position: relative;
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    .back {
+      width: 50px;
+      height: 44px;
+      position: absolute;
+      left: 0;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 44px;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+    h1 {
+      height: 44px;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      margin: 0 auto;
+      line-height: 44px;
+      text-align: center;
+    }
+    .downloadApp {
+      width: 50px;
+      height: 44px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: url("../images/header_app.png") no-repeat center center;
+      background-size: 34px 34px;
+    }
+  }
+  /*下拉列表头部*/
+  .selectBar {
+    width: 100%;
+    position: relative;
+    height: 37px;
+    background-color: white;
+    padding-right: 47px;
+    border-bottom: 1px solid #dadada;
+    > .selectLeft {
+      width: 100%;
+      height: 100%;
+      > li {
+        width: 33.33%;
+        height: 100%;
+        float: left;
+        > a {
+          color: #5a5a5a;
+          display: block;
+          height: 100%;
+          font-size: 16px;
+          text-align: center;
+          line-height: 37px;
+          > i {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            font-size: 12px;
+            line-height: 24px;
+            text-align: center;
+          }
+        }
+
+      }
+    }
+    > a.serch {
+      border-bottom: 1px solid #dadada;
+      border-left: 1px solid #dadada;
+      width: 45px;
+      height: 37px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      line-height: 38px;
+      text-align: center;
+      font-size: 24px;
+      color: #888;
+    }
+  }
+  /*下拉列表*/
+  .selectShop {
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 81px;
+    display: none;
+    > li {
+      height: 40px;
+      width: 100%;
+      padding: 0 8px;
+      > a {
+        display: block;
+        width: 100%;
+        height: 40px;
+        text-align: left;
+        line-height: 40px;
+        > span {
+          float: right;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          color: #f8601d;
+          font-weight: bold;
+          font-size: 18px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .selectArea {
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 81px;
+    display: none;
+    > li {
+      height: 40px;
+      width: 100%;
+      padding: 0 8px;
+      > a {
+        display: block;
+        width: 100%;
+        height: 40px;
+        text-align: left;
+        line-height: 40px;
+        > span {
+          float: right;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          color: #f8601d;
+          font-weight: bold;
+          font-size: 18px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  /*商品列表*/
+  .goodList{
+    width: 98%;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 15px;
+    >li{
+      list-style: none;
+      float: left;
+      width: 50%;
+      >a{
+        display: block;
+        width: 100%;
+        >img{
+          display: block;
+          width: 90%;
+          margin: 0 auto;
+        }
+        >h3{
+          color: #333333;
+          font-weight: normal;
+          text-align: left;
+          margin-top: 6px;
+          padding: 0 6px;
+          height: 14px;
+          font-size: 12px;
+          line-height: 14px;
+          overflow: hidden;
+        }
+        >div{
+          padding: 6px;
+          width: 100%;
+          .price{
+            float: left;
+            color: #f8601d;
+            font-size: 20px;
+            >span{
+              font-size: 10px;
+              color: #f8601d;
+            }
+          }
+          .btn{
+            float: right;
+            font-size: 14px;
+            color: #FFFFFF;
+            border-radius: 3px;
+            background-color: #ff9501;
+            padding: 4px 10px;
+          }
+        }
+      }
+    }
+  }
+}

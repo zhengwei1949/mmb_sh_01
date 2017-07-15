@@ -1,0 +1,195 @@
+/*根字体函数*/
+/*混合函数使用*/
+/*基本颜色*/
+/*字体设置*/
+/*字体图标使用*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/iconfont.woff') format('woff'), url('../font/iconfont.ttf') format('truetype'), url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*主页设置*/
+html,
+body {
+  background: #f7f7f7;
+}
+/*页面菜单显示栏start*/
+.classify {
+  margin-top: 0.26666667rem;
+  margin-bottom: 0.13333333rem;
+  padding: 0.18666667rem 0 0.24rem;
+  width: 100%;
+  background: #FFFFFF;
+}
+.classify .area-item {
+  height: 1.6rem;
+  float: left;
+  margin-top: 0.26666667rem;
+  width: 25%;
+  text-align: center;
+}
+.classify .area-item img {
+  margin: 0 auto;
+  height: 1.14666667rem;
+}
+.classify .area-item div {
+  font-size: 12px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  color: #000;
+  margin: 0.06666667rem 0;
+}
+[data-dpr="2"] .classify .area-item div {
+  font-size: 24px;
+}
+[data-dpr="2.5"] .classify .area-item div {
+  font-size: 30px;
+}
+[data-dpr="2.75"] .classify .area-item div {
+  font-size: 33px;
+}
+[data-dpr="3"] .classify .area-item div {
+  font-size: 36px;
+}
+[data-dpr="4"] .classify .area-item div {
+  font-size: 48px;
+}
+/*页面菜单显示栏end*/
+/*超值折扣推荐start*/
+.discount {
+  background: #ffffff;
+}
+.MMB_Nav {
+  height: 0.8rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fec273), to(#ff960d));
+  width: 100%;
+}
+.navTxt {
+  padding-left: 0.13333333rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-size: 15px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+}
+[data-dpr="2"] .navTxt {
+  font-size: 30px;
+}
+[data-dpr="2.5"] .navTxt {
+  font-size: 38px;
+}
+[data-dpr="2.75"] .navTxt {
+  font-size: 41px;
+}
+[data-dpr="3"] .navTxt {
+  font-size: 45px;
+}
+[data-dpr="4"] .navTxt {
+  font-size: 60px;
+}
+.navRight {
+  margin: 0.13333333rem;
+  height: 0.53333333rem;
+  width: 0.53333333rem;
+}
+/*产品展示部分start*/
+.product {
+  display: block;
+  list-style: none;
+  padding: 0.37333333rem 0.26666667rem;
+  width: 100%;
+  border-bottom: 0.01388889rem solid #c4c4c4;
+}
+.product img {
+  float: left;
+  width: 25%;
+}
+.product .allInfo {
+  overflow: hidden;
+  padding-left: 0.26666667rem;
+}
+.product p {
+  margin-top: 0.26666667rem;
+  font-size: 13px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  color: #000;
+}
+[data-dpr="2"] .product p {
+  font-size: 26px;
+}
+[data-dpr="2.5"] .product p {
+  font-size: 33px;
+}
+[data-dpr="2.75"] .product p {
+  font-size: 36px;
+}
+[data-dpr="3"] .product p {
+  font-size: 39px;
+}
+[data-dpr="4"] .product p {
+  font-size: 52px;
+}
+.product p span {
+  color: #ff6c00;
+}
+.product .txt {
+  margin-top: 0.6rem;
+  font-size: 12px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  color: #a1a1a1;
+}
+[data-dpr="2"] .product .txt {
+  font-size: 24px;
+}
+[data-dpr="2.5"] .product .txt {
+  font-size: 30px;
+}
+[data-dpr="2.75"] .product .txt {
+  font-size: 33px;
+}
+[data-dpr="3"] .product .txt {
+  font-size: 36px;
+}
+[data-dpr="4"] .product .txt {
+  font-size: 48px;
+}
+.product .txt i {
+  font-size: 10px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+}
+[data-dpr="2"] .product .txt i {
+  font-size: 20px;
+}
+[data-dpr="2.5"] .product .txt i {
+  font-size: 25px;
+}
+[data-dpr="2.75"] .product .txt i {
+  font-size: 28px;
+}
+[data-dpr="3"] .product .txt i {
+  font-size: 30px;
+}
+[data-dpr="4"] .product .txt i {
+  font-size: 40px;
+}
+/*产品展示部分end*/
+/*超值折扣推荐end*/

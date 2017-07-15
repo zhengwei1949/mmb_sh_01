@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="../lib/flexible/flexible.js"></script>
+    <title>国内折扣商品详情</title>
+    <link rel="stylesheet" href="../css/l.css"/>
+    <link rel="stylesheet" href="../fonts/iconfont.css"/>
+    <link rel="stylesheet" href="../less/productData.css"/>
+    <script src="../lib/template/template.js"></script>
+</head>
+<body>
+<!--顶部通栏start-->
+<div class="top_header">
+    <a href="javascript:;" class="iconfont icon-xiangzuo1"></a>
+
+    <h1>国内折扣</h1>
+
+    <div class="app_download">
+        <img src="../images/header_app.png" alt=""/>
+    </div>
+</div>
+<!--顶部通栏end-->
+<!--内容区域start-->
+<div class="main_content">
+    <!-- <h2 class="main_title">移动端凑单品：海天 鲜味 生抽 <span>1.28L</span></h2>
+
+     <p class="sub_title">京东商城 10-25 14：10 小编烟火/慢慢买</p>
+
+     <div class="artical">
+         <img src="images/gengduo.png" alt=""/>
+
+         <p style="max-height: 100%">这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字
+             这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字
+             这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字
+             这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字
+             这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字
+             这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字
+             这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字
+             这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字
+             这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字
+             这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字这里是大段的文字
+         </p>
+         <img src="images/gengduo.png" alt=""/>
+     </div>
+     <div class="toBuy">
+         <a href="#">前往购买</a>
+     </div>
+
+     &lt;!&ndash;二维码区域start&ndash;&gt;
+     <div class="erweima">
+
+     </div>
+     &lt;!&ndash;二维码区域end&ndash;&gt;
+
+     &lt;!&ndash;评论区start&ndash;&gt;
+     <div class="comment_box">
+         <h3 class="comment_title">发表评论</h3>
+
+         <div class="input">
+             <textarea name="" cols="30" rows="10"></textarea>
+
+             <div class="func">
+                 <a href="javascript:;">发表评论</a>
+             </div>
+         </div>
+     </div>
+     <div class="comments">
+         <h3 class="comments_title">最新评论</h3>
+         <ul>
+             <li class="clearfix">
+                 <div class="photo fl">
+                     <img src="images/gengduo.png" alt=""/>
+                 </div>
+                 <div class="text_content">
+                     <div class="userdata clearfix">
+                         <div class="userName fl">赶鸭子上架</div>
+                         <div class="issue_time fr">2016/10/25 14:18:45</div>
+                     </div>
+                     <div class="user_comment">比超市便宜了几块了块比超市便宜了几块了块比超市便宜了几块了块比超市便宜了几块了块</div>
+                 </div>
+                </li>
+         </ul>
+     </div>
+     评论区end-->
+</div>
+<!--内容区域end-->
+<!--固定底部区域start-->
+<footer>
+    <ul class="clearfix">
+        <li>登录</li>
+        <li>注册</li>
+        <li id="toTop"><span class="iconfont icon-xiangshang4"></span>返回顶部</li>
+    </ul>
+    <div class="footer_info">
+        <p><a href="#">手机APP下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<!--固定底部区域end-->
+</body>
+<script src="../lib/jQuery/jquery-1.12.2.js"></script>
+<script id="productData" type="text/html">
+    {{if result}}
+    <h2 class="main_title">{{result[0].productName}}</h2>
+    <p class="product_price">{{result[0].productPinkage}}</p>
+    <p class="sub_title">{{result[0].productFrom}} {{result[0].productTime}} {{result[0].productTips}}</p>
+
+    <div class="artical">
+        {{=result[0].productImgSm}}
+
+        <p>{{result[0].productInfo}}</p>
+
+        <p>{{result[0].productInfo1}}</p>
+
+        <p>{{result[0].productInfo2}}</p>
+        {{=result[0].productImgLg}}
+    </div>
+    <div class="toBuy">
+        <div class="store"></div>
+        <button id="storeBtn">点击查看库存量</button>
+        <a href="javascript:;" class="go">前往购买</a>
+    </div>
+
+    <!--二维码区域start-->
+    <div class="erweima">
+        <img src="images/mmbweixin2.png" alt=""/>
+    </div>
+    <!--二维码区域end-->
+
+    <!--评论区start-->
+    {{=result[0].productComment}}
+    <!--评论区end-->
+    {{/if}}
+</script>
+<script id="productCity" type="text/html">
+    {{if result}}
+    {{=result[0].productCity}}
+    {{/if}}
+</script>
+<script id="newComments" type="text/html">
+    {{if result}}
+        {{each result as value i}}
+            <li class="ui-border-b">
+                <div class="userimg">
+                    {{=value.img}}
+                </div>
+                <div class="con">
+                    <div class="name clearfix">
+                        <div class="username">{{value.userName}}</div>
+                        <div class="time">{{value.commentTime}}</div>
+                    </div>
+                    <div class="content">{{value.commentValue}}</div>
+                </div>
+            </li>
+        {{/each}}
+    {{/if}}
+</script>
+<script src="../js/common.js"></script>
+<script src="../js/productData.js"></script>
+</html>

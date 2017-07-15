@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src='../lib/flexible/flexible.js'></script>
+    <script src='../lib/flexible/flexible_css.js'></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/productlist.css">
+    <title>商品列表</title>
+</head>
+<body>
+<!-- mtop 顶部栏和搜索框 -- >
+<div class="mtop">
+    <!-- mheader 顶部栏 -->
+    <header class="mheader">
+        <a href="index.html" class='f-left mh-logo' ><img  src="../images/header_logo.png" alt=""></a>
+        <a href="javascript:;" class='f-right mh-app'><img src="../images/header_app.png" alt=""></a>
+    </header>
+    <!-- minput 顶部搜索框 -->
+    <div class="minput">
+        <div class="minput-inp">
+            <input class='inp' type="text" placeholder='请输入你想比价的商品'>
+        </div>
+        <div class="input-bt">
+            <input class='bt' type="button" value='搜索'>
+        </div>
+    </div>
+</div>
+
+<!-- 页面主体部分 mbody -->
+<main class="mbody">
+    <!-- 3级导航菜单 -->
+    <div class='mdaohang'>
+        <ul class='clearfix'>
+            <li><a href="index.html">首页 > </a></li>
+            <li><a href="category.html">全部分类 > </a></li>
+            <li><a href="javascript:;">电视 > </a></li>
+        </ul>
+    </div>
+    <!-- 产品列表 -->
+    <!-- mproduct 产品模板  mcategorylist 产品列表 -->
+    <section class="mproduct mcategorylist">
+        <!-- 产品展示列表 -->
+        <div class="mpro-list">
+            <ul class='clearfix'>
+                <li class='mpro-list-item'>
+                    <a href="javascript:;">
+                        <div class="mitem-left">
+                            <img src="../images/categorylist.jpg" >
+                        </div>
+                        <div class="mitem-info">
+                            <div class="tit">
+                                乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视
+                            </div>
+                            <div class='price'><em>&yen;</em>3599</div>
+                            <div class="other clearfix">
+                                <span class='mall'>6商城报价</span>
+                                <span class='comment'>有4201人评论</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class='mpro-list-item'>
+                    <a href="javascript:;">
+                        <div class="mitem-left">
+                            <img src="../images/categorylist.jpg" >
+                        </div>
+                        <div class="mitem-info">
+                            <div class="tit">
+                                乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视
+                            </div>
+                            <div class='price'><em>&yen;</em>3599</div>
+                            <div class="other clearfix">
+                                <span class='mall'>6商城报价</span>
+                                <span class='comment'>有4201人评论</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class='mpro-list-item'>
+                    <a href="javascript:;">
+                        <div class="mitem-left">
+                            <img src="../images/categorylist.jpg" >
+                        </div>
+                        <div class="mitem-info">
+                            <div class="tit">
+                                乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视
+                            </div>
+                            <div class='price'><em>&yen;</em>3599</div>
+                            <div class="other clearfix">
+                                <span class='mall'>6商城报价</span>
+                                <span class='comment'>有4201人评论</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<!-- 分页选择 -->
+<div class='mfenye'>
+    <div><a href="javascript:;">上一页</a></div>
+    <div>
+        <select name="mfenye-select" id="mfenye-select">
+            <option value="1">1/4</option>
+            <option value="2">2/4</option>
+            <option value="3">3/4</option>
+            <option value="4">4/4</option>
+        </select>
+    </div>
+    <div><a href="javascript:;">下一页</a></div>
+</div>
+
+<!-- mfooter 底部 -->
+<footer class='mfooter'>
+    <div class="mft-bts clearfix">
+        <a href='javascript:;' class="bt-login">登录</a>
+        <a href='javascript:;' class="bt-register">注册</a>
+        <a href='javascript:;' class="bt-totop">
+            <img src="../images/top.jpg" alt="回到顶部">回到顶部
+        </a>
+    </div>
+    <!-- 底部信息 -->
+    <div class='mft-msg'>
+        <p>
+            <a href="javascript:;" style='color:red'>手机APP下载</a>
+            <a href="javascript:;" style='color:black'>慢慢买手机版</a>
+            <a href="javascript:;">--掌上比价平台</a>
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<script src='../lib/art/template.js'></script>
+<script src='../lib/jquery/jquery-1.12.0.min.js'></script>
+</body>
+</html>

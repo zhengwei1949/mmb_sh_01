@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>白菜价</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/baicaijia.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+	<script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<!-- 顶部top栏start -->
+	<div class="top clearfix">
+		<div class="return fl"><i class="iconfont">&#xe653;</i></div>
+		<h3>白菜价-淘宝内部券</h3>
+		<img src="images/header_app.png" class="fr">
+	</div>
+	<!-- 顶部top栏end -->
+
+	<!-- 导航栏start -->
+	<div class="nav" id="nav">
+		
+	</div>
+	<!-- 导航栏end -->
+
+    <!-- 商品列表start -->
+    <div class="list">
+        
+    </div>
+    <!-- 商品列表end -->
+
+    <!-- 底部部分start -->
+    <div class="footer">
+        <div class="login">
+            <a>登录</a>
+            <a>注册</a>
+            <a>返回顶部</a>
+        </div>
+        <div class="text">
+            <p><span>手机APP下载</span><span>慢慢买手机版</span><span>--掌上比价平台</span></p>
+            <p>m.manmanbuy.com</p>
+        </div>
+        <span></span>
+    </div>
+    <span class="fix iconfont">&#xe64a;</span>
+    <!-- 底部部分end -->
+</body>
+<script type="text/javascript" src="lib/flexible.js"></script>
+<script type="text/javascript" src="js/baicaijia.js"></script>
+<script type="text/javascript" src="lib/template.js"></script>
+<!-- 头部标签栏部分 -->
+<script id="bcjTitle" type="text/html">
+    <div class="ul-wapper">
+        <ul class="tabs clearfix">
+            {{each result as value i}}
+            <li class=""><a href="#">{{value.title}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+</script>
+<!-- 商品详情信息 -->
+<script id="bcjList" type="text/html">
+    <ul class="clearfix">
+    {{each result as value i}}
+        <li>
+            <div class="pic">{{#value.productImg}}</div>
+            <div class="info">
+                <div class="title">
+                    <div class="pro_title">{{#value.productName}}</div>
+                    <div class="pro_price">{{#value.productPrice}}</div>
+                </div>
+                <div class="pro_href">
+                    {{#value.productCouponRemain}}
+                    <div class="b clearfix">
+                        <div class="get">{{#value.productCoupon}}</div>
+                        <div class="submit">{{#value.productHref}}</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+</html>

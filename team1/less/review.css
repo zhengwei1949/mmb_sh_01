@@ -1,0 +1,74 @@
+.main .title {
+  height: 0.959976rem;
+  background-color: #f3f3f3;
+  color: #874604;
+  line-height: 0.959976rem;
+  padding-left: 0.26666rem;
+  font-size: 14px;
+  font-weight: 900;
+  border-top: 1px solid #ccc;
+}
+.main .title1 {
+  border-top: 1px solid #ccc;
+}
+.main .title1 img {
+  float: left;
+  height: 3.19992rem;
+  width: 3.19992rem;
+}
+.main .title1 p {
+  height: 1.59996rem;
+  width: 100%;
+  padding-top: 0.319992rem;
+  line-height: 0.586652rem;
+  padding-right: 5px;
+  color: #999;
+}
+.main ul {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  position: relative;
+  margin-top: 0.26666rem;
+  background-color: #F8F8F8;
+}
+.main ul li {
+  font-size: 12px;
+  width: 100%;
+  border-bottom: 1px solid #A1A1A3;
+  padding-left: 0.199995rem;
+  padding-right: 0.199995rem;
+  padding-top: 0.26666rem;
+}
+.main ul li p {
+  display: block;
+  line-height: 0.639984rem;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 0.79998rem;
+}
+.main ul li div {
+  height: 0.639984rem;
+  line-height: 0.639984rem;
+}
+.main ul li i {
+  display: block;
+  float: left;
+  width: 2.6666rem;
+  height: 0.639984rem;
+  line-height: 0.639984rem;
+  text-align: center;
+  color: #FF9000;
+}
+.main ul::before {
+  content: '';
+  display: block;
+  height: 0.39999rem;
+  width: 0.39999rem;
+  background-color: #F8F8F8;
+  position: absolute;
+  left: 0.79998rem;
+  top: -0.213328rem;
+  transform: rotate(45deg);
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}

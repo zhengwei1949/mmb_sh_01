@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src='../lib/flexible/flexible.js'></script>
+    <script src='../lib/flexible/flexible_css.js'></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <title>国内折扣</title>
+</head>
+<body>
+<!-- mtop 顶部栏和搜索框 -->
+<div class="mtop">
+    <!-- mheader 顶部栏 -->
+    <header class="mheader">
+        <a href="index.html" class='f-left mh-back'><img src="../images/icback.svg" alt=""></a>
+        <a href="javascript:;" class='f-right mh-app'><img src="../images/header_app.png" alt=""></a>
+        <h1 class='mh-title'>国内折扣</h1>
+    </header>
+</div>
+
+<!--  mproduct 产品  -->
+<section class="mproduct"></section>
+<script id='tempMprolist' type='text/html'>
+    {{if result}}
+        <!-- 产品展示列表 -->
+        <div class="mpro-list">
+            <ul class='clearfix'>
+                {{each result as v i}}
+                    <li class='mpro-list-2rol-item'>
+                        <a href="inlandproduct.html?productid={{v.productId}}" productid='{{v.productId}}'>
+                            <div class="mitem-top">{{#v.productImg}}</div>
+                            <div class="mitem-info">
+                                <h3 class='tit'>{{v.productName}}</h3>
+                                <p class='price'>{{v.productPrice}}</p>
+                                <p class='mall'>{{v.productFrom}} | {{v.productTime}}</p>
+                            </div>
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    {{/if}}
+</script>
+
+<!-- mfooter 底部 -->
+<footer class='mfooter'>
+    <div class="mft-bts clearfix">
+        <a href='javascript:;' class="bt-login">登录</a>
+        <a href='javascript:;' class="bt-register">注册</a>
+        <a href='javascript:window.scrollTo(0,0);' class="bt-totop">
+            <img src="../images/top.jpg" alt="回到顶部">回到顶部
+        </a>
+    </div>
+    <!-- 底部信息 -->
+    <div class='mft-msg'>
+        <p>
+            <a href="javascript:;" style='color:red'>手机APP下载</a>
+            <a href="javascript:;" style='color:black'>慢慢买手机版</a>
+            <a href="javascript:;">--掌上比价平台</a>
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<script src='../lib/jquery/jquery-1.12.0.min.js'></script>
+<script src='../lib/art/template.js'></script>
+<script src='../js/common/routeURL.js'></script>
+<script src='../js/common/tools.js'></script>
+<script src='../js/inlanddiscount.js'></script>
+</body>
+</html>

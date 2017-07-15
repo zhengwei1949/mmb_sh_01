@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>category</title>
+    <link rel="stylesheet/less" href="less/base.less">
+    <link rel="stylesheet/less" href="less/inlanddiscount.less">
+      <script src="js/less.js"></script>
+</head>
+<body>
+<div class="MMB_category">
+    <!--页面头部导航栏START-->
+    <header class="topHeader1 ">
+        <div class=" logo clearfix">
+            <a  class="icon iconfont" href="index.html" title="慢慢买比价网--手机版">
+                &#xe653;
+            </a>
+        </div>
+        <h1 class="">
+            国内折扣
+        </h1>
+        <div class=" appdown1 ">
+            <a href="#" title="慢慢买比价网--手机版">
+                <img src="images/header_app.png" alt="慢慢买比价网--手机版">
+            </a>
+        </div>
+    </header>
+    <!--页面头部导航栏END-->
+    <!--页面内容START-->
+
+    <div id="content-con" class=" details clearfix" >
+        <!--<a href="">
+             <img src="../images/gengduo.png" alt="">
+             <h4>西域美农新疆特产五星和田红枣250g*2</h4>
+             <p>19.8元（5件99元</p>
+             <p>
+                 京东商城
+                 <i>|</i>
+                 10-22 13:28
+             </p>
+         </a>-->
+    </div>
+
+
+    <!--页面内容END-->
+
+    <!--页面底部START-->
+    <div class="MMB_foot1 clearfix">
+        <div class="footTop clearfix">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a id="backtrack"><i class="iconfont">&#xe668;</i>返回顶部</a>
+        </div>
+        <div class="footBottom1">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="#">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <p>m.mananbuy.com</p>
+        </div>
+    </div>
+    <!--页面底部END-->
+</div>
+
+
+
+<script type="text/html" id="briefTable">
+    {{each result as value i}}
+    <div class="f_left one" onclick="">
+     <a href="moneyproduct.html?productid={{value.productId}}">
+            {{#value.productImg}}
+            <h4>{{value.productName}}</h4>
+        <p> {{value.productPrice}} </p>
+            <p>
+                {{value.productFrom}} | {{value.productTime}}
+            </p>
+        </a>
+        </div>
+     {{/each}}
+</script>
+
+<script src="lib/jQuery/jquery-1.12.2.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/inlanddiscount.js"></script>
+</body>
+</html>

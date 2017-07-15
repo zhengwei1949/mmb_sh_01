@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sitnav</title>
+    <script src="lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="less/base.css">
+    <link rel="stylesheet" href="less/sitenav.css">
+</head>
+<body>
+<!--页面头部导航栏START-->
+<header class="topHeader">
+    <div class="f_left logo">
+        <a href="index.html" title="慢慢买比价网--手机版">
+            <i class="iconfont icon-xiangzuo1"></i>
+        </a>
+    </div>
+    <div class="topTitle">
+        <h1>商城导航</h1>
+    </div>
+    <div class="f_right appdown">
+        <a href="#" title="慢慢买比价网--手机版">
+            <img src="images/header_app.png" alt="慢慢买比价网--手机版">
+        </a>
+    </div>
+</header>
+<!--页面头部导航栏END-->
+<div class="sitenav clearfix">
+</div>
+<!--页面底部START-->
+<div class="MMB_foot">
+    <div class="footTop clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="javascript:scroll(0,0)"><i class="iconfont">&#xe668;</i>返回顶部</a>
+    </div>
+    <div class="footBottom">
+        <p>
+            <a href="#">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+        <p>m.mananbuy.com</p>
+    </div>
+</div>
+<!--页面底部END-->
+<script type="text/html" id="sitenav">
+    {{if result}}
+        {{each result as value i}}
+            <a href="{{value.navHref}}">
+                <img src="{{value.navImg}}" alt="">
+                <span>{{value.navTitle}}</span>
+            </a>
+        {{/each}}
+    {{/if}}
+</script>
+<script src="lib/jQuery/jquery-1.12.2.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common.js"></script>
+<script src="js/sitenav.js"></script>
+</body>
+</html>

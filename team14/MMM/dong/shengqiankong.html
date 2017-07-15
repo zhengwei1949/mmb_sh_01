@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="lib/flexible.js"></script>
+	<title>省钱控</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/shengqiankong.css">
+	<link rel="stylesheet" href="lib/iconfont/iconfont.css">
+	<script src='lib/jquery.js'></script>
+	<script src='lib/template.js'></script>
+	<script src="js/shengqiankong.js"></script>
+</head>
+<body>
+	<div class="bg">
+		<!-- 头部 -->
+		<header class="header">
+			<h3>省钱控-最新优惠</h3>
+			<a href="#" class="iconfont">&#xe609;</a>
+			<a href="#" class="iconfont">&#xe646;</a>
+		</header>
+		<!-- 主体-->
+		 <main class="main">
+	</main>	
+	<div class="main_bottom">
+		<input class="input_left" type="button" value="上一页">
+		<select class="selected">
+			<option value="0"d>1/15</option>
+			<option value="1">2/15</option>
+			<option value="2">3/15</option>
+			<option value="3">4/15</option>
+			<option value="4">5/15</option>
+			<option value="5">6/15</option>
+			<option value="6">7/15</option>
+			<option value="7">8/15</option>
+			<option value="8">9/15</option>
+			<option value="9">10/15</option>
+			<option value="10">11/15</option>
+			<option value="11">12/15</option>
+			<option value="12">13/15</option>
+			<option value="13">14/15</option>
+			<option value="14">15/15</option>
+		</select>
+		<input class="input_right" type="button" value="下一页">
+	</div>	
+	<!-- 尾部 -->
+	<footer class="footer">
+		<div class="footer_top">
+			<a href="#">登录</a>
+			<a href="#">注册</a>
+			<a href="#">返回顶部</a>
+		</div>
+		<div class="footer_bottom">
+			<p>
+				<a href="#">手机APP下载 </a>慢慢买手机版 -- 掌上比价平台
+			</p>
+			<p>m.manmanbuy.com</p>
+		</div>
+	</footer>
+</div>
+<!-- 模板 S-->
+<script id="product" type="text/html">
+	<ul >
+		{{ if result }}
+		{{ each result as value i}}
+		<li>
+			<a href="#" class="pic">{{ #value.productImgSm }}</a>
+			<a href="#" class="pic_right">
+				<p>{{ value.productName}} <span> {{ value.productPinkage }}</span></p>
+				<p>{{ value.productFrom}} | {{value.productTime }}
+					<span href="#" class="iconfont">&#xe60a;{{value.productComCount[1] }}</span>
+				</p>
+			</a>
+		</li>
+		{{ /each }}
+		{{ /if }}
+	</ul>
+</script>
+</body>
+</html>

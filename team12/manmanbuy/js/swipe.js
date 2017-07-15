@@ -1,0 +1,138 @@
+
+if(!window.swipeEffect){
+    window.swipeEffect = {};
+}
+swipeEffect.iScroll = function(args){
+    /*??????????閻犲鎷�??????????????????*/
+    if(!(this instanceof arguments.callee)) return new arguments.callee(args);
+    this.init(args);
+};
+swipeEffect.iScroll.prototype = {
+    constructor:swipeEffect.iScroll,
+    init:function(args){
+        /*?????????????????this*/
+        var that  = this;
+        /*????????????????Dom????????????????????????????*/
+        if(args.swipeDom && typeof  args.swipeDom == 'object'){
+            that.parentDom = args.swipeDom;
+        }
+        /*???????????????????????*/
+        if(!that.parentDom) return false;
+        /*?????????*/
+        that.childDom = that.parentDom.children&&that.parentDom.children[0]?that.parentDom.children[0]:'';
+        /*????????????????????????*/
+        if(!that.childDom) return false;
+        /*?????????????*/
+        that.settings = {};
+        /*???????  ????Y???? ???????y?????????x???????*/
+        that.settings.swipeType = args.swipeType?args.swipeType:'y';
+        /*??????閻庣偣鍊ч幏???????*/
+        that.settings.swipeDistance = args.swipeDistance>=0?args.swipeDistance:150;
+        /*?????????*/
+        that._scroll();
+    },
+    /*????????????濞达綇鎷�?????*/
+    setTranslate:function(translate){
+        this.currPostion = translate;
+        this._addTransition();
+        this._changeTranslate(this.currPostion);
+    },
+    _addTransition:function(){
+        this.childDom.style.transition = "all .2s ease";
+        this.childDom.style.webkitTransition = "all .2s ease";/*???? ??濠殿喖婀辩粣濉璪kit????????*/
+    },
+    _removeTransition:function(){
+        this.childDom.style.transition = "none";
+        this.childDom.style.webkitTransition = "none";/*???? ??濠殿喖婀辩粣濉璪kit????????*/
+    },
+    _changeTranslate:function(translate){
+        if(this.settings.swipeType == 'y'){
+            this.childDom.style.transform = "translateY("+translate+"px)";
+            this.childDom.style.webkitTransform = "translateY("+translate+"px)";
+        }else{
+            this.childDom.style.transform = "translateX("+translate+"px)";
+            this.childDom.style.webkitTransform = "translateX("+translate+"px)";
+        }
+    },
+    _scroll:function(){
+        /*?????????????????this*/
+        var that = this;
+        /*??????????*/
+        var type = that.settings.swipeType == 'y'?true:false;
+        /*?????????????*/
+        var parentHeight = type?that.parentDom.offsetHeight:that.parentDom.offsetWidth;
+        /*?????????????*/
+        var childHeight = type?that.childDom.offsetHeight:that.childDom.offsetWidth;
+
+        /*????????闁圭鎷�???????????*/
+        if(childHeight < parentHeight){
+            if(type){
+                that.childDom.style.height = parentHeight + 'px';
+                childHeight = parentHeight;
+            }else{
+                that.childDom.style.width = parentHeight + 'px';
+                childHeight = parentHeight;
+            }
+        }
+
+        /*???????*/
+        var distance = that.settings.swipeDistance;
+        /*????*/
+        /*???????濞达綇鎷�??????*/
+        that.maxPostion = 0;
+        that.minPostion = -(childHeight-parentHeight);
+        /*???????????濞达綇鎷�??*/
+        that.currPostion = 0;
+        that.startPostion = 0;
+        that.endPostion = 0;
+        that.movePostion = 0;
+        /*1.????*/
+        that.childDom.addEventListener('touchstart',function(e){
+            /*?????Y??????*/
+            that.startPostion = type?e.touches[0].clientY: e.touches[0].clientX;
+        },false);
+        that.childDom.addEventListener('touchmove',function(e){
+            e.preventDefault();
+            /*????????????????????endY???*/
+            that.endPostion = type?e.touches[0].clientY: e.touches[0].clientX;
+            that.movePostion = that.startPostion - that.endPostion;/*??????????????*/
+
+            /*2.????????*/
+            /*???????????*/
+            if((that.currPostion-that.movePostion)<(that.maxPostion+distance)
+                &&
+                (that.currPostion-that.movePostion)>(that.minPostion -distance)){
+                that._removeTransition();
+                that._changeTranslate(that.currPostion-that.movePostion);
+            }
+        },false);
+        window.addEventListener('touchend',function(e){
+            /*???????????????? ??????????濞达綇鎷�*/
+            /*?闁告鎷�??????????????濞达綇鎷�??????*/
+            /*????????? */
+            if((that.currPostion-that.movePostion) > that.maxPostion){
+                that.currPostion = that.maxPostion;
+                that._addTransition();
+                that._changeTranslate(that.currPostion);
+            }
+            /*????????????*/
+            else if((that.currPostion-that.movePostion) < that.minPostion){
+                that.currPostion = that.minPostion;
+                that._addTransition();
+                that._changeTranslate(that.currPostion);
+            }
+            /*?????????*/
+            else{
+                that.currPostion = that.currPostion-that.movePostion;
+            }
+            that._reset();
+        },false);
+
+    },
+    _reset:function(){
+        var that = this;
+        that.startPostion = 0;
+        that.endPostion = 0;
+        that.movePostion = 0;
+    }
+};

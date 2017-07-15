@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src='../lib/flexible/flexible.js'></script>
+    <script src='../lib/flexible/flexible_css.js'></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <title>首页</title>
+</head>
+<body>
+    <!-- mtop 顶部栏和搜索框 -->
+    <div class="mtop">
+        <!-- mheader 顶部栏 -->
+        <header class="mheader">
+            <a href="javascript:;" class='f-left mh-logo'><img  src="../images/header_logo.png" alt=""></a>
+            <a href="javascript:;" class='f-right mh-app'><img src="../images/header_app.png" alt=""></a>
+        </header>
+        <!-- minput 顶部搜索框 -->
+        <div class="minput">
+            <div class="minput-inp">
+                <input class='inp' type="text" placeholder='请输入你想比价的商品'>
+            </div>
+            <div class="input-bt">
+                <input class='bt' type="button" value='搜索'>
+            </div>
+        </div>
+    </div>
+    <!-- mnav 导航栏 -->
+    <nav class="mnav"></nav>
+    <!-- 导航模板 -->
+    <script id='tempMnav' type='text/html'>
+        {{if result}}
+            <ul class='mnav-list contains clearfix'>
+                {{each result as v i}}
+                    <li _id='{{v._id}}' indexmenuId={{v.indexmenuId}}><a href="{{v.titlehref}}">{{#v.img}}<p>{{v.name}}</p></a></li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </script>
+
+    <!-- mpercent 超值折扣推荐  mproduct 产品  -->
+    <section class="mproduct mpercent">
+        <!-- 产品展示标题栏 -->
+        <header class='mpro-tit'>
+            <a href="javascript:;">
+                <h3 class='tit f-left'>超值折扣推荐</h3>
+                <img class='more f-right' src="../images/more.png" alt="更多">
+            </a>
+        </header>
+        <!-- 产品展示列表 -->
+        <div class="mpro-list"></div>
+    </section>
+    <!-- 超值折扣产品模板 -->
+    <script id='tempMproduct' type='text/html'>
+        {{if result}}
+            <ul class='clearfix'>
+                {{each result as v i}}
+                    <li class='mpro-list-item' productid={{v.productId}}>
+                        <a href="moneyproduct.html?productid={{v.productId}}">
+                            <div class="mitem-left">
+                                {{#v.productImgSm}}
+                            </div>
+                            <div class="mitem-info">
+                                <div class="tit">
+                                    {{v.productName}}
+                                    <span>{{v.productPinkage}}</span>
+                                </div>
+                                <div class="other clearfix">
+                                    <span class='mall'>{{v.productFrom}} | {{v.productTime}}</span>
+                                    <span class='comment'><i class='icon-comment'></i>{{v.productComCount}}</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </script>
+
+    <!-- mmore 更多 -->
+    <section class='mmore'>
+        <a class='mmore-bt' href="moneyctrl.html" >更多优惠信息 >></a>
+    </section>
+
+    <!-- mpinpai 品牌排行 mproduct 产品 -->
+    <section class="mpinpai mproduct">
+        <!-- 产品展示标题栏 -->
+        <header class='mpro-tit'>
+            <a href="javascript:;">
+                <h3 class='tit f-left'>品牌排行</h3>
+                <img class='more f-right' src="../images/more.png" alt="更多">
+            </a>
+        </header>
+    </section>
+
+    <!-- mfooter 底部 -->
+    <footer class='mfooter'>
+        <div class="mft-bts clearfix">
+            <a href='javascript:;' class="bt-login">登录</a>
+            <a href='javascript:;' class="bt-register">注册</a>
+            <a href='javascript:window.scrollTo(0,0);' class="bt-totop">
+                <img src="../images/top.jpg" alt="回到顶部">回到顶部
+            </a>
+        </div>
+        <!-- 底部信息 -->
+        <div class='mft-msg'>
+            <p>
+                <a href="javascript:;" style='color:red'>手机APP下载</a>
+                <a href="javascript:;" style='color:black'>慢慢买手机版</a>
+                <a href="javascript:;">--掌上比价平台</a>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <script src='../lib/art/template.js'></script>
+    <script src='../lib/jquery/jquery-1.12.0.min.js'></script>
+    <script src='../js/common/routeURL.js'></script>
+    <script src='../js/common/tools.js'></script>
+    <script src='../js/index.js'></script>
+</body>
+</html>

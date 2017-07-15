@@ -1,0 +1,231 @@
+nav {
+  margin-top: 0.40540541rem;
+  background: #F3F3F3;
+  height: 1.08108108rem;
+  line-height: 1.08108108rem;
+  font-size: 0.37837838rem;
+}
+nav a {
+  display: inline-block;
+  padding: 0.13513514rem;
+  text-align: center;
+}
+nav span {
+  display: inline-block;
+  padding: 0.13513514rem;
+  text-align: center;
+}
+.name {
+  text-align: center;
+  font-size: 0.43243243rem;
+  padding: 0.40540541rem 0.40540541rem 0.40540541rem 0.40540541rem;
+}
+.img {
+  text-align: center;
+  width: 4.97297297rem;
+  height: 3.24324324rem;
+  margin: 0 auto;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+}
+.shop {
+  text-align: center;
+  height: 1.08108108rem;
+  line-height: 1.08108108rem;
+  font-size: 0.37837838rem;
+}
+.shop tr {
+  position: relative;
+}
+.shop tr td:nth-child(1) {
+  width: 0.54054054rem;
+}
+.shop tr td:nth-child(2) {
+  width: 1.89189189rem;
+}
+.shop tr td:nth-child(3) {
+  width: 1.35135135rem;
+  position: absolute;
+  right: 1.89189189rem;
+}
+.shop tr td:nth-child(4) {
+  width: 1.35135135rem;
+  position: absolute;
+  right: 0;
+  transform: translate(0, -0.08108108rem);
+}
+.bijiaogoumai {
+  margin-top: 0.54054054rem;
+}
+.bijiaogoumai div {
+  color: white;
+  font-size: 0.37837838rem;
+  background: orange;
+  float: left;
+  width: 33.333%;
+  height: 0.81081081rem;
+  line-height: 0.81081081rem;
+  text-align: center;
+  border-bottom: 1px solid red;
+  border-top: 1px solid red;
+}
+.bijiaogoumai div:nth-child(1) {
+  border-right: 1px solid red;
+}
+.bijiaogoumai div:nth-child(2) {
+  border-right: 1px solid red;
+}
+.tishi {
+  margin-top: 0.81081081rem;
+  font-size: 12px;
+  padding: 0.08108108rem;
+  border-top: 1px solid ;
+  font-weight: 100;
+}
+.comment_title {
+  height: 1.08108108rem;
+  background: #DBDBDB;
+  text-align: center;
+  line-height: 1.08108108rem;
+  font-size: 0.37837838rem;
+}
+.person {
+  height: 1.08108108rem;
+  position: relative;
+}
+.comName {
+  position: absolute;
+  left: 0.13513514rem;
+  top: 0.08108108rem;
+}
+.comTime {
+  position: absolute;
+  top: 0.13513514rem;
+  right: 0.08108108rem;
+}
+.comFrom {
+  position: absolute;
+  bottom: 0.13513514rem;
+  right: 0.08108108rem;
+}
+.comContent {
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid #DBDBDB;
+  padding-bottom: 0.13513514rem;
+}
+.more {
+  display: block;
+  height: 0.81081081rem;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 0.54054054rem;
+  border-radius: 0.13513514rem;
+  font-size: 0.37837838rem;
+}
+/*头部*/
+header {
+  background: #FF841D;
+  height: 1.35135135rem;
+  position: relative;
+}
+header .logo {
+  padding: 0.32432432rem;
+  height: 100%;
+}
+header .logo a img {
+  max-height: 0.67567568rem;
+  overflow: hidden;
+}
+header .appdown {
+  position: absolute;
+  width: 1.35135135rem;
+  height: 1.35135135rem;
+  right: 0;
+  top: 0;
+  padding: 0.18918919rem;
+}
+header .appdown a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+header .appdown a img {
+  width: 100%;
+  height: 100%;
+}
+/*搜索*/
+.form-search form {
+  position: relative;
+  padding: 10px;
+  text-align: center;
+}
+.form-search form input {
+  border-radius: 0.40540541rem;
+  height: 0.81081081rem;
+  line-height: 0.81081081rem;
+  font-size: 0.35135135rem;
+}
+.form-search form input[type="search"] {
+  background: white;
+  width: 6.75675676rem;
+  font-size: 0.35135135rem;
+  padding-right: 1.35135135rem;
+  padding-left: 0.54054054rem;
+}
+.form-search form input[type="button"] {
+  background: #FF841D;
+  width: 1.62162162rem;
+  margin-left: 0.27027027rem;
+}
+/*ding部*/
+footer {
+  width: 100%;
+  overflow: hidden;
+}
+.row {
+  height: 0.89189189rem;
+  line-height: 0.89189189rem;
+  background-color: #EFEFEF;
+  border: 1px solid #C4C4C4;
+  /*margin: 0;*/
+  margin-top: 0.94594595rem;
+}
+.row .bottom_right {
+  position: relative;
+}
+.row p {
+  color: #000000;
+  border-right: 1px solid #C4C4C4;
+  text-align: center;
+  font-size: 0.37837838rem;
+}
+.row a {
+  display: inline-block;
+  font-size: 0.37837838rem;
+  color: #747474;
+  position: absolute;
+  top: 0.21621622rem;
+  left: 0.62162162rem;
+}
+footer .bottom_bar {
+  background-color: #EFEFEF;
+  height: 1.56756757rem;
+}
+.bottom_bar p {
+  text-align: center;
+  color: #FF0000;
+  font-size: 0.32432432rem;
+}
+.bottom_bar p span {
+  color: #000000;
+}
+.bottom_bar p b {
+  color: #666666;
+}
+.bottom_bar p p {
+  color: #666666;
+  text-align: center;
+}

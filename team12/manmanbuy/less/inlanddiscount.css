@@ -1,0 +1,179 @@
+.domestic_layout {
+  width: 100%;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.domestic_layout header {
+  width: 100%;
+  color: #FFF;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.3125rem;
+}
+[data-dpr="2"] .domestic_layout header {
+  font-size: 35px;
+}
+[data-dpr="2.5"] .domestic_layout header {
+  font-size: 44px;
+}
+[data-dpr="2.75"] .domestic_layout header {
+  font-size: 48px;
+}
+[data-dpr="3"] .domestic_layout header {
+  font-size: 53px;
+}
+[data-dpr="4"] .domestic_layout header {
+  font-size: 70px;
+}
+.domestic_layout header h4 {
+  display: inline-block;
+  font-weight: normal;
+}
+.domestic_layout header a {
+  display: block;
+  color: #FFF;
+}
+.domestic_layout header a:first-child {
+  margin: 0.171875rem 0 0 0.1875rem;
+}
+.domestic_layout header a:first-child span {
+  display: block;
+  font-size: 30px;
+  line-height: 0.9375rem;
+}
+.domestic_layout header a:last-child {
+  margin: 0.171875rem 0.1875rem 0 0;
+}
+.domestic_layout header a:last-child img {
+  width: 0.90625rem;
+  height: 0.90625rem;
+}
+.domestic_layout header a img {
+  display: block;
+}
+.domestic_layout .domestic_main {
+  width: 100%;
+}
+.domestic_layout .domestic_main .domestic_content {
+  width: 50%;
+  border-bottom: 1px solid #E7E7E7;
+  border-right: 1px solid #E7E7E7;
+  padding: 0.53333333rem 0.26666667rem 0.26666667rem 0.48rem;
+  float: left;
+}
+.domestic_layout .domestic_main .domestic_content a {
+  display: inline-block;
+  width: 100%;
+}
+.domestic_layout .domestic_main .domestic_content a .content_pic {
+  width: 100%;
+  margin-bottom: 0.26666667rem;
+}
+.domestic_layout .domestic_main .domestic_content a .content_pic img {
+  width: 100%;
+  height: 4.24rem;
+}
+.domestic_layout .domestic_main .domestic_content a .content_message {
+  width: 100%;
+  height: 0.96rem;
+  color: #000;
+  overflow: hidden;
+  font-size: 13px;
+  font-weight: 600;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /** ������Ϊ��������ģ����ʾ **/
+  -webkit-box-orient: vertical;
+  /** ���û����������ж�������Ԫ�ص����з�ʽ **/
+  -webkit-line-clamp: 2;
+}
+[data-dpr="2"] .domestic_layout .domestic_main .domestic_content a .content_message {
+  font-size: 25px;
+}
+[data-dpr="2.5"] .domestic_layout .domestic_main .domestic_content a .content_message {
+  font-size: 31px;
+}
+[data-dpr="2.75"] .domestic_layout .domestic_main .domestic_content a .content_message {
+  font-size: 34px;
+}
+[data-dpr="3"] .domestic_layout .domestic_main .domestic_content a .content_message {
+  font-size: 38px;
+}
+[data-dpr="4"] .domestic_layout .domestic_main .domestic_content a .content_message {
+  font-size: 50px;
+}
+.domestic_layout .domestic_main .domestic_content a .content_price {
+  display: block;
+  font-size: 14px;
+  color: #FF6C00;
+  width: 100%;
+  height: 0.53333333rem;
+  overflow: hidden;
+}
+[data-dpr="2"] .domestic_layout .domestic_main .domestic_content a .content_price {
+  font-size: 27px;
+}
+[data-dpr="2.5"] .domestic_layout .domestic_main .domestic_content a .content_price {
+  font-size: 34px;
+}
+[data-dpr="2.75"] .domestic_layout .domestic_main .domestic_content a .content_price {
+  font-size: 37px;
+}
+[data-dpr="3"] .domestic_layout .domestic_main .domestic_content a .content_price {
+  font-size: 41px;
+}
+[data-dpr="4"] .domestic_layout .domestic_main .domestic_content a .content_price {
+  font-size: 54px;
+}
+.domestic_layout .domestic_main .domestic_content a .content_tip {
+  color: #A1A1A1;
+  font-size: 0.32rem;
+  margin-top: 0.29333333rem;
+}
+.domestic_layout footer {
+  width: 100%;
+  height: 2.625rem;
+  background-color: #EFEFEF;
+}
+.domestic_layout footer .operate {
+  width: 100%;
+  line-height: 0.953125rem;
+  border-top: 1px solid #C4C4C4;
+  border-bottom: 1px solid #C4C4C4;
+}
+.domestic_layout footer .operate ul li {
+  float: left;
+  width: 30%;
+  text-align: center;
+  border-right: 1px solid #C4C4C4;
+}
+.domestic_layout footer .operate ul li:last-child {
+  width: 40%;
+  border-right: none;
+}
+.domestic_layout footer .operate ul li span {
+  font-size: 13px;
+}
+[data-dpr="2"] .domestic_layout footer .operate ul li span {
+  font-size: 25px;
+}
+[data-dpr="2.5"] .domestic_layout footer .operate ul li span {
+  font-size: 31px;
+}
+[data-dpr="2.75"] .domestic_layout footer .operate ul li span {
+  font-size: 34px;
+}
+[data-dpr="3"] .domestic_layout footer .operate ul li span {
+  font-size: 38px;
+}
+[data-dpr="4"] .domestic_layout footer .operate ul li span {
+  font-size: 50px;
+}
+.domestic_layout footer .introduce {
+  width: 100%;
+  height: 1.671875rem;
+  text-align: center;
+  padding-top: 0.46875rem;
+}

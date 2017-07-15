@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/base.css">
+
+</head>
+ <script type="text/javascript" src="lib/jquery/jquery-3.1.0.min.js"></script>
+<body>
+<!--头部 -->
+<header>
+    <div class="lBeijing"></div>
+    <div class="rBeijing"></div>
+</header>
+<!-- 搜索 -->
+   <div class="search">
+       <input  placeholder="请输入你想比价的商品" class="ls">
+       <input  type="button"   value= "搜索"class="rs">
+   </div>
+   <!-- 菜单 -->
+   <div class="menu  hide">
+       <ul>
+       </ul>
+       <input type="button" class='mmore' value="加载更多">
+   </div>
+   <!-- 超值折扣推荐 -->
+   <div class="zhekou">
+      <div class="title">
+      <span>超值折扣推荐</span>
+      <a href="#"> <span> > </span></a>
+      </div>
+
+
+      <div class="center">
+      <ul>
+
+      </ul>
+
+      </div>
+   </div>
+   <!-- 更多 -->
+   <div class="more">
+       <div class="more1"><a href="#">更多优惠信息 >></a></div>
+   </div>
+   <!-- 品牌排行 -->
+   <div class="zhekou">
+      <div class="title">
+      <span>品牌排行</span>
+      <a href="#"> <span> > </span></a>
+      </div>
+      </div>
+      <!-- 底部 -->
+      <div class="bottom ">
+          <div class="denglu">
+           <span class="span1">登录</span>
+           <span class="span1">注册</span>
+           <span class="span3"><a href="#"><img src="images/jiantou0.png" height="16" width="17" alt=""> 返回顶部</a></span>
+            </div>
+
+               <p class='p1'><span class='class1'>手机APP下载  </span>慢慢买手机版<span class='class2'>--掌上比价平台</span></p>
+               <p class="p2">m.manmanbuy.com</p>
+
+      </div>
+
+
+	<!-- 菜单template模板引擎 -->
+<script type='text/html' id='list'>
+	{{each result as value}}
+	<li>
+
+	  <a {{if value.indexmenuId === 7}}class= {{/if}} href="html/{{value.titlehref}}">
+	  {{#value.img}}
+    </a>
+    <span>{{value.name}}</span>
+  </li>
+	{{/each}}
+</script>
+
+
+
+
+
+  <!--    折扣template模板引擎 -->
+<script type='text/html' id='lis'>
+  {{each result as value}}
+          <li>
+           <a href="#">
+           {{#value.productImgSm}}
+           <div  class="jy">
+           <p>{{value.productName}}
+           <span>{{value.productPinkage}}</span></p>
+            <p>{{value.productFrom}} {{value.productTime}}</p>
+           </div>
+           </a>
+           </li>
+
+  {{/each}}
+</script>
+
+
+
+
+
+
+
+
+
+ <script type="text/javascript" src="lib/template/template.js"></script>
+ <script src="js/index.js"></script>
+</body>
+
+</html>

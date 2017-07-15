@@ -1,0 +1,102 @@
+@charset "utf-8";
+@import 'color.less';  
+html,
+body {
+  width: 100%;
+  background-color: @bgc;
+}
+
+/*头部样式*/
+header {
+  width: 100%;
+  height: 1.333333rem;
+  background-color: @mainColor;
+  justify-content: space-between;
+  .logo{
+    padding-left: 0.4rem;
+    width: 50%;
+    a{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+  }
+  .appDown{
+    padding-right:0.266667rem ;
+  
+    img{
+        width: 0.906667rem;
+    }
+    
+  }
+}
+.search {
+  height:1.333333rem;
+  background-color: #fff;
+  padding: 0.266667rem;
+
+  input{
+    width: 80%;
+    background-color: @bgc;
+    height: 0.8rem;
+    border-radius: 0.4rem;
+    font-size: 14px;
+    padding-left: 0.533333rem;
+  }
+  button{
+    border:none;
+    background-color: @mainColor;
+    height: 0.8rem;
+    width: 16%;
+    border-radius: 0.4rem;
+    font-size: 14px;
+    color: #fff;
+  }
+}
+[data-dpr="2"] .search input{
+    font-size: 28px;
+}
+[data-dpr="3"] .search input{
+    font-size: 42px;
+}
+[data-dpr="2"] .search button{
+    font-size: 28px;
+}
+[data-dpr="3"] .search button{
+    font-size: 42px;
+}
+/*底部样式*/
+footer {
+  height:2.56rem;
+  padding-top: 0.666667rem;
+  background-color: #fff;
+  .footTop{
+      background-color: #f1f1f1; 
+    li{
+        width: 33.33%;
+      float: left;
+      a{
+        display: block;
+        padding: 0.133333rem 0;
+        text-align: center;
+        text-align: center;
+      }
+    }
+  }
+  .footBottom{
+    padding-top: 0.533333rem;
+    background-color: #f1f1f1; 
+    p{
+      text-align: center;
+      font-size: 12px;
+    }
+
+  }
+}
+[data-dpr="2"] footer .footBottom p{
+    font-size: 24px;
+}
+[data-dpr="3"] footer .footBottom p{
+    font-size: 36px;
+}

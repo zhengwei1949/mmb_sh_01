@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>省钱控</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../less/moneyctrl.css"/>
+    <!-- art模板引擎-->
+    <script src="../lib/artTemplate/template.js"></script>
+    <script type="text/html" id="sqk_template">
+        {{if result}}
+        {{each result as value i}}
+        <li class="sqk_item">
+            <a href="monerctrlGoods.html?productId={{value.productId}}">
+                {{#value.productImgSm}}
+                <!-- 右边信息部分-->
+                <div class="sqk_message">
+                    <!--产品介绍:简介,价格-->
+                    <div class="item_mes">
+                        <span class="pro_name">{{value.productName}}</span>
+                        <span class="pro_price">{{value.productPinkage}}</span>
+                    </div>
+                    <!-- 产品的网购网站和上线时间-->
+                    <div class="sqk_date">
+                        <!--网购网站 -->
+                        <span class="sqk_jd">{{value.productFrom}}</span>
+                        <span class="sqk_line">|</span>
+                        <!--产品上线时间 -->
+                        <span class="spk_proTime">{{value.productTime}}</span>
+                        <span class="spk-num fr">{{value.productComCount}}</span>
+                        <span class="mmb-icon mmb-icon-liuyanfill spk-liuYan fr"></span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+        {{/if}}
+    </script>
+</head>
+<body>
+    <div class="layer">
+        <!--********** 头部---start **********-->
+        <header class="colorB">
+            <a href="../index.html" class="fl">
+                <span class="iconfont icon-fanhui"></span>
+            </a>
+            <h4></h4>
+            <a href="javascript:;" class="fr">
+                <img src="../images/header_app.png" alt=""/>
+            </a>
+        </header>
+        <!--***** 头部---end *****-->
+
+        <!--页面主体部分-->
+        <ul class="sqk_main">
+           <!--  <li class="sqk_item-1">
+                <a href="javascript:;">
+                    <img src="" alt=""/>
+                    <div class="sqk_message">
+                        <div class="item_mes">
+                            <span class="pro_name">
+                                移动端凑单品: 海天 鲜味 生抽<br>
+                                <i class="pro_ml">1.28L</i>
+                            </span>
+                            <span class="pro_price">10.9元</span>
+                        </div>
+                        <div class="sqk_date">
+                            <span class="sqk_jd">京东商城</span>
+                            <span class="sqk_line">|</span>
+                            <span class="spk_proTime">10-25&nbsp;14:10</span>
+                            <div class="spk_valuation">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li> -->
+        </ul>
+        <!--点击选择部分-->
+        <div class="sqk_select">
+            <!--上一页-->
+            <input type="button" value="上一页" class="previous"/>
+            <!-- 下拉选择-->
+            <select id="sqk_sel">
+            </select>
+            <!-- 下一页-->
+            <input type="button" value="下一页" class="next"/>
+        </div>
+        <!--********** 底部---start **********-->
+        <footer>
+            <div class="operate clearfix">
+                <ul>
+                    <li>
+                        <span>登录</span>
+                    </li>
+                    <li><span>注册</span></li>
+                    <li id="reTop"><span class="iconfont icon-xiangshang-copy"></span><span>返回顶部</span></li>
+                </ul>
+            </div>
+            <div class="introduce">
+                <p><span class="colorRed">手机APP下载</span>
+                    <span>慢慢买手机版</span>
+                    <span class="colorGray">-- 掌上比价平台</span>
+                </p>
+
+                <p class="colorGray">m.manmanbuy.com</p>
+            </div>
+        </footer>
+        <!--***** 底部---end *****-->
+    </div>
+    <!-- 适配rem-->
+    <script src="../lib/flexible/flexible.js"></script>
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <!--公共js库-->
+    <script src="../js/base.js"></script>
+    <script src="../js/moneyctrl.js"></script>
+</body>
+</html>

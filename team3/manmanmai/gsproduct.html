@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>凑单品</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/gsproduct.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <script type="text/javascript" src="lib/flexible/flexible.js"></script>
+    <script src="lib/jQuery/jquery.js"></script>
+    <script src="js/base.js"></script>
+    <script src="lib/template/template.js"></script>
+</head>
+
+<body>
+    <!-- 顶部固定定位 -->
+    <div class="hb_title ">
+        <!-- 头部 -->
+    <header class="flexBox ac">
+        <div>
+        <a href="" class="goback icon_navigate_before"></a>
+        </div>
+        <span class="title">凑单品</span>
+        <div class="appDown">
+            <a href="index.html"><img src="images/header_app.png" /></a>
+        </div>
+    </header>
+        <!-- 导航 -->
+        <nav class="hb_nav">
+            <ul>
+                <li><a class="hb_getshop" href="javascript:;"><span class="hb_market">京东</span><span class="icon_expand_more"></span></a></li>
+                <li><a class="hb_getarea" href="javascript:;"><span class="hb_where">华北</span><span class="icon_expand_more"></span></a></li>
+                <li><a href="javascript:;">全部价格<span class="icon_expand_more"></span></a></li>
+            </ul>
+            <div class="hb_search"><a href="javascript:;"><span class="icon_search"></span></a></div>
+        </nav>
+    </div>
+    <!-- 商品主体 -->
+    <main class="hb_main">
+        <script type="text/html" id="main">
+            <ul class="clearfix">
+                {{each result as value i}}
+                <li>
+                    <a href="#"><img src={{value.productImg}} alt=""></a>
+                    <p>{{value.productName}}</p>
+                    <div class="clearfix"><span>{{value.productPrice}}</span>
+                        <button>去凑单</button>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </script>
+    </main>
+    <!--弹出框店铺-->
+    <div class="hb_shopInfo">
+        <script type="text/html" id="shop">
+            {{if result}}
+            <ul class="hb_shopList">
+                {{each result as value i}}
+                <li shopid="{{value.shopId}}"><a href="#">{{value.shopName}}<span></span></a></li>
+                {{/each}}
+            </ul>
+            {{/if}}
+        </script>
+    </div>
+    <!--弹出框地区-->
+    <div class="hb_areaInfo">
+        <script type="text/html" id="area">
+            {{if result}}
+            <ul class="hb_areaList">
+                {{each result as value i}}
+                <li areaid="{{value.areaId}}"><a href="javascript:;">{{value.areaName}}<span></span></a></li>
+                {{/each}}
+            </ul>
+            {{/if}}
+        </script>
+    </div>
+     <script src="js/footer.js"></script>
+    <!-- JS -->
+    <script src="js/gsproduct.js"></script>
+
+</body>
+
+</html>

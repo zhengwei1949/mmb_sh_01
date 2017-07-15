@@ -1,0 +1,175 @@
+/*顶部通栏S*/
+.topHeader {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.topHeader .topHeaderBox {
+  position: relative;
+  width: 100%;
+  height: 1.28rem;
+  background: #f4483e;
+}
+/*顶部通栏E*/
+/*导航栏S*/
+.cab_nav {
+  position: fixed;
+  top: 1.28rem;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 1.28rem;
+  overflow: hidden;
+}
+.cab_nav .cab_nav_box {
+  position: relative;
+  width: 130%;
+  height: 100%;
+  background: white;
+}
+.cab_nav .cab_nav_box ul {
+  width: 100%;
+  height: 100%;
+}
+.cab_nav .cab_nav_box ul li {
+  height: 100%;
+  float: left;
+  padding: 0.13333333rem 0.13333333rem;
+}
+.cab_nav .cab_nav_box ul li a {
+  display: block;
+  height: 100%;
+  font-size: 0.4rem;
+  line-height: 1.01333333rem;
+  color: black;
+}
+.cab_nav .cab_nav_box ul li a:hover {
+  color: red;
+  border-bottom: 0.08rem solid red;
+}
+/*导航栏E*/
+/*商品类S*/
+.cab_shop {
+  margin-top: 2.56rem;
+  width: 100%;
+  background: #f7f7f7;
+  padding: 0.26666667rem;
+}
+.cab_shop .cab_shop_box {
+  width: 100%;
+  height: 4rem;
+  background: white;
+  margin-bottom: 0.26666667rem;
+  overflow: hidden;
+}
+.cab_shop .cab_shop_box .cab_shop_picture {
+  width: 3.46666667rem;
+  height: 3.46666667rem;
+  margin: 0.26666667rem 0 0.26666667rem 0.26666667rem;
+}
+.cab_shop .cab_shop_box .cab_shop_picture img {
+  width: 3.46666667rem;
+  height: 3.46666667rem;
+}
+.cab_shop .cab_shop_box .cab_shop_text {
+  width: 5.6rem;
+  height: 3.46666667rem;
+  margin: 0.26666667rem 0;
+  position: relative;
+}
+.cab_shop .cab_shop_box .cab_shop_text .cab_shop_productName {
+  width: 100%;
+  height: 0.93333333rem;
+  font-size: 0.42666667rem;
+  font-weight: normal;
+}
+.cab_shop .cab_shop_box .cab_shop_text .cab_shop_productName .b {
+  font-size: 0.26666667rem;
+  color: red;
+}
+.cab_shop .cab_shop_box .cab_shop_text .cab_shop_productPrice {
+  color: red;
+  font-size: 0.53333333rem;
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+}
+.cab_shop .cab_shop_box .cab_shop_text .cab_shop_productPrice em {
+  font-size: 0.4rem;
+}
+.cab_shop .cab_shop_box .cab_shop_text .cab_shop_productPrice del {
+  font-size: 0.4rem;
+  color: gray;
+  margin-left: 0.26666667rem;
+}
+.cab_shop .cab_shop_box .cab_shop_text .cab_shop_productPrice i {
+  font-style: normal;
+}
+.cab_shop .cab_shop_box .cab_shop_text .cab_shop_productCouponRemain {
+  height: 0.8rem;
+}
+.cab_shop .cab_shop_box .cab_shop_text .cab_shop_productCouponRemain .bar {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.cab_shop .cab_shop_box .cab_shop_text .cab_shop_productCouponRemain .bar .goquan {
+  display: block;
+  width: 2.26666667rem;
+  height: 0.4rem;
+  background: #ffb7b7;
+  border-radius: 0.26666667rem;
+  border: 0.02666667rem solid #fc353a;
+  position: absolute;
+  left: 0;
+  top: 0.06666667rem;
+}
+.cab_shop .cab_shop_box .cab_shop_text .cab_shop_productCouponRemain .bar i {
+  position: absolute;
+  top: 0.13333333rem;
+  left: 0.88rem;
+  font-size: 0.21333333rem;
+}
+.cab_shop .cab_shop_box .cab_shop_text .cab_shop_productCouponRemain .bar i span {
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+}
+.cab_shop .cab_shop_box .cab_shop_text .cab_shop_productCouponRemain .bar b {
+  font-size: 0.37333333rem;
+  position: absolute;
+  top: 0.08rem;
+  left: 2.74666667rem;
+  color: #fc353a;
+}
+.cab_shop .cab_shop_box .cab_shop_text .cab_shop_productCoupon a {
+  display: block;
+  width: 3.2rem;
+  height: 0.66666667rem;
+  border: 0.02666667rem dotted #e4393c;
+  font-size: 0.32rem;
+  line-height: 0.66666667rem;
+  text-align: center;
+  color: #e4393c;
+}
+.cab_shop .cab_shop_box .cab_shop_text .cab_shop_download {
+  width: 1.6rem;
+  height: 0.66666667rem;
+  z-index: 100;
+  position: absolute;
+  right: 0.26666667rem;
+  bottom: 0;
+}
+.cab_shop .cab_shop_box .cab_shop_text .cab_shop_download a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 0.34666667rem;
+  text-align: center;
+  line-height: 0.66666667rem;
+  color: white;
+  background: #ff5e5d;
+  border-radius: 0.10666667rem;
+}
+/*商品类E*/

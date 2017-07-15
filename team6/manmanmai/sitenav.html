@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>商城导航</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/sitenav.css">
+</head>
+<body>
+	<!-- 头部部分 -->
+	<header class="shop-header">
+		<div class="logo fl">
+			<a href="index.html" title='慢慢买'>
+				<img src="images/header_logo.png" alt="">
+			</a>
+		</div>
+		<div class="appdown fr" >
+			<a href="javascript:">
+				<img src="images/header_app.png" alt="">
+			</a>
+		</div>
+	</header>
+	<!-- 商城导航部分 -->
+	<nav class="shop-nav">
+		<ul class='nav-list clearfix'>
+			
+
+		</ul>
+	</nav>
+	
+ <!-- 底部部分 -->
+ <footer>
+ 	<div class='footer-ranking'>
+ 		<p>品牌排行</p>
+ 		<span></span>
+ 	</div>
+ 	<div class='info clearfix'>
+ 	<a href="#">登录</a>
+ 	<a href="#">注册</a>
+
+ 	<a href="#">返回底部</a>
+   </div>
+   <div class='mobile'>
+   	 	<a href="#">手机APP下载</a>
+   	 	<a href="#">慢慢买手机版</a>、
+   	 	<a href="#">--掌上比价平台</a>
+   	 	<p class='net'>m.manmanbuy.com</p>
+   </div>
+ 	
+ </footer>
+
+	<script src='lib/zepto/zepto.min.js'></script>
+	<script src='lib/zepto/touch.js'></script>
+	<script src='lib/zepto/selector.js'></script>
+	<script src='lib/zepto/fx.js'></script>
+	<script src='js/url.js'></script>
+	<script src='lib/template-native.js'></script>
+	<script src='js/sitenav.js'></script>
+	<script type="text/template" id='item1'>
+		<% for(var i = 0;i<result.length;i++){ %> 
+			<li>
+				<a href="<%= result[i].navHref%>">
+					<span><img src="<%= result[i].navImg%>" alt=""></span>
+
+					<p><%= result[i].navTitle%></p>
+				</a>
+
+			</li>
+		<% } %>
+		
+	</script>
+	
+</body>
+</html>

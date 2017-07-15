@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="less/base.css">
+    <link rel="stylesheet" href="less/baicaijia.css">
+    <script src="lib/jQuery/jquery-1.12.2.js"></script>
+    <script src="lib/artTemplate/template.js"></script>
+    <script src="lib/swipe/swipe.js"></script>
+</head>
+<body>
+<!--顶部通栏S-->
+<header class="topHeader">
+    <div class="f_left logo">
+        <a href="#" title="慢慢买比价网--手机版">
+            <img src="images/header_logo.png" alt="慢慢买比价网--手机版">
+        </a>
+    </div>
+    <div class="f_right appdown">
+        <a href="#" title="慢慢买比价网--手机版">
+            <img src="images/header_app.png" alt="慢慢买比价网--手机版">
+        </a>
+    </div>
+</header>
+<!--顶部通栏E-->
+<!--导航栏S-->
+<script type="text/html" id="cab_nav_art">
+    {{if result}}
+     <ul>
+         {{each result as value i}}
+         <li titleid={{value.titleId}}><a href="#">{{value.title}}</a></li>
+         {{/each}}
+     </ul>
+    {{/if}}
+</script>
+<div class="cab_nav">
+    <div class="cab_nav_box"></div>
+</div>
+<!--导航栏E-->
+<!--商品栏S-->
+<script type="text/html" id="cab_shop_art">
+    {{if result}}
+    {{each result as value i}}
+    <div class="cab_shop_box">
+        <div class="cab_shop_picture f_left">{{#value.productImg}}</div>
+        <div class="cab_shop_text f_right">
+            <div class="cab_shop_productName">{{#value.productName}}</div>
+            <div class="cab_shop_productPrice">{{#value.productPrice}}</div>
+            <div class="cab_shop_productCouponRemain">{{#value.productCouponRemain}}</div>
+            <div class="cab_shop_productCoupon">{{#value.productCoupon}}</div>
+            <div class="cab_shop_download"><a href="#">下单链接</a></div>
+        </div>
+    </div>
+    {{/each}}
+    {{/if}}
+</script>
+<div class="cab_shop"></div>
+<!--商品栏E-->
+<!--页面底部S-->
+<div class="MMB_foot">
+    <div class="footTop clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="javascript:scroll(0,0)"><i class="iconfont">&#xe668;</i>返回顶部</a>
+    </div>
+    <div class="footBottom">
+        <p>
+            <a href="#">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+        <p>m.mananbuy.com</p>
+    </div>
+</div>
+<!--页面底部E-->
+<script src="js/baicaijia.js"></script>
+</body>
+</html>

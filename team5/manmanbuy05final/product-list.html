@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/product-list.css"/>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/base.css"/>
+    <script src="js/base.js"></script>
+    <script src="lib/flexible.js"></script>
+</head>
+<body>
+<!-- 顶部-->
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/header_logo.png" alt="">
+        </a>
+    </div>
+    <div class="appdown">
+        <a href="#">
+            <img src='images/header_app.png' alt=""/>
+        </a>
+    </div>
+</header>
+
+<section class='form-search'>
+    <form action="">
+        <input type="search" placeholder='请输入你想比价的商品'/>
+        <input type="button" value='搜索'/>
+    </form>
+</section>
+
+<section class="main"></section>
+<section class="comment"></section>
+
+
+
+
+
+
+<!--底部部分B-->
+<footer>
+    <!--使用bootstrap栅格系统-->
+    <!--底部写死-->
+    <div class="row">
+        <div class="col-xs-4 col-sm-4">
+            <p>登录</p>
+        </div>
+        <div class="col-xs-4 col-sm-4">
+            <p>注册</p>
+        </div>
+        <div class=" bottom_right col-xs-4 col-sm-4">
+            <a href="#" class="glyphicon glyphicon-arrow-up"><img src="" alt=""/></a>
+            <p >返回顶部</p>
+        </div>
+    </div>
+    <div class="bottom_bar">
+        <p>手机APP下载&nbsp;<span>慢慢买手机版</span><b>—掌上比价平台</b></p>
+        <p><b>m.manmanbuy.com</b></p>
+    </div>
+</footer>
+<!--底部部分E-->
+
+<script src='lib/template.js'></script>
+<script type="text/html" id="template">
+    <nav><a href="index.html">首页</a><sapn>&gt;</sapn>
+        <a href="category.html">全部分类</a><span>&gt;</span><a></a></nav>
+    {{each result as value i}}
+    <div class="name">{{value.productName}}</div>
+    <div class="img">{{#value.productImg}}</div>
+    <div class='bijiaogoumai'>
+        <div>比价购买</div>
+        <div>产品参数</div>
+        <div>评价(2322)</div>
+    </div>
+    <div class="shop">{{#value.bjShop}}</div>
+    {{/each}}
+</script>
+<script type="text/html" id="template1">
+    <div class="tishi">*实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延时。</div>
+    <div class="comment_title">网友评价</div>
+    {{each result as value i}}
+    <div class="person">
+        <div class="comName">{{value.comName}}</div>
+        <div class="comTime">{{value.comTime}}</div>
+        <div class="comFrom">{{value.comFrom}}</div>
+    </div>
+    <div class="comContent">{{value.comContent}}</div>
+    {{/each}}
+    <div><button class="more">查看更多评价</button></div>
+</script>
+
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/product-list.js"></script>
+</body>
+</html>

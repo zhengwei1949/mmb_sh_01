@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>凑单品</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/coudanpin.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+	<script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="lib/flexible.js"></script>
+</head>
+<body>
+	<!-- 顶部top栏start -->
+	<div class="top clearfix">
+		<div class="return fl"><i class="iconfont">&#xe653;</i></div> 
+		<h3>白菜价-淘宝内部券</h3>
+		<img src="images/header_app.png" class="fr">
+	</div>
+	<!-- 顶部top栏end -->
+
+	<!-- 主体内容start -->
+	<div class="product">
+		<div class="list">
+			<div class="nav">
+				<!-- 标签栏 -->
+				<div class="filter">
+				</div>
+				<div class="search"><span class=""></span></div>
+				<!-- 商城下拉框 -->
+				<div class="shop_down box" id="shop">
+                    
+                </div>
+                <!-- 地域选择 -->
+                <div class="areasele box" id="area">
+                    
+                </div>
+			</div>
+			<!-- 商品列表 -->
+			<div class="pro_shop clearfix">
+				
+			</div>
+		</div>
+	</div>
+	<!-- 主体内容end -->
+
+	<!-- 底部部分start -->
+    <div class="footer">
+        <div class="login">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#">返回顶部</a>
+        </div>
+        <div class="text">
+            <p><span>手机APP下载</span><span>慢慢买手机版</span><span>--掌上比价平台</span></p>
+            <p>m.manmanbuy.com</p>
+        </div>
+        <span></span>
+    </div>
+    <!-- 底部部分end -->
+</body>
+<script type="text/javascript" src="lib/template.js"></script>
+<!-- 获取标签栏数据 -->
+<script type="text/html" id="filter">
+	<ul>
+        {{each result as value i}}
+        <li class=""><a href="#" data-id="0" class="{{value.selectName}}">{{value.selected}}<i></i></a></li>
+        {{/each}}
+    </ul>
+</script>
+<!-- 获取下拉框 商城数据 -->
+<script type="text/html" id="shop_down">
+	<ul>
+		{{each result as value i}}
+	    <li class=""><a href="javascript:GetShopProduct('shopid', {{value.shopId}},'{{value.shopName}}');" data-shopid="{{value.shopId}}">{{value.shopName}}</a><i class="select iconfont">&#xe610;</i></li>
+	    {{/each}}	    
+	    
+	</ul>
+</script>
+<!-- 获取下拉框 地域选择数据 -->
+<script type="text/html" id="areasele">
+	<ul>
+		{{each result as value i}}
+	    <li class=""><a href="javascript:GetAreaProduct('shopid', {{value.areaId}},'{{value.areaName}}');" data-shopid="{{value.shopId}}">{{value.areaName}}</a></li>
+	    {{/each}}
+	</ul>
+</script>
+<!-- 获取商品列表数据 -->
+<script type="text/html" id="pro_shop">
+	<ul>
+		{{each result as value i}}
+		<li>
+			<a href="#">
+				<div class="pic"><img src="{{value.productImg}}"></div>
+				<div class="title">{{value.productName}}</div>
+				<div class="text">
+					<div class="price fl">{{value.productPrice}}</div>
+					<div class="btn fr">去凑单</div>
+				</div>
+			</a>
+		</li>
+		{{/each}}
+	</ul>
+</script>
+<script type="text/javascript" src="js/coudanpin.js"></script>
+</html>

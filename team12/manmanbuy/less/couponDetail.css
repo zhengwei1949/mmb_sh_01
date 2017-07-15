@@ -1,0 +1,246 @@
+.ticket_layout {
+  width: 100%;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  border: 1px solid #E2E2E3;
+}
+.ticket_layout header {
+  width: 100%;
+  color: #FFF;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.3125rem;
+  background-color: #F4483E;
+}
+[data-dpr="2"] .ticket_layout header {
+  font-size: 35px;
+}
+[data-dpr="2.5"] .ticket_layout header {
+  font-size: 44px;
+}
+[data-dpr="2.75"] .ticket_layout header {
+  font-size: 48px;
+}
+[data-dpr="3"] .ticket_layout header {
+  font-size: 53px;
+}
+[data-dpr="4"] .ticket_layout header {
+  font-size: 70px;
+}
+.ticket_layout header h4 {
+  display: inline-block;
+  font-weight: normal;
+}
+.ticket_layout header a {
+  display: block;
+  color: #FFF;
+}
+.ticket_layout header a:first-child {
+  margin: 0.171875rem 0 0 0.1875rem;
+}
+.ticket_layout header a:first-child span {
+  display: block;
+  font-size: 30px;
+  line-height: 0.9375rem;
+}
+.ticket_layout header a:last-child {
+  margin: 0.171875rem 0.1875rem 0 0;
+}
+.ticket_layout header a:last-child img {
+  width: 0.90625rem;
+  height: 0.90625rem;
+}
+.ticket_layout header a img {
+  display: block;
+}
+.ticket_layout .content .main {
+  width: 100%;
+  border: 1px solid #E2E2E3;
+}
+.ticket_layout .content .main .ticket_header {
+  width: 100%;
+  font-size: 0.37333333rem;
+  text-align: center;
+  line-height: 0.74666667rem;
+  color: #999999;
+}
+.ticket_layout .content .main .ticket_content {
+  width: 100%;
+  border-bottom: 1px solid #E7E7E7;
+  padding: 0.26666667rem 0.46666667rem 0.4rem 0.2rem;
+  position: relative;
+}
+.ticket_layout .content .main .ticket_content .content_pic {
+  height: 2.13333333rem;
+  width: 2.66666667rem;
+  float: left;
+  background: pink;
+  margin-right: 0.26666667rem;
+}
+.ticket_layout .content .main .ticket_content .content_pic img {
+  height: 2.13333333rem;
+  width: 2.66666667rem;
+}
+.ticket_layout .content .main .ticket_content .content_right {
+  float: right;
+  width: 6.26666667rem;
+}
+.ticket_layout .content .main .ticket_content .content_right .content_msg {
+  width: 100%;
+  font-size: 0.37837838rem;
+}
+.ticket_layout .content .main .ticket_content .content_right .content_price {
+  font-size: 0.32rem;
+  height: 0.69333333rem;
+  line-height: 0.69333333rem;
+  color: #5A5A5A;
+}
+.ticket_layout .content .main .ticket_content .content_right .content_time {
+  color: #EE7700;
+  font-size: 0.32rem;
+  margin-top: 0.42666667rem;
+}
+.ticket_layout .content .main .ticket_content .content_tip {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -0.22666667rem;
+  height: 0.45333333rem;
+  width: 0.45333333rem;
+}
+.ticket_layout .content .main .ticket_content .content_tip a {
+  font-size: 0.45333333rem;
+}
+.ticket_layout .content .undis {
+  display: block;
+}
+.ticket_layout .content .main2 {
+  width: 100%;
+  height: 18.66666667rem;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.ticket_layout .content .main2 .main2_img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5.33333333rem;
+  height: 4.26666667rem;
+  margin-top: -2.13333333rem;
+  margin-left: -2.66666667rem;
+  background: pink;
+  overflow: hidden;
+  position: relative;
+}
+.ticket_layout .content .main2 .main2_img ul {
+  width: 1333.33333333rem;
+  height: 4.26666667rem;
+  position: absolute;
+}
+.ticket_layout .content .main2 .main2_img ul li {
+  width: 5.33333333rem;
+  height: 4.26666667rem;
+  float: left;
+}
+.ticket_layout .content .main2 .main2_img ul li img {
+  width: 100%;
+}
+.ticket_layout .content .main2 .main2_left {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.8rem;
+  left: 0.66666667rem;
+  width: 1.2rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  background: #242424;
+  color: #999999;
+  font-size: 1.06666667rem;
+  text-align: center;
+}
+.ticket_layout .content .main2 .main2_right {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.8rem;
+  right: 0.66666667rem;
+  width: 1.2rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  background: #242424;
+  color: #999999;
+  font-size: 1.06666667rem;
+  text-align: center;
+}
+.ticket_layout .content .main2 .main2_del {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 1.06666667rem;
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  text-align: center;
+  font-size: 1.06666667rem;
+  background: #242424;
+  color: #999999;
+}
+.ticket_layout .nav {
+  width: 100%;
+  font-size: 0.34666667rem;
+  line-height: 0.85333333rem;
+  padding-left: 0.26666667rem;
+  border-bottom: 1px solid #CCCCCC;
+  background: #F1F1F1;
+  margin-bottom: 0.85333333rem;
+}
+.ticket_layout .nav a {
+  color: #000;
+}
+.ticket_layout footer {
+  width: 100%;
+  height: 2.625rem;
+  background-color: #EFEFEF;
+}
+.ticket_layout footer .operate {
+  width: 100%;
+  line-height: 0.953125rem;
+  border-top: 1px solid #C4C4C4;
+  border-bottom: 1px solid #C4C4C4;
+}
+.ticket_layout footer .operate ul li {
+  float: left;
+  width: 30%;
+  text-align: center;
+  border-right: 1px solid #C4C4C4;
+}
+.ticket_layout footer .operate ul li:last-child {
+  width: 40%;
+  border-right: none;
+}
+.ticket_layout footer .operate ul li span {
+  font-size: 13px;
+}
+[data-dpr="2"] .ticket_layout footer .operate ul li span {
+  font-size: 25px;
+}
+[data-dpr="2.5"] .ticket_layout footer .operate ul li span {
+  font-size: 31px;
+}
+[data-dpr="2.75"] .ticket_layout footer .operate ul li span {
+  font-size: 34px;
+}
+[data-dpr="3"] .ticket_layout footer .operate ul li span {
+  font-size: 38px;
+}
+[data-dpr="4"] .ticket_layout footer .operate ul li span {
+  font-size: 50px;
+}
+.ticket_layout footer .introduce {
+  width: 100%;
+  height: 1.671875rem;
+  text-align: center;
+  padding-top: 0.46875rem;
+}

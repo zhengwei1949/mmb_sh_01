@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* =====十大品牌排行===== */
+.layout .sub_nav {
+  color: #874604;
+  margin: 0px;
+  border-bottom: 0;
+  border-right: 0;
+  box-shadow: 0px 2px 2px #ccc;
+}
+.layout .b_list .s_list {
+  padding: 10px;
+  border-top: 1px solid #C8C8C8;
+  color: #000000;
+  position: relative;
+}
+.layout .b_list .s_list i {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  display: inline-block;
+  color: #ffffff;
+  background: #C9C9C9;
+  margin-right: 10px;
+}
+.layout .b_list .s_list .s_right h5 {
+  margin-bottom: 8px;
+  color: #000000;
+}
+.layout .b_list .s_list .s_right p {
+  color: #999999;
+}
+.layout .b_list .s_list span {
+  position: absolute;
+  color: #A9B7B7;
+  right: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.layout .b_list .s_list:nth-of-type(1) i {
+  background: #F10E0E;
+}
+.layout .b_list .s_list:nth-child(2) i {
+  background: #FF9314;
+}
+.layout .b_list .s_list:nth-child(3) i {
+  background: #8ADF5B;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>proDetails</title>
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="less/base.css">
+    <link rel="stylesheet" href="less/bijia.css">
+</head>
+<body>
+<div class="proDetails">
+    <!--页面头部导航栏START-->
+    <header class="topHeader">
+        <div class="f_left logo">
+            <a href="#" title="慢慢买比价网--手机版">
+                <img src="images/header_logo.png" alt="慢慢买比价网--手机版">
+            </a>
+        </div>
+        <div class="f_right appdown">
+            <a href="#" title="慢慢买比价网--手机版">
+                <img src="images/header_app.png" alt="慢慢买比价网--手机版">
+            </a>
+        </div>
+    </header>
+    <!--页面头部导航栏END-->
+    <!--页面搜索框START-->
+    <form class="topSearch">
+        <div class="searchMMB">
+            <input type="text" class="searchTxt" placeholder="请输入你想比价的商品">
+            <input type="button" class="searchBtn" value="搜索">
+        </div>
+    </form>
+    <!--页面搜索框END-->
+
+    <!--产品分类导航栏start-->
+    <div class="proNav clearfix">
+        <div class="pronavLinks f_left clearfix">
+            <a href="index.html">首页</a><i class="iconfont icon-xiangyou1"></i>
+        </div>
+        <a href="#" class="f_right">筛选</a>
+    </div>
+    <!--产品分类导航栏end-->
+    <!--产品详情部分start-->
+    <div class='detailsPro'>
+        <div class="detailsShow"></div>
+        <div class="detailstable">
+            <p class="detbot">
+                * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+            </p>
+        </div>
+        <div class="detTitle">
+            <div>网友评价</div>
+        </div>
+        <div class="comContent">
+            <ul></ul>
+        </div>
+    </div>
+    <!--产品详情部分end-->
+
+
+    <!--查看更多评价START-->
+    <div class="more_bar">
+        <a href="moneyctrl.html">查看更多评价</a>
+    </div>
+    <!--查看更多评价END-->
+    <!--页面底部START-->
+    <div class="MMB_foot">
+        <div class="footTop clearfix">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="javascript:scroll(0,0)"><i class="iconfont">&#xe668;</i>返回顶部</a>
+        </div>
+        <div class="footBottom">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="#">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <p>m.mananbuy.com</p>
+        </div>
+    </div>
+    <!--页面底部END-->
+    <!--模板引擎start-->
+    <script type="text/html" id="detailsNav">
+        {{if result}}
+            {{each result as value}}
+                <a href="productlist.html?category={{value.category}}&categoryId={{value.categoryId}}">{{value.category}}</a><i class="iconfont icon-xiangyou1"></i>
+            {{/each}}
+        {{/if}}
+    </script>
+    <script type="text/html" id="detailsShow">
+        {{if result}}
+            {{each result as value}}
+                <h3>{{value.productName}}</h3>
+                <div class="detImg">{{#value.productImg}}</div>
+                <div class="proCollect"><a href="#"><img src="images/sc.jpg" alt=""></a></div>
+                <div class="detailsTab clearfix">
+                    <a href="#" class="f_left">比价购买</a>
+                    <a href="#" class="f_left">产品参数</a>
+                    <a href="#" class="f_left">评价(2322)</a>
+                </div>
+                <div class="detList clearfix">{{#value.bjShop}}</div>
+            {{/each}}
+        {{/if}}
+    </script>
+    <script type="text/html" id="comContent">
+        {{if result}}
+            {{each result as value}}
+                <li>
+                    <div class="clearfix">
+                        <span class="f_left">{{value.comName}}</span>
+                        <span class="f_right">{{value.comTime}}</span>
+                    </div>
+                    <div class="clearfix">
+                        <span class="f_right">{{value.comFrom}}</span>
+                    </div>
+                    <div class="content">{{value.comContent}}</div>
+                </li>
+            {{/each}}
+        {{/if}}
+    </script>
+    <!--模板引擎end-->
+
+</div>
+<script src="lib/jQuery/jquery-1.12.2.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common.js"></script>
+<script src="js/bijia.js"></script>
+</body>
+</html>

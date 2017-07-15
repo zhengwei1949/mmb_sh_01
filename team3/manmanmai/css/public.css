@@ -1,0 +1,166 @@
+@charset "utf-8";
+html,
+body {
+  width: 100%;
+  background-color: #f1f1f1;
+}
+/*头部样式*/
+header {
+  width: 100%;
+  height: 1.333333rem;
+  background-color: #FF841C;
+  justify-content: space-between;
+}
+header .logo {
+  padding-left: 0.4rem;
+  width: 50%;
+}
+header .logo a {
+  width: 100%;
+}
+header .logo a img {
+  width: 100%;
+}
+header .appDown {
+  padding-right: 0.266667rem ;
+}
+header .appDown img {
+  width: 0.906667rem;
+}
+header .goback {
+    line-height: 1.3333rem;
+    color: #FFF;
+}
+
+[data-dpr="2"] header .goback {
+    font-size: 80px;
+}
+
+[data-dpr="3"] header .goback {
+    font-size: 100px;
+}
+
+header .title {
+    color: #FFF;
+}
+
+[data-dpr="2"] header .title {
+    font-size: 50px
+}
+
+[data-dpr="3"] header .title {
+    font-size: 54px
+}
+.search {
+  height: 1.333333rem;
+  background-color: #fff;
+  padding: 0.266667rem;
+}
+.search input {
+  width: 80%;
+  background-color: #f1f1f1;
+  height: 0.8rem;
+  border-radius: 0.4rem;
+  font-size: 14px;
+  padding-left: 0.533333rem;
+}
+.search button {
+  border: none;
+  background-color: #FF841C;
+  height: 0.8rem;
+  width: 16%;
+  border-radius: 0.4rem;
+  font-size: 14px;
+  color: #fff;
+}
+[data-dpr="2"] .search input {
+  font-size: 28px;
+}
+[data-dpr="3"] .search input {
+  font-size: 42px;
+}
+[data-dpr="2"] .search button {
+  font-size: 28px;
+}
+[data-dpr="3"] .search button {
+  font-size: 42px;
+}
+/*底部样式*/
+footer {
+  height: 2.9333rem;
+  padding-top: 0.666667rem;
+  background-color: #f1f1f1;
+}
+footer .footTop {
+  background-color: #f1f1f1;
+}
+footer .footTop li {
+  width: 33.33%;
+  float: left;
+}
+footer .footTop li a {
+  display: block;
+  padding: 0.133333rem 0;
+  text-align: center;
+}
+footer .footBottom {
+  padding-top: 0.533333rem;
+  background-color: #f1f1f1;
+}
+footer .footBottom p {
+  text-align: center;
+  font-size: 12px;
+}
+[data-dpr="2"] footer .footBottom p {
+  font-size: 24px;
+}
+[data-dpr="3"] footer .footBottom p {
+  font-size: 36px;
+}
+
+/*=======底部上下页下拉框模块============*/
+.page_select .select_area,
+.page_select .prev,
+.page_select .next{
+    float: left;
+    width: 26.66%;
+    height: 40px;
+    margin:10px 3.33%;
+    font-size:18px;
+    border-style: none;
+    /*-webkit-appearance: none;*/
+}
+.page_select .prev{
+    border-radius: 10px;
+}
+.page_select .next{
+    border-radius: 10px;
+}
+
+/*页面搜索通栏 公用模块*/
+.search_bar form {
+    padding:10px;
+    height: 50px;
+    border-bottom:1px solid #E6E6E6;
+}
+
+.search_bar .search {
+    float: left;
+    width: 658px;
+    height: 30px;
+    font-size:16px;
+    color:#707070;
+    padding-left:37px;
+    border-radius: 15px;
+    background-color: #F1F1F1;
+}
+
+.search_bar .btn {
+    float: right;
+    width: 63px;
+    height: 30px;
+    font-size:16px;
+    color:#fff;
+    border-radius: 15px;
+    background-color: #FF841D;
+}

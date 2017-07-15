@@ -1,0 +1,189 @@
+/*reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致*/
+/*所有的标签和伪类  before after*/
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    /*在移动端特殊的设置*/
+    /*清除点击高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+    /*设置所有的盒子的宽度以边框开始计算*/
+    -webkit-box-sizing: border-box;
+    /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+body{
+    width: 100%;
+    font-family: "MicroSoft YaHei","sans-serif";/*是设备默认的字体*/
+    min-width: 320px;
+}
+ul,ol{
+    list-style: none;
+}
+a,a:active, a:hover, a:visited, a:link{
+    text-decoration: none;
+    color: #000000;
+}
+input,textarea{
+    border: none;
+    border-radius: 0;
+    outline: none;
+    resize: none;
+    /*特殊的属性定义  清除浏览器给input自带的样式*/
+    -webkit-appearance: none;/*组件默认的样式空*/
+}
+/*common styles  也就是我们公用的css*/
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.clearfix::after,
+.clearfix::before{
+    content: ".";
+    line-height: 0;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.m_r10{
+    margin-right: 10px;
+}
+.m_l10{
+    margin-left: 10px;
+}
+.m_t10{
+    margin-top: 10px;
+}
+.m_b10{
+    margin-bottom: 10px;
+}
+
+@font-face{
+    font-family: "HLComic";
+    src:
+    url(../fonts/glyphicons-halflings-regular.eot) format("embedded-opentype"),
+    url(../fonts/glyphicons-halflings-regular.svg) format("svg"),
+    url(../fonts/glyphicons-halflings-regular.ttf) format("truetype"),
+    url(../fonts/glyphicons-halflings-regular.woff) format("woff");
+}
+.HLComic {
+    font-family: HLComic;
+}
+.HLComic-search:before{
+    content:"\e003"
+}
+.HLComic-menu-hamburger:before{
+    content:"\e236"
+}
+.HLComic-chevron-left:before{
+    content:"\e079"
+}
+/*所有的容器*/
+.HLComic_layout {
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    position: static;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.HLComic_layout.layoutActive {
+    -webkit-transform: translateX(70%);
+    -moz-transform: translateX(70%);
+    -ms-transform: translateX(70%);
+    -o-transform: translateX(70%);
+    transform: translateX(70%);
+}
+.navLeft.navActive {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+/*顶部通栏*/
+.HLComic_topBar {
+    width: 100%;
+    height: 1rem;
+    position: fixed;
+    padding: 0 1rem;
+    z-index: 5;
+    background-color: #F7F7F7;
+}
+.HLComic_topBar a {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.5rem;
+    position: absolute;
+    top: 0;
+    text-decoration: none;
+    color: rgb(248, 90, 29);
+    padding: 0.25rem;
+}
+.HLComic_topBar a:first-child {
+    left: 0;
+}
+.HLComic_topBar a:last-child {
+    right: 0;
+}
+/*h3级主标题*/
+.HLComic_topBar h3 {
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    color: #000;
+    font-weight: normal;
+    text-align: center;
+    font-size: 0.4rem;
+}
+/*h4级主标题*/
+.HLComic_topBar h4 {
+}
+.navLeft {
+    width: 70%;
+    height: 100%;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    position: absolute;
+}
+.navLeft .logo {
+    width: 50%;
+    height: 3rem;
+    background-color: red;
+    margin-bottom: 1rem;
+}
+.navLeft ul {
+    width: 100%;
+    padding: 0 0.3rem;
+}
+.navLeft ul li {
+    width: 100%;
+}
+.navLeft ul li a {
+    display: block;
+    font-size: 0.3rem;
+    height: 1rem;
+    line-height: 1rem;
+    border-top: 1px solid #ccc;
+}

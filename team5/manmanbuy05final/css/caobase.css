@@ -1,0 +1,168 @@
+@charset "utf-8";
+/*reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致*/
+/*所有的标签和伪类  before after*/
+html {
+  font-size: 1rem;
+}
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  /*在移动端特殊的设置*/
+  /*清除点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+  /*设置所有的盒子的宽度以边框开始计算*/
+  -webkit-box-sizing: border-box;
+  /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+  box-sizing: border-box;
+}
+body {
+  font-size: 0.37837838rem;
+  color: #333;
+  font-family: "MicroSoft YaHei", "sans-serif";
+  /*是设备默认的字体*/
+  background-color: #EFEFEF;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+input,
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  /*特殊的属性定义  清除浏览器给input自带的样式*/
+  -webkit-appearance: none;
+  /*组件默认的样式空*/
+}
+/*一般公共类名*/
+.f_l {
+  float: left;
+}
+.f_r {
+  float: right;
+}
+.clearfix::after,
+.clearfix::before {
+  content: ".";
+  line-height: 0;
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+/*---动态增删的类名---*/
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.current > a {
+  color: red;
+  border-bottom: 0.05405405rem solid #ED1C24;
+}
+/*-----------顶部通栏-头部header样式----------*/
+header {
+  font-size: 0.54054054rem;
+  height: 1.35135135rem;
+  position: relative;
+  background-color: #F4483E;
+  text-align: center;
+}
+header h3 {
+  height: 1.35135135rem;
+  line-height: 1.35135135rem;
+  color: #fff;
+}
+header .back {
+  background: url("../images/baicaijia-sprite.png") no-repeat -0.72972973rem -0.16216216rem;
+  background-size: 5.40540541rem 5.40540541rem;
+  width: 0.43243243rem;
+  height: 0.62162162rem;
+  position: absolute;
+  top: 0.40540541rem;
+  left: 0.54054054rem;
+}
+header .fx {
+  width: 1.08108108rem;
+  height: 1.08108108rem;
+  position: absolute;
+  top: 0.13513514rem;
+  right: 0.54054054rem;
+}
+header .fx img {
+  width: 1.08108108rem;
+}
+/*-----------------footer-----------------*/
+footer {
+  margin-top: 0.13513514rem;
+  display: block;
+  height: 2.2972973rem;
+  background-color: #EFEFEF;
+}
+footer .f-move {
+  font-size: 0.37837838rem;
+  height: 0.81081081rem;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+footer .f-move a {
+  display: inline-block;
+  width: 3.13513514rem;
+  height: 0.81081081rem;
+  text-align: center;
+  line-height: 0.81081081rem;
+}
+footer .f-move .register {
+  border-right: 1px solid #666;
+  border-left: 1px solid #666;
+}
+footer .f-move .footer-back {
+  position: relative;
+}
+footer .f-move .footer-back span {
+  background: url("../images/baicaijia-sprite.png") no-repeat -1.45945946rem -0.24324324rem;
+  background-size: 5.40540541rem 5.40540541rem;
+  width: 0.48648649rem;
+  height: 0.45945946rem;
+  position: absolute;
+  left: 0.35135135rem;
+  top: 0.16216216rem;
+}
+footer .f-info {
+  padding: 0.27027027rem 0;
+  text-align: center;
+}
+footer .f-info p {
+  font-size: 0.32432432rem;
+}
+footer .f-info p span {
+  color: red;
+  font-size: 0.37837838rem;
+}
+/*-----------------arow-----------------*/
+#arow {
+  background-color: #787878;
+  width: 1.08108108rem;
+  height: 1.08108108rem;
+  position: fixed;
+  bottom: 0.54054054rem;
+  right: 0.27027027rem;
+  border-radius: 50%;
+}
+#arow span {
+  background: url("../images/baicaijia-sprite.png") no-repeat -0.10810811rem -0.13513514rem;
+  width: 0.45945946rem;
+  height: 0.56756757rem;
+  position: absolute;
+  left: 0.27027027rem;
+  top: 0.27027027rem;
+  background-size: 5.40540541rem 5.40540541rem;
+}

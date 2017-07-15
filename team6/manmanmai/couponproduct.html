@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>肯德基优惠券</title>
+
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/couponproduct.css">
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+	
+	<!-- 头部部分 -->
+	<header class='couponproduct-header'>
+		<a href="#" class='icon-back'></a>
+		<p>肯德基优惠券</p>
+		<a href="javascript:;" class='appdown'>
+				<img src="images/header_app.png" alt="">
+		</a>
+	</header>
+	<!-- 温馨提示 -->
+	<p class="prompt">--点餐前出示手机中的优惠券即可享受优惠--</p>
+	<!-- 优惠产品展示 -->
+	<ul class="couponproduct-coupon">
+		
+	</ul>
+	<!-- 弹出框 -->
+	<div class="coupon_win">
+        <div class="coupon_win_box bounceInDown">
+           <div class="imgBox">
+           	<ul class='banner'>
+           		
+           </ul>
+           </div>
+           <div class="arrowBox">
+           		<span class='leftArr' id='leftArr'>&lt;</span>
+           		<span class='rightArr' id='rightArr'>&gt;</span>
+
+           </div>
+        </div>
+    </div>
+
+	
+ <!-- 底部部分 -->
+ <footer>
+ 	<div class='footer-ranking'>
+ 		<p>品牌排行</p>
+ 		<span></span>
+ 	</div>
+ 	<div class='info clearfix'>
+ 	<a href="#">登录</a>
+ 	<a href="#">注册</a>
+
+ 	<a href="#">返回底部</a>
+   </div>
+   <div class='mobile'>
+   	 	<a href="#">手机APP下载</a>
+   	 	<a href="#">慢慢买手机版</a>、
+   	 	<a href="#">--掌上比价平台</a>
+   	 	<p class='net'>m.manmanbuy.com</p>
+   </div>
+ 	
+ </footer>
+
+	<script src='lib/zepto/zepto.min.js'></script>
+	<script src='lib/zepto/touch.js'></script>
+	<script src='lib/zepto/selector.js'></script>
+	<script src='lib/zepto/fx.js'></script>
+	<script src='js/url.js'></script>
+	<script src='lib/template-native.js'></script>
+	<script src='js/couponproduct.js'></script>
+	<script type="text/template" id='tpl'>
+		<% for(var i = 0;i<result.length;i++){ %> 
+			<li>
+		    <a href="javascript:;" class='clearfix' data-id="<%= result[i].couponProductId%>">
+		    	<span class="left"><img src="<%= result[i].couponProductImg%>" alt=""></span>
+		    	<div class='right'>
+		    		<p class='tit'><%= result[i].couponProductName%></p>
+		    		<span><img src="images/arrowr.png" alt=""></span>
+		    		<p class="price"><%= result[i].couponProductPrice%></p>
+
+		    		<p class='validity'><%= result[i].couponProductTime%></p>
+
+		    	</div>
+		    </a>
+		</li>
+		<% } %>
+		
+	</script>
+	<script type="text/template" id='tpl1'>
+		<% for(var i = 0;i<result.length;i++){ %> 
+			<li>
+           			<a href="#">
+           				<img src="<%= result[i].couponProductImg%>" alt="">
+
+           			</a>
+           		</li>
+		<% } %>
+	</script>
+	
+</body>
+</html>

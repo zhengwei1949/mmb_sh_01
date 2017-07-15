@@ -1,0 +1,448 @@
+html {
+  font-size: 75px;
+}
+html,
+body {
+  height: 100%;
+}
+.top_header {
+  width: 100%;
+  height: 1.33333333rem;
+  background: #FF841D;
+  position: relative;
+  overflow: hidden;
+}
+.top_header a {
+  position: absolute;
+  left: 0.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.2rem;
+  color: #FFF;
+}
+[data-dpr="1"] .top_header a {
+  font-size: 20px;
+}
+[data-dpr="2"] .top_header a {
+  font-size: 40px;
+}
+[data-dpr="3"] .top_header a {
+  font-size: 60px;
+}
+.top_header h1 {
+  position: absolute;
+  color: #FFF;
+  line-height: 1.33333333rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "MicroSoft YaHei";
+}
+[data-dpr="1"] .top_header h1 {
+  font-size: 18px;
+}
+[data-dpr="2"] .top_header h1 {
+  font-size: 36px;
+}
+[data-dpr="3"] .top_header h1 {
+  font-size: 54px;
+}
+.top_header .app_download {
+  position: absolute;
+  right: 0;
+  margin-top: 0.26666667rem;
+  margin-right: 0.2rem;
+}
+.top_header .app_download img {
+  height: 0.90666667rem;
+  width: auto;
+}
+.main_content {
+  min-height: 80%;
+}
+.main_content .main_title {
+  font-weight: 400;
+  line-height: 0.66666667rem;
+  padding-top: 0.33333333rem;
+  padding-left: 0.33333333rem;
+  font-family: "SimSun";
+  font-weight: bold;
+  color: #000;
+  max-height: 100%;
+}
+[data-dpr="1"] .main_content .main_title {
+  font-size: 16px;
+}
+[data-dpr="2"] .main_content .main_title {
+  font-size: 32px;
+}
+[data-dpr="3"] .main_content .main_title {
+  font-size: 48px;
+}
+.main_content .product_price {
+  line-height: 1rem;
+  padding-left: 0.33333333rem;
+  color: #FF841D;
+}
+[data-dpr="1"] .main_content .product_price {
+  font-size: 14px;
+}
+[data-dpr="2"] .main_content .product_price {
+  font-size: 28px;
+}
+[data-dpr="3"] .main_content .product_price {
+  font-size: 42px;
+}
+.main_content .sub_title {
+  padding-left: 0.33333333rem;
+  color: #BBB;
+  max-height: 100%;
+}
+[data-dpr="1"] .main_content .sub_title {
+  font-size: 12px;
+}
+[data-dpr="2"] .main_content .sub_title {
+  font-size: 24px;
+}
+[data-dpr="3"] .main_content .sub_title {
+  font-size: 36px;
+}
+.main_content .artical {
+  padding-top: 0.4rem;
+  padding-left: 0.26666667rem;
+}
+.main_content .artical img:nth-child(1) {
+  float: right;
+  width: 3rem;
+  height: 4rem;
+  padding: 0.5rem;
+}
+.main_content .artical img:nth-last-child(1) {
+  display: block;
+  margin: 0.13333333rem auto;
+  width: 4rem;
+  height: 6rem;
+}
+.main_content .artical p {
+  font-family: "MicroSoft YaHei";
+  letter-spacing: 0.02666667rem;
+  text-indent: 2em;
+  max-height: 100%;
+}
+[data-dpr="1"] .main_content .artical p {
+  font-size: 14px;
+}
+[data-dpr="2"] .main_content .artical p {
+  font-size: 28px;
+}
+[data-dpr="3"] .main_content .artical p {
+  font-size: 42px;
+}
+.main_content .toBuy {
+  width: 8.5rem;
+  height: 1.6rem;
+  line-height: 0.8rem;
+  margin: 0.4rem auto;
+  position: relative;
+}
+.main_content .toBuy .store {
+  position: absolute;
+  /*overflow: scroll;
+      -webkit-overflow-scrolling:touch;*/
+  overflow: hidden;
+  width: 2.2rem;
+  height: 0rem;
+  bottom: 1.5rem;
+  left: 0;
+}
+.main_content .toBuy .store.active {
+  border: 1px solid #CCC;
+  border-bottom: none;
+  height: 4.2rem;
+  transition: height 0.2s;
+}
+.main_content .toBuy .store #disstorck {
+  width: 100%;
+  font-family: "Microsoft YaHei", "sans-serif";
+}
+.main_content .toBuy .store #disstorck li {
+  height: 0.7rem;
+  line-height: 0.7rem;
+  width: 2rem;
+  margin: 0 auto;
+  border-bottom: 0.01333333rem solid #CCC;
+}
+[data-dpr="1"] .main_content .toBuy .store #disstorck li {
+  font-size: 12px;
+}
+[data-dpr="2"] .main_content .toBuy .store #disstorck li {
+  font-size: 24px;
+}
+[data-dpr="3"] .main_content .toBuy .store #disstorck li {
+  font-size: 36px;
+}
+.main_content .toBuy .store #disstorck li a {
+  display: block;
+  width: 100%;
+  color: #333;
+}
+.main_content .toBuy .store #disstorck li a strong {
+  font-weight: normal;
+  color: #FF841D;
+  float: right;
+}
+.main_content .toBuy button {
+  padding: 0 0.2rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  color: #FFF;
+  background: #FF841D;
+  font-family: "MicroSoft YaHei";
+}
+[data-dpr="1"] .main_content .toBuy button {
+  font-size: 12px;
+}
+[data-dpr="2"] .main_content .toBuy button {
+  font-size: 24px;
+}
+[data-dpr="3"] .main_content .toBuy button {
+  font-size: 36px;
+}
+.main_content .toBuy .go {
+  display: block;
+  width: 100%;
+  height: 0.8rem;
+  background: #FF841D;
+  border-radius: 0.05333333rem;
+  color: #FFF;
+  text-align: center;
+}
+[data-dpr="1"] .main_content .toBuy .go {
+  font-size: 14px;
+}
+[data-dpr="2"] .main_content .toBuy .go {
+  font-size: 28px;
+}
+[data-dpr="3"] .main_content .toBuy .go {
+  font-size: 42px;
+}
+.main_content .erweima {
+  width: 9rem;
+  height: 4rem;
+  margin: 0.6rem auto;
+}
+.main_content .erweima img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.main_content .cu-content-pl .tit {
+  margin-left: 0.26666667rem;
+  color: #000;
+  line-height: 0.8rem;
+}
+[data-dpr="1"] .main_content .cu-content-pl .tit {
+  font-size: 16px;
+}
+[data-dpr="2"] .main_content .cu-content-pl .tit {
+  font-size: 32px;
+}
+[data-dpr="3"] .main_content .cu-content-pl .tit {
+  font-size: 48px;
+}
+.main_content .cu-content-pl .reply {
+  width: 9rem;
+  height: 3.5rem;
+  margin: 0 auto;
+  position: relative;
+}
+.main_content .cu-content-pl .reply textarea {
+  resize: none;
+  width: 100%;
+  height: 2.5rem;
+  font-family: "MicroSoft YaHei";
+  color: #666;
+  border: 0.01333333rem solid #666;
+  border-bottom: none;
+  padding: 0.13333333rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+[data-dpr="1"] .main_content .cu-content-pl .reply textarea {
+  font-size: 14px;
+}
+[data-dpr="2"] .main_content .cu-content-pl .reply textarea {
+  font-size: 28px;
+}
+[data-dpr="3"] .main_content .cu-content-pl .reply textarea {
+  font-size: 42px;
+}
+.main_content .cu-content-pl .reply .ctrl {
+  width: 100%;
+  height: 1rem;
+  background: #F7F7F7;
+  border: 0.01333333rem solid #666;
+  border-top: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.main_content .cu-content-pl .reply .ctrl .tjdp {
+  display: block;
+  width: 2.5rem;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  background: #FF841D;
+  color: #FFF;
+  font-family: "SimSun";
+  float: right;
+}
+[data-dpr="1"] .main_content .cu-content-pl .reply .ctrl .tjdp {
+  font-size: 16px;
+}
+[data-dpr="2"] .main_content .cu-content-pl .reply .ctrl .tjdp {
+  font-size: 32px;
+}
+[data-dpr="3"] .main_content .cu-content-pl .reply .ctrl .tjdp {
+  font-size: 48px;
+}
+.main_content .newcomment {
+  margin-left: 0.26666667rem;
+  color: #000;
+  line-height: 0.8rem;
+}
+[data-dpr="1"] .main_content .newcomment {
+  font-size: 16px;
+}
+[data-dpr="2"] .main_content .newcomment {
+  font-size: 32px;
+}
+[data-dpr="3"] .main_content .newcomment {
+  font-size: 48px;
+}
+.main_content .list ul {
+  padding: 0.53333333rem 0.33333333rem 0;
+  width: 100%;
+}
+.main_content .list ul li {
+  width: 100%;
+  padding-bottom: 1rem;
+  overflow: hidden;
+}
+.main_content .list ul li .userimg {
+  width: 1rem;
+  height: 1rem;
+  float: left;
+}
+.main_content .list ul li .userimg img {
+  width: 100%;
+  height: 100%;
+}
+.main_content .list ul li .con {
+  float: left;
+  margin-left: 0.4rem;
+  width: 7.8rem;
+}
+.main_content .list ul li .con .name {
+  width: 100%;
+}
+.main_content .list ul li .con .name .username {
+  color: skyblue;
+  float: left;
+}
+[data-dpr="1"] .main_content .list ul li .con .name .username {
+  font-size: 12px;
+}
+[data-dpr="2"] .main_content .list ul li .con .name .username {
+  font-size: 24px;
+}
+[data-dpr="3"] .main_content .list ul li .con .name .username {
+  font-size: 36px;
+}
+.main_content .list ul li .con .name .time {
+  color: #666;
+  float: right;
+}
+[data-dpr="1"] .main_content .list ul li .con .name .time {
+  font-size: 12px;
+}
+[data-dpr="2"] .main_content .list ul li .con .name .time {
+  font-size: 24px;
+}
+[data-dpr="3"] .main_content .list ul li .con .name .time {
+  font-size: 36px;
+}
+.main_content .list ul li .con .content {
+  font-family: "MicroSoft YaHei";
+  color: #333;
+  max-height: 100%;
+  margin-top: 0.13333333rem;
+}
+[data-dpr="1"] .main_content .list ul li .con .content {
+  font-size: 14px;
+}
+[data-dpr="2"] .main_content .list ul li .con .content {
+  font-size: 28px;
+}
+[data-dpr="3"] .main_content .list ul li .con .content {
+  font-size: 42px;
+}
+footer {
+  background: #F1F1F1;
+  width: 100%;
+  height: 3.2rem;
+  overflow: hidden;
+}
+footer ul {
+  width: 100%;
+  margin-top: 0.6rem;
+}
+footer ul li {
+  float: left;
+  width: 33.333%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  border: 0.01333333rem solid #CCC;
+  border-left: none;
+  color: #000;
+  text-align: center;
+}
+[data-dpr="1"] footer ul li {
+  font-size: 12px;
+}
+[data-dpr="2"] footer ul li {
+  font-size: 24px;
+}
+[data-dpr="3"] footer ul li {
+  font-size: 36px;
+}
+footer ul li:nth-child(3) {
+  border-right: none;
+}
+[data-dpr="1"] footer ul li:nth-child(3) span {
+  font-size: 14px;
+}
+[data-dpr="2"] footer ul li:nth-child(3) span {
+  font-size: 28px;
+}
+[data-dpr="3"] footer ul li:nth-child(3) span {
+  font-size: 42px;
+}
+footer .footer_info {
+  margin-top: 0.26666667rem;
+}
+footer .footer_info p {
+  text-align: center;
+}
+[data-dpr="1"] footer .footer_info p {
+  font-size: 12px;
+}
+[data-dpr="2"] footer .footer_info p {
+  font-size: 24px;
+}
+[data-dpr="3"] footer .footer_info p {
+  font-size: 36px;
+}
+footer .footer_info p a {
+  color: #FF0000;
+}

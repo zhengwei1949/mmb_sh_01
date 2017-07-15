@@ -1,0 +1,205 @@
+
+/*reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致*/
+/*所有的标签和伪类  before after*/
+*,
+::before,
+::after{
+  padding: 0;
+  margin: 0;
+
+  /*在移动端特殊的设置*/
+  /*清除点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+  /*设置所有的盒子的宽度以边框开始计算*/
+  -webkit-box-sizing: border-box;
+  /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+  box-sizing: border-box;
+}
+body{
+  font-size: 14px;
+  color: #333;
+  font-family: "MicroSoft YaHei","sans-serif"; /*是设备默认的字体*/
+  /*background: #E8E8E8;*/
+}
+html{
+  font-size: 75px;
+}
+.main{
+  min-width: 300px;
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+}
+ul,ol{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+a:hover{
+  color: #333;
+}
+input,textarea{
+  border: none;
+  outline: none;
+  resize: none;
+  /*特殊的属性定义  清除浏览器给input自带的样式*/
+  -webkit-appearance: none;/*组件默认的样式空*/
+}
+/*common css  也就是我们公用的css*/
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfix::after,
+.clearfix::before{
+  content: ".";
+  line-height: 0;
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.m_r10{
+  margin-right: 10px;
+}
+.m_l10{
+  margin-left: 10px;
+}
+.m_t10{
+  margin-top: 10px;
+}
+.m_b10{
+  margin-bottom: 10px;
+}
+@mainColor:#ff841d;
+/*公用样式*/
+/*顶部通栏*/
+header{
+  width: 100%;
+  height: 50/75rem;
+  background:@mainColor;
+  .logo{
+    width: 190/75rem;
+    height: 100%;
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-top: 15/75rem;
+      img{
+        display: block;
+        width: 190/75rem;
+        height: 25/75rem;
+      }
+    }
+  }
+  .download{
+    width: 34/75rem;
+    height: 100%;
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-top: 10/75rem;
+      img{
+        display: block;
+        width: 34/75rem;
+        height: 34/75rem;
+      }
+    }
+  }
+}
+//主体部分
+section{
+  width: 100%;
+
+  //搜索框
+  .search{
+      width: 100%;
+      height: 50/75rem;
+    border-bottom: 5/75rem solid #e0e0e0;
+    padding: 5/75rem 15/75rem;
+    .txt {
+      width: 83%;
+      height: 30/75rem;
+      border:1px solid #e0e0e0;
+      border-radius: 15/75rem;
+      padding-left: 15/75rem;
+    }
+    .btn{
+      width: 15%;
+      height: 30/75rem;
+      background: @mainColor;
+      border-radius: 15/75rem;
+      color: #fff;
+    }
+
+  }
+
+}
+//底部
+footer{
+  .pingpai{
+    width: 100%;
+    height:30/75rem;
+    background: @mainColor;
+    padding: 0 10/75rem;
+    span{
+      line-height: 30/75rem;
+      color: #fff;
+    }
+    a{
+      display: block;
+      color: #fff;
+      font-family: monospace;
+      border:1px solid #fff;
+      padding: 1px 4px;
+      border-radius: 14/75rem;
+      margin-top: 5/75rem;
+    }
+
+  }
+  ul{
+    width: 100%;
+    height: 40/75rem;
+    margin-top: 20/75rem;
+    li{
+      width: 33.3%;
+      float: left;
+      text-align: center;
+      line-height: 40/75rem;
+      border-bottom:2px solid #cccccc;
+      border-top:2px solid #cccccc;
+      &:nth-child(2){
+        border-left: 2px solid #cccccc;
+        border-right: 2px solid #cccccc;
+      }
+    }
+  }
+.phone{
+  width: 100%;
+  height: 60/75rem;
+  margin-top: 20/75rem;
+  text-align: center;
+  p{
+    &:nth-child(1){
+      a{
+        color: red;
+      }
+      span{
+        color: #ccc;
+      }
+    }
+    &:nth-child(2){
+      a{
+        color: #ccc;
+      }
+    }
+  }
+}
+}
+

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>品牌大全页面</title>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/caobase.css"/>
+    <link rel="stylesheet" href="./css/pinpaidaquan.css"/>
+    <script src="js/base.js"></script>
+    <script src="./js/flexible/flexible.js"></script>
+    <script src="./js/jquery-1.12.2.js"></script>
+    <script src="./js/template.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/pinpaidaquan.js"></script>
+    <script type="text/html" id="order-moban">
+        {{if result}}
+        {{each result as value i}}
+        <li brandTitleId="{{value.brandTitleId}}" categoryId={{value.categoryId}}>{{value.brandTitle}}<span class="f_r skip">&gt;&gt;</span> </li>
+        {{/each}}
+        {{/if}}
+    </script>
+    <script type="text/html" id="order2-moban">
+        {{if result}}
+        {{each result as value i}}
+        <li brandTitleId="{{value.brandTitleId}}">
+            <p>{{value.brandName}}</p>
+            <p>{{value.brandInfo}}</p>
+            <span class="num"></span>
+            <span class="skip2">&gt;</span>
+        </li>
+        {{/each}}
+        {{/if}}
+    </script>
+    <script type="text/html" id="order3-moban">
+        {{if result}}
+        {{each result as value i}}
+        <div class="pro-order" productId="{{value.productId}}">
+            <div class="img-box f_l" id="pro-img">{{#value.productImg}}</div>
+            <div class="pro-desc f_r">
+                <p  class="pro-name" id="pro-name">{{value.productName}}</p>
+                <p class="pr">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <b class="price">{{value.productPrice}}</b>
+                </p>
+                <p class="pro-f"><span>{{value.productQuote}}</span>&nbsp;&nbsp;&nbsp;<span>{{value.productCom}}</span></p>
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+    </script>
+    <script type="text/html" id="order4-moban">
+        {{if result}}
+        {{each result as value i}}
+        <div class="pro-box">
+            <div class="pro-order clearfix">
+                <div class="img-box f_l">img</div>
+                <div class="pro-desc f_r">
+                    <p  class="pro-name">临时数字</p>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="comment-top">
+                    <span>{{value.comName}}：</span>
+                        <span >
+                            <b>★</b>
+                            <b>★</b>
+                            <b>★</b>
+                            <b>★</b>
+                            <b>★</b>
+                        </span>
+                    <span class="date f_r">{{value.comTime}}</span>
+                </div>
+                <p class="comFrom">{{value.comFrom}}</p>
+                <p>{{value.comContent}}</p>
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+    </script>
+</head>
+<body>
+<div class="layout">
+    <!-- 顶部-->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="appdown">
+            <a href="#">
+                <img src='images/header_app.png' alt=""/>
+            </a>
+        </div>
+    </header>
+
+    <section class='form-search'>
+        <form action="">
+            <input type="search" placeholder='请输入你想比价的商品'/>
+            <input type="button" value='搜索'/>
+        </form>
+    </section>
+    <!--头部-->
+    <!--<div class="pp-header">头部</div>-->
+    <!--搜索栏-->
+    <!--<div class="pp-search">搜索栏</div>-->
+    <!--主体部分-->
+    <div class="pp-main">
+            <!--顶部链接-->
+        <div class="options">
+            <a href="index.html">首页></a>
+            <a href="category.html">全部分类></a>
+        </div>
+            <!--商品列表-->
+        <!--第一个页面的-->
+        <div class="order-box ">
+            <div class="pp-title ">热门品牌排行</div>
+            <ul class="order-ul"></ul>
+        </div>
+        <!--第二个页面的-->
+        <div class="order-box2 hide">
+            <div class="pp-title2">平板电视哪个牌子好</div>
+            <ul class="order-ul2"></ul>
+        </div>
+        <!--第三个页面的-->
+        <div class="order-box3 hide">
+            <div class="pp-title2">平板电视产品销量排行</div>
+            <div class="pro-box"></div>
+        </div>
+        <!--第四个页面的-->
+        <div class="order-box4 hide">
+            <div class="pp-title2">平板电视最新评论</div> </div>
+    </div>
+    <!--底部-->
+    <footer class="">
+        <div class="f-move">
+            <a href="javascript:;" class="login">登录</a>
+            <a href="javascript:;" class="register">注册</a>
+            <a href="javascript:;" class="footer-back"><span class=""></span>返回顶部</a>
+        </div>
+        <div class="f-info">
+            <p><span>手机app下载</span> 慢慢买手机版-掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!--固定浮动的箭头-->
+    <div id="arow"><span></span></div>
+</div>
+</body>
+</html>

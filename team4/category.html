@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="libs/flexible.js"></script>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/category.css"/>
+</head>
+<body>
+<div class="layout">
+    <!-- 顶部通栏-->
+    <div class="top" id="top">
+        <div class="topban">
+            <span></span>
+            <a href="#"></a>
+        </div>
+        <div class="topSearch">
+            <form>
+                <input class="search fs12" type="search" placeholder="请输入你想比价的商品"/>
+            </form>
+            <input class="search_btn fs16" type="button" value="搜索"/>
+        </div>
+    </div>
+    <!-- 商品分类 -->
+    <div class="catalogry">
+    </div>
+    <!-- 底部 -->
+    <div class="foot">
+        <div>
+            <a href="#" class="fs14">登录</a>
+            <a href="#" class="fs14">注册</a>
+            <a href="#top" class="fs14"><i class="iconfont icon-xiangshangjiantou fs16"></i>返回顶部</a>
+        </div>
+        <p class="fs12">
+            <span>手机APP下载</span>
+            慢慢买手机版
+            <span>-- 掌上比价平台</span>
+        </p>
+        <p class="fs12">m.manmanbuy.com</p>
+    </div>
+</div>
+</body>
+<!-- 标题的模板对象 -->
+<script id="listTitle" type="text/html">
+    {{if result}}
+    <ul>
+        {{each result as value}}
+        <li class="titleLi clearfix">
+            <h3 class="fs18" id="{{value.titleId}}">{{value.title}}</h3>
+            <i class="iconfont icon-jiantouxia fs14"></i>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</script>
+<!-- 列表的模板对象 -->
+<script id="listContain" type="text/html">
+    {{if result}}
+    <ul class="lists clearfix">
+        {{each result as value}}
+        <li><a href="getcategor.html?categoryId={{value.categoryId}}" class="fs14" id="{{value.categoryId}}">{{value.category}}</a></li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</script>
+<script src="libs/jquery-2.2.0.js"></script>
+<script src="libs/template.js"></script>
+<script src="js/common.js"></script>
+<script src="js/category.js"></script>
+</html>
+
+

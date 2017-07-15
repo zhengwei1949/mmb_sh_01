@@ -1,0 +1,224 @@
+/*页面头部START*/
+.topHeader1 {
+  background: #ff841d;
+  color: #FFFFFF;
+  height: 44px;
+  width: 100%;
+  position: relative;
+}
+.topHeader1 > .logo {
+  float: left;
+  display: block;
+  height: 44px;
+  width: 50px;
+  text-align: center;
+  line-height: 44px;
+}
+.topHeader1 > .logo > .iconfont {
+  color: #FFFFFF;
+  font-size: 17px;
+}
+.topHeader1 > h1 {
+  padding-left: 50px;
+  padding-right: 51px;
+  height: 44px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 44px;
+}
+.topHeader1 .appdown1 {
+  margin: 0;
+  padding: 0;
+  height: 44px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.topHeader1 .appdown1 > a {
+  display: block;
+}
+.topHeader1 .appdown1 > a > img {
+  padding: 5px;
+  height: 44px;
+  width: 100%;
+}
+/*页面头部END*/
+/*页面内容start*/
+.commodityDetails .tradeName {
+  margin: 10px;
+}
+.commodityDetails .tradeName > h6 {
+  font-size: 16px;
+}
+.commodityDetails .tradeName > p {
+  color: #ff841d;
+  margin-top: 5px;
+  font-size: 14px;
+}
+.commodityDetails .source {
+  margin: 10px;
+  color: gray;
+}
+.commodityDetails .introduce {
+  margin: 10px;
+}
+.commodityDetails .introduce img {
+  width: 120px;
+  height: 120px;
+  float: right;
+}
+.commodityDetails .introduce > p {
+  line-height: 20px;
+  font-size: 14px;
+}
+.commodityDetails .imglg {
+  text-align: center;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+}
+.commodityDetails .imglg > img {
+  margin: 10px;
+}
+.commodityDetails .purchase {
+  margin: 20px;
+  margin-top: 50px;
+  text-align: center;
+  border-radius: 5px;
+  height: 30px;
+  background-color: #ff841d;
+}
+.commodityDetails .purchase > a {
+  display: block;
+  line-height: 30px;
+  color: #ffffff;
+  font-size: 12px;
+}
+.commodityDetails .picture {
+  margin: 20px  10px;
+  text-align: center;
+}
+.commodityDetails .picture > img {
+  width: 100%;
+  height: auto;
+}
+.commodityDetails .discuss {
+  background-color: #ffffff;
+}
+.commodityDetails .discuss > .tit {
+  font-size: 16px;
+  padding: 6px 8px;
+}
+.commodityDetails .discuss > .reply {
+  padding: 6px 8px;
+}
+.commodityDetails .discuss > .reply > .form {
+  border: 2px solid #ECEAE8;
+  border-radius: 2px;
+  padding: 4px 0 0 4px;
+  background-color: #fff;
+  position: relative;
+  width: 98%;
+  margin: 0px auto;
+}
+.commodityDetails .discuss > .reply > .form > textarea {
+  width: 100%;
+  resize: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: none;
+  line-height: 22px;
+  font-size: 14px;
+  outline: 0;
+  color: #666;
+  height: 68px;
+}
+.commodityDetails .discuss > .reply > .form > .ctrl {
+  background-color: #fbfbfb;
+  height: 36px;
+  margin-left: -4px;
+  border-top: solid 1px #f2f2f2;
+}
+.commodityDetails .discuss > .reply > .form > .ctrl > input {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  background: #ff841d;
+  border: none;
+  border: 2px solid #ff841d;
+  border-left: none;
+  border-top: none;
+  padding: 0px;
+  width: 100px;
+  height: 39px;
+  color: #fff;
+  outline: 0;
+  border-radius: 0 0 2px 0;
+  font-size: 16px;
+}
+.nav {
+  margin-top: 20px;
+  height: 36px;
+  color: #000;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-top: solid 1px #ebebeb;
+  border-bottom: 1px solid #ccc;
+  line-height: 36px;
+  padding-left: 8px;
+  font-size: 14px;
+  text-align: left;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+/*页面内容END*/
+/*页面底部start*/
+.MMB_foot1 {
+  margin-top: 20px;
+  background: #efefef;
+}
+.MMB_foot1 > .footTop {
+  width: 100%;
+  border-top: 1px solid#333;
+  border-bottom: 1px solid #333;
+}
+.MMB_foot1 > .footTop > a {
+  display: block;
+  float: left;
+  width: 30%;
+  height: 30px;
+  line-height: 30px;
+  border-right: 1px solid#333;
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+}
+.MMB_foot1 > .footTop > a > i {
+  font-size: 38;
+  color: #747474;
+}
+.MMB_foot1 > .footTop > a:nth-of-type(3) {
+  width: 40%;
+  border-right: none;
+}
+.MMB_foot1 > .footBottom1 {
+  text-align: center;
+  width: 100%;
+}
+.MMB_foot1 > .footBottom1 > p {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #a1a1a1;
+}
+.MMB_foot1 > .footBottom1 > p > a {
+  color: #000;
+}
+.MMB_foot1 > .footBottom1 > p > a:nth-last-of-type(1) {
+  color: red;
+}
+/*页面底部end*/

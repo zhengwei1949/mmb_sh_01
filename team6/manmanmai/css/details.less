@@ -1,0 +1,280 @@
+// 顶部通栏
+.top {
+	width: 100%;
+	height: 50px;
+	background-color: #ff841d;
+	text-align: center;
+	// 返回箭头
+	.left {
+		color: #fff;
+		font-size: 30px;
+		padding-left: 3%;
+		line-height: 50px;
+		cursor: pointer;
+	}
+	// 国内折扣
+	span {
+		color: #fff;
+		font-size: 24px;
+		line-height: 50px;
+	}
+	// app下载
+	.download {
+		width: 50px;
+		padding: 8px;
+		height: 100%;
+		background: url(../images/header_app.png) no-repeat;
+		background-size: 34px 34px;
+		background-origin: content-box;
+		cursor: pointer;
+	}
+}
+
+
+// ********************************商品信息栏***********************************
+
+// 详细商品信息栏
+// 标题部分
+.details {
+	width: 95%;
+	margin: 0 auto;
+	// 标题部分
+	.header {
+		.productName {
+			font-size: 20px;
+			font-weight: 900;
+			font-style: 'Microsoft yahei';
+			margin: 15px 0 20px 0;
+		}
+		.productPinkage {
+			font-size: 18px;
+			font-weight: normal;
+			color: #ff6c00;
+		}
+		.tt {
+			font-size: 14px;
+			font-weight: normal;
+			color: #999999;
+			margin-top: 10px;
+			margin-bottom: 20px;
+			.productTime {
+				display: inline-block;
+			}
+			.productTips {
+				display: inline-block;
+			}
+		}
+	}
+	// 详细描述
+	.small_pic {
+		width: 40%;
+		height: 150px;
+		background-size: 115px 150px;
+		img {
+			width: 100%;
+			height: 100%;
+			display: inline-block;
+		}
+	}
+	.info {
+		font-size: 16px;
+	}
+	.big_pic {
+		width: 100%;
+		height: 220px;
+		background-size: 100% 220px;
+		img {
+			width: 100%;
+			height: 100%;
+			display: inline-block;
+		}
+	}
+}
+// 前往购买
+.buy {
+	width: 90%;
+	height: 30px;
+	line-height: 30px;
+	background-color: #ff9000;
+	margin: 0 auto;
+	margin-top: 40px;
+	border-radius: 5px;
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+}
+// 二维码
+.erweima {
+	width: 95%;
+	height: 136px;
+	background: url(../images/mmbweixin2.png) no-repeat;
+	background-size: 100% 136px;
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+//评论区
+.cu-content-pl {
+	width: 95%;
+	margin: 0 auto;
+	.tit {
+		font-size: 16px;
+		margin-top: 25px;
+		margin-bottom: 10px;
+	}
+	.reply {
+		width: 100%;
+		height: 112px;
+		border: 2px solid #eceae8;
+		.form {
+			width: 100%;
+			height: 71px;
+			border-bottom: 1px solid #f2f2f2;
+			#ctl00_ContentBody_txt_nr {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.ctrl {
+			width: 100%;
+			height: 35px;
+			background-color: #fbfbfb;
+			#ctl00_ContentBody_Button1 {
+				width: 30%;
+				height: 100%;
+				float: right;
+				background-color: #ff841d;
+				color: #fff;
+			}
+		}
+	}
+	#newcomment {
+		font-size: 16px;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+	.list {
+		width: 100%;
+		// height: 40px;
+		.ui-border-b {
+			width: 100%;
+			height: 100%;
+			margin-bottom: 10px;
+			.userimg {
+				width: 40px;
+				height: 40px;
+				background-size: 40px 40px;
+				display: inline-block;
+				margin-right: 15px;
+				img {
+					width: 40px;
+					height: 40px;
+					border-radius: 20px;
+					display: inline-block;
+				}
+			}
+			.con {
+				width: 80%;
+				// height: 40px;
+				display: inline-block;
+				.name {
+					.username {
+						font-size: 12px;
+						color: #5997c0;
+						float: left;
+						margin-right: 10px;
+					}
+					.time {
+						font-size: 10px;
+						color: #9999b2;
+						float: right;
+					}
+				}
+				.content {
+					font-size: 14px;
+					color: #606060;
+					margin-top: 8px;
+				}
+				
+			}
+		}
+	}
+}
+ 
+
+
+
+// ************************************页面底部**************************************
+.footer {
+	width: 100%;
+	height: 90px;
+	margin-top: 35px;
+	background-color: #efefef;
+	// 上半部分
+	.top {
+		width: 100%;
+		height: 35px;
+		border-top: 1px solid #c4c4c4;
+		background-color: #efefef;
+		// 登陆框
+		.denglu {
+			width: 30%;
+			height: 100%;
+			line-height: 35px;
+			cursor: pointer;
+		}
+		// 注册框
+		.zhuce {
+			width: 30%;
+			height: 100%;
+			line-height: 35px;
+			border-left: 1px solid #c4c4c4;
+			border-right: 1px solid #c4c4c4;
+		}
+		// 返回顶部
+		.backtop {
+			width: 40%;
+			height: 100%;
+			// 小图标
+			.back {
+				width: 74px;
+				height: 15px;
+				line-height: 15px;
+				margin: 0 auto;
+				margin-top: 10px;
+				line-height: 15px;
+				background: url(../images/top.png) no-repeat;
+				background-size: 15px 15px;
+			}
+		}
+	}
+	// 下半部分
+	.bottom {
+		width: 100%;
+		height: 55px;
+		border-top: 1px solid #c4c4c4;
+		// 文字
+		.txt {
+			width: 236px;
+			margin: 0 auto;
+			margin-top: 15px;
+			font-size: 12px;
+			.left {
+				color: #fc0000;
+			}
+			.right {
+				color: #666;
+			}
+		}
+		// 网址
+		.net {
+			width: 106px;
+			margin: 0 auto;
+			color: #7b6690;
+		}
+	}
+}
+
+
+

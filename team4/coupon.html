@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>优惠券</title>
+    <script src="libs/flexible.js"></script>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/coupon.css"/>
+</head>
+<body>
+<div class="layout">
+    <!--优惠券头部-->
+    <header id="header">
+        <a href="javascript:history.go(-1)" class="icon-back fs24 iconfont icon-jiantouyoujiantou1"></a>
+        <h3 class="fs20">优惠券</h3>
+        <a href="#" class="app-download"><img src="images/header_app.png" alt="#"/></a>
+    </header>
+    <!--优惠券头部-->
+    <!--优惠券title -->
+    <main class="count-title"></main>
+    <!--优惠券title -->
+    <!--返回首页-->
+    <div class="home fs14">
+        <a href="index.html">首页</a>><a href="javascript:;">优惠券</a>
+    </div>
+    <!--返回首页-->
+    <!--优惠券底部-->
+    <div class="foot">
+        <div>
+            <a href="#" class="fs14">登录</a>
+            <a href="#" class="fs14">注册</a>
+            <a href="#top" class="fs14"><i class="iconfont icon-xiangshangjiantou fs16"></i>返回顶部</a>
+        </div>
+        <p class="fs12">
+            <span>手机APP下载</span>
+            慢慢买手机版
+            <span>-- 掌上比价平台</span>
+        </p>
+        <p class="fs12">m.manmanbuy.com</p>
+    </div>
+    <!--优惠券底部-->
+</div>
+<!--art模板-->
+<script type="text/html" id="count-title">
+    <ul class="clearfix">
+    {{each result as value}}
+        <li><a href="{{value.couponLink}}?couponId={{value.couponId}}"><img src="{{value.couponImg}}" alt=""/><span class="fs12">{{value.couponTitle}}</span></a></li>
+    {{/each}}
+    </ul>
+</script>
+<!--art模板-->
+<script src="libs/template.js"></script>
+<script src="libs/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/coupon.js"></script>
+</body>
+</html>

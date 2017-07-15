@@ -1,0 +1,150 @@
+.all {
+    background: #fff;
+}
+
+/* ----------------- 顶部通栏111--------------- */
+
+.header {
+    height: 1.28rem;
+    width: 100%;
+    background: #F4483E;
+    line-height: 1.28rem;
+}
+
+.header .iconfonts {
+    float: left;
+    font-size: 0.533333rem;
+    margin-left: 0.426667rem;
+    color: #fff;
+
+}
+
+.header p {
+    height: 1.28rem;
+    color: #fff;
+    text-align: center;
+    font-size: 0.533333rem;
+}
+
+.header .header_right {
+    float: right;
+    padding-top: 0.24rem;
+    padding-right: 0.373333rem;
+}
+
+.header .header_right img {
+    height: 0.8rem;
+
+}
+
+/* ----------------- 优惠券信息说明222--------------- */
+
+.dinner {
+    height: 1.013333rem;
+    width: 100%;
+}
+
+.dinner p {
+    color: #999999;
+    font-size: 0.4rem;
+    text-align: center;
+    line-height: 1.013333rem;
+}
+
+/* ----------------- 优惠券列表信息333--------------- */
+
+.discount-all {
+    width: 100%;
+    background: #fff;
+}
+
+.discount-all .discount_list ul li {
+    border-bottom: 1px solid #E7E7E7;
+    padding: 0.266667rem 0;
+}
+
+/*-------------------优惠券列表信息左边部分333--------------------- */
+
+.discount-all .discount_list ul li .list_left {
+    height: 100%;
+    width: 30%;
+    float: left;
+    overflow: hidden;
+}
+
+.discount-all .discount_list ul li .list_left a {
+    display: block;
+    width: 3.133333rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.discount-all .discount_list ul li .list_left a img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+/*-------------------优惠券列表信息右边部分333--------------------- */
+
+.discount-all .discount_list ul li .list_right {
+    width: 60%;
+    padding-left: 0.146667rem;
+    padding-right: 0.13333333rem;
+    position: relative;
+    float: left;
+}
+
+.discount-all .discount_list ul li .list_right .list_title {
+    line-height: 0.53333333rem;
+}
+
+.discount-all .discount_list ul li .list_right .list_title span:nth-of-type(1) {
+    display: block;
+    color: #5A5A5A;
+    font-weight: 800;
+}
+
+.discount-all .discount_list ul li .list_right .list_title span:nth-of-type(2) {
+    display: block;
+    padding-bottom: 32px;
+    color: #EE7700;
+}
+
+/*-------------------优惠券列表信息小图标部分333--------------------- */
+
+.discount-all .discount_list ul li .iconfonts {
+    float: right;
+    color: #ccc;
+    font-size: 25px;
+    position: absolute;
+    top: 2.133333rem;
+    right: 0px;
+}
+
+/*-------------------优惠券弹出框--------------------- */
+
+body {
+    position: relative;
+}
+
+.lay {
+    position: absolute;
+    display: none;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+
+.foot a i {
+    opacity: 0.4;
+    position: fixed;
+    bottom: 0.133333rem;
+    right: 0.133333rem;
+}
+
+.foot a i::before {
+    font-size: 0.9rem;
+}

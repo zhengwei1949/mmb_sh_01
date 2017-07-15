@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="lib/flexible.js"></script>
+	<title>商品列表</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/product-list.css">
+	<link rel="stylesheet" href="lib/iconfont/iconfont.css">
+	<script src='lib/jquery.js'></script>
+	<script src='lib/template.js'></script>
+	<script src='js/product-list.js'></script>
+</head>
+<body>
+	<div class="bg">
+		<!-- 头部 -->
+		<header class="header">
+			<!-- <h3></h3> -->
+			<a href="#" class="iconfont"></a>
+			<a href="#" class="iconfont">&#xe646;</a>
+		</header>
+		<!-- 搜索 -->
+		<div class="search_div">
+			<input type="text" placeholder="请输入你想比价的商品"><input type="button" value="搜索">
+		</div>
+		<!-- 导航 -->
+		<nav class="nav">
+			<a href="#" class="nav_one">首页</a>
+			>
+			<a class="nav_two" href="#">大家电</a>
+			>
+			<a class="nav_three" href="#">电视</a>
+			>
+			<input type="button" value="筛选">
+		</nav>
+		<div class="nav_list toggle"></div>
+
+		<!-- 商品列表 -->
+		<main class="main_bg">
+			<main class="main ">
+
+			</main>
+			<div class="main_bottom">
+				<input class="input_left" type="button" value="上一页">
+				<select class="selected">
+
+				</select>
+				<input class="input_right" type="button" value="下一页">
+			</div>	
+		</main>
+		<!-- 商品详情 -->
+		<div class="detail_bg toggle">
+			<div class="detail">
+				<div class="detail_pic">
+					<p>乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</p>
+					<div></div>
+				</div>
+				<div>
+					<div>比价购买</div>
+					<div>产品参数</div>
+					<div>评价(223)</div>
+				</div>
+				<div class="detail_price"></div>
+				<div>实际价格以各网站列出的实时售价为准,我们提供的价格可能有数小时到数天的延迟</div>
+			</div>
+			<!-- 网友评价 -->
+			<div class="eval_bg ">
+				<div class="eval_top">网友评价</div>
+				<div class="eval">
+					
+				</div>
+				<div class="eval_bottom">
+					<p>查看更多评价</p>
+				</div>
+			</div>
+		</div>
+		<!-- 尾部 -->
+		<footer class="footer">
+			<div class="footer_top">
+				<a href="#">登录</a>
+				<a href="#">注册</a>
+				<a href="#">返回顶部</a>
+			</div>
+			<div class="footer_bottom">
+				<p>
+					<a href="#">手机APP下载 </a>慢慢买手机版 -- 掌上比价平台
+				</p>
+				<p>m.manmanbuy.com</p>
+			</div>
+		</footer>
+	</div>
+
+	<!-- 评价内容模板对象 -->
+	<script id="eval_demo" type="text/html">
+		{{ each result as value i}}
+		<div class="eval_one">
+			<div class="eval_right">
+				<span class="eval_date">{{value.comTime}}</span>
+				<p class="eval_origin">{{value.comFrom}}</p>
+			</div>
+			<span class="eval_name">{{value.comName}}</span>
+		</div>
+		<div class="eval_content">{{value.comContent}}
+
+		</div>
+		{{ /each}}
+	</script>
+
+	<!-- 商品列表模板对象 -->
+	<script id="product" type="text/html">
+		<ul >
+			{{ if result }}
+			{{ each result as value i}}
+			<li id = {{ value.productId }} >
+				<a href="#" class="pic">{{ #value.productImg }}</a>
+				<a href="#" class="pic_right">
+					<p>{{ value.productName}} <br> <span> {{ value.productPrice }}</span></p>
+					<p>{{ value.productQuote}} {{value.productCom }}
+					</p>
+				</a>
+			</li>
+			{{ /each }}
+			{{ /if }}
+		</ul>
+	</script>
+	<!-- 导航栏列表模板 -->
+	<script id="nav_list_mod" type="text/html">
+		<div id="sideMenu" class="sideBox">
+			{{ each result as value i}}
+			<div class="hd" id = {{value.titleId}}>
+				<h3>{{value.title}}</h3>
+			</div>
+			<div class="bd toggle">
+				
+			</div>
+			{{ /each }}
+		</div>
+	</script>
+	<!-- 导航栏详情模板 -->
+	<script id="nav_list_mod_code" type="text/html">
+		<ul>
+			<li class="clearfix">
+				{{ each result as value i }}
+				<a href="#">{{ value.category}}</a>
+				{{ /each }}
+			</li>
+		</ul>
+	</script>
+</body>
+</html>

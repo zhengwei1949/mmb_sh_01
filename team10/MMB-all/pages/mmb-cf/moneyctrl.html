@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src='lib/flexible/flexible.js'></script>
+    <title></title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/money.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <script src='lib/less/less.min.js'></script>
+    <script src='lib/jquery-1.12.0/jquery-1.12.0.js'></script>
+    <script src = 'js/money.js'></script>
+</head>
+<body>
+<!-- 头部通栏 -->
+<header class='head'>
+    <div class='h_head1 fl'>
+        <a href="javascript:;"><i class="iconfont">&#xe653;</i></a>
+    </div>
+    <div class='h_head2 fl'>
+        <h3>省钱控-最新优惠</h3>
+    </div>
+    <div class='h_head3 fr'>
+        <a href="#"><img class='img' src="img/header_app.png" alt=""></a>
+    </div>
+</header>
+<!--商品位置-->
+<main>
+    <div class='box'>
+        <ul class="abc">
+            <li class='clearfix'>
+                <div class='top fl'><img src="" alt=""></div>
+                <div class='bottom clearfix'>
+                    <div class='title'>
+                        移动端凑单品
+                        <span>10.9元</span>
+                    </div>
+                    <div class='other'>
+                        <span class='mall'>京东商城 | 10-25 14:10</span>
+                        <spsan class='comment fr'>
+                            <i class='icon-comment'></i>
+                            1
+                        </spsan>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+        <div class='btn clearfix'>
+            <span class='w33'><input type="button" id='btnUp' value='上一页'></span>
+                  <span class='w33'>
+                    <select id='option'>
+                        <option value="1/3">1/3</option>
+                    </select>
+                  </span>
+            <span class='w33'><input type="button" id='btnDown' value='下一页'></span>
+        </div>
+    </div>
+</main>
+
+<!-- 底部开发-->
+<footer>
+    <div class='foot_top'>
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" style="width :40%; border:0" ;>
+            <img src="img/top.jpg" alt="">返回顶部</a>
+    </div>
+    <div class='foot_bottom'>
+        <p>
+            <a href="">手机app下载</a><a href="">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+
+        <p>
+            m.manmanbuy.com
+        </p>
+    </div>
+</footer>
+<script id="test" type="text/html">
+    {{each result as v i}}
+    <li class='clearfix'>
+        <div class='top fl'>
+            <a href={{v.skipUrl}} style="display: block">{{#v.productImgSm}}</a>
+        </div>
+        <div class='bottom clearfix'>
+            <div class='title'>
+                <a href={{v.skipUrl}} style="display: block">
+                    {{v.productName}}
+                    <span>{{v.productPinkage}}</span>
+                </a>
+            </div>
+            <div class='other'>
+                <span class='mall'>{{v.productFrom}} | {{v.productTime}}</span>
+                <spsan class='comment fr'>
+                    <i class='iconfont'>&#xe624;</i>
+                    {{v.productComCount.replace("有","").replace("人评论","")}}
+                </spsan>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</script>
+</body>
+<script src='js/template-debug.js'></script>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>凑单品</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/gsproduct.css">
+</head>
+<body>
+	<!-- 头部部分 -->
+	<header class='single-header'>
+		<a href="#" class='icon-back'></a>
+		<p>凑单品</p>
+		<a href="javascript:;" class='appdown'>
+				<img src="images/header_app.png" alt="">
+		</a>
+	</header>
+	<!-- 主体部分 -->
+	<main class='all'>
+	<!-- 下拉菜单部分 -->
+		<div class="main-list">
+		   <a class="search"></a>
+			<ul class='listBox'>
+				<li class='shop1' data-id='0'>
+				 	<a href="javascript:;">
+				 		<i>京东</i>
+				 		<span></span>
+				 	</a>
+				</li>
+				<li class='shop2' data-id='0'>
+					<a href="javascript:;">
+						<i>华北</i>
+						<span></span>
+					</a>
+				</li>
+
+				<li class='shop3'>
+					<a href="javascript:;">
+						<i>全部价格</i>
+						<span></span>
+					</a>
+				</li>
+
+			</ul>
+			<!-- <a href="#" class="search"></a> -->
+
+		</div>
+		<div class='shop-list'>
+			<ul class="shopBox"></ul>
+		</div>
+		<!-- 商品展示部分 -->
+		<div class="product-list">
+			<ul class='product-box'>
+				
+			</ul>
+		</div>
+	</main>
+	<!-- 底部部分 -->
+ <footer>
+ 	<div class='footer-ranking'>
+ 		<p>品牌排行</p>
+ 		<span></span>
+ 	</div>
+ 	<div class='info clearfix'>
+ 	<a href="#">登录</a>
+ 	<a href="#">注册</a>
+
+ 	<a href="#">返回底部</a>
+   </div>
+   <div class='mobile'>
+   	 	<a href="#">手机APP下载</a>
+   	 	<a href="#">慢慢买手机版</a>、
+   	 	<a href="#">--掌上比价平台</a>
+   	 	<p class='net'>m.manmanbuy.com</p>
+   </div>
+ 	
+ </footer>
+
+	<script src='lib/zepto/zepto.min.js'></script>
+	<script src='lib/zepto/touch.js'></script>
+	<script src='lib/zepto/selector.js'></script>
+	<script src='lib/zepto/fx.js'></script>
+	<script src='js/url.js'></script>
+	<script src='lib/template-native.js'></script>
+	<script src='js/gsproduct.js'></script>
+	<script type="text/template" id='item1'>
+		
+			<% for(var i = 0;i<result.length;i++) { %>
+			   <li data-id="<%= result[i].shopId%>">
+			    <a href="javascript:;"><%= result[i].shopName%></a>
+			    <span></span>
+			   </li>
+			   
+			<% } %>
+	
+	</script>
+	<script type="text/template" id='item2'>
+		
+			<% for(var i = 0;i<result.length;i++) { %>
+			   <li data-id="<%= result[i].areaId%>">
+			   <a href="javascript:;"><%= result[i].areaName%></a>
+			   <span></span>
+			   </li>
+			<% } %>
+	
+	</script>
+	<script type="text/template" id='item3'>
+		
+			<% for(var i = 0;i<result.length;i++) { %>
+			  <li>
+				 <a href="#">
+				 	<div class='img-box'>
+				 		<img src="<%= result[i].productImg%>" alt="">
+				 	</div>
+				 	<div class='introduce'>
+				 		<p class='name'><%= result[i].productName%></p>
+						<p class='price fl'><%= result[i].productPrice%></p>
+						<p class='mix fr'>去凑单</p>
+				 	</div>
+
+				 </a>
+				</li>
+			<% } %>
+	
+	</script>
+
+</body>
+</html>

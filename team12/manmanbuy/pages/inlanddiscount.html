@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>国内折扣</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../less/inlanddiscount.css"/>
+    <script src='../lib/flexible/flexible.js'></script>
+    <script src='../lib/zepto/zepto.min.js'></script>
+    <script src='../lib/artTemplate/template.js'></script>
+    <script type='text/html'id='result'>
+        {{if result}}
+            {{each result as value}}
+        <!--页面主题-->
+                    <div class="domestic_content" >
+                        <a href="inlandGoods.html?productid={{value.productId}} ">
+                            <div class="content_pic">{{#value.productImg}}</div>
+                            <span class='content_message'>{{value.productName}}</span><br/>
+                            <span class='content_price'>{{value.productPrice}}</span><br/>
+                            <span class='content_tip'>{{value.productFrom}}|{{value.productTime}}</span>
+                        </a>
+                    </div>
+            {{/each}}
+        {{/if}}
+    </script>
+</head>
+<body>
+<div class='domestic_layout'>
+    <header class="colorB">
+        <a href="../index.html" class="fl">
+            <span class="iconfont icon-fanhui"></span>
+        </a>
+        <h4>国内折扣</h4>
+        <a href="javascript:;" class="fr">
+            <img src="../images/header_app.png" alt=""/>
+        </a>
+    </header>
+    <div class="domestic_main clearfix">
+
+    </div>
+    <footer>
+        <div class="operate clearfix">
+            <ul>
+                <li>
+                    <span>登录</span>
+                </li>
+                <li><span>注册</span></li>
+                <li id="reTop"><span class="iconfont icon-xiangshang-copy"></span><span>返回顶部</span></li>
+            </ul>
+        </div>
+        <div class="introduce">
+            <p><span class="colorRed">手机APP下载</span>
+                <span>慢慢买手机版</span>
+                <span class="colorGray">-- 掌上比价平台</span>
+            </p>
+
+            <p class="colorGray">m.manmanbuy.com</p>
+        </div>
+    </footer>
+</div>
+</body>
+<script src='../js/base.js'></script>
+<script src='../js/inlanddiscount.js'></script>
+</html>

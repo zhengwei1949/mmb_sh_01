@@ -1,0 +1,183 @@
+/* 
+author :wzp
+date :2016-11-22
+ */
+
+html,body{
+ 	width: 100%;
+ 	height: 100%;
+ 	min-width:320px;
+ }
+.brandList {
+ 	width: 100%;
+ 	min-width:320px;
+ 	position: relative;
+ }
+  /*顶部通栏*/
+.brandList .topBar {
+  	width: 100%;
+  	height: 3.83rem;
+  	background-color: orange;
+  	position: fixed;
+  }
+ .brandList .topBar a:first-child img {
+ 	height:2.128rem;  
+ 	position: absolute;
+ 	top: 0.851rem;
+ 	left:0.851rem; 
+ 	display: block;
+ }
+ .brandList .topBar a:last-child img {
+ 	height:2.894rem;  
+ 	position: absolute;
+ 	top: 0.468rem;
+ 	right:0.851rem; 
+ 	display: block;
+ }
+ /*搜索栏*/
+ .brandList .search {
+   	padding: 4.255rem 0.851rem 0.426rem 0.851rem;
+
+ }
+  .brandList .search input:first-child {
+  	width: 75%;
+  	height:2.128rem;
+  	border-radius: 1.277rem;
+  	background-color: #EEE;
+  	padding-left: 0.638rem;
+  }
+.brandList .search input:last-child {
+  	width: 20%;
+  	height:2.128rem;
+	background-color: orange;
+	border-radius: 1.277rem;
+	font:1.191rem/2.128rem "microsoft yahei";
+	color:white;
+	float: right;
+ }
+ /*层级导航*/
+.brandList .nav {
+	width: 100%;
+	height:2.979rem;
+	background: linear-gradient(to top,#ddd,#fff);
+	vertical-align: middle;
+	padding:0 0.851rem;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	margin-bottom: 0.426rem;
+}
+.brandList .nav a {
+	display: inline-block;
+	height:2.979rem;
+	font: 0.979rem/2.979rem "simsum";
+	padding:0 0.213rem;
+}
+/*热门品牌*/
+.brandList .hot_brand {
+	width: 100%;
+	height:2.979rem;
+	background: #EEE;
+	font:bold 1.5rem/2.979rem "simsum";
+	padding:0 0.851rem;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	color:orange;	
+	margin-bottom: 0.426rem;
+} 
+
+  /*商品栏*/
+.brandList .brands {
+	width: 100%;
+	margin-bottom: 1.277rem;
+/*	height:26.766rem;
+	overflow: auto;*/
+	margin-bottom: 7rem;
+
+
+}
+
+/*动画*/
+// @keyframes  move{
+// 	from {
+// 		transform:translate(100%);
+// 	}
+// 	to{
+// 		transform:translate(0%);
+// 	}
+// }
+/*品牌列表*/
+.brandList .brands>li{
+	padding: 0 1.5rem;
+	height:2.979rem;
+	background-color: #EEE;
+	border-bottom: 1px solid #ccc;
+} 
+.brandList .brands>li>a {
+	display: inline-block;
+	width: 100%;
+	height:2.979rem;
+	line-height:2.979rem;
+	font-size: 1.5rem;
+	font-weight:bold;
+}
+/*品牌列表右侧箭头*/
+.brandList .brands>li>a>span::before {
+	float: right;
+	display: inline-block;
+	height: 100%;
+	padding-top: .6rem;
+	font-size: 2rem;
+}
+  /*登录*/
+.brandList .login {
+	width: 100%;
+	height:2.128rem;
+	background-color: #EEE;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	position: fixed;
+	bottom: 4.255rem;
+}	
+.brandList .login li {
+	float: left;
+	width: 33.333%;
+	height:2.128rem;
+}
+.brandList .login li a {
+	display: inline-block;
+	width: 100%;
+	height:2.128rem;
+	line-height:2.128rem;
+	text-align: center;
+}
+/*返回顶部箭头*/
+.brandList .login li:nth-child(3) .icon-arrow-up {
+	color:#666;
+}
+.brandList .login li:nth-child(-n+2){
+	border-right:1px solid #ccc;
+}
+  /*底部*/
+.brandList footer {
+	width: 100%;
+	height:4.255rem;
+	background-color: #EEE;
+	padding-top:0.851rem;
+	position: fixed;
+	bottom: 0;
+}
+.brandList footer p{
+	width: 100%;
+	/*height:4.255rem;*/
+	/*line-height:4.255rem;*/
+	text-align: center;
+	vertical-align: middle;
+
+}
+.brandList footer p a:nth-child(1) {
+	color: red;
+}
+.brandList footer p a:nth-child(3) {
+	color: #666;
+}
+

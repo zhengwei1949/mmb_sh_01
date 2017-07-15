@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>产品分类 - 慢慢买比价网</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/productDetalPage.css">
+</head>
+<body>
+<div class="layout">
+    <!-- 顶部通栏 -->
+    <header>
+        <div class="logo f_left">
+            <a href="index.html" title='慢慢买比价网--手机版'>
+                <img src="./images/header_logo.png" alt='慢慢买比价网--手机版'>
+            </a>
+        </div>
+        <div class="appdown f_right">
+            <a href="#" title='手机app下载'>
+                <img src="./images/header_app.png" alt="手机app下载">
+            </a>
+        </div>
+    </header>
+
+    <!-- 搜索框 -->
+    <form action="#">
+        <div class="search">
+            <div class="searchtxt">
+                <input type="search" name="keyword" placeholder='请输入你想比价的商品'>
+            </div>
+            <div class="searchbtn">
+                <input type="submit" value="搜索">
+            </div>
+        </div>
+    </form>
+
+    <!-- 3级菜单 -->
+    <nav>
+        <div class="menu f_left">
+            <a href="index.html">首页&nbsp;</a>&gt;
+            <a href="./productList.html" class='category'>&nbsp;</a>&gt;
+            <a href="#" class='currentCategory'></a>
+        </div>
+        <div class="filter f_right">
+            <input type="button" value="筛选">
+        </div>
+    </nav>
+
+    <!-- 商品详细信息 -->
+    <div class="product">
+        <div class="title"></div>
+        <div class="pic">
+            <a href="#">
+                <img src="./images/sc.jpg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <!-- 切换功能区 -->
+    <div class="tab">
+        <ul>
+            <li class="compare"><a href="#">比价购买</a></li>
+            <li class="param"><a href="#">产品参数</a></li>
+            <li class="com"><a href="#">优选评价</a></li>
+        </ul>
+    </div>
+
+    <!-- 比价商店 -->
+    <div class="shop clearfix">
+        <!--<div class="f_left shopname">
+            <img src="./images/jd.png" alt="">
+            <span>京东商城</span>
+        </div>
+        <div class="f_right buy">
+            <span class="red">￥359.00</span>
+            <span class="btn">去购买</span>-->
+        </div>
+    </div>
+    <div class="note"> * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</div>
+    <div class="comtit">
+        <div>网友评价</div>
+    </div>
+    <!-- 网友评论区块 -->
+    <section>
+        <!--<div class="commentlist">
+            <table width="100%">
+                <tbody>
+                <tr>
+                    <td class="name" align="left">电***卖</td>
+                    <td align="right" >2015/1/20</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="right" >购买自：京东商城</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="comcont" >电脑机箱的盖、光驱、硬盘免工具安装，电源下置，标配前端12CMM风扇，前置USB3.0线很粗很好，配置了固态硬盘架，电脑中的线走背线设置很好，机箱侧面板凸出设计， 空间大强度好，质量很好，前后风道设置很好，钢板很厚很沉，安全实用,正品行货盒装;电源80PLUS铜牌认证，额定功率450瓦，设置12CM风扇，主动PFC宽电压，智能温控，效率85%，接口齐全，C认证，质量很好正品行货盒装;内存条很好，正品行货，硬盘很好正品行货盒装;主板有高清、模拟、数字3种接口，还有光纤网线接口，网速10M网卡，声卡7.1声道，支持CPU内置GPU核心的显卡，有待机省电模式，功能齐全高端的主板，正品行货盒装；CPU内置GPU显卡核心 HD Graphics 4400GPU，带风扇，性能很好，正品行货盒装。买了两台一样的电脑全部配件，两台电脑全部是一次安装点亮，运行平稳，电脑配件和店家说明展示一致，京东！好商品是首选的店家！价格合理，物超所值，质量让人信得过，以后买商品，京东是首选！支持京东继续发展成长壮大！好！                </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>-->
+    </section>
+
+
+    <!-- 查看更多 -->
+    <div class="more">
+        <a href="#">查看更多评价</a>
+    </div>
+
+    <!-- 底部信息 -->
+    <div class="foot">
+        <div class="foot_top">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="javascript:;" id='backToTop'>
+                <img src="./images/top.jpg" alt="">返回顶部
+            </a>
+        </div>
+        <footer>
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="index.html">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </footer>
+    </div>
+
+    <!-- APP推广下载 -->
+    <div class="app_promotion">
+        <a class="close" href="javascript:;"></a>
+        <div class="icon"></div>
+        <p class="title">慢慢买</p>
+        <p class="desc">全网比价，省钱专家</p>
+        <a class="download_btn" href="#">立即打开</a>
+    </div>
+</div>
+</body>
+
+<script src='./lib/jquery.min.js'></script>
+<script src='js/url.js'></script>
+<script src='./js/productDetalPage.js' ></script>
+</html>

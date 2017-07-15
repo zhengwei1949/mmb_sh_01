@@ -1,0 +1,108 @@
+html {
+  font-size: 75px;
+}
+html,
+body {
+  height: 100%;
+}
+.navTitle {
+  margin-top: 0.26666667rem;
+  background: #F7F7F7;
+  border-bottom: 0.01333333rem solid #CCC;
+  border-top: 0.01333333rem solid #CCC;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  padding-left: 0.26666667rem;
+  color: #b81900;
+}
+[data-dpr="1"] .navTitle {
+  font-size: 12px;
+}
+[data-dpr="2"] .navTitle {
+  font-size: 24px;
+}
+[data-dpr="3"] .navTitle {
+  font-size: 36px;
+}
+.salelist {
+  width: 100%;
+  min-height: 60%;
+}
+.salelist > ul {
+  width: 100%;
+  margin-bottom: 0.4rem;
+}
+.salelist > ul > li {
+  width: 100%;
+  border-bottom: 0.01333333rem solid #cccccc;
+}
+.salelist > ul > li .productImg {
+  float: left;
+  width: 30%;
+  padding-left: 0.33333333rem;
+}
+.salelist > ul > li .productImg img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50%;
+  transform: translateY(-50%);
+  width: 2.4rem;
+  height: 2rem;
+}
+.salelist > ul > li .pro_right {
+  float: left;
+  width: 70%;
+}
+.salelist > ul > li .pro_right a:nth-child(1) {
+  display: block;
+  margin-top: 0.33333333rem;
+  margin-bottom: 0.26666667rem;
+  color: #000;
+}
+[data-dpr="1"] .salelist > ul > li .pro_right a:nth-child(1) {
+  font-size: 14px;
+}
+[data-dpr="2"] .salelist > ul > li .pro_right a:nth-child(1) {
+  font-size: 28px;
+}
+[data-dpr="3"] .salelist > ul > li .pro_right a:nth-child(1) {
+  font-size: 42px;
+}
+.salelist > ul > li .pro_right .price {
+  color: orangered;
+  display: block;
+  margin-bottom: 0.26666667rem;
+}
+[data-dpr="1"] .salelist > ul > li .pro_right .price {
+  font-size: 16px;
+}
+[data-dpr="2"] .salelist > ul > li .pro_right .price {
+  font-size: 32px;
+}
+[data-dpr="3"] .salelist > ul > li .pro_right .price {
+  font-size: 48px;
+}
+.salelist > ul > li .pro_right .star {
+  color: gold;
+  float: right;
+  margin-right: 0.4rem;
+}
+.salelist > ul > li .pro_right .star li {
+  float: left;
+  margin-left: 0.06666667rem;
+}
+[data-dpr="1"] .salelist > ul > li .pro_right .star li {
+  font-size: 16px;
+}
+[data-dpr="2"] .salelist > ul > li .pro_right .star li {
+  font-size: 32px;
+}
+[data-dpr="3"] .salelist > ul > li .pro_right .star li {
+  font-size: 48px;
+}
+.salelist > ul > li .pro_right p {
+  margin-bottom: 0.4rem;
+}
+.salelist > ul > li .pro_right p span {
+  margin-right: 0.4rem;
+}

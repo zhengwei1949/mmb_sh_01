@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>白菜价</title>
+    <link rel="stylesheet" href="../css/base3.css"/>
+    <link rel="stylesheet" href="../css/baicaijia.css"/>
+    <link rel="stylesheet" href="../fonts/iconfont.css"/>
+    <script src="../lib/jquery-1.12.2.js"></script>
+    <script src="../lib/template.js"></script>
+    <script src="../lib/swipe.js"></script>
+</head>
+<body>
+<!--整体盒子-->
+<div class="layout">
+    <!--顶部通栏-->
+    <div class="head" id="topBar">
+        <!--后退按钮-->
+        <div class="back">
+            <a href="#" class="iconfont icon-back"></a>
+        </div>
+        <h1>白菜价-淘宝内部券</h1>
+
+        <div class="downloadApp"></div>
+    </div>
+    <!--标签切换-->
+    <div class="tabBar">
+        <ul id="tabBar">
+            <!--<li><a href="#" class="current">全部</a></li>-->
+        </ul>
+        <div class="serch">
+            <a href="#" class="iconfont icon-sousuo"></a>
+        </div>
+    </div>
+    <!--banner图片-->
+    <div class="banner">
+        <img src="../images/baicaijiaBanner.png" alt=""/>
+    </div>
+    <!--商品展示-->
+    <div class="display">
+        <ul id="display">
+
+        </ul>
+    </div>
+    <!--页面底部-->
+    <footer>
+        <div class="top">
+            <div class="landing fl">登录</div>
+            <div class="login fl">注册</div>
+            <div class="backTop fl">☝返回顶部</div>
+        </div>
+        <div class="bottom">
+            <p>
+                <span>手机APP下载</span>
+                <span>慢慢买手机版</span>
+                <span>-掌上比价平台</span>
+            </p>
+
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+    <!--返回顶部小球-->
+    <div class="toTop">
+        <a href="#topBar"></a>
+    </div>
+</div>
+<!--ajax交互-->
+<script>
+    $(function () {
+        $.ajax({
+            url: 'http://127.0.0.1:9090/api/getbaicaijiatitle',
+            success: function (data) {
+                //var htmlStr = template('tab',data.result);
+                var section = $("#display");
+                var htmlStr = '';
+                for (var i = 0; i <= data.result.length - 1; i++) {
+                    var str = '<li><a href="#" id="' + data.result[i].titleId + '">' + data.result[i].title + '</a></li>';
+                    htmlStr += str;
+                }
+                $('#tabBar').html(htmlStr);
+                /*给每个a标签添加点击事件*/
+                var tabs = $('#tabBar>li>a');
+                /*默认第一个tab展示出来。所以还需要获取一次数据*/
+                $.ajax({
+                    url: 'http://127.0.0.1:9090/api/getbaicaijiaproduct',
+                    data: {"titleid": tabs[0].id},
+                    success: function (data) {
+                        /*字符串模板*/
+                        function getStr(i){
+                            var htmlStr ='<li class="displayItem">' +
+                                    '<div class="container">' +
+                                    data.result[i].productImg +
+                                    '<div class="right">' +
+                                    '<p>' + data.result[i].productName+ '</p>' +
+                                    '<p>' + '<i>券后</i>' + data.result[i].productPrice+ '</p>' +
+                                    data.result[i].productCouponRemain +
+                                    '<p>' + data.result[i].productCoupon + data.result[i].productHref+ '</p>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</li>';
+                            return htmlStr;
+                        }
+                        //处理数据，渲染页面
+                        var str = '';
+                        for(var i=0;i<=data.result.length-1;i++){
+                             str += getStr(i);
+                        }
+                        section.html(str);
+                    }
+                });
+                //默认第一个选中状态
+                $(tabs[0]).addClass("current");
+                for (var i = 0; i <= tabs.length - 1; i++) {
+                    tabs[i].onclick = function () {
+                        //干掉所有人，留下我自己
+                        if ($(this).hasClass("current")) {
+                            //假如就停留在此页面内，就不用再次获取了
+                        } else {
+                            tabs.removeClass("current");
+                            $(this).addClass("current");
+                            $.ajax({
+                                url: 'http://127.0.0.1:9090/api/getbaicaijiaproduct',
+                                data: {"titleid": this.id},
+                                success: function (data) {
+                                    for(var i=0;i<=data.result.length-1;i++){
+                                        /*字符串模板*/
+                                        function getStr(i){
+                                            var htmlStr ='<li class="displayItem">' +
+                                                    '<div class="container">' +
+                                                    data.result[i].productImg +
+                                                    '<div class="right">' +
+                                                    '<p>' + data.result[i].productName+ '</p>' +
+                                                    '<p>' + '<i>券后</i>' + data.result[i].productPrice+ '</p>' +
+                                                    data.result[i].productCouponRemain +
+                                                    '<p>' + data.result[i].productCoupon + data.result[i].productHref+ '</p>' +
+                                                    '</div>' +
+                                                    '</div>' +
+                                                    '</li>';
+                                            return htmlStr;
+                                        }
+                                        //处理数据，渲染页面
+                                        var str = '';
+                                        for(var i=0;i<=data.result.length-1;i++){
+                                            str += getStr(i);
+                                        }
+                                        section.html(str);
+
+                                    }
+                                }
+                            });
+                        }
+
+                    }
+                }
+                //tab左右滑动
+                itcast.iScroll({
+                    swipeDom:document.querySelector('.tabBar'),/*父容器对象*/
+                    swipeType:'x',/*滑动的方向*/
+                    swipeDistance:100/*缓冲的距离*/
+                });
+            }
+        })
+    });
+</script>
+
+
+
+</body>
+</html>

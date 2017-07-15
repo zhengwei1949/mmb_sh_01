@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src='../lib/flexible/flexible.js'></script>
+    <script src='../lib/flexible/flexible_css.js'></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <title> 国内折扣 </title>
+</head>
+<body>
+<!-- mtop 顶部栏和搜索框 -->
+<div class="mtop">
+    <!-- mheader 顶部栏 -->
+    <header class="mheader">
+        <a href="javascript:history.go(-1);" class='f-left mh-back'><img src="../images/icback.svg" alt=""></a>
+        <a href="javascript:;" class='f-right mh-app'><img src="../images/header_app.png" alt=""></a>
+        <h1 class='mh-title'> 国内折扣 </h1>
+    </header>
+</div>
+
+<!-- 页面主体部分 -->
+<main class='mmain'>
+    <!-- productshow 产品展示 -->
+    <div class="mproductshow"></div>
+    <script id='tempMproduct' type='text/html'>
+        {{ if result }}{{ each result as v i }}
+            <div class='tit'>
+                <h3>{{v.productName}}</h3>
+                <p class='price'>{{v.productPinkage}}</p>
+            </div>
+            <div class='info'>
+                <span class='mall'>{{v.productFrom}}</span>
+                <span class='addtime'>{{v.productTime}}</span>
+                <span class='author'>{{v.productTips}}</span>
+                <span class='say'><a href="#newcomment">{{v.productComCount}}</a></span>
+            </div>
+            <div class="content">
+                <div class='pic'>{{#v.productImgSm}}</div>
+                <div class="con">{{v.productInfo}}</div>
+                <div class='lpic'>{{#v.productImgLg}}</div>
+            </div>
+            <div class='city'>{{#v.productCity}}</div>
+            <div class="golink">
+                <a href="javascript:;"><i class='icon-gobuy'></i>前往购买</a>
+            </div>
+            <!-- 评论 -->
+            <div class="comment">{{#v.productComment}}</div>
+        {{ /each }}{{ /if }}
+    </script>
+    <!-- 3级导航菜单 -->
+    <div class='mdaohang'>
+        <ul class='clearfix'>
+            <li><a href="index.html">首页 > </a></li>
+            <li><a href="moneyctrl.html">超值推荐 > </a></li>
+            <li><a class='pro' href="javascript:;">再特价：水密码 密集补水 > </a></li>
+        </ul>
+    </div>
+</main>
+
+<!-- mfooter 底部 -->
+<footer class='mfooter'>
+    <div class="mft-bts clearfix">
+        <a href='javascript:;' class="bt-login">登录</a>
+        <a href='javascript:;' class="bt-register">注册</a>
+        <a href='javascript:window.scrollTo(0,0);' class="bt-totop"><img src="../images/top.jpg" alt="回到顶部">回到顶部</a>
+    </div>
+    <!-- 底部信息 -->
+    <div class='mft-msg'>
+        <p><a href="javascript:;" style='color:red'>手机APP下载</a><a href="javascript:;" style='color:black'>慢慢买手机版</a><a href="javascript:;">--掌上比价平台</a></p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<script src='../lib/jquery/jquery-1.12.0.min.js'></script>
+<script src='../lib/art/template.js'></script>
+<script src='../js/common/routeURL.js'></script>
+<script src='../js/common/tools.js'></script>
+<script src='../js/moneyproduct.js'></script>
+</body>
+</html>

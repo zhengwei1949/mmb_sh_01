@@ -1,0 +1,117 @@
+@charset "utf-8";
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.hd {
+  position: relative;
+}
+/* 头部 */
+header h3 {
+  font-weight: normal;
+}
+/* 筛选 */
+.filter {
+  border: 0.02666667rem solid #dadada;
+}
+.filter i {
+  color: #565656;
+}
+.filter .search {
+  width: 1.2rem;
+  height: 0.98666667rem;
+  text-align: center;
+  border-left: 0.02666667rem solid #dadada;
+}
+.filter ul {
+  overflow: hidden;
+  padding-right: 0.4rem;
+}
+.filter ul li {
+  height: 0.98666667rem;
+  line-height: 0.98666667rem;
+  text-align: center;
+  width: 33.3%;
+  float: left;
+}
+.filter ul li i {
+  margin-left: 0.13333333rem;
+  color: #565656;
+}
+/* 筛选 */
+/* 下拉列表 */
+.popBox {
+  position: absolute;
+  left: 0;
+  top: 1.04rem;
+  width: 100%;
+}
+.popBox ul {
+  background: #fff;
+}
+.popBox ul li {
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  border-bottom: 0.01333333rem solid #dadada;
+  padding: 0 0.33333333rem;
+}
+.popBox ul li.on i {
+  display: block;
+}
+.popBox ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.popBox ul li a i {
+  float: right;
+  color: #f8601d;
+  display: none;
+}
+/* 下拉列表 */
+/* 商品详情列表 */
+.gsProductList ul {
+  background: #F1F1F1;
+}
+.gsProductList ul li {
+  float: left;
+  width: 47%;
+  margin: 2% 0 0 2%;
+  background: white;
+}
+.gsProductList ul li img {
+  width: 100%;
+  height: 4.53333333rem;
+}
+.gsProductList ul li .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  padding: 0 0.13333333rem;
+  margin-bottom: 0.13333333rem;
+  color: #333;
+}
+.gsProductList ul li .other {
+  padding: 0 0.13333333rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+}
+.gsProductList ul li .price {
+  color: #F86047;
+}
+.gsProductList ul li .price:first-letter {
+  font-size: 12px;
+}
+.gsProductList ul li .btn {
+  height: 0.64rem;
+  width: 1.6rem;
+  background: #FF9501;
+  color: #ffffff;
+  border-radius: 0.06666667rem;
+  text-align: center;
+  line-height: 0.64rem;
+}
+/* 商品详情列表 */

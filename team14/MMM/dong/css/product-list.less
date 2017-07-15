@@ -1,0 +1,259 @@
+.header {
+	background-image: url("../images/header_logo.png");
+	background-size: 4.946667rem 0.666667rem;
+	background-repeat: no-repeat;
+	background-position: 0.56rem 0.32rem;
+}
+/*搜索*/
+.search_div {
+	margin-top: 1.173333rem;
+	text-align: center;
+	padding: 0.266667rem 0;
+	input:nth-of-type(1) {
+		height: 0.8rem;
+		width: 7.6rem;
+		font-size: 0.32rem;
+		background: #efefef;
+		border-radius: 0.4rem;
+		text-indent: 0.6rem;
+	}
+	input:nth-of-type(2) {
+		height: 0.8rem;
+		width: 1.68rem;
+		font-size: 0.426667rem;
+		background: #FF841D;
+		border-radius: 0.4rem;
+		text-align: center;
+		color: white;
+	}
+}
+/*导航*/
+.nav {
+	height: 1.013333rem;
+	font-size: 0.373333rem;
+	background: #efefef;
+	padding-top: 0.293333rem;
+	padding-left: 0.213333rem;
+	input {
+		float: right;
+		margin-right:0.186667rem;
+		margin-top:-0.186667rem;
+		font-size: 0.373333rem;
+		height: 0.8rem;
+		width:1.653333rem;
+		border:1px solid #000;
+		border-radius: 0.2rem;
+	}
+}
+.toggle {
+	display:none;
+}
+/* 手风琴 */
+.nav_list {
+	ul {
+		border-bottom: 0.013333rem solid #666;
+	}
+	h3 {
+		height: 1.066667rem;
+		line-height: 1.066667rem;
+		font-size: 0.426667rem;
+		border-top: 0.013333rem solid #666;
+		background: #f0f0f0;
+		text-indent: 0.426667rem;
+	}
+	li {
+		background: #f9f9f9;
+	}
+	a {
+		float: left;
+		margin-right: -0.013333rem;
+		border-right: 0.013333rem solid #ccc;
+		font-size: 0.426667rem;
+		height: 1.066667rem;
+		line-height: 1.066667rem;
+		width: 33.3333%;
+		border-bottom: 0.013333rem solid #ccc;
+		text-align: center;
+	}
+}
+/*商品列表*/
+.main {
+	// margin-top: 1.173333rem;
+	ul {
+		/*每一条商品信息*/
+		li {
+			height: 3.413333rem;
+			/*商品信息左边图片*/
+			.pic {
+				float: left;
+				height: 3.413333rem;
+				width: 3.146667rem;
+				overflow: hidden;
+				img {
+					height: 80%;
+					width: 80%;
+					margin-left: 10%;
+					margin-top:10%;
+				}
+			}
+			/*商品信息右边详情*/
+			.pic_right {
+				float: left;
+				height: 3.413333rem;
+				width: 6.85rem;
+				position: relative;
+				p:nth-of-type(1) {
+					font-size:0.4rem;
+					line-height: 0.506667rem;
+					word-break:break-all;
+					margin-top: 0.293333rem;
+					span {
+						color:#FF841D;
+					}
+				}
+				p:nth-of-type(2) {
+					width: 6.85rem;
+					position: absolute;
+					bottom: 0.8rem;
+					left:0;
+					font-size:0.32rem;
+					color:#a1a1a1;
+					/*评论*/
+					span {
+						width: 0.88rem;
+						color: #a1a1a1;
+						font-size: 0.32rem;
+						float: right;
+					}
+				}
+			}
+		}
+	}
+}
+.main_bottom {
+	padding: 0.266667rem;
+	text-align: center;
+	input{
+		width: 2.24rem;
+		height: 0.906667rem;
+		font-size: 0.373333rem;
+		border-radius: 0.2rem;
+	}
+	a {
+		display: inline-block;
+	}
+	select {
+		text-indent: 0.4rem;
+		width: 2.24rem;
+		height: 0.906667rem;
+		font-size: 0.38rem;
+		margin:0 0.4rem;
+		border:1px solid #666;
+	}
+	option {
+		width: 2.24rem;
+		// font-size:  0.38rem;
+
+	}
+}
+/*商品详情*/
+.detail_bg {
+	.detail {
+		height: 10.4rem;
+		.detail_pic {
+			height: 6.666667rem;
+			p {
+				line-height: 0.586667rem;
+				font-size: 0.426667rem;
+				padding:0.4rem 0.746667rem 0;
+				text-align: center;
+				font-weight: 700;
+			}
+			div {
+				padding-top: 0.266667rem;
+				text-align: center;
+				img {
+					width: 4.666667rem;
+				}
+			}
+		}
+		/*参数评论数*/
+		>div:nth-of-type(2) {
+			height: 0.906667rem;
+			border-bottom: 0.013333rem solid #C14D00; 
+			border-top: 0.013333rem solid #C14D00; 
+			>div {
+				font-size: 0.373333rem;
+				color:#fff;
+				height: 100%;
+				line-height:0.906667rem ;
+				width:33.3333%;
+				background: #FFCA3A;
+				float: left;
+				text-align: center;
+				>div:nth-of-type(2) {
+					border-left: 0.013333rem solid #C14D00;
+					border-right: 0.013333rem solid #C14D00;
+				}
+			}
+		}
+		/*商品价格*/
+		.detail_price {
+			height: 1.173333rem;
+			line-height: 1.173333rem;
+			font-size: 0.426667rem;
+			img {
+				height:0.426667rem ;
+				margin-left:0.186667rem;
+				margin-top: 0.4rem;
+			}
+			span {
+				height: 0.586667rem !important;
+				line-height: 0.586667rem !important;
+				width:1.6rem !important;
+				font-size: 0.426667rem !important;
+			}
+		}
+		>div:nth-of-type(4) {
+			border-top: 0.013333rem solid #666;
+			padding: 0.266667rem;
+			color:#666;
+			font-size: 0.32rem;
+		}
+	}
+	/*网友评价*/
+	.eval_bg {
+		background: #ccc;
+		font-size: 0.32rem;
+		.eval_top {
+			text-align: center;
+			font-size: 0.373333rem;
+		}
+		.eval {
+			background: #fff;
+			padding: 0.2rem;
+			.eval_one {
+				height: 1.333333rem;
+				.eval_right {
+					float: right;
+
+				}
+			}
+			.eval_content {
+				border-bottom:0.026667rem solid #ccc;
+				padding-bottom: 0.2rem;
+			}
+		}
+		.eval_bottom {
+			height: 2.0rem;
+			padding: 0.4rem 0.266667rem 0;
+			background: #fff;
+			p {
+				text-align: center;
+				background: #ccc;
+				line-height: 0.88rem;
+				border-radius: 0.4rem;
+			}
+		}
+	}
+}

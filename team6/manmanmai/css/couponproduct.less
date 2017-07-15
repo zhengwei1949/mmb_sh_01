@@ -1,0 +1,242 @@
+.backgroundSet {
+	background:url(../images/icon_bar.png) no-repeat;
+	background-size: 220px 132px;
+}
+/* 头部部分 */
+.couponproduct-header {
+	height: 44px;
+	width: 100%;
+	background-color: #F4483E;
+	text-align:center;
+	line-height: 44px;
+	color:#fff;
+	font-size: 20px;
+	position:fixed;
+	top:0;
+	left: 0;
+	.icon-back {
+		position:absolute;
+
+		top: 0;
+		left: 0;
+		width: 48px;
+		height: 44px;
+		padding:10px 18px;
+		.backgroundSet();
+
+		background-position: -104px -10px;
+		background-clip:content-box;
+		background-origin: content-box;
+
+	}
+	.appdown {
+		position:absolute;
+		top: 6px;
+		right:10px;
+		height:32px;
+		img {
+			display:block;
+			height: 100%;
+		}
+	}
+
+}
+/* 温馨提示 */
+.prompt {
+	font-size:12px;
+	color:#999999;
+	margin-top: 44px;
+	text-align:center;
+	height: 30px;
+	line-height: 30px;
+}
+/* 优惠产品展示 */
+.couponproduct-coupon {
+	width: 100%;
+	li {
+		width: 100%;
+		border-bottom:1px solid #E7E7E7;
+		padding-top:10px;
+		
+		a {
+			display:block;
+			width: 100%;
+			height: 100%;
+			padding-left:7px;
+			.left {
+				display:block;
+				width: 100px;
+				float:left;
+				img {
+					display:block;
+					width: 100%;
+					height: 80px;
+				}
+
+			}
+			.right {
+				overflow: hidden;
+
+				padding-left:10px;
+				.tit {
+					padding-right:20px;
+				}
+
+				.validity {
+					padding:20px 0;
+					color:#EE7700;
+				}
+				span {
+					display:block;
+					float:right;
+					width: 10px;
+					height: 18px;
+					margin-right: 6px;
+					img {
+						display:block;
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+			}
+		}
+	}
+}
+
+
+/* 弹出框 */
+.coupon_win {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position:fixed;
+	top:0;
+	left:0;
+	display:none;
+	.coupon_win_box {
+		width:80%;
+		margin: 0 auto;
+		margin-top:250px;
+		
+		position:relative;
+
+		
+		.imgBox {
+			width: 200px;
+			height: 160px;
+			overflow:hidden;
+			margin:0 auto;
+
+			
+			ul {
+				width:6666666px;
+				height: 100%;
+				transform:translateX(-200px);
+				
+
+
+				li {
+					width: 200px;
+					height: 100%;
+					float:left;
+					a {
+						display:block;
+						width: 100%;
+						height: 100%;
+						img {
+							display:block;
+							width: 100%;
+							height: 100%;
+
+						}
+					}
+
+				}
+			}
+		}
+		.arrowBox {
+			
+			span {
+				position:absolute;
+				top:50%;
+				
+				transform:translateY(-50%);
+				width: 43px;
+				height: 58px;
+				background-color: rgba(0,0,0,0.7);
+				color:#fff;
+				cursor: pointer;
+				border-radius: 5px;
+				text-align:center;
+				line-height: 58px;
+				font-size:36px;
+
+			}
+			.leftArr {
+				left:0;
+			}
+			.rightArr {
+				right:0;
+			}
+
+		}
+  }
+  .coupon_win_box.bounceInDown {
+  	animation: bounceInDown 1s;
+  	 -webkit-animation: bounceInDown 1s;
+  }
+}
+
+
+/*bounceInDown*/
+@keyframes bounceInDown {
+     0%{
+         opacity: 0;
+         -webkit-transform: translateY(-3000px);
+         transform: translateY(-3000px);
+     }
+     60%{
+         opacity: 1;
+         -webkit-transform: translateY(25px);
+         transform: translateY(25px);
+     }
+     75%{
+         -webkit-transform: translateY(-10px);
+         transform: translateY(-10px);
+     }
+     90%{
+         -webkit-transform: translateY(5px);
+         transform: translateY(5px);
+     }
+     100%{
+         opacity: 1;
+         -webkit-transform:none;
+         transform:none;
+     }
+ }
+@-webkit-keyframes bounceInDown {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(-3000px);
+        transform: translateY(-3000px);
+    }
+    60%{
+        opacity: 1;
+        -webkit-transform: translateY(25px);
+        transform: translateY(25px);
+    }
+    75%{
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    90%{
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform:none;
+        transform:none;
+    }
+}

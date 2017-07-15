@@ -1,0 +1,249 @@
+
+//设置字体大小，兼容各种屏幕
+.font-size(@px) {
+  font-size: round(@px / 2) * 1px;
+  [data-dpr="2"] & {
+    font-size: @px * 1px;
+  }
+  [data-dpr="2.5"] & {
+    font-size: round(@px * 2.5 / 2) * 1px;
+  }
+  [data-dpr="2.75"] & {
+    font-size: round(@px * 2.75 / 2) * 1px;
+  }
+  [data-dpr="3"] & {
+    font-size: round(@px * 3 / 2) * 1px;
+  }
+  [data-dpr="4"] & {
+    font-size: @px * 2px;
+  }
+}
+
+.ticket_layout{
+  width: 100%;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  border: 1px solid #E2E2E3;
+
+  header {
+    width: 100%;
+    color: #FFF;
+    .font-size(35);
+    text-align: center;
+    line-height: 84/64rem;
+    background-color: #F4483E;
+    h4 {
+      display: inline-block;
+      font-weight: normal;
+    }
+    a {
+      display: block;
+      color: #FFF;
+      &:first-child {
+        margin: 11/64rem 0 0 12/64rem;
+        span {
+          display: block;
+          font-size: 30px;
+          line-height: 60/64rem;
+        }
+      }
+      &:last-child {
+        margin: 11/64rem 12/64rem 0 0;
+        img {
+          width: 58/64rem;
+          height: 58/64rem;
+        }
+      }
+      img {
+        display: block;
+      }
+    }
+  }
+  //内容部分
+ .content{
+   .main{
+     width: 100%;
+     border:1px solid #E2E2E3;
+     .ticket_header{
+       width: 100%;
+       font-size: 28/75rem;
+       text-align: center;
+       line-height: 56/75rem;
+       color:#999999;
+     }
+     .ticket_content{
+       width: 100%;
+       border-bottom: 1px solid #E7E7E7;
+       padding: 20/75rem 35/75rem 30/75rem 15/75rem;
+       position: relative;
+       .content_pic{
+         height: 160/75rem;
+         width: 200/75rem;
+         float:left;
+         background: pink;
+         margin-right: 20/75rem;
+         img{
+           height: 160/75rem;
+           width: 200/75rem;
+         }
+       }
+       .content_right{
+         float:right;
+         width: 470/75rem;
+         .content_msg{
+           width: 100%;
+           font-size: 28/74rem;
+         }
+         .content_price{
+           font-size: 24/75rem;
+           height: 52/75rem;
+           line-height: 52/75rem;
+           //float: left;
+           color:#5A5A5A;
+         }
+         .content_time{
+           color:#EE7700;
+           font-size: 24/75rem;
+           margin-top: 32/75rem;
+           //float:left;
+         }
+       }
+       .content_tip{
+         position: absolute;
+         top:50%;
+         right:0;
+         margin-top: -17/75rem;
+         height: 34/75rem;
+         width: 34/75rem;
+         a{
+           font-size: 34/75rem;
+         }
+       }
+     }
+   }
+   .undis{
+     display: block;
+   }
+   .main2{
+     width: 100%;
+     height: 1400/75rem;
+     display: none;
+     position: fixed;
+     top:0;
+     left:0;
+     background: rgba(0, 0, 0, 0.5);
+
+     .main2_img{
+       position: absolute;
+       top:50%;
+       left:50%;
+       width:400/75rem;
+       height: 320/75rem;
+       margin-top:-160/75rem ;
+       margin-left: -200/75rem;
+       background: pink;
+       overflow: hidden;
+       position: relative;
+       ul{
+         width: 100000/75rem;
+         height:320/75rem ;
+         position: absolute;
+         li{
+           width:400/75rem;
+           height: 320/75rem;
+           float:left;
+           img{
+             width: 100%;
+           }
+         }
+       }
+     }
+     .main2_left{
+       position: absolute;
+       top: 50%;
+       margin-top: -60/75rem;
+       left:50/75rem;
+       width: 90/75rem;
+       height: 120/75rem;
+       line-height: 120/75rem;
+       background: #242424;
+       color:#999999;
+       font-size: 80/75rem;
+       text-align: center;
+     }
+     .main2_right{
+       position: absolute;
+       top: 50%;
+       margin-top: -60/75rem;
+       right:50/75rem;
+       width: 90/75rem;
+       height: 120/75rem;
+       line-height: 120/75rem;
+       background: #242424;
+       color:#999999;
+       font-size: 80/75rem;
+       text-align: center;
+     }
+     .main2_del{
+       position: absolute;
+       top:1rem;
+       right:1rem;
+       width: 80/75rem;
+       height: 80/75rem;
+       line-height: 80/75rem;
+       text-align: center;
+       font-size: 80/75rem;
+       background: #242424;
+       color:#999999;
+     }
+   }
+ }
+  //首页优惠券
+  .nav {
+    width: 100%;
+    font-size: 26/75rem;
+    line-height: 64/75rem;
+    padding-left: 20/75rem;
+    border-bottom: 1px solid #CCCCCC;
+    background: #F1F1F1;
+    margin-bottom: 64/75rem;
+    a {
+      color: #000;
+    }
+  }
+  footer {
+    width: 100%;
+    height: 168/64rem;
+    background-color: #EFEFEF;
+    .operate {
+      width: 100%;
+      line-height: 61/64rem;
+      border-top: 1px solid #C4C4C4;
+      border-bottom: 1px solid #C4C4C4;
+      ul {
+        li {
+          float: left;
+          width: 30%;
+          text-align: center;
+          border-right: 1px solid #C4C4C4;
+          &:last-child {
+            width: 40%;
+            border-right: none;
+          }
+          span {
+            .font-size(25);
+          }
+        }
+      }
+    }
+    .introduce {
+      width: 100%;
+      height: 107/64rem;
+      text-align: center;
+      padding-top: 30/64rem;
+    }
+  }
+}
+
+

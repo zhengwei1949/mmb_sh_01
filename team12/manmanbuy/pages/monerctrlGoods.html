@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>省钱控商品</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../less/moneyctrlGoods.css"/>
+</head>
+<body>
+<div class="layer">
+    <!--********** 头部---start **********-->
+    <header class="colorB">
+        国内折扣
+        <a href="../index.html" class="fl">
+            <span class="iconfont icon-fanhui"></span>
+        </a>
+        <a href="javascript:;" class="fr">
+            <img src="../images/header_app.png" alt=""/>
+        </a>
+    </header>
+    <!--***** 头部---end *****-->
+
+    <div class="sqk_main">
+
+    </div>
+
+    <!--********** 底部---start **********-->
+    <footer>
+        <div class="operate clearfix">
+            <ul>
+                <li>
+                    <span>登录</span>
+                </li>
+                <li><span>注册</span></li>
+                <li id="reTop"><span class="iconfont icon-xiangshang-copy"></span><span>返回顶部</span></li>
+            </ul>
+        </div>
+        <div class="introduce">
+            <p><span class="colorRed">手机APP下载</span>
+                <span>慢慢买手机版</span>
+                <span class="colorGray">-- 掌上比价平台</span>
+            </p>
+
+            <p class="colorGray">m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!--***** 底部---end *****-->
+</div>
+<!-- art模板引擎-->
+<script src="../lib/artTemplate/template.js"></script>
+<!-- 适配rem-->
+<script src="../lib/flexible/flexible.js"></script>
+<script src="../lib/jquery/jquery.min.js"></script>
+<!--公共js库-->
+<script src="../js/base.js"></script>
+<script src="../js/moneyctrlGoods.js"></script>
+<script type="text/html" id="sqk_template1">
+       {{if result}}
+          {{each result as value i}}
+               <p class="sqk-title">
+                   {{value.productName}}
+               </p>
+               <p class="sqk_mes">
+                   <span class="sqk_mes">{{value.productFrom}}</span>
+                   <span class="spk_proTime">{{value.productTime}}</span>
+                   <span class="spk_mmb">{{value.productTips}}</span>
+               </p>
+               <div class="sqk_explain">
+                   {{#value.productImgSm}}
+                   <p class="explain_word">
+                       {{value.productInfo}}
+                   </p>
+               </div>
+               <div class="sqk_Ad">
+                   <p class="sqk_adWord">
+                       {{value.productInfo1}}
+                   </p>
+                   {{#value.productImgSm}}
+               </div>
+               <div class="sqk_city">
+                    {{#value.productCity}}
+               </div>
+               <div class="sqk_buy">
+                   <a href="javascript:;">前往购买</a>
+               </div>
+               <div class="sqk_ewm">
+                   <img src="../images/mmbweixin2.png" alt=""/>
+               </div>
+               <div class="spk_assess">
+                   <div class="ass_num clearfix">
+                       <p class="ass_title fl">发表评论</p>
+                       <p class="ass_word fr">还可以输入<span id="word_num">10</span>字</p>
+                   </div>
+                   <div class="ass_area">
+                       <textarea name="" id="assess" cols="100" rows="10"></textarea>
+                       <div class="ass_btn">
+                           <span class="btn">发表评论</span>
+                       </div>
+                   </div>
+                   <p class="ass_new">最新发布</p>
+                   <div class="mess_assess">
+                       <ul id="sqk_mes">
+                           <li class="ui-border-b">
+                               <div class="userimg">
+                               </div>
+                               <div class="con">
+                                   <div class="name clearfix">
+                                       <div class="username fl">赶鸭子上架</div>
+                                       <div class="time fr">2016/10/25 14:18:45</div>
+                                   </div>
+                                   <div class="content">比超市便宜了几块</div>
+                               </div>
+                           </li>
+                       </ul>
+                   </div>
+               </div>
+          {{/each}}
+       {{/if}}
+</script>
+</body>
+</html>

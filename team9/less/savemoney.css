@@ -1,0 +1,114 @@
+html {
+  font-size: 75px;
+}
+/* 顶部通栏部分start*/
+.save_header {
+  width: 100%;
+  height: 1.2rem;
+  box-sizing: border-box;
+  background: #ff841d;
+  padding: 0.13333333rem 0.2rem 0.13333333rem 0.26666667rem;
+}
+.save_header .h_back {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.86666667rem;
+  font-weight: 100;
+}
+.save_header p {
+  text-align: center;
+  line-height: 0.93333333rem;
+  font-size: 0.46666667rem;
+  color: #fff;
+  letter-spacing: 0.08rem;
+}
+.save_header .h_download {
+  display: inline-block;
+  float: right;
+  position: absolute;
+  top: 0.2rem;
+  right: 0;
+}
+.save_header .h_download img {
+  display: block;
+  padding-right: 0.2rem;
+  width: 1.06666667rem;
+  height: 0.93333333rem;
+}
+/* 顶部通栏部分end*/
+.cc_goods {
+  /*商品列表*/
+  /*底部翻页按钮*/
+}
+.cc_goods .goods_list {
+  width: 100%;
+}
+.cc_goods .goods_list li {
+  padding: 0.2rem 0.2rem;
+  border-bottom: 0.01333333rem solid #ddd;
+}
+.cc_goods .goods_list li a {
+  width: 100%;
+  padding: 0.13333333rem;
+  display: block;
+  /*左侧图片*/
+  /*右侧商品信息*/
+}
+.cc_goods .goods_list li a .list_pic {
+  width: 25%;
+  float: left;
+  overflow: hidden;
+}
+.cc_goods .goods_list li a .list_pic img {
+  width: 100%;
+  height: 2.66666667rem;
+}
+.cc_goods .goods_list li a .list_info {
+  width: 75%;
+  float: right;
+  overflow: hidden;
+  padding-left: 0.4rem;
+}
+.cc_goods .goods_list li a .list_info .info_tit {
+  padding-top: 0.2rem;
+}
+.cc_goods .goods_list li a .list_info .info_tit .tit_price {
+  color: #ff6c00;
+}
+.cc_goods .goods_list li a .list_info .info_shop {
+  padding-top: 1.13333333rem;
+}
+.cc_goods .goods_list li a .list_info .info_shop .shop_sort {
+  display: inline-block;
+  float: left;
+}
+.cc_goods .goods_list li a .list_info .info_shop .shop_comment {
+  display: inline-block;
+  float: right;
+}
+.cc_goods .goods_list li a .list_info .info_shop .shop_comment .comment_icon {
+  width: 0.33333333rem;
+  height: 0.26666667rem;
+}
+.cc_goods .goods_page ul {
+  height: 2rem;
+  line-height: 2rem;
+}
+.cc_goods .goods_page ul li {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+.cc_goods .goods_page ul li input {
+  padding: 0.2rem 0.4rem;
+  background: #e9e9e9;
+  border: 1px solid #ddd;
+  border-radius: 0.06666667rem;
+}
+.cc_goods .goods_page ul li select {
+  padding: 0.2rem 0.4rem;
+  padding-left: 0.2rem;
+}
+.cc_goods .goods_page ul li select > option {
+  z-index: 100;
+}

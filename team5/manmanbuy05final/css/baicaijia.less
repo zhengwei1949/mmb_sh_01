@@ -1,0 +1,160 @@
+@charset "utf-8";
+@fz: 37rem;
+/*开始*/
+/*-----------------主体部分-----------------*/
+.main {
+  /*------tab部分----*/
+  .tab {
+    background-color: #fff;
+    overflow: hidden;
+    height: 40/@fz;
+    ul {
+      width: 575/@fz; //临时算出的所有的li的宽度和
+      height: 40/@fz;
+      overflow: hidden;
+      font-size: 14/@fz;
+      li {
+        float: left;
+        //width: 50/@fz;//临时 由于li里面的字数不一，所以这里的li不给死宽度
+        height: 40/@fz;
+        line-height: 40/@fz;
+        padding: 0 5/@fz;
+        text-align: center;
+        /*&:first-child > a {
+          color: red;
+          border-bottom: 1px solid #ED1C24;
+        }*/
+        a {
+          width: 100%;
+          height: 100%;
+          display: inline-block;
+        }
+
+      }
+    }
+  }
+  /*-----商品列表部分----*/
+  .pro-order {
+    .pro {
+      background-color: #fff;
+      margin: 10/@fz 0;
+      padding: 10/@fz 5/@fz;
+      height: 150/@fz;
+      .img-box {
+        width: 130/@fz;
+        height: 130/@fz;
+        a {
+          width: 100%;
+          height: 100%;
+          display: inline-block;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .proinfo {
+        position: relative;
+        font-size: 12/@fz;
+        width: 225/@fz;
+        height: 130/@fz;
+        padding-left: 5/@fz;
+        p {
+          font-size: 14/@fz;
+        }
+        //第一行字体
+        .pro-name {
+          height: 45/@fz;
+          line-height: 20/@fz;
+          .b {
+            font-weight: bolder;
+          }
+        }
+        //第二行字体
+        .pr {
+          height: 30/@fz;
+          line-height: 30/@fz;
+          color: red;
+          font-size: 18/@fz;
+          i {
+            font-size: 14/@fz;
+            font-style: normal;
+          }
+          em {
+            padding: 0 5/@fz;
+            font-size: 12/@fz;
+          }
+          del {
+            font-size: 12/@fz;
+            padding-left: 5/@fz;
+            color: #001100;
+          }
+        }
+        //第三行字体
+        .num {
+          margin-top: 5px;
+          height: 15/@fz;
+          line-height: 15/@fz;
+          .bar {
+            .goquan {
+
+            }
+            i {
+              float: left;
+              width: 80/@fz;
+              height: 15/@fz;
+              background-color: #FFB7B7;
+              border: 1px solid red;
+              border-radius: 5/@fz;
+              line-height: 15/@fz;
+              position: relative;
+              span {
+                position: absolute;
+                left: 35%;
+                top: 0;
+              }
+              em {
+                float: left;
+                background-color: red;
+                border-radius: 5/@fz;
+                height: 100%;
+              }
+            }
+            b {
+              float: left;
+              margin-left: 5/@fz;
+              font-weight: normal;
+            }
+          }
+        }
+        //第四行字体
+        .get {
+          width: 220/@fz;
+          height: 30/@fz;
+          line-height: 30/@fz;
+          position: absolute;
+          bottom: 0;
+          left: 5/@fz;
+          text-align: center;
+          a:first-child {
+            float: left;
+            height: 30/@fz;
+            border: 1px dashed red;
+            color: red;
+            padding: 0 5/@fz;
+          }
+          a:last-child {
+            float: right;
+            background-color: red;
+            width: 60/@fz;
+            height: 30/@fz;
+            color: #fff;
+            border-radius: 5/@fz;
+          }
+        }
+      }
+    }
+
+  }
+}
+

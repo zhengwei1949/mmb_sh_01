@@ -1,0 +1,78 @@
+#form-search {
+  padding: 10px;
+  background-color: #fff;
+}
+#form-search .search {
+  position: relative;
+  padding-right: 70px;
+}
+#form-search .search > input[type="search"] {
+  width: 100%;
+  border: none;
+  background: #f1f1f1;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  font-size: 13px;
+  padding-right: 50px;
+  padding-left: 20px;
+}
+#form-search .search > input[type="button"] {
+  position: absolute;
+  width: 63px;
+  background: #ff841d;
+  color: #FFFFFF;
+  border: none;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  top: 0px;
+  right: 0px;
+  font-size: 16px;
+}
+#category .category_box {
+  border-radius: 5px;
+  background: #ededed;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #666;
+}
+#category .category_box > ul > li > a {
+  height: 40px;
+  line-height: 40px;
+  color: #000;
+  font-size: 16px;
+  display: block;
+  padding-left: 16px;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+}
+#category .category_box > ul > li > a span {
+  width: 40px;
+  height: 40px;
+  color: #666;
+  float: right;
+  font-size: 20px;
+  text-align: center;
+  transition: transform .5s;
+}
+#category .category_box > ul > li .categroy_content {
+  background: #f9f9f9;
+}
+#category .category_box > ul > li .categroy_content > li {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+#category .category_box > ul > li .categroy_content > li > a {
+  display: block;
+  width: 100%;
+  color: #333;
+}
+.godown {
+  transform: rotate(90deg);
+}

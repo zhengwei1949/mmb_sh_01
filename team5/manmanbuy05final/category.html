@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>比较搜索</title>
+    <link rel="stylesheet" href="css/compare-search.css"/>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/base.css"/>
+    <script src="js/base.js"></script>
+    <script src="lib/flexible.js"></script>
+    <!--<script src="lib/flexible.js"></script>-->
+</head>
+<body>
+    <!-- 顶部-->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="appdown">
+            <a href="#">
+                <img src='images/header_app.png' alt=""/>
+            </a>
+        </div>
+    </header>
+
+    <section class='form-search'>
+        <form action="">
+            <input type="search" placeholder='请输入你想比价的商品'/>
+            <input type="button" value='搜索'/>
+        </form>
+    </section>
+
+    <section class="product-search">
+        <!--<div class="title">-->
+            <!--<div class="title_data"></div>-->
+            <!--<div class="more">-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<ul class='more_data'></ul>-->
+        <ul class="product-title"></ul>
+        <div class="juti">
+            <a></a>
+        </div>
+    </section>
+    <div class="productlist">
+        <nav><a href="index.html">首页</a><sapn>&gt;</sapn>
+            <a href="category.html">全部分类</a><span>&gt;</span><span class="current"></span></nav>
+        <section class="list"></section>
+        <div class="tiaozhuan">
+            <input type="button" class="last" value="上一页"/>
+            <select name="" id="">
+            </select>
+            <!--<option value=""></option>-->
+            <input type="button" class='next' value="下一页"/>
+        </div>
+    </div>
+
+
+
+
+    <!--底部部分B-->
+    <footer>
+        <!--使用bootstrap栅格系统-->
+        <!--底部写死-->
+        <div class="row">
+            <div class="col-xs-4 col-sm-4">
+                <p>登录</p>
+            </div>
+            <div class="col-xs-4 col-sm-4">
+                <p>注册</p>
+            </div>
+            <div class=" bottom_right col-xs-4 col-sm-4">
+                <a href="#" class="glyphicon glyphicon-arrow-up"><img src="" alt=""/></a>
+                <p >返回顶部</p>
+            </div>
+        </div>
+        <div class="bottom_bar">
+            <p>手机APP下载&nbsp;<span>慢慢买手机版</span><b>—掌上比价平台</b></p>
+            <p><b>m.manmanbuy.com</b></p>
+        </div>
+    </footer>
+    <!--底部部分E-->
+
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src='lib/template.js'></script>
+
+    <script src='js/compare-search.js'></script>
+</body>
+</html>

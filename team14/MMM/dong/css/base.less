@@ -1,0 +1,112 @@
+/*---默认样式---*/
+html {
+	font-size: 75px;
+}
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    color: #333;
+    font-family: "MicroSoft YaHei","sans-serif";/*是设备默认的字体*/
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+a:hover{
+    color: #333;
+}
+input,textarea{
+    border: none;
+    outline: none;
+    resize: none;
+    -webkit-appearance: none;
+}
+.clearfix::after,
+.clearfix::before{
+    content: ".";
+    line-height: 0;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+/*---公用的样式---*/
+
+/*头部*/
+.header {
+
+	color: #fff;
+	background-color: #FF841D;
+	height: 1.173333rem;
+    width:100%;
+	line-height: 1.173333rem;
+	position: fixed;
+    top:0;
+    left:0;
+    z-index: 10;
+	h3 {
+		font-size: 0.48rem;
+		text-align: center;
+	}
+	a {
+		color: #fff;
+		position: absolute;
+		top: 0;
+		font-size: 0.533333rem;
+		width: 1.213333rem;
+		text-align: center;
+	}
+	a:nth-of-type(2) {
+		right: 0;
+	}
+}
+/*--尾部--S--*/
+.footer {
+    .footer_top {
+        height: 0.906667rem;
+        background: #EFEFEF;
+        border-top: 1px solid #666;
+        border-bottom: 1px solid #666;
+        a {
+            float: left;
+            font-size: 0.373333rem;
+            line-height: 0.906667rem;
+            text-align: center;
+        }
+        a:nth-of-type(1) {
+            width:30%;
+            border-right:1px solid #666 ;
+        }
+        a:nth-of-type(2) {
+            width:30%;
+            border-right:1px solid #666 ;
+        }
+        a:nth-of-type(3) {
+            width:40%;
+        }
+    }
+    .footer_bottom {
+        background: #EFEFEF;
+        height: 1.6rem;
+        text-align: center;
+        p:nth-of-type(1) {
+            font-size: 0.373333rem;
+            padding-top: 0.346667rem;
+            a {
+                color:#FC0000;
+            }
+        }
+    }
+}
+/*--尾部--E--*/

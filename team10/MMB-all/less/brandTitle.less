@@ -1,0 +1,64 @@
+@fs:75rem;
+html {
+  font-size: 75px;
+}
+html,body {
+  height: 100%;
+}
+//公用函数
+.font-size(@size){
+  [data-dpr="1"] & {
+    font-size: unit(@size,px);
+  };
+  [data-dpr="2"] & {
+    font-size: unit(@size*2,px);
+  };
+  [data-dpr="3"] & {
+    font-size: unit(@size*3,px);
+  }
+}
+
+//品牌排行
+.navTitle {
+  height:1rem;
+  color: #874604;
+  line-height: 1rem;
+  padding-left: 30/@fs;
+  background: #EEEEEE;
+  margin: 25/@fs 5/@fs;
+  .font-size(16px);
+  border: 1/@fs solid #CCC;
+}
+.wrap {
+  min-height: 60%;
+  ul{
+    margin-bottom: 30/@fs;
+    li{
+      border-top: 1/@fs solid #CCC;
+      border-left: 1/@fs solid #CCC;
+      border-right: 1/@fs solid #CCC;
+      background: #EDEDED;
+      width: 740/@fs;
+      height: 0.9rem;
+      line-height: 0.9rem;
+      color: #000;
+      .font-size(16px);
+      font-family: "SimSun";
+      font-weight: bold;
+      margin: 0 5/@fs;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #000;
+        padding-left: 35/@fs;
+        padding-right: 20/@fs;
+        span {
+          float: right;
+          .font-size(18px);
+        }
+      }
+    }
+  }
+}
+

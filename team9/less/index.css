@@ -1,0 +1,197 @@
+html {
+  font-size: 75px;
+}
+/*顶部通栏部分start*/
+/*顶部通栏部分end*/
+/*搜索框部分start*/
+.cc_searchbox {
+  width: 100%;
+  height: 1.2rem;
+  border: 0.05333333rem solid #ff841d;
+  padding: 0.13333333rem;
+}
+.cc_searchbox form {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.cc_searchbox form .search {
+  width: 83%;
+  height: 100%;
+  float: left;
+  background: #f1f1f1;
+  border-radius: 0.53333333rem;
+  font-size: 0.33333333rem;
+  padding-left: 0.4rem;
+  line-height: 100%;
+}
+.cc_searchbox form .btn {
+  width: 15%;
+  height: 100%;
+  float: right;
+  background: #ff841d;
+  border-radius: 0.53333333rem;
+  color: #fff;
+  font-size: 0.4rem;
+}
+/*搜索框部分end*/
+/*菜单栏start*/
+.cc_menu {
+  width: 100%;
+  border-top: 0.26666667rem solid #f1f1f1;
+}
+.cc_menu .menu_list {
+  padding: 0.26666667rem 0.4rem;
+}
+.cc_menu .menu_list li {
+  float: left;
+  width: 25%;
+  margin-top: 0.4rem;
+}
+.cc_menu .menu_list li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  font-size: 0.33333333rem;
+  text-align: center;
+}
+.cc_menu .menu_list li a img {
+  width: 50%;
+}
+/*菜单栏end*/
+/*折扣商品列表start*/
+.cc_goods {
+  width: 100%;
+  border-top: 0.2rem solid #f1f1f1;
+  /*标题*/
+  /*商品列表*/
+  /*更多优惠信息*/
+}
+.cc_goods .goods_head {
+  width: 100%;
+  height: 0.93333333rem;
+  background: #ff9c1c;
+  color: #fff;
+  font-size: 0.4rem;
+  position: relative;
+}
+.cc_goods .goods_head p {
+  display: inline-block;
+  float: left;
+  line-height: 0.93333333rem;
+  padding-left: 0.2rem;
+}
+.cc_goods .goods_head a span {
+  display: inline-block;
+  float: right;
+  width: 0.53333333rem;
+  height: 0.53333333rem;
+  border-radius: 0.26666667rem;
+  border: 0.04rem solid #fff;
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  line-height: 0.4rem;
+  text-align: center;
+  color: #fff;
+  font-weight: 200;
+  padding-left: 2px;
+  padding-top: 2px;
+}
+.cc_goods .goods_list {
+  width: 100%;
+}
+.cc_goods .goods_list li {
+  padding: 0.2rem 0.2rem;
+  border-bottom: 0.01333333rem solid #ddd;
+}
+.cc_goods .goods_list li a {
+  width: 100%;
+  padding: 0.13333333rem;
+  display: block;
+  /*左侧图片*/
+  /*右侧商品信息*/
+}
+.cc_goods .goods_list li a .list_pic {
+  width: 25%;
+  float: left;
+  overflow: hidden;
+}
+.cc_goods .goods_list li a .list_pic img {
+  width: 100%;
+  height: 2.66666667rem;
+}
+.cc_goods .goods_list li a .list_info {
+  width: 75%;
+  float: right;
+  overflow: hidden;
+  padding-left: 0.4rem;
+}
+.cc_goods .goods_list li a .list_info .info_tit {
+  padding-top: 0.2rem;
+}
+.cc_goods .goods_list li a .list_info .info_tit .tit_price {
+  color: #ff6c00;
+}
+.cc_goods .goods_list li a .list_info .info_shop {
+  padding-top: 1.13333333rem;
+}
+.cc_goods .goods_list li a .list_info .info_shop .shop_sort {
+  display: inline-block;
+  float: left;
+}
+.cc_goods .goods_list li a .list_info .info_shop .shop_comment {
+  display: inline-block;
+  float: right;
+}
+.cc_goods .goods_list li a .list_info .info_shop .shop_comment .comment_icon {
+  width: 0.33333333rem;
+  height: 0.26666667rem;
+}
+.cc_goods .cc_info {
+  display: block;
+  width: 95%;
+  height: 0.93333333rem;
+  background: #f9f9f9;
+  line-height: 0.93333333rem;
+  border-radius: 0.13333333rem;
+  border: 0.01333333rem solid #ddd;
+  margin: 0.2rem 0;
+  text-align: center;
+  margin-left: 2.5%;
+}
+/*折扣商品列表end*/
+/*品牌排行部分start*/
+.goods_rank {
+  width: 100%;
+  height: 0.66666667rem;
+  background: #ff9c1c;
+  color: #fff;
+  font-size: 0.26666667rem;
+  position: relative;
+}
+.goods_rank p {
+  display: inline-block;
+  float: left;
+  line-height: 0.66666667rem;
+  padding-left: 0.13333333rem;
+}
+.goods_rank .rank_back span {
+  display: inline-block;
+  float: right;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 0.2rem;
+  border: 0.02666667rem solid #fff;
+  position: absolute;
+  top: 0.13333333rem;
+  right: 0.2rem;
+  text-align: center;
+  line-height: 0.36rem;
+  color: #fff;
+  font-weight: 200;
+  padding-left: 2px;
+}
+/*品牌排行部分end*/
+/*底部部分start*/
+/*底部部分end*/

@@ -1,0 +1,174 @@
+// 顶部通栏
+.top {
+	width: 100%;
+	height: 50px;
+	background-color: #ff841d;
+	text-align: center;
+	// 返回箭头
+	.left {
+		color: #fff;
+		font-size: 30px;
+		padding-left: 3%;
+		line-height: 50px;
+		cursor: pointer;
+	}
+	// 国内折扣
+	span {
+		color: #fff;
+		font-size: 24px;
+		line-height: 50px;
+	}
+	// app下载
+	.download {
+		width: 50px;
+		padding: 8px;
+		height: 100%;
+		background: url(../images/header_app.png) no-repeat;
+		background-size: 34px 34px;
+		background-origin: content-box;
+		cursor: pointer;
+	}
+}
+
+
+// ********************************商品信息栏***********************************
+.goods {
+	width: 100%;
+	ul li{
+		width: 50%;
+		height: 265px;
+		display: inline-block;
+		float: left;
+		.biggest {
+			width: 100%;
+			height: 100%;
+			padding: 0 5% 0 5%;
+			border-right: 1px solid #eeeeee;
+			border-bottom: 1px solid #eeeeee;
+			// 图片
+			.pic {
+				width: 100%;
+				height: 170px;
+				background-size: 220px 170px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				img {
+					width: 100%;
+					height: 100%;
+					display: inline-block;
+				}
+			}
+			// 详细信息
+			.info {
+				height: 95px;
+				position: relative;
+				// 描述信息
+				.desc {
+					height: 45px;
+					overflow: hidden;
+					font: normal bold 16px "Microsoft yahei";
+				}
+				// 价格
+				.price {
+					height: 16px;
+					line-height: 16px;
+					font-size: 14px;
+					color: #ff6c00;
+					position: absolute;
+					bottom: 25px;
+					overflow: hidden;
+				}
+				// 来源和时间
+				.date {
+					height: 12px;
+					position: absolute;
+					bottom: 0;
+					margin: 8px 0;
+					color: #a1a1a1;
+					// 来源
+					.from {
+						display: inline-block;
+						line-height: 14px;
+						font-size: 14px;
+					}
+					// 时间
+					.time {
+						display: inline-block;
+						line-height: 14px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+// ************************************页面底部**************************************
+.footer {
+	width: 100%;
+	height: 90px;
+	margin-top: 35px;
+	background-color: #efefef;
+	// 上半部分
+	.top {
+		width: 100%;
+		height: 35px;
+		border-top: 1px solid #c4c4c4;
+		background-color: #efefef;
+		// 登陆框
+		.denglu {
+			width: 30%;
+			height: 100%;
+			line-height: 35px;
+			cursor: pointer;
+		}
+		// 注册框
+		.zhuce {
+			width: 30%;
+			height: 100%;
+			line-height: 35px;
+			border-left: 1px solid #c4c4c4;
+			border-right: 1px solid #c4c4c4;
+		}
+		// 返回顶部
+		.backtop {
+			width: 40%;
+			height: 100%;
+			// 小图标
+			.back {
+				width: 74px;
+				height: 15px;
+				line-height: 15px;
+				margin: 0 auto;
+				margin-top: 10px;
+				line-height: 15px;
+				background: url(../images/top.png) no-repeat;
+				background-size: 15px 15px;
+			}
+		}
+	}
+	// 下半部分
+	.bottom {
+		width: 100%;
+		height: 55px;
+		border-top: 1px solid #c4c4c4;
+		// 文字
+		.txt {
+			width: 236px;
+			margin: 0 auto;
+			margin-top: 15px;
+			font-size: 12px;
+			.left {
+				color: #fc0000;
+			}
+			.right {
+				color: #666;
+			}
+		}
+		// 网址
+		.net {
+			width: 106px;
+			margin: 0 auto;
+			color: #7b6690;
+		}
+	}
+}

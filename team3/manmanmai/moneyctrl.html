@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>省钱控</title>
+    <script type="text/javascript" src="lib/jQuery/jquery.js"></script>
+    <script type="text/javascript" src="lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/moneyctrl.css">
+    <script type="text/javascript" src="js/moneyctrl.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="lib/template/template.js"></script>
+    <!-- 产品列表模版引擎 -->
+    <script type="text/html" id="productRender">
+        {{if result}} {{each result as value i}}
+        <li class="sqk-product">
+            <a href="getmoneyctrlproduct.html?productid={{value.productId}}"  class="sqk-product-img"  > 
+                    {{#value.productImgSm}}
+            </a>
+            <div class="sqk-product-detail">
+                <div class="sqk-product-intro">
+                    <a href="javascript:">
+                        <span class="sqk-product-name">{{value.productName}}</span>
+                    </a>
+                    <a href="javascript:">
+                        <span class="sqk-product-pinkage">{{value.productPinkage}}</span>
+                    </a>
+                </div>
+                <div class="sqk-product-market">
+                    <a><span class="sqk-product-from">{{value.productFrom}}</span></a>
+                    <span>|</span>
+                    <a href="javascript:"><span class="sqk-product-time">{{value.productTime}}</span></a>
+                    <a href="javascript:"><span class="sqk-product-count">{{value.productComCount.charAt(1)}}</span></a>
+                </div>
+            </div>
+        </li>
+        {{/each}} {{/if}}
+    </script>
+</head>
+
+<body>
+    <header class="flexBox ac">
+        <div>
+        <a href="" class="goback icon_navigate_before"></a>
+        </div>
+        <span class="title">省钱控-最新优惠</span>
+        <div class="appDown">
+            <a href="index.html"><img src="images/header_app.png" /></a>
+        </div>
+    </header>
+    <div class="sqk-content">
+        <ul>
+        </ul>
+    </div>
+    <div class="sqk-pageselect">
+        <input type="button" name="perivous" id="btn_p" value="上一页">
+        <select id="pageselect" name="pageselect">
+        </select>
+        <input type="button" name="next" id="btn_n" value="下一页">
+    </div>
+    <script src="js/footer.js"></script>
+</body>
+
+</html>

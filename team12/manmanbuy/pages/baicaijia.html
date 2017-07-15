@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title>白菜价</title>
+    <script src='../lib/flexible/flexible.js'></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../less/baicaijia.css">
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/artTemplate/template.js"></script>
+    <script src="../js/swipe.js"></script>
+    <script type="text/html" id="tab">
+        {{if result}}
+        <ul class="clearfix" >
+            {{each result as value i}}
+            <li id="{{value._id}}" titleId="{{value.titleId}}">
+                <a href="#">{{value.title}}</a>
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </script>
+    <script type="text/html" id="mainBox">
+        {{if result}}
+        {{each result as value i}}
+        <div class="mmb_tab_con clearfix">
+            <div class="tab_containt">
+                <a class="img_box">
+                    {{=value.productImg}}
+                </a>
+                <div class="info_box">
+                    <div class="info_top">
+                        {{=value.productName}}
+                    </div>
+                    <p>{{=value.productPrice}}</p>
+                    {{=value.productCouponRemain}}
+                    <div class="product">
+                        {{=value.productCoupon}}
+                        {{=value.productHref}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+    </script>
+</head>
+<body>
+    <div class="layout">
+        <!-- 顶部通栏  -->
+        <div class="fixbox">
+            <div class="bcj_topnav">
+                <!-- 顶部导航栏start -->
+                <div class="topnav_box">
+                    <a href="../index.html">
+                        <span class="iconfont icon-fanhui"></span>
+                    </a>
+                    <h4>白菜价-淘宝内部券</h4>
+                    <a href="#" class="onload">
+                        <img src="./../images/header_app.png" alt="">
+                    </a>
+                </div>
+                <!-- 顶部导航栏end -->
+                <!-- tab栏start -->
+                <div class="tab">
+                    <div class="mmb_tab"  id="tab1"></div>
+                </div>
+
+                <!-- tab栏end -->
+            </div>
+        </div>
+
+        <main class="main_box" id="mainBox1">
+            <!-- tab栏对应的内容start -->
+            <!-- tab栏对应的内容end -->
+        </main>
+        <!-- 底部---start -->
+        <footer>
+            <div class="operate clearfix">
+                <ul>
+                    <li><span>登录</span></li>
+                    <li><span>注册</span></li>
+                    <li id="reTop"><span class="iconfont icon-xiangshang-copy"></span><span>返回顶部</span></li>
+                </ul>
+            </div>
+            <div class="introduce">
+                <p><span class="colorRed">手机APP下载</span>
+                    <span>慢慢买手机版</span>
+                    <span class="colorGray">-- 掌上比价平台</span>
+                </p>
+                <p class="colorGray">m.manmanbuy.com</p>
+            </div>
+        </footer>
+        <!-- 底部---end -->
+    </div>
+</body>
+<script src="../js/base.js"></script>
+<script src="../js/baicaijia.js"></script>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>优惠券详情</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../less/couponDetail.css"/>
+    <script src='../lib/flexible/flexible.js'></script>
+    <script src='../lib/zepto/zepto.min.js'></script>
+    <script src='../lib/artTemplate/template.js'></script>
+    <!--模板引擎-->
+    <script type='text/html' id='result'>
+        {{if result}}
+        <!--页面主体-->
+        <div class="main clearfix">
+            <div class="ticket_header ">--点餐前出示手机中的优惠券，即可享受优惠--</div>
+            {{each result as value}}
+            <a class="ticket_box">
+                <div class="ticket_content clearfix" id='tickets'>
+                    <div class="content_pic">{{#value.couponProductImg}}</div>
+                    <div class="content_right">
+                        <div class="content_msg">{{value.couponProductName}}</div>
+                        <div class="content_price">{{value.couponProductPrice}}</div>
+                        <div class="content_time">{{value.couponProductTime}}</div>
+                    </div>
+                    <div class="content_tip"><a href="">></a></div>
+                </div>
+            </a>
+            {{/each}}
+        </div>
+        <!--弹出遮幕轮播图-->
+        <div class="main2" id='h2'>
+            <div class="main2_img">
+                <ul>
+                    {{each result as value}}
+                    <li>{{#value.couponProductImg}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="main2_left"><</div>
+            <div class="main2_right">></div>
+            <div class="main2_del" id='h1'>X</div>
+        </div>
+        {{/if}}
+    </script>
+</head>
+<body>
+<div class='ticket_layout'>
+    <!--头部-->
+    <header>
+        <a href="./coupon.html" class="fl">
+            <span class="iconfont icon-fanhui"></span>
+        </a>
+        <h4></h4>
+        <a href="javascript:;" class="fr">
+            <img src="../images/header_app.png" alt=""/>
+        </a>
+    </header>
+    <div class="content">
+
+    </div>
+    <!--标题导航-->
+    <div class="nav">
+        <a href="../index.html">
+            <span>首页 ></span>
+        </a>
+        <a href="coupon.html">
+            <span>优惠券 ></span>
+        </a>
+        <span class="c-title"></span>
+    </div>
+    <!-- 底部---start -->
+    <footer>
+        <div class="operate clearfix">
+            <ul>
+                <li>
+                    <span>登录</span>
+                </li>
+                <li><span>注册</span></li>
+                <li id="reTop"><span class="iconfont icon-xiangshang-copy"></span><span>返回顶部</span></li>
+            </ul>
+        </div>
+        <div class="introduce">
+            <p><span class="colorRed">手机APP下载</span>
+                <span>慢慢买手机版</span>
+                <span class="colorGray">-- 掌上比价平台</span>
+            </p>
+
+            <p class="colorGray">m.manmanbuy.com</p>
+        </div>
+    </footer>
+</div>
+</body>
+<script src='../js/base.js'></script>
+<script src='../js/couponDetail.js'></script>
+</html>

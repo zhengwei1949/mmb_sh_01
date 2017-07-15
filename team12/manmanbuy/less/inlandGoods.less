@@ -1,0 +1,220 @@
+//设置字体大小，兼容各种屏幕
+.font-size(@px) {
+  font-size: round(@px / 2) * 1px;
+  [data-dpr="2"] & {
+    font-size: @px * 1px;
+  }
+  [data-dpr="2.5"] & {
+    font-size: round(@px * 2.5 / 2) * 1px;
+  }
+  [data-dpr="2.75"] & {
+    font-size: round(@px * 2.75 / 2) * 1px;
+  }
+  [data-dpr="3"] & {
+    font-size: round(@px * 3 / 2) * 1px;
+  }
+  [data-dpr="4"] & {
+    font-size: @px * 2px;
+  }
+}
+
+.domestic_layout {
+  width: 100%;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  //头部
+  header {
+    width: 100%;
+    color: #FFF;
+    .font-size(35);
+    text-align: center;
+    line-height: 84/64rem;
+    h4 {
+      display: inline-block;
+      font-weight: normal;
+    }
+    a {
+      display: block;
+      color: #FFF;
+      &:first-child {
+        margin: 11/64rem 0 0 12/64rem;
+        span {
+          display: block;
+          font-size: 30px;
+          //width: 58/64rem;
+          //height: 58/64rem;
+          line-height: 60/64rem;
+        }
+      }
+      &:last-child {
+        margin: 11/64rem 12/64rem 0 0;
+        img {
+          width: 58/64rem;
+          height: 58/64rem;
+        }
+      }
+      img {
+        display: block;
+      }
+    }
+  }
+  //内容部分
+  .domestic_main {
+    width: 100%;
+    padding: 30/75rem 20/75rem 20/75rem;
+    .domestic_content {
+      .content_productName {
+        .font-size(36);
+        font-weight: 600;
+        font-family: Simsun;
+      }
+      .content_productPrice {
+        .font-size(28);
+        color: #FF6C00;
+        padding: 20/75rem 0;
+      }
+      .content_productFrom {
+        .font-size(24);
+        color: #A599B2;
+      }
+      .content_box {
+        margin-top: 50/75rem;
+        width: 100%;
+        .content-right {
+          width: 250/75rem;
+          height: 400/75rem;
+        }
+        .content-left {
+          overflow: hidden;
+          p {
+            .font-size(30);
+            line-height: 30/75rem;
+          }
+          img {
+            width: 230/75rem;
+            .font-size(30);
+          }
+        }
+      }
+    }
+    .domestic_buy {
+      width: 45%;
+      border: 1px solid #C0C0C0;
+      margin: 0 auto;
+      padding: 20/75rem;
+      li {
+        display: block;
+        width: 100%;
+        height: 60/75rem;
+        line-height: 60/75rem;
+        border-bottom: 1px dashed black;
+        padding: 0 10/75rem;
+        .buy_city {
+          float: left;
+          .font-size(24);
+        }
+        .buy_tip {
+          float: right;
+          .font-size(24);
+          color: #F28742;
+        }
+      }
+    }
+    .buy_goumai {
+      margin: 0 auto;
+      .font-size(28);
+      color: white;
+      width: 95%;
+      line-height:80/75rem;
+      background: #FF841D;
+      border-radius: 3px;
+      text-align: center;
+    }
+    .domestic_message {
+      width: 100%;
+      padding: 40/75rem 20/75rem;
+      img {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+    .domestic_productComment {
+      .tit {
+        .font-size(30);
+        line-height: 50/75rem;
+      }
+      .reply {
+        width: 100%;
+        height: 230/75rem;
+        border: 1px solid #ECEAE8;
+        .form {
+          width: 100%;
+          height: 230/75rem;
+          textarea {
+            width: 100%;
+            height: 200/75rem;
+            .font-size(24);
+          }
+          .ctrl {
+            width: 100%;
+            height: 80/75rem;
+            border-top: 1px solid #ECEAE8;
+            input {
+              float: right;
+              .font-size(28);
+              color: white;
+              width: 200/75rem;
+              height: 60/75rem;
+              background: #FF841D;
+            }
+          }
+        }
+      }
+      .list {
+        padding: 0 40/75rem;
+        width: 100%;
+        height: 180/75rem;
+        .font-size(28);
+        ul li b {
+          float: right;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  //底部
+  footer {
+    width: 100%;
+    height: 168/64rem;
+    background-color: #EFEFEF;
+    .operate {
+      width: 100%;
+      line-height: 61/64rem;
+      border-top: 1px solid #C4C4C4;
+      border-bottom: 1px solid #C4C4C4;
+      ul {
+        li {
+          float: left;
+          width: 30%;
+          text-align: center;
+          border-right: 1px solid #C4C4C4;
+          &:last-child {
+            width: 40%;
+            border-right: none;
+          }
+          span {
+            .font-size(25);
+          }
+        }
+      }
+    }
+    .introduce {
+      width: 100%;
+      height: 107/64rem;
+      text-align: center;
+      padding-top: 30/64rem;
+    }
+  }
+}
+

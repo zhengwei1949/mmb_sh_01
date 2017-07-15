@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/base1.css">
+    <link rel="stylesheet" href="../css/shopList.css">
+</head>
+<body>
+    <!--header部分-->
+    <header id="head" class="head clearfix">
+        <div class="back">
+            <a href="#" class="icon-jiantouyoujiantou1 iconfont"></a>
+        </div>
+        <h1>凑品单</h1>
+        <div class="app">
+            <a href="#"><img src="../images/header_app.png" alt=""></a>
+        </div>
+    </header>
+
+    <!--商品菜单部分-->
+    <section id="list">
+        <div class="list_box">
+            <div class="box_top">
+                <ul class="box_title clearfix">
+                    <li><a>京东</a><span class="icon-xiajiantou iconfont"></span></li>
+                    <li><a>华北</a><span class="icon-xiajiantou iconfont"></span></li>
+                    <li><a>全部价格</a><span class="icon-xiajiantou iconfont"></span></li>
+                    <li><a></a></li>
+                </ul>
+            </div>
+            <div class="shop list_down">
+                <ul class="hide"></ul>
+            </div>
+            <div class="area list_down">
+                <ul class="hide"></ul>
+            </div>
+            <div class="price list_down">
+                <ul class="hide">
+                    <li><a href="#">全部价格</a><span></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="list_content">
+
+        </div>
+    </section>
+
+    <!--底部footer部分-->
+    <footer id="foot" class="foot">
+        <div class="foot_top clearfix">
+            <ul>
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li id="goTop"><a href="javascript:void(0)"><img src="images/gotop.png" alt="">返回顶部</a></li>
+            </ul>
+        </div>
+        <div class="foot_bottom">
+            <p><a href="#">手机APP下载</a> <a href="#">慢慢买手机版</a> -- 掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+    <!--商品内容部分-->
+    <script id="gsProductList" type="text/html">
+        <ul id="container" class="masonry clearfix" >
+            {{each result as value i}}
+            <li>
+                <a href="http://item.m.jd.com/ware/view.action?wareId=1274360" class="item border-img">
+                    <div class="pic"><img src="{{value.productImg}}" style="width: 174px; height: 174px;"></div>
+                    <div class="title">{{value.productName}}</div>
+                    <div class="other clearfix">
+                        <div class="price">{{value.productPrice}}</div>
+                        <div class="btn">去凑单</div>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+
+    <script src="../lib/template/template.js"></script>
+    <script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+    <script src="../js/shopList.js"></script>
+</body>
+</html>

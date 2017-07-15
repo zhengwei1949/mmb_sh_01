@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="less/base.css"/>
+    <link rel="stylesheet" href="less/brand.css"/>
+
+</head>
+<body>
+<!--头部-->
+    <header class="header">
+        <div class="logo">
+            <a href="#" title="慢慢买">
+                <img src="images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="appdown">
+            <a href="#"  title="手机app下载">
+                <img src="images/header_app.png">
+            </a>
+        </div>
+    </header>
+    <!--搜索栏-->
+    <div class="search">
+        <form action="#" class="search_form">
+            <input type="search" class="search_input" placeholder="请输入你想比价的商品"/>
+            <input type="button" class="search_button" value="搜索"/>
+        </form>
+    </div>
+    <!--首页分类-->
+    <div class="brand_main">
+        <!--导航-->
+        <nav class="brand_nav">
+         <a href="index.html" class="brand_title1">首页</a> &gt; <a href="brandTitle.html" class="brand_title2">品牌大全</a> &gt;
+        </nav>
+        <div class="brand_hot">平板电视哪个牌子好</div>
+        <!--列表-->
+        <div class="brand_listz">
+            <div class="brand_list2 clearfix" >
+
+            </div>
+            <div class="brand_hot">平板电视产品销量排行</div>
+            <div class="brand_list3 clearfix">
+            </div>
+            <div class="brand_hot">平板电视最新评论</div>
+            <div class="brand_list4">
+                <div class="comz">
+                </div>
+            </div>
+        </div>
+    </div>
+<!--底部-->
+<footer id="foot">
+    <div class="foot_top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#">
+           <span class="iconfont">&#xe668;</span>返回顶部
+        </a>
+    </div>
+    <div class="foot_bottom">
+        <p>
+            <a href="#">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+        <p>
+            m.manmanbuy.com
+        </p>
+    </div>
+</footer>
+
+<script id="brandnice" type="text/html">
+    <ul class="clearfix list" id="brl2">
+        {{each result as value i}}
+        <li brandId="{{value.brandId}}" brandtitleId="{{value.brandTitleId}}">
+            <a href="productlist.html?categoryid={{value.categoryId}}">
+                <div class="f_left list_title1">
+                    <span>{{i+1}}</span>
+                    <span>{{value.brandName}}</span></br>
+                    <p>{{value.brandInfo}}</p>
+                </div>
+                <div class="list_title2 f_right iconfont">&#xe64f;</div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<!--模板三-->
+<script id="brandsole" type="text/html">
+     <ul class="clearfix list" id="brl3">
+        {{each result as value i}}
+         <li brandId="{{value.brandId}}" productId="{{value.productId}}">
+             <a href="bijia.html?productid={{value.productId}}" class="f_left list_title1">
+                 {{#value.productImg}}
+             </a>
+             <div class="list_title2 clearfix">
+                <span class="list_title2 f_left">{{value.productName}}</span><br/>
+                <p class="clearfix"><span class="f_left list_span">{{value.productPrice}}</span><em class="f_right iconfont">&#xe614 &#xe614 &#xe614 &#xe614 &#xe614</em></p>
+                <p><span>{{value.productQuote}}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="review">{{value.productCom}}</span></p>
+             </div>
+         </li>
+        {{/each}}
+    </ul>
+</script>
+<!--模板4-->
+<script id="brandreview" type="text/html">
+    <a href="#">
+        {{each result as value i}}
+        <div class="list_top clearfix">
+            <a href="#" class="f_left">{{#value.productImg}}</a>
+            <div class="topword">{{value.productName}}</div>
+        </div>
+        <div class="list_bottom" comId="{{comId}}" productId="{{value.productId}}" categoryId="{{value.categoryId}}">
+            <div class="com">
+                <span class="comname f_left">{{value.comName}}:<em class="star iconfont">&#xe614 &#xe614 &#xe614 &#xe614 &#xe614</em></span>
+                <i class="comtime f_right">{{value.comTime}}</i>
+            </div>
+            <p>{{value.comContent}}</p>
+        </div>
+        {{/each}}
+    </a>
+</script>
+<script src="lib/flexible/flexible.js"></script>
+<script src="lib/jQuery/jquery-1.12.2.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/brand.js"></script>
+</body>
+</html>

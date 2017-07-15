@@ -1,0 +1,87 @@
+//表单部分
+#form-search{
+  padding: 10px;
+  background-color: #fff;
+  .search{
+    position: relative;
+    padding-right: 70px;
+    >input[type="search"]{
+      width: 100%;
+      border: none;
+      background: #f1f1f1;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 15px;
+      font-size: 13px;
+      padding-right: 50px;
+      padding-left: 20px;
+    }
+    >input[type="button"]{
+      position: absolute;
+      width: 63px;
+      background: #ff841d;
+      color: #FFFFFF;
+      border: none;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 15px;
+      top: 0px;
+      right: 0px;
+      font-size: 16px;
+    }
+  }
+}
+//商品分类标题部分
+#category{
+  .category_box{
+    border-radius: 5px;
+    background: #ededed;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #666;
+    >ul{
+      >li{
+        >a{
+          height: 40px;
+          line-height: 40px;
+          color: #000;
+          font-size: 16px;
+          display: block;
+          padding-left: 16px;
+          border-bottom: 1px solid #ccc;
+          font-weight: bold;
+          span{
+            width: 40px;
+            height: 40px;
+            color: #666;
+            float: right;
+            font-size: 20px;
+            text-align: center;
+            transition: transform .5s;
+          }
+        }
+        .categroy_content{
+           background: #f9f9f9;
+          >li{
+            width: 33.33%;
+            float: left;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            >a{
+              display: block;
+              width: 100%;
+              color: #333;
+            }
+          }
+         }
+      }
+    }
+  }
+}
+//点击箭头转向
+.godown{
+  transform: rotate(90deg);
+}

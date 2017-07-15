@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>优惠券</title>
+	<script type="text/javascript" src="lib/jQuery/jquery.js"></script>
+    <script type="text/javascript" src="lib/flexible/flexible.js"></script>
+    <script src="js/base.js"></script>
+    <script src="lib/template/template.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/coupon.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+	<script type="text/html" id="coupon">
+		{{if result}}
+			{{each result as value}}
+				<div id="{{value.couponId}}" class="coupon">
+					<img src="{{value.couponImg}}" alt="">
+					<a href="{{value.couponLink}}?couponid={{value.couponId}}">
+						<span>{{value.couponTitle}}</span>
+					</a>
+				</div>
+			{{/each}}
+		{{/if}}
+	</script>
+	<script src="js/coupon.js"></script>
+</head>
+<body>
+        <!-- 头部内容 -->
+    <header class="flexBox ac">
+        <div>
+        <a href="index.html" class="goback icon_navigate_before"></a>
+        </div>
+        <span class="title">优惠券</span>
+        <div class="appDown">
+            <a href="index.html"><img src="images/header_app.png" /></a>
+        </div>
+    </header>
+    <!-- 中间内容 -->
+     <div class="container">
+    	
+    </div>
+    <!-- 底部内容 -->
+        <footer>
+            <div class="footTop">
+                <ul class="clearfix bt bb">
+                    <li class="br">
+                        <a href="javascript:;">登录</a>
+                    </li>
+                    <li class="br">
+                        <a href="javascript:;">注册</a>
+                    </li>
+                    <li class="backTop">
+                        <a href="javascript:;"><span class="icon_shift"></span>返回顶部</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footBottom">
+                <p>
+                    <a href="javascript:;">手机APP下载</a>
+                    <a href="javascript:;">慢慢买手机版</a>
+                    <span class="scolor"> -- 掌上比价平台</span>
+                </p>
+                <p class="scolor"> m.manmanbuy.com</p>
+            </div>
+        </footer>
+</body>
+</html>

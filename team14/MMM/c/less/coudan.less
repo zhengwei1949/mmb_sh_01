@@ -1,0 +1,330 @@
+/*根字体函数*/
+@bs: 75*1rem;
+/*混合函数使用*/
+.px2rem(@name,@px) {
+  @{name}: @px/@baseFontSize *1rem;
+}
+
+/*字体设置*/
+.font-size(@px) {
+  font-size: round(@px /2)*1px;
+  [data-dpr="2"] & {
+    font-size: @px *1px;
+  }
+  /*for mx3*/
+  [data-dpr="2.5"] & {
+    font-size: round(@px *2.5/2)*1px;
+  }
+  /*for小米node*/
+  [data-dpr="2.75"] & {
+    font-size: round(@px *2.75/2)*1px;
+  }
+  [data-dpr="3"] & {
+    font-size: round(@px /2*3)*1px;
+  }
+  /*for 三星note4*/
+  [data-dpr="4"] & {
+    font-size: @px *2px;
+  }
+}
+
+html, body {
+  background:#F1F1F1;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+/*这是顶部....star*/
+.tops {
+  height: 95/@bs;
+  width: 100%;
+  background: #F4483E;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  .tops_l {
+    display: block;
+    height: 100%;
+    line-height: 88/@bs;
+    text-align: center;
+    width: 118/@bs;
+    .font-size(48);
+    float: left;
+  }
+  .tops_r {
+    display: block;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    padding: 20/@bs;
+    margin-right: 5/@bs;
+    float: right;
+    s {
+      display: block;
+      text-decoration: none;
+      .font-size(20);
+    }
+    i {
+      display: block;
+      font-style: normal;
+      .font-size(20);
+      width: 100%;
+      height: 40/@bs;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+  }
+}
+/*这是顶部....end*/
+
+/*这是导航栏菜单...star....*/
+nav {
+  position: fixed;
+  top: 95/@bs;
+  z-index: 3;
+  width: 100%;
+  border-top: 1px solid #919188;
+  border-bottom: 1px solid #919188;
+  background-color: #fff;
+  box-shadow: 0px 13px 45px -22px;
+  .nav_m {
+    ul:nth-of-type(1) {
+      width: 100%;
+      li {
+        height: 80/@bs;
+        line-height: 80/@bs;
+        .font-size(30);
+        width: 30%;
+        border-bottom: 1px solid #919188;
+        text-align: center;
+        vertical-align: middle;
+        float: left;
+        i {
+          margin-bottom: 16/@bs;
+          margin-left: 11/@bs;
+          vertical-align: middle;
+          display: inline-block;
+          width: 0;
+          border-color: transparent transparent #565656 transparent;
+          border-width: 12/@bs;
+          border-style: solid;
+
+        }
+        &:nth-of-type(2) {
+
+          border-right: 1px solid #919188;
+          border-left: 1px solid #919188;
+        }
+      }
+      #seach {
+        width: 10%;
+        border-left: 1px solid #919188;
+        //border-radius: 9px;
+        color: #565656;
+        .font-size(38);
+      }
+    }
+  }
+  .nav_b {
+    height: 100%;
+    ul {
+      margin-top: 80/@bs;
+      position: absolute;
+      z-index: 2;
+
+      li {
+        height: 80/@bs;
+        line-height: 80/@bs;
+        background-color: #fff;
+        .font-size(30);
+        width: 100%;
+        padding-left: 10/@bs;
+        border-bottom: 1px solid #919188;
+        position: relative;
+        .active{
+          display: inline-block;
+          width: 30/@bs;
+          height: 30/@bs;
+          border-radius: 30/@bs;
+          line-height:15/@bs;
+          background-color:green;
+          position:absolute;
+          top:50%;
+          right:20/@bs;
+          margin-top: -15/@bs;
+        }
+
+      }
+      &:nth-of-type(1) {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: red;
+
+      }
+      &:nth-of-type(2) {
+        display: none;
+        width: 100%;
+
+      }
+    }
+
+  }
+
+}
+/*这是导航栏菜单...end....*/
+
+/*这是返回顶部的按钮属性.....star*/
+aside {
+  width: 72/@bs;
+  height: 72/@bs;
+  line-height: 72/@bs;
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 72/@bs;
+  position: fixed;
+  bottom: 75/@bs;
+  right: 4.5%;
+  z-index: 5;
+  text-align: center;
+  transform: rotate(-90deg);
+  > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 3.5%;
+    z-index: 9;
+
+  }
+  > .iconfont {
+    display: block;
+    font-size: 60/@bs;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.5);
+    z-index: 7;
+  }
+
+}
+/*这是返回顶部的按钮属性.....end*/
+
+
+/*这是中间的商品列表*/
+main {
+  ul {
+    margin-top: 190/@bs;
+    width: 100%;
+
+    li {
+      height: 448/@bs;
+      width: 46.7%;
+      float: left;
+      background-color: #fff;
+      margin-left:2%;
+      margin-top: 15/@bs;
+      //&:nth-child(2n){
+      //  margin-left: 0.25%;
+      //}
+      //&:nth-child(2n+1){
+      //  margin-right: 0.25%;
+      //}
+      position: relative;
+      overflow: hidden;
+      a {
+        display: block;
+        img {
+
+          display: block;
+          width: 100%;
+          padding: 10px;
+          height: 340/@bs;
+          //background-color: blue;
+        }
+
+      }
+      p {
+        margin-left: 10/@bs;
+        white-space: nowrap;
+        .font-size(25);
+      }
+      s {
+        display: block;
+        line-height: 56/@bs;
+        text-decoration: none;
+        margin-left: 10/@bs;
+        .font-size(40);
+        color: #F86E1D;
+      }
+      span {
+        display: block;
+        //width: 90px;
+        //height: 90px;
+        padding: 10/@bs;
+        font-weight: 400;
+        border-radius: 9/@bs;
+        color: #fff;
+        .font-size(24);
+        background-color: #FF9501;
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+
+      }
+
+    }
+  }
+}
+/*这是中间的商品列表*/
+
+
+/*这是最底部属性.....star*/
+.MMB_foot {
+  margin-top: 95/@bs;
+  > .footTop {
+    width: 100%;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    margin-top: 20/@bs;
+    overflow: hidden;
+    > a {
+      float: left;
+      width: 30%;
+      height: 70/@bs;
+      line-height: 70/@bs;
+      border-right: 0;
+      color: #000;
+      text-align: center;
+      font-size: 28/@bs;
+      > i {
+        .font-size(38);
+        color: #747474;
+      }
+    }
+    a:nth-of-type(2) {
+      display: inline-block;
+      width: 40%;
+      border: 1px solid #000;
+      border-top: 0;
+      border-bottom: 0;
+    }
+  }
+  > .footBottom {
+    text-align: center;
+    width: 100%;
+    height: 120/@bs;
+    > p {
+      margin-top: 20/@bs;
+      font-size: 24/@bs;
+      color: #a1a1a1;
+      .mob {
+        color: red;
+      }
+
+    }
+
+  }
+}
+/*这是最底部属性.....end*/
+

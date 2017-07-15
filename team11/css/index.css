@@ -1,0 +1,96 @@
+.hide {
+  display: none;
+}
+section .free {
+  width: 100%;
+  height: 0.4rem;
+  background: #ff841d;
+  padding: 0 0.13333333rem;
+}
+section .free span {
+  line-height: 0.4rem;
+  color: #fff;
+}
+section .free a {
+  display: block;
+  color: #fff;
+  font-family: monospace;
+  border: 1px solid #fff;
+  padding: 1px 4px;
+  border-radius: 0.18666667rem;
+  margin-top: 0.06666667rem;
+}
+section .mainnav {
+  width: 100%;
+}
+section .mainnav .list {
+  width: 100%;
+}
+section .mainnav .list li {
+  float: left;
+  width: 25%;
+  height: 1.2rem;
+  text-align: center;
+  margin: 0.26666667rem 0;
+}
+section .mainnav .list li a {
+  display: block;
+  width: 0.93333333rem;
+  height: 0.93333333rem;
+  margin: 0 auto;
+}
+section .mainnav .list li a img {
+  display: block;
+  width: 100% ;
+  height: 100%;
+}
+section .shopping .goods {
+  width: 100%;
+  height: 2rem;
+  border-bottom: 1px solid #cccccc;
+}
+section .shopping .goods .goods-img {
+  float: left;
+  width: 2rem;
+  height: 100%;
+}
+section .shopping .goods .goods-img a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+section .shopping .goods .goods-img a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+section .shopping .goods .goods-txt {
+  width: 100%;
+  height: 100%;
+  padding-left: 2.13333333rem;
+}
+section .shopping .goods .goods-txt p:nth-child(1) {
+  margin-top: 0.13333333rem;
+}
+section .shopping .goods .goods-txt p:nth-child(1) span {
+  color: red;
+}
+section .shopping .goods .goods-txt p:nth-child(2) {
+  margin-top: 0.66666667rem;
+  color: #ccc;
+}
+section .shopping .goods .goods-txt p:nth-child(2) span {
+  margin-right: 0.13333333rem;
+}
+section .downmore {
+  height: 0.66666667rem;
+  width: 100%;
+  text-align: center;
+  padding: 0.10666667rem 0.2rem;
+}
+section .downmore a {
+  display: block;
+  padding: 0.06666667rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}

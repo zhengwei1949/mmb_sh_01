@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/less/base.css"/>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <script src="js/base.js"></script>
+    <script src='js/flexible.js'></script>
+    <script src='lib/zepto/zepto.min.js'></script>
+    <script src="js/template.js"></script>
+    <link rel="stylesheet" href="css/less/discount_soy.css"/>
+</head>
+<body>
+<!--头部B-->
+<header class="top_nav">
+    <div class="left_logo f_left">
+        <a onclick="javascript:history.go(-1)" class='glyphicon glyphicon-menu-left m_l10'></a>
+    </div>
+    <div class='center_word'><p>国内折扣</p></div>
+    <div class="right_logo f_right ">
+        <a href="#"><img class='m_r10' src="./images/header_app.png" alt=""></a>
+    </div>
+</header>
+<!--头部E-->
+
+<div id="soy_intro">
+
+</div>
+
+<!--前往购买B-->
+<div class="input_or">
+    <div class="input_ora">前往购买</div>
+</div>
+<!--前往购买E-->
+<!--二维码B-->
+<div class="erweima">
+
+    <img class="erweima_pic" src="images/mmbweixin2.png" alt=""/>
+</div>
+<!--二维码E-->
+
+<!--最新评论B-->
+<div id="soy_comment">
+
+</div>
+
+<!--最新评论E-->
+
+
+<!--底部部分B-->
+<!--使用bootstrap栅格系统          底部写死-->
+<footer>
+    <div class="row">
+        <div class="col-xs-4 col-sm-4">
+            <p>登录</p>
+        </div>
+        <div class="col-xs-4 col-sm-4">
+            <p>注册</p>
+        </div>
+        <div class=" bottom_right col-xs-4 col-sm-4">
+            <a href="#" class="up glyphicon glyphicon-arrow-up"><img src="" alt=""/></a>
+
+            <p>返回顶部</p>
+        </div>
+    </div>
+    <div class="bottom_bar">
+        <p>手机APP下载&nbsp;<span>慢慢买手机版</span><b>—掌上比价平台</b></p>
+
+        <p><b>m.manmanbuy.com</b></p>
+    </div>
+</footer>
+<!--底部部分E-->
+
+
+
+
+
+
+<script type="text/html" id="template1">
+    <!--使用template模板B-->
+    <h3 class="soy_title">{{productName}}</h3>
+    <p class="soy_subTitle">
+        <span>{{productFrom}}</span>
+        <span>{{productTime}}</span>
+        <span>{{productTips}}</span>
+    </p>
+    <div class="soy_content">
+        <div class="small_pic">{{#productImgSm}}</div>
+        <p class="info_one">{{productInfo}}</p>
+    </div>
+    <p class="info_two">{{productInfo1}}</p>
+    <div class="big_pic">{{#productImgLg}}</div>
+    <div class="soy_city">{{#productCity}}</div>
+</script>
+
+
+
+
+
+
+
+
+<script type="text/html" id="template2">
+    <div>
+        {{#productComment}}
+    </div>
+</script>
+</body>
+<script src="js/discount_soy.js"></script>
+</html>

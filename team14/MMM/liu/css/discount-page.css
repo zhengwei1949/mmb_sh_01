@@ -1,0 +1,152 @@
+.all {
+    background: #fff;
+}
+
+/* ----------------- 顶部通栏111--------------- */
+.header {
+    height: 1.28rem;
+    width: 100%;
+    background: #F4483E;
+    line-height: 1.28rem;
+}
+
+.header .iconfonts {
+    float: left;
+    font-size: 0.533333rem;
+    margin-left: 0.426667rem;
+    color: #fff;
+
+}
+
+.header p {
+    height: 1.28rem;
+    color: #fff;
+    text-align: center;
+    font-size: 0.533333rem;
+}
+
+.header .header_right {
+    float: right;
+    padding-top: 0.24rem;
+    padding-right: 0.373333rem;
+}
+
+.header .header_right img {
+    height: 0.8rem;
+
+}
+
+/*--------------------------优惠券标题列表----------------------- */
+.coupon {
+    margin-top: 0.266667rem;
+    margin-bottom: 0.8rem;
+    padding-left: 0.233333rem;
+    width: 100%;
+    height: 100%;
+}
+
+.coupon ul {
+    width: 100%;
+    height: 100%;
+    padding-right: 0.133333rem;
+    padding-bottom: 0.133333rem;
+}
+
+.coupon ul li {
+    border: 1px solid #ccc;
+    width: 31%;
+    float: left;
+    margin-right: 0.2rem;
+    padding-bottom: 0.32rem;
+}
+
+.coupon ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 0.133333rem;
+
+}
+
+.coupon ul li a img {
+    display: block;
+    height: 1.333333rem;
+    width: 1.333333rem;
+    background: red;
+    margin: 0 auto;
+}
+
+.coupon ul li a span {
+    font-size: 0.4rem;
+    color: #5A5A5A;
+    padding-left: 0.8rem;
+}
+
+/*--------------------------首页>优惠券----------------------- */
+
+.brand {
+    height: 0.933333rem;
+    background: #F1F1F1;
+    width: 100%;
+    line-height: 0.933333rem;
+    border-top: 1px solid #C4C4C4;
+    border-bottom: 1px solid #C4C4C4;
+    margin-bottom: 0.666667rem;
+}
+
+.brand span {
+    color: #000000;
+    margin-left: 0.266667rem;
+    font-size: 0.4rem;
+}
+
+/*--------------------------底部----------------------- */
+.foot {
+    height: 2.4rem;
+    background: #EFEFEF;
+}
+
+.foot .foot_top {
+    border-top: 1px solid #C4C4C4;
+    border-bottom: 1px solid #C4C4C4;
+    width: 100%;
+}
+
+.foot .foot_top a {
+    display: inline-block;
+    width: 2.986667rem;
+    border-right: 1px solid #C4C4C4;
+    text-align: center;
+    height: 0.853333rem;
+    line-height: 0.853333rem;
+}
+
+.foot .foot_top a:last-child {
+    border-right: none;
+}
+
+.foot .foot_top a i {
+    color: #747474;
+}
+
+/*--------------------------搴曢儴涓嬪崐閮ㄥ垎----------------------- */
+.foot .foot_bottom {
+    text-align: center;
+}
+
+.foot p span:first-child {
+    color: #FF0000
+}
+
+.foot p span:last-child {
+    color: #727272
+}
+
+.foot .foot_bottom p:nth-child(1) {
+    margin-top: 0.4rem;
+}
+
+.foot .foot_bottom p:nth-child(2) {
+    color: #727272;
+    height: 0.4rem;
+}

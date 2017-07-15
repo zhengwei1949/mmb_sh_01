@@ -1,0 +1,35 @@
+@charset "utf-8";
+@import 'color.less';
+/*主体部分样式*/
+main {
+    .list {
+        /*标题样式*/
+        .listTitle {
+            padding: 0.266667rem;
+            font-weight: 400;
+            .icon_expand_more {
+                color: #666;
+                font-size: 60px;
+                .dpr-cal(60);
+            }
+        }
+        /*内容样式*/
+        .listCont {
+            background-color: #fff;
+            ul {
+                flex-wrap: wrap;
+                li {
+                    width: 33.333%;
+                    &:nth-of-type(3n) {
+                        border-right: none;
+                    }
+                    a {
+                        display: block;
+                        padding: 0.333333rem 0;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

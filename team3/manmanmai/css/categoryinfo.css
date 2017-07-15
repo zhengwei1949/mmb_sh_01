@@ -1,0 +1,95 @@
+
+.wraper h3{
+    text-align: center;
+}
+
+.wraper .imgTV {
+    display: block;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wraper .bjNav a{
+    float: left;
+    width: 33.333%;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    border: 1px solid #000;
+    background-color: #FFC72F;
+}
+
+.wraper .bjNav a.on{
+    background-color: #FF9914
+}
+.wraper p{
+    border-top:1px solid #999;
+    height: 50px;
+}
+
+.netercom h4{
+    height: 40px;
+    font-size:18px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #DBDBDB;
+}
+
+.netercom ul li:nth-last-child(1){
+    margin:20px 0;
+    padding:0 20px;
+}
+
+.netercom .moreinfo {
+    display: block;
+    width: 710px;
+    text-align: center;
+    font:400 16px/40px 'microsoft yahei';
+    background-color: #E4E4E4;
+    border-radius: 10px;
+}
+
+
+.product_hot_score {
+
+}
+
+.product_score {
+    position: relative;
+    /*height: 250px;*/
+}
+
+.product_score dl {
+    /*height: 115px;*/
+    width: 750px;
+    padding:0 10px 10px;
+    border: 1px solid #ccc;
+    background-color: #F8F8F8;
+}
+
+.product_score dt {
+    font:400 12px/20px 'microsoft yahei';
+}
+
+.product_score dt .user {
+    color:#629177;
+}
+
+.product_score dl .date {
+    width: 80px;
+    height: 14px;
+    font-size:12px;
+    margin-top:4px;
+}
+
+.product_score dl .taright {
+    text-align: right;
+    font-size:12px;
+}
+
+.product_score dd {
+    font-size:12px;
+}
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="./libs/flexible.js"></script>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/discount.css"/>
+</head>
+<body>
+<div class="layout" style="max-height: 9999px">
+    <!--顶部栏 start-->
+    <header id="header">
+        <!-- 返回上一页 -->
+        <a href="javascript:history.go(-1)" class="icon-back fs24 iconfont icon-jiantouyoujiantou1"></a>
+
+        <h3 class="fs20">国内折扣</h3>
+        <!-- app下载 -->
+        <a href="#" class="app-download"><img src="./images/header_app.png" alt="app"/></a>
+    </header>
+    <!--end-->
+
+    <!-- 商品信息 start -->
+    <main class="productMessages">
+    </main>
+    <!-- end -->
+
+    <!--底部栏 start -->
+    <div class="foot">
+        <div>
+            <a href="#" class="fs14">登录</a>
+            <a href="#" class="fs14">注册</a>
+            <a href="#top" class="fs14"><i class="iconfont icon-xiangshangjiantou fs16"></i>返回顶部</a>
+        </div>
+        <p class="fs12">
+            <span>手机APP下载</span>
+            慢慢买手机版
+            <span>-- 掌上比价平台</span>
+        </p>
+        <p class="fs12">m.manmanbuy.com</p>
+    </div>
+    <!--end-->
+</div>
+<!--html end-->
+<script id="moneyProduct" type="text/html">
+    {{each result as value i}}
+    <div class="g_content">
+        <h3 class="title fs18">{{value.productName}}</h3>
+        <h4 class="fs15">{{value.productPrice}}</h4>
+
+        <p class="mall fs14">{{value.productFrom}} | {{value.productTime}} | {{value.productTips}}</p>
+
+        <div class="picW fs16">
+            {{#value.productImgSm}}
+        </div>
+        <div class="mess fs16">
+            <!--内容开始-->
+            <p>{{value.productInfo}}</p>
+
+            <p>{{#value.productImg}}</p>
+
+            <p>{{#value.productInfo1}}</p>
+
+            <p>{{#value.productInfo3}}</p>
+
+            <p>{{#value.productImg2}}</p>
+
+            <p>{{#value.productImg3}}</p>
+            <!--内容结束-->
+        </div>
+        <center>
+            <div class="huo fs12">
+                {{#value.productCity}}
+            </div>
+        </center>
+        <div class="go_buy fs14">
+            <a href="#">前往购买</a>
+        </div>
+    </div>
+    <div class="erm">
+        <img src="./images/mmbweixin2.png" alt="微信"/>
+    </div>
+    <div class="talk_area">{{#value.productComment}}</div>
+    {{/each}}
+</script>
+<script src="./libs/jquery.min.js"></script>
+<script src="./libs/template.js"></script>
+<script>
+    (function ($) {
+        $.getUrlParam = function (name) {
+            var reg = new RegExp("(^|&)" +
+                    name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+    })(jQuery);
+</script>
+<script src="js/common.js"></script>
+<script src="./js/moneyproduct.js"></script>
+</body>
+</html>

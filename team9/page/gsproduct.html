@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>凑单品</title>
+    <link rel="stylesheet" href="../css/base3.css"/>
+    <link rel="stylesheet" href="../css/coudanpin.css"/>
+    <link rel="stylesheet" href="../fonts/iconfont.css"/>
+    <script src="../lib/jquery-1.12.2.js"></script>
+    <script src="../lib/template.js"></script>
+    <script type="text/html" id="tab">
+
+    </script>
+    <script>
+        $(function () {
+            /*获取元素*/
+            var shop = $(".selectLeft>li:nth-child(1)>a");
+            var selectShop = $(".selectShop");
+            var area = $(".selectLeft>li:nth-child(2)>a");
+            var selectArea = $(".selectArea");
+            var goodList = $(".goodList");
+            /*第一次打开页面获取数据，默认情况,shop*/
+            $.ajax({
+                url: 'http://localhost:9090/api/getgsshop',
+                success: function (data) {
+                    /*渲染页面*/
+                    //默认选中
+                    shop.html(data.result[0].shopName + "<i>▼</i>");
+                    shop.currentId = data.result[0].shopId;
+                    //渲染列表页面
+                    var str = '';
+                    for (var i = 0; i <= data.result.length - 1; i++) {
+                        str += '<li><a href="#" thisname = "' + data.result[i].shopName + '" id="' + data.result[i].shopId + '">' + data.result[i].shopName + '<span>√</span></a></li>'
+                    }
+                    selectShop.html(str);
+                    //列表默认选中的对勾
+                    var shopItems = $(".selectShop>li>a");//每一个a标签
+                    var shopSpan = $(".selectShop>li>a>span");//每一个a中的对勾
+                    shopSpan.css("display", "none");
+                    for (var s = 0; s < shopItems.length; s++) {
+                        if (shopItems[s].id == shop.currentId) {
+                            shopSpan[s].style.display = "block";
+                        }
+                    }
+
+                    shop.on("click", function () {
+                        if (selectShop[0].style.display == "none") {
+                            $(".selectLeft>li:nth-child(1)>a>i").html("▲");
+                        } else {
+                            $(".selectLeft>li:nth-child(1)>a>i").html("▼");
+                        }
+                        selectShop.slideToggle(200);
+                    });
+                    /*获取区域数据*/
+                    $.ajax({
+                        url: 'http://localhost:9090/api/getgsshoparea',
+                        success: function (data) {
+                            //默认选中
+                            area.html(data.result[0].areaName.slice(0, 2) + "<i>▼</i>");
+                            area.currentId = data.result[0].areaId;
+                            //渲染列表页面
+                            var strArea = '';
+                            for (var j = 0; j <= data.result.length - 1; j++) {
+                                strArea += '<li><a href="#" thisname = "' + data.result[j].areaName + '" id="' + data.result[j].areaId + '">' + data.result[j].areaName + '<span>√</span></a></li>'
+                            }
+                            selectArea.html(strArea);
+                            //列表默认选中的对勾
+                            var areaItems = $(".selectArea>li>a");//每一个a标签
+                            var areaSpan = $(".selectArea>li>a>span");//每一个a中的对勾
+                            areaSpan.css("display", "none");
+                            for (var k = 0; k < areaItems.length; k++) {
+                                if (areaItems[k].id == area.currentId) {
+                                    areaSpan[k].style.display = "block";
+                                }
+                            }
+
+                            area.on("click", function () {
+                                if (selectArea[0].style.display == "none") {
+                                    $(".selectLeft>li:nth-child(2)>a>i").html("▲");
+                                } else {
+                                    $(".selectLeft>li:nth-child(2)>a>i").html("▼");
+                                }
+                                selectArea.slideToggle(200);
+                            });
+                            //获取第三次数据，默认的商品列表
+                            $.ajax({
+                                url: 'http://localhost:9090/api/getgsproduct',
+                                data: {
+                                    shopid: 0,
+                                    areaid: 0
+                                },
+                                success: function (data) {
+                                    function getListItem(){
+                                        var strlistItem = '<li>'+
+                                                '<a href="#">'+
+                                                '<img src='+data.result[v].productImg+' alt=""/>'+
+                                                '<h3>'+data.result[v].productName+'</h3>'+
+                                                '<div>'+
+                                                '<div class="price">'+
+                                                '<span>¥</span>'+data.result[v].productPrice.slice(1,data.result[v].productPrice.length)+
+                                                '</div>'+
+                                                '<div class="btn">去凑单</div>'+
+                                                '</div>'+
+                                                '</a>'+
+                                                '</li>';
+                                        return strlistItem;
+                                    }
+                                    var listItemstr = '';
+                                    for(v = 0;v<=data.result.length-1;v++){
+                                        listItemstr += getListItem();
+                                    }
+                                    goodList.html(listItemstr);
+                                }
+                            });
+                            /*添加单机事件（1.currentid改变 2.对勾改变 3.获取另一个currentid
+                             4.ajax获取，并将currentid传入 5.列表消失 6.文字改变）*/
+                            shopItems.on("click", function () {
+                                shop.currentId = this.id;
+                                //对勾改变
+                                shopSpan.css("display", "none");
+                                for (var n = 0; n < shopItems.length; n++) {
+                                    if (shopItems[n].id == shop.currentId) {
+                                        shopSpan[n].style.display = "block";
+                                    }
+                                }
+                                //列表消失
+                                selectShop.slideUp(200);
+                                //文字改变
+                                shop.html(this.getAttribute("thisname") + "<i>▼</i>");
+                                $.ajax({
+                                    url: 'http://localhost:9090/api/getgsproduct',
+                                    data: {
+                                        shopid: shop.currentId,
+                                        areaid: area.currentId
+                                    },
+                                    success: function (data) {
+                                        function getListItem(){
+                                            var strlistItem = '<li>'+
+                                                    '<a href="#">'+
+                                                    '<img src='+data.result[v].productImg+' alt=""/>'+
+                                                    '<h3>'+data.result[v].productName+'</h3>'+
+                                                    '<div>'+
+                                                    '<div class="price">'+
+                                                    '<span>¥</span>'+data.result[v].productPrice.slice(1,data.result[v].productPrice.length)+
+                                                    '</div>'+
+                                                    '<div class="btn">去凑单</div>'+
+                                                    '</div>'+
+                                                    '</a>'+
+                                                    '</li>';
+                                            return strlistItem;
+                                        }
+                                        var listItemstr = '';
+                                        for(v = 0;v<=data.result.length-1;v++){
+                                            listItemstr += getListItem();
+                                        }
+                                        goodList.html(listItemstr);
+                                    }
+                                });
+                            });
+                            areaItems.on("click", function () {
+                                area.currentId = this.id;
+                                //对勾改变
+                                areaSpan.css("display", "none");
+                                for (var o = 0; o < areaItems.length; o++) {
+                                    if (areaItems[o].id == area.currentId) {
+                                        areaSpan[o].style.display = "block";
+                                    }
+                                }
+                                //列表消失
+                                selectArea.slideUp(200);
+                                //文字改变
+                                area.html(this.getAttribute("thisname").slice(0, 2) + "<i>▼</i>");
+                                $.ajax({
+                                    url: 'http://localhost:9090/api/getgsproduct',
+                                    data: {
+                                        shopid: shop.currentId,
+                                        areaid: area.currentId
+                                    },
+                                    success: function (data) {
+                                        function getListItem(){
+                                            var strlistItem = '<li>'+
+                                                    '<a href="#">'+
+                                                    '<img src='+data.result[v].productImg+' alt=""/>'+
+                                                    '<h3>'+data.result[v].productName+'</h3>'+
+                                                    '<div>'+
+                                                    '<div class="price">'+
+                                                    '<span>¥</span>'+data.result[v].productPrice.slice(1,data.result[v].productPrice.length)+
+                                                    '</div>'+
+                                                    '<div class="btn">去凑单</div>'+
+                                                    '</div>'+
+                                                    '</a>'+
+                                                    '</li>';
+                                            return strlistItem;
+                                        }
+                                        var listItemstr = '';
+                                        for(v = 0;v<=data.result.length-1;v++){
+                                            listItemstr += getListItem();
+                                        }
+                                        goodList.html(listItemstr);
+                                    }
+                                });
+                            });
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<!--整体盒子-->
+<div class="layout">
+    <!--顶部通栏-->
+    <div class="head" id="topBar">
+        <!--后退按钮-->
+        <div class="back">
+            <a href="#" class="iconfont icon-back"></a>
+        </div>
+        <h1>凑单品</h1>
+
+        <div class="downloadApp"></div>
+    </div>
+    <!--下拉列表头部-->
+    <div class="selectBar">
+        <!--左侧三个下拉框-->
+        <ul class="selectLeft">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#">全部价格<i>▼</i></a></li>
+        </ul>
+        <!--右侧的搜索按钮-->
+        <a href="#" class="serch iconfont icon-sousuo"></a>
+    </div>
+    <!--下拉列表-->
+    <ul class="selectShop"></ul>
+    <ul class="selectArea"></ul>
+    <!--商品列表-->
+    <ul class="goodList clearfix">
+        <li>
+            <a href="#">
+                <img src="../images/goodsitem.jpg" alt=""/>
+                <h3>【京东超市】喔喔 小黄人棒棒糖(草莓牛奶味) 10g</h3>
+                <div>
+                    <div class="price">
+                        <span>¥</span>0.40
+                    </div>
+                    <div class="btn">去凑单</div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

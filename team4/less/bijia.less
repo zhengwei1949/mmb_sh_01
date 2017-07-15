@@ -1,0 +1,229 @@
+@maincolor:#ff841d;
+//头部
+.top {
+  .topban {
+    height: 96/75rem;
+    width: 100%;
+    background: @maincolor;
+    span {
+      display: block;
+      float: left;
+      width: 600/75rem;
+      height: 100%;
+      background: url("../images/header_logo.png") no-repeat 36/75rem 26/75rem;
+    }
+    a {
+      display: block;
+      float: right;
+      height: 100%;
+      width: 120/75rem;
+      background: url("../images/header_app.png") no-repeat 16/75rem;
+      margin-right: 10/75rem;
+    }
+  }
+  .topSearch {
+    margin-top: -2/75rem;
+    width: 100%;
+    height: 96/75rem;
+    border: 6/75rem solid @maincolor;
+    border-left-width: 4/75rem;
+    border-right-width: 4/75rem;
+    padding: 16/75rem;
+    position: relative;
+    form {
+      width: 100%;
+      height: 100%;
+      padding-right: 126/75rem;
+      float: left;
+      .search {
+        height: 100%;
+        width: 100%;
+        background-color: #f1f1f1;
+        border: none;
+        border-radius: 22/75rem;
+        padding-left: 42/75rem;
+      }
+    }
+    .search_btn {
+      height: 54/75rem;
+      width: 126/75rem;
+      background: @maincolor;
+      border: none;
+      color: #fff;
+      border-radius: 24/75rem;
+      position: absolute;
+      right: 10/75rem;
+    }
+  }
+}
+//内容区域样式：
+#product {
+  //内容导航部分：
+  >.product_title {
+       height: 76/75rem;
+       background-color: #ebebeb;
+       background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+       border-top: 1px solid #ebebeb;
+       border-bottom: 1px solid #ccc;
+       line-height: 72/75rem;
+       padding-left: 16/75rem;
+       font-size: 28/75rem;
+  }
+  // 内容比价购买部分02样式：
+  >.plist {
+      table {
+         margin-top: 24/75rem;
+     }
+     .red {
+        color: #d10311;
+        text-align: right;
+        padding-right: 30/75rem;
+     }
+     .p_pic{
+        width: 54;
+        text-align: center;
+        border-bottom: 1px solid #bbb;
+     }
+      .note {
+        font-size: 24/75rem;
+        color: #888;
+        padding: 16/75rem 20/75rem;
+        line-height: 36/75rem;
+      }
+  }
+  // 内容比价购买01部分样式：
+  >.tab {
+      width: 100%;
+      margin-top: 40/75rem;
+      height: 68/75rem;
+      line-height: 68/75rem;
+      font-size: 30/75rem;
+      overflow: hidden;
+      z-index: 0;
+      background-color: #ffbb00;
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd050), to(#ffbb00));
+      background: -moz-linear-gradient(top, #ffd050, #ffbb00);
+      background: -o-linear-gradient(top, #ffd050, #ffbb00);
+      border-top: solid 1px #c14d00;
+      border-bottom: 1px solid #c14d00;
+         ul {
+            width: 100%;
+            li {
+            &.cur{
+                background-color: #ffbb00;
+               background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa632), to(#ff9000));
+               background: -moz-linear-gradient(top, #ffa632, #ff9000);
+               background: -o-linear-gradient(top, #ffa632, #ff9000);
+             }
+            &.mtab{
+               border-left: solid 1px #c14d00;
+               border-right: solid 1px #c14d00;
+             }
+             -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+             -o-box-sizing: border-box;
+             box-sizing: border-box;
+             float: left;
+             width: 33.33%;
+             height: 68/75rem;
+             text-align: center;
+             background-color: #ffbb00;
+             background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd050), to(#ffbb00));
+             background: -moz-linear-gradient(top, #ffd050, #ffbb00);
+             background: -o-linear-gradient(top, #ffd050, #ffbb00);
+               a {
+                 color: #fff;
+                 display: block;
+                 height: 68/75rem;
+                 width: 100%;
+               }
+            }
+         }
+      }
+  // 内容信息部分：
+  >.product_message{
+        .product_name {
+        text-align: center;
+        font-size: 34/75rem;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 32/75rem;
+           }
+        .product_img {
+        display: block;
+        width: 340/75rem;
+        height: 340/75rem;
+        margin: 0px auto;
+           }
+       .product_collect{
+        float: right;
+        margin-right: 48rem;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+           }
+  }
+  // 内容评论标题部分：
+  >.product-com-title {
+         border-top: 16/75rem solid #7a7a7a;
+         margin-top: 10/75rem;
+         >div {
+             height: 68/75rem;
+             line-height: 68/75rem;
+             text-align: center;
+             overflow: hidden;
+             background: #dbdbdb;
+             font-size: 28/75rem;
+             border-top: 1px solid #fff;
+         }
+      }
+  // 内容评论内容部分：
+  >.product-com-list {
+     > ul {
+             >li {
+                 font-size: 24/75rem;
+                 color: #666;
+                 padding: 20/75rem;
+                 padding-bottom: 0px;
+                 line-height: 36/75rem;
+                 margin-top: 6/75rem;
+                 border-bottom: 1px solid #ccc;
+                 .pull-left{
+                        float: left;
+                    }
+                 .pull-right {
+                        float: right;
+                    }
+                 .com-content {
+                        color: #000;
+                        line-height: 44/75rem;
+                        padding-top: 10/75rem;
+                    }
+                  }
+          }
+     >.more {
+            padding: 0 16/75rem;
+            margin-top: 32/75rem;
+            .morein {
+                  display: block;
+                  height: 64/75rem;
+                  background-color: #d4d4d4;
+                  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+                  background: -moz-linear-gradient(top, #f1f1f1, #d4d4d4);
+                  background: -o-linear-gradient(top, #f1f1f1, #d4d4d4);
+                  border-bottom: 1px solid #bababa;
+                  box-shadow: 0 0 1px #666;
+                  -webkit-border-radius: 10/75rem;
+                  -moz-border-radius: 10/75rem;
+                  -o-border-radius: 10/75rem;
+                  border-radius: 10/75rem;
+                  text-align: center;
+                  font-size: 28/75rem;
+                  line-height: 64/75rem;
+                  overflow: hidden;
+                  }
+          }
+    }
+  }
+
+

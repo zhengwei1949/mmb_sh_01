@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>优惠券</title>
+    <link rel="stylesheet" href="css/youhuiquan.css"/>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/base.css"/>
+    <script src="js/base.js"></script>
+    <script src="lib/flexible.js"></script>
+</head>
+<body>
+<!-- 顶部-->
+<header class="top_nav">
+    <div class="left_logo f_left">
+        <a onclick="javascript:history.go(-1)" class='glyphicon glyphicon-menu-left m_l10'></a>
+    </div>
+    <div class='center_word'><p>优惠券</p></div>
+    <div class="right_logo f_right ">
+        <a href="#"><img class='m_r10' src="./images/header_app.png" alt=""></a>
+    </div>
+</header>
+<!--头部E-->
+
+<section class="content"></section>
+
+
+
+<!--底部部分B-->
+<!--使用bootstrap栅格系统          底部写死-->
+<footer>
+    <div class="row">
+        <div class="col-xs-4 col-sm-4">
+            <p>登录</p>
+        </div>
+        <div class="col-xs-4 col-sm-4">
+            <p>注册</p>
+        </div>
+        <div class=" bottom_right col-xs-4 col-sm-4">
+            <a href="#" class="up glyphicon glyphicon-arrow-up"><img src="" alt=""/></a>
+
+            <p>返回顶部</p>
+        </div>
+    </div>
+    <div class="bottom_bar">
+        <p>手机APP下载&nbsp;<span>慢慢买手机版</span><b>—掌上比价平台</b></p>
+
+        <p><b>m.manmanbuy.com</b></p>
+    </div>
+</footer>
+<!--底部部分E-->
+<script src="lib/template.js"></script>
+<script type="text/html" id="tem">
+    {{each result as value i}}
+    <a class="box" href="yhq_list.html?couponid={{value.couponId}}">
+        <img src={{value.couponImg}} alt=""/>
+        <div class="title">{{value.couponTitle}}</div>
+    </a>
+    {{/each}}
+</script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/youhuiquan.js"></script>
+</body>
+</html>

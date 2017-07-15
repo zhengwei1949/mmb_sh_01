@@ -1,0 +1,31 @@
+@base:round(1/75,6)*1rem;//基本值   保留6位小数
+.px2rem(@name,@px){
+    @{name}:@px*@base;
+}
+
+.font-size(@px){
+  //font-size: round(@px/2)*1px;
+  [data-dpr="1"] & {
+    font-size: round(@px/2)*1px;
+  }
+
+  [data-dpr="2"] & {
+    font-size: @px*1px;
+  }
+
+  [data-dpr="2.5"] &{
+    font-size:round(@px*2.5/2)*1px ;
+  }
+
+  [data-dpr="2.75"] &{
+    font-size:round(@px*2.75/2)*1px ;
+  }
+
+  [data-dpr="3"] &{
+    font-size:round(@px / 2 *3 )*1px ;
+  }
+
+  [data-dpr="4"] &{
+    font-size:@px * 2px ;
+  }
+}

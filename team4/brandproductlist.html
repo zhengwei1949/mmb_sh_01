@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>凑单品</title>
+    <script src="libs/flexible.js"></script>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/brang_first.css"/>
+    <link rel="stylesheet" href="css/brandproductlist.css"/>
+</head>
+<body>
+<div class="yayout">
+    <!--头部区域-->
+    <header class="head">
+        <div class="head_left"></div>
+        <a class="app_dowload fr" href="#">
+        </a>
+    </header>
+    <!--搜索框-->
+    <section class="search">
+        <form action="#">
+            <input type="search" placeholder="请输入你想比价的商品"/>
+        </form>
+        <button class="fr">搜索</button>
+    </section>
+    <!-- 分类-->
+    <div class="scale">
+        <p></p>
+    </div>
+    <!-- 热门排行标题-->
+    <div class="hot">
+        <p>热门分类排行</p>
+    </div>
+    <!-- 商品列表-->
+    <div class="goodslist">
+        <ul>
+        </ul>
+    </div>
+    <!-- 按钮 -->
+    <div class="btn icon-shangjiantou1 iconfont"></div>
+</div>
+<!-- 结构的模版引擎 -->
+<script type="text/html" id="goods_list">
+{{each result as value}}
+<li data-productId = {{value.productId}}>
+    <div class="img">{{#value.productImg}}</div>
+    <div class="goods_right">
+        <span class="info"><a href="bijia.html?productid={{value.productId}}">{{value.productName}}</a></span>
+        <span class="prive">{{value.productPrice}}</span>
+        <span class="star fr">★★★★★</span>
+        <div class="goods_b">
+            <span class="offer"><a href="#">{{value.productQuote}}</a></span>
+            <span class="review"><a href="#">{{value.productCom}}</a></span>
+        </div>
+    </div>
+</li>
+{{/each}}
+</script>
+<!-- 评论栏的模版引擎 -->
+    <script type="text/html" id="info">
+            <div class="review_box">
+            {{each result as value}}
+    <div class="info_title">
+            <span class="name">{{value.comName}}</span>
+    <span class="wjx"> ★ ★ ★ ★ ★ </span>
+    <span class="date fr">{{value.comTime}}</span>
+    </div>
+    <p>{{value.comContent}}</p>
+    {{/each}}
+    </div>
+    </script>
+<script src="libs/template.js"></script>
+<script src="libs/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/brandproductlist.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>storenav</title>
+    <script src="../lib/flexible/flexible_css.js" charset="utf-8"></script>
+    <script src="../lib/flexible/flexible.js"></script>
+    <script src="../lib/template/template.js"></script>
+    <link rel="stylesheet" href="../css/basez.css">
+    <link rel="stylesheet" href="../less/stroenav.css">
+</head>
+<body>
+<!--页面头部-->
+<header>
+    <div class="top">
+    <a href="../index.html" class="icon-jiantouyoujiantou iconfont fl"></a>
+
+        商城导航
+        <a href="#" class="fr">
+        </a></div>
+</header>
+<div class="main">
+</div>
+<script type="text/html" id="pro">
+    {{ each result as value }}
+    <div><a href="{{value.navHref}}">
+        <img src="{{value.navImg}}" alt="">
+        {{value.navTitle}}
+    </a></div>
+    {{ /each }}
+</script>
+
+</body>
+<script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+<script src="../js/stroenav.js"></script>
+</html>

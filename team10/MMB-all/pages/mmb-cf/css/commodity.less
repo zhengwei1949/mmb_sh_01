@@ -1,0 +1,204 @@
+@charset "utf-8";
+.font-size(@size) {
+  [data-dpr = '1'] & {
+    font-size: unit(@size/2,px);
+  }
+  [data-dpr = '2'] & {
+    font-size: unit(@size,px);
+  }
+  [data-dpr = '3'] & {
+    font-size: unit(@size/2*3,px);
+  }
+}
+.nav {
+  height: 0.9rem;
+  background-color: #ebebeb;
+  //background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ccc;
+  line-height:0.9rem;
+  padding-left:0.106rem;
+  .font-size(14px);
+  border-bottom: 1px solid #cccccc;
+  position: relative;
+     span {
+       max-height: 100%;
+        .font-size(24px);
+       color: #000;
+      }
+    input {
+      height: 0.8rem;
+      width: 1.6rem;
+      position: absolute;
+      top:0.051rem;
+      right: 0.2rem;
+      border-radius: 0.1333rem;
+      .font-size(28px);
+    }
+}
+.product-bijia {
+  position: relative;
+  .product-name {
+    text-align: center;
+    .font-size(30px);
+    color: #000;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 0.213rem;
+  }
+  .product-img {
+    display: block;
+    width: 3.5rem;
+    height:3.5rem;
+    margin: 0 auto;
+    img {
+      width:3.5rem;
+    }
+  }
+  .product-collect {
+    float: right;
+    margin-right: 0.64rem;
+    position: absolute;
+    right:0rem;
+    bottom: 0.85rem;
+    //background-color: #333;
+    position: relative;
+    overflow: hidden;
+    img {
+      width:0.9rem;
+      //height:0.45rem;
+    }
+  }
+  .tab {
+    width: 100%;
+    margin-top: 0.4rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    .font-size(20px);
+    overflow: hidden;
+    z-index: 0;
+    background-color: #ffbb00;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd050), to(#ffbb00));
+    background: -moz-linear-gradient(top, #ffd050, #ffbb00);
+    background: -o-linear-gradient(top, #ffd050, #ffbb00);
+    border-top: solid 1px #c14d00;
+    border-bottom: 1px solid #c14d00;
+    li {
+      ox-sizing: border-box;
+      float: left;
+      width: 33.2%;
+      height: 0.8rem;
+      text-align: center;
+      border-right:1px solid #c14d00;
+      a {
+        color: #fff;
+        display: block;
+        height: 0.8rem;
+        width: 100%;
+      }
+    }
+  }
+  .plist {
+      table{
+        width:100%;
+          margin-top:0.3rem ;
+        margin-bottom: 0.3rem;
+        tbody {
+          height:0.5rem;
+          .font-size(30px);
+
+          .p_pic{
+            width:0.52rem;
+              img {
+                width:0.42rem;
+                height: 0.42rem;
+              }
+          }
+          .red {
+            color: #d10311;
+            text-align: right;
+            padding-right: 0.4rem;
+          }
+          .p_pic2 {
+            align:center;
+            width:1.5rem;
+            span {
+              display: inline-block;
+              width: 1.86rem;
+              height:1.06rem;
+              border-radius:0.13rem;
+              text-align: center;
+              line-height: 1.06rem;
+              background-color: #ff5500;
+              color: #FFFFFF;
+            }
+          }
+        }
+      }
+  }
+  .note {
+    margin-top: 0.1rem;
+    border-top:1px solid #ccc;
+    max-height:100%;
+    .font-size(14px);
+    color: #888;
+    padding: 0.21rem 0.2666rem;
+    line-height: 0.52rem;
+    border-bottom: 5px solid #7A7A7A;
+  }
+}
+/*            网友评价                */
+.product-com-title {
+  div {
+    height:0.8rem;
+    line-height:0.8rem;
+    text-align: center;
+    overflow: hidden;
+    background: #dbdbdb;
+    max-height:100%;
+    .font-size(24px);
+
+  }
+}
+.product-com-list {
+  ul {
+    li {
+      max-height:100%;
+      .font-size(20px);
+      color: #666;
+      padding:0.2rem;
+      padding-bottom: 0px;
+      line-height: 0.4rem;
+      margin:0.0666rem;
+      border-bottom: 1px solid #ccc;
+      .com-from {
+        margin-top: 0.21rem;
+      }
+      .com-content {
+        margin-top: 0.15rem;
+        line-height:0.66rem;
+        color: #000;
+        .font-size(24px)
+      }
+    }
+  }
+}
+.more {
+  padding: 0 0.5rem;
+  margin-top: .3rem;
+  .morein {
+    display: block;
+    height: 0.5rem;
+    background-color: #d4d4d4;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+    background: -moz-linear-gradient(top, #f1f1f1, #d4d4d4);
+    background: -o-linear-gradient(top, #f1f1f1, #d4d4d4);
+    border-bottom: 1px solid #bababa;
+    border-radius: 5px;
+    text-align: center;
+    max-height:100%;
+    .font-size(14px);
+    line-height: 0.5rem;
+    overflow: hidden;
+  }
+}

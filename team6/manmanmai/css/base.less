@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+@color:#000;
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+
+    /*清除高亮显示*/
+    -webkit-tap-highlight-color: transparent;
+   /*宽度从边框开始计算*/
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-size: 14px;
+
+    font-family: "MicroSoft YaHei","sans-serif";/*是设备默认的字体*/
+}
+i {
+
+   font-style: normal; 
+}
+
+ul,ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: @color;
+}
+
+a:hover {
+    color:  @color;
+}
+input, textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    -webkit-appearance: none;
+}
+
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after {
+    content: ".";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    line-height: 0;
+
+}
+
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+
+/* 底部部分 */
+footer {
+    .footer-ranking {
+        height: 35px;
+        border-bottom: 1px solid #FFC881;
+        background-color: #FF9306;
+        padding-left:10px;
+        line-height: 35px;
+        color:#fff;
+    }
+    .info {
+        background-color: #F1F1F1;
+        padding-top:25px;
+        a {
+            display: block;
+            border:1px solid #C4C4C4;
+            height:34px;
+            float:left;
+            text-align:center;
+            line-height: 34px;
+            &:nth-of-type(1) {
+                width:30%;
+            }
+            &:nth-of-type(2) {
+                width:30%;
+            }
+            &:nth-of-type(3) {
+                width:40%;
+                
+            }
+        }
+
+    }
+    .mobile {
+        background-color: #F1F1F1;
+        padding-top:17px;
+        padding-bottom:13px;
+        font-size:12px;
+        text-align:center;
+        color:#66666A;
+        a {
+        &:nth-of-type(1) {
+                color:#FF0000;
+            }
+        &:nth-of-type(2) {
+                color:#1D1D1D;
+            }
+        
+        &:nth-of-type(3) {
+                color:#666666;
+            }
+        }
+    }
+}

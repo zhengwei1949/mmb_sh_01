@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="libs/flexible.js"></script>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/baicaijia.css"/>
+</head>
+<body>
+<div class="layout">
+    <div class="top_fixed">
+        <!-- 顶部通栏 -->
+        <div class="top">
+            <a href="javascript:history.go(-1)" class="iconfont icon-jiantouyoujiantou1 fs20"></a>
+            <h3 class="fs18">白菜价-淘宝内部券</h3>
+            <i></i>
+        </div>
+        <!-- nav导航栏 -->
+        <div class="nav">
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <!-- 向上箭头 -->
+    <a href="#top" class="iconfont icon-shangjiantou1 return_top fs40"></a>
+    <!-- 主商品栏 -->
+    <div class="main">
+    </div>
+    <!-- 底部 -->
+    <div class="foot">
+        <div>
+            <a href="#" class="fs14">登录</a>
+            <a href="#" class="fs14">注册</a>
+            <a href="#top" class="fs14"><i class="iconfont icon-xiangshangjiantou fs16"></i>返回顶部</a>
+        </div>
+        <p class="fs12">
+            <span>手机APP下载</span>
+            慢慢买手机版
+            <span>-- 掌上比价平台</span>
+        </p>
+        <p class="fs12">m.manmanbuy.com</p>
+    </div>
+</div>
+<!-- nav导航栏模板 -->
+<script id="navLists" type="text/html">
+    {{if result}}
+    <ul class="navUl">
+        {{each result as value i}}
+        <li>
+            <a href="#" class="fs14" id="{{value.titleId}}">{{value.title}}</a>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</script>
+<!-- 主商品模板 -->
+<script id="goodLists" type="text/html">
+    {{if result}}
+    <ul class="main_goods">
+        {{each result as value}}
+        <li>
+            <div class="good_left">
+                <a href="#">
+                    {{#value.productImg}}
+                    <!--<img src="images/haitao.png" alt=""/>-->
+                </a>
+            </div>
+            <div class="good_right">
+                <p class="fs14">{{#value.productName}}</p>
+                <p class="fs24">{{#value.productPrice}}</p>
+                {{#value.productCouponRemain}}
+                <p class="fs14">{{#value.productCoupon}}</p>
+                <span class="fs12">下单连接</span>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</script>
+<script src="libs/jquery.min.js"></script>
+<script src="libs/template.js"></script>
+<script src="js/common.js"></script>
+<script src="js/baicaijia.js"></script>
+</body>
+</html>

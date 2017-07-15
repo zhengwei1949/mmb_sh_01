@@ -1,0 +1,15 @@
+慢慢买服务器开启
+
+
+1、
+mongodb  ---> 双击mongostart.bat    //即开启
+         
+	//无法开启时
+mongodb  --->data   ---> 删除 mongod.lock   ---> 双击mongostart.bat
+
+2、
+MMBApiServer  --->  src   ---> start.bat  
+
+3、端口号：9090
+
+4、接口就是网址改成自己电脑的IP地址。

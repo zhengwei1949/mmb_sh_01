@@ -1,0 +1,306 @@
+/*根字体函数*/
+/*混合函数使用*/
+/*基本颜色*/
+/*字体设置*/
+/*产品详情部分start*/
+.detailsPro .detailsShow {
+  width: 100%;
+  position: relative;
+}
+.detailsPro .detailsShow h3 {
+  text-align: center;
+  font-size: 18px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 0.26666667rem;
+}
+[data-dpr="2"] .detailsPro .detailsShow h3 {
+  font-size: 36px;
+}
+[data-dpr="2.5"] .detailsPro .detailsShow h3 {
+  font-size: 45px;
+}
+[data-dpr="2.75"] .detailsPro .detailsShow h3 {
+  font-size: 50px;
+}
+[data-dpr="3"] .detailsPro .detailsShow h3 {
+  font-size: 54px;
+}
+[data-dpr="4"] .detailsPro .detailsShow h3 {
+  font-size: 72px;
+}
+.detailsPro .detailsShow .detImg {
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 3.46666667rem;
+  margin: 0px auto;
+}
+.detailsPro .detailsShow .detImg img {
+  height: 100% !important;
+  width: 35% !important;
+}
+.detailsPro .detailsShow .proCollect {
+  margin-right: 0.4rem;
+  position: absolute;
+  right: 0px;
+  bottom: 2.2rem;
+}
+.detailsPro .detailsShow .proCollect img {
+  height: 0.93333333rem;
+  width: 0.93333333rem;
+}
+.detailsPro .detailsTab {
+  width: 100%;
+  margin-top: 0.26666667rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  overflow: hidden;
+  z-index: 0;
+  background-color: #ffbb00;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd050), to(#ffbb00));
+  background: -moz-linear-gradient(top, #ffd050, #ffbb00);
+  background: -o-linear-gradient(top, #ffd050, #ffbb00);
+  border-top: solid 0.01333333rem #c14d00;
+  border-bottom: 0.01333333rem solid #c14d00;
+}
+.detailsPro .detailsTab a {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-size: 15px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  font-weight: 100;
+  width: 33.3333%;
+  color: #fff;
+  text-align: center;
+  border-right: 1px solid #c14d00;
+}
+[data-dpr="2"] .detailsPro .detailsTab a {
+  font-size: 30px;
+}
+[data-dpr="2.5"] .detailsPro .detailsTab a {
+  font-size: 38px;
+}
+[data-dpr="2.75"] .detailsPro .detailsTab a {
+  font-size: 41px;
+}
+[data-dpr="3"] .detailsPro .detailsTab a {
+  font-size: 45px;
+}
+[data-dpr="4"] .detailsPro .detailsTab a {
+  font-size: 60px;
+}
+.detailsPro .detailsTab a:first-child {
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa632), to(#ff9000));
+}
+.detailsPro .detailsTab a:last-child {
+  border-right: none;
+}
+.detailsPro .detList {
+  width: 100%;
+}
+.detailsPro .detList table {
+  margin: 0.13333333rem 0;
+}
+.detailsPro .detList td:nth-child(2) {
+  transform: translate(-0.6rem);
+  vertical-align: middle !important;
+}
+.detailsPro .detList img {
+  height: 0.4rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.detailsPro .detList a {
+  vertical-align: middle;
+  margin-left: 0.18666667rem;
+  font-size: 14px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  vertical-align: middle !important;
+}
+[data-dpr="2"] .detailsPro .detList a {
+  font-size: 28px;
+}
+[data-dpr="2.5"] .detailsPro .detList a {
+  font-size: 35px;
+}
+[data-dpr="2.75"] .detailsPro .detList a {
+  font-size: 39px;
+}
+[data-dpr="3"] .detailsPro .detList a {
+  font-size: 42px;
+}
+[data-dpr="4"] .detailsPro .detList a {
+  font-size: 56px;
+}
+.detailsPro .detList .red {
+  color: #d10311;
+  margin-right: 0.21333333rem;
+  font-size: 14px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  transform: translate(-0.7rem);
+}
+[data-dpr="2"] .detailsPro .detList .red {
+  font-size: 28px;
+}
+[data-dpr="2.5"] .detailsPro .detList .red {
+  font-size: 35px;
+}
+[data-dpr="2.75"] .detailsPro .detList .red {
+  font-size: 39px;
+}
+[data-dpr="3"] .detailsPro .detList .red {
+  font-size: 42px;
+}
+[data-dpr="4"] .detailsPro .detList .red {
+  font-size: 56px;
+}
+.detailsPro .detList span {
+  display: inline-block !important;
+  height: 0.6rem !important;
+  line-height: 0.6rem !important;
+  width: 1.73333333rem !important;
+  background: #ff5500 !important;
+  color: #ffffff !important;
+  border-radius: 0.13333333rem !important;
+  font-size: 12px !important;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  text-align: center !important;
+  margin-right: 0.13333333rem;
+}
+[data-dpr="2"] .detailsPro .detList span {
+  font-size: 24px !important;
+}
+[data-dpr="2.5"] .detailsPro .detList span {
+  font-size: 30px !important;
+}
+[data-dpr="2.75"] .detailsPro .detList span {
+  font-size: 33px !important;
+}
+[data-dpr="3"] .detailsPro .detList span {
+  font-size: 36px !important;
+}
+[data-dpr="4"] .detailsPro .detList span {
+  font-size: 48px !important;
+}
+.detailsPro .detbot {
+  display: block;
+  padding: 0.26666667rem;
+  padding: 0.13333333rem 0.26666667rem;
+  line-height: 0.4rem;
+  font-size: 13px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  color: #a1a1a1;
+  border-top: 1px solid #8c8c8c;
+}
+[data-dpr="2"] .detailsPro .detbot {
+  font-size: 26px;
+}
+[data-dpr="2.5"] .detailsPro .detbot {
+  font-size: 33px;
+}
+[data-dpr="2.75"] .detailsPro .detbot {
+  font-size: 36px;
+}
+[data-dpr="3"] .detailsPro .detbot {
+  font-size: 39px;
+}
+[data-dpr="4"] .detailsPro .detbot {
+  font-size: 52px;
+}
+.detailsPro .detTitle {
+  margin-top: 0.06666667rem;
+}
+.detailsPro .detTitle > div {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+  overflow: hidden;
+  font-size: 12px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  border-top: 0.01333333rem solid #fff;
+  background: #dbdbdb;
+}
+[data-dpr="2"] .detailsPro .detTitle > div {
+  font-size: 24px;
+}
+[data-dpr="2.5"] .detailsPro .detTitle > div {
+  font-size: 30px;
+}
+[data-dpr="2.75"] .detailsPro .detTitle > div {
+  font-size: 33px;
+}
+[data-dpr="3"] .detailsPro .detTitle > div {
+  font-size: 36px;
+}
+[data-dpr="4"] .detailsPro .detTitle > div {
+  font-size: 48px;
+}
+.detailsPro .comContent li {
+  padding: 0.21333333rem;
+  border: 0.01333333rem solid #8c8c8c;
+  border-bottom: 1px solid #ccc;
+}
+.detailsPro .comContent li div:nth-child(-n+2) {
+  height: 0.4rem;
+  line-height: 0.4rem;
+  font-size: 10px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  color: #666;
+}
+[data-dpr="2"] .detailsPro .comContent li div:nth-child(-n+2) {
+  font-size: 20px;
+}
+[data-dpr="2.5"] .detailsPro .comContent li div:nth-child(-n+2) {
+  font-size: 25px;
+}
+[data-dpr="2.75"] .detailsPro .comContent li div:nth-child(-n+2) {
+  font-size: 28px;
+}
+[data-dpr="3"] .detailsPro .comContent li div:nth-child(-n+2) {
+  font-size: 30px;
+}
+[data-dpr="4"] .detailsPro .comContent li div:nth-child(-n+2) {
+  font-size: 40px;
+}
+.detailsPro .comContent li .content {
+  color: #000;
+  line-height: 0.4rem;
+  font-size: 11px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+}
+[data-dpr="2"] .detailsPro .comContent li .content {
+  font-size: 22px;
+}
+[data-dpr="2.5"] .detailsPro .comContent li .content {
+  font-size: 28px;
+}
+[data-dpr="2.75"] .detailsPro .comContent li .content {
+  font-size: 30px;
+}
+[data-dpr="3"] .detailsPro .comContent li .content {
+  font-size: 33px;
+}
+[data-dpr="4"] .detailsPro .comContent li .content {
+  font-size: 44px;
+}
+/*产品详情部分end*/

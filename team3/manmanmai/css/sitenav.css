@@ -1,0 +1,43 @@
+@charset "utf-8";
+html {
+    font-size: 75px;
+}
+
+body {
+    background: #FFF;
+}
+
+.container {
+    padding: 0.2667rem;
+}
+
+.container a {
+    border: 0.0267rem solid #bfbfbf;
+    float: left;
+    padding: 0.2667rem;
+    background: #f4f4f4;
+    height: 1.0667rem;
+    width: auto;
+    margin: 0.2667rem;
+}
+
+.container a img {
+    float: left;
+    width: 0.5333rem;
+    height: 0.5333rem;
+}
+
+.container a span {
+    float: left;
+    height: 0.5333rem;
+    line-height: 0.5333rem;
+    margin-left: 0.2667rem;
+}
+
+[data-dpr="2"] .container a span {
+    font-size: 26px;
+}
+
+[data-dpr="3"] .container a span {
+    font-size: 39px;
+}

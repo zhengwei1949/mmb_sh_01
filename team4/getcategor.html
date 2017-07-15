@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>凑单品</title>
+    <script src="libs/flexible.js"></script>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/brang_first.css"/>
+    <link rel="stylesheet" href="css/getcategor.css"/>
+<body>
+    <div class="yayout">
+        <!--头部区域-->
+        <header class="head">
+            <div class="head_left"></div>
+            <a class="app_dowload fr" href="#">
+            </a>
+        </header>
+        <!--搜索框-->
+        <section class="search">
+            <form action="#">
+                <input type="search" placeholder="请输入你想比价的商品"/>
+            </form>
+            <button class="fr">搜索</button>
+        </section>
+        <!-- 3 级菜单区域 -->
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">首页</a> > &nbsp;</li>
+                <li><a href="category.html">全部分类</a> >&nbsp;</li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <div class="goods">
+            <ul>
+                <li>
+                    <div class="img"></div>
+                    <div class="goods_right">
+                        <span class="info"><a href="#">乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</a></span>
+                        <span class="prive">￥1999.00</span>
+                        <div class="goods_b">
+                            <span class="offer"><a href="#">报价(6)</a></span>
+                            <span class="review"><a href="#">评论(2286)</a></span>
+                        </div>
+                    </div>
+                    <div class="review_box">
+                        <div class="info_title">
+                            <span class="name">name:</span>
+                            <span class="wjx"> ★ ★ ★ ★ ★ </span>
+                            <span class="date fr">2012/2/2</span>
+                        </div>
+                        <p> 防守对方开始大举发力是看得见佛is的分类</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="bt">
+            <input type="button" class="prev" value="上一页"/>
+            <select class="option">
+                <!--<option value="1/3">1/3</option>-->
+                <!--<option value="2/3">2/3</option>-->
+                <!--<option value="3/3">3/3</option>-->
+            </select>
+            <input type="button" class="next" value="下一页"/>
+        </div>
+        <!-- 底部 -->
+        <div class="foot">
+            <div>
+                <a href="#" class="fs14">登录</a>
+                <a href="#" class="fs14">注册</a>
+                <a href="#top" class="fs14"><i class="iconfont icon-xiangshangjiantou fs16"></i>返回顶部</a>
+            </div>
+            <p class="fs12">
+                <span>手机APP下载</span>
+                慢慢买手机版
+                <span>-- 掌上比价平台</span>
+            </p>
+            <p class="fs12">m.manmanbuy.com</p>
+        </div>
+    </div>
+    <script type="text/html" id="menu">
+        {{each result as value}}
+        <li>
+            <a href="#" categoryId = {{value.categoryId}} titleId = {{value.titleId}}>
+                {{value.category}}
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="goods">
+    {{each result as value}}
+    <li data-productId = {{value.productId}} class="particulars">
+        <div class="img">{{#value.productImg}}</div>
+        <div class="goods_right">
+            <span class="info"><a href="bijia.html?productid={{value.productId}}">{{value.productName}}</a></span>
+            <span class="prive">{{value.productPrice}}</span>
+            <div class="goods_b">
+                <span class="offer"><a href="#">{{value.productQuote}}</a></span>
+                <span class="review"><a href="#">{{value.productCom}}</a></span>
+            </div>
+        </div>
+    </li>
+
+    {{/each}}
+</script>
+    <script type="text/html" id="info">
+        <div class="review_box">
+    {{each result as value}}
+        <div class="info_title">
+            <span class="name">{{value.comName}}</span>
+            <span class="wjx"> ★ ★ ★ ★ ★ </span>
+            <span class="date fr">{{value.comTime}}</span>
+        </div>
+        <p>{{value.comContent}}</p>
+    {{/each}}
+    </div>
+</script>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/template.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/getcategor.js"></script>
+</body>
+</html>

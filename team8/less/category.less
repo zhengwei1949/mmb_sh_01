@@ -1,0 +1,124 @@
+/*根字体函数*/
+@baseFontSize: 75;
+/*混合函数使用*/
+.px2rem(@name,@px) {
+    @{name}: @px/@baseFontSize *1rem;
+}
+
+/*基本颜色*/
+@bodyBGColor: #f7f7f7;
+@mainColor: #ff841d;
+@borderColor: #8c8c8c;
+@fontColor: #ff6c00;
+@fontColor1: #a1a1a1;
+
+/*字体设置*/
+.font-size(@px) {
+  font-size: round(@px /2)*1px;
+  [data-dpr="2"] & {
+    font-size: @px *1px;
+  }
+  /*for mx3*/
+  [data-dpr="2.5"] & {
+    font-size: round(@px *2.5/2)*1px;
+  }
+  /*for小米node*/
+  [data-dpr="2.75"] & {
+    font-size: round(@px *2.75/2)*1px;
+  }
+  [data-dpr="3"] & {
+    font-size: round(@px /2*3)*1px;
+  }
+  /*for 三星note4*/
+  [data-dpr="4"] & {
+    font-size: @px *2px;
+  }
+}
+
+
+
+/*主页设置*/
+html, body {
+  background: #ffffff;
+}
+.MMB_category{
+  padding-bottom: 220/75rem;
+}
+/*产品分类START*/
+.briefAll {
+  background: #ffffff;
+  .px2rem(padding, 20rem);
+  .brief {
+    border: 1/75rem solid @borderColor;
+    border-radius: 5/75rem;
+  }
+}
+
+.briefList {
+  width:100%;
+  .listNav {
+    p{
+      display: block;
+      .px2rem(height, 80rem);
+      .px2rem(line-height, 80rem);
+      background: #ebebeb;
+      width: 100%;
+      .font-size(34px);
+      letter-spacing: 5/75rem;
+      border-top: 1/75rem solid @borderColor;
+      span{
+        margin-left: 20/75rem;
+      }
+      i {
+        .font-size(34px);
+        margin-right: 20/75rem;
+      }
+    }
+
+    ul {
+      background: #f9f9f9;
+      //border-bottom: 3/75rem solid #888888;
+      width: 100%;
+      //display: none;
+      li {
+        float: left;
+        .px2rem(height, 80rem);
+        .px2rem(line-height, 80rem);
+        width: 33.333333%;
+        border-bottom: 1px solid @borderColor;
+        border-right: 1px solid @borderColor;
+        .font-size(28px);
+        text-align: center;
+        a{
+          display: block;
+          .px2rem(height, 80rem);
+          width:100%;
+        }
+      }
+      li:nth-child(3n) {
+        border-right: none;
+      }
+    }
+  }
+
+
+  .listNav:nth-of-type(1) {
+    border-top: none;
+  }
+
+}
+
+.hide {
+  display: none;
+}
+
+/*产品分类END*/
+/*产品底部START*/
+.MMB_foot {
+  background: #efefef;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/*产品底部END*/

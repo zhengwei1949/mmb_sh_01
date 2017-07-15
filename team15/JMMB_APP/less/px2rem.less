@@ -1,0 +1,35 @@
+// 设计图 375  使用 flexible
+// px => rem 根据设计稿 尺寸，要除以 37.5，换算成单位 rem
+// 例如：height: 40*@base;
+@base: round(1/37.5, 6) * 1rem; // 基准值
+
+// less写一个mixin
+// 例如: .px2rem(height, 40);
+.px2rem(@name, @px){
+    @{name}: round( @px / 37.5, 6) * 1rem;
+}
+
+// 字体不可以用用 rem 因为误差太大了，且不能满足任何屏幕下字体大小相同
+// 为了方便，我们也会用 less 写一个 mixin
+// 例如： .font-size(32);
+.font-size(@px) {
+    font-size: round(@px / 2) * 1px;
+    [data-dpr='2'] & {
+        font-size: @px * 1px;
+    }
+    // for mx3
+    [data-dpr='2.5'] & {
+        font-size: round(@px * 2.5 / 2) * 1px;
+    }
+    // for 小米note
+    [data-dpr="2.75"] & {
+        font-size: round(@px * 2.75 / 2) * 1px;
+    }
+    [data-dpr="3"] & {
+        font-size: round(@px / 2 * 3) * 1px
+    }
+    // for 三星note4
+    [data-dpr="4"] & {
+        font-size: @px * 2px;
+    }
+}

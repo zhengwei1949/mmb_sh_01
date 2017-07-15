@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/shengqian.css">
+
+ 
+</head>
+<body>
+<!--头部 -->
+<header>
+    <div class="lBeijing"></div>
+    <div class="rBeijing"></div>
+</header>
+  
+
+      <div class="center">
+      <ul>
+        
+      </ul>
+       
+      </div>
+   </div>
+
+
+
+<!-- ************************************************************************* -->
+   <!-- 翻页 -->
+   <div  class='fanye'>
+   <ul>
+     <li>
+       <input type="button"  class="b1"  value="上一页">
+     </li>
+     <li>
+     <select name="" id=""  class="s1">
+    <!-- <option value="0">1/14</option> -->
+    <option value="1">1/14</option>
+    <option value="2">2/14</option>
+    <option value="3">3/14</option>
+    <option value="4">4/14</option>
+    <option value="5">5/14</option>
+    <option value="6">6/14</option>
+    <option value="7">7/14</option>
+    <option value="8">8/14</option>
+    <option value="9">9/14</option>
+    <option value="10">10/14</option>
+    <option value="11">11/14</option>
+    <option value="12">12/14</option>
+    <option value="13">13/14</option>
+    <option value="14">14/14</option>
+  </select>
+  </li>
+     <li>
+       <input type="button"  class="b2" value="下一页">
+     </li>
+   </ul>
+   </div>
+      <!-- 底部 -->
+      <div class="bottom ">
+          <div class="denglu">
+           <span class="span1">登录</span>
+           <span class="span1">注册</span>
+           <span class="span3"><a href="#"><img src="../images/jiantou0.png" height="16" width="17" alt=""> 返回顶部</a></span>
+            </div>
+         
+               <p class='p1'><span class='class1'>手机APP下载  </span>慢慢买手机版<span class='class2'>--掌上比价平台</span></p>
+               <p class="p2">m.manmanbuy.com</p>
+      
+         
+      </div>   
+
+
+  <!--     省钱空
+  template模板引擎 -->
+<script type='text/html' id='lis'>
+  {{each result as value i}}
+          <li>
+           <a href="#" class='clearfix'> 
+           {{#value.productImgSm}}
+           <div  class="jy">
+           <p>{{value.productName}}
+           <span>{{value.productPinkage}}</span></p>
+            <p>{{value.productFrom}} | {{value.productTime}}</p>
+           </div>
+           </a>
+           </li>  
+  {{/each}}
+</script>
+
+
+
+ <script type="text/javascript" src="../lib/jquery/jquery-3.1.0.min.js"></script>
+ <script type="text/javascript" src="../lib/template/template.js"></script>
+ <script src="../js/sheng.js"></script>
+</body>
+
+</html>

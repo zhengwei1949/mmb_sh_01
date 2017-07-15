@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+@redColor:#F8601D;
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+.hd{
+  position: relative;
+}
+/* 头部 */
+header {
+  h3 {
+    font-weight: normal;
+  }
+}
+/* 筛选 */
+.filter{
+  border: 2/75rem solid #DADADA;
+  i{
+    color: #565656;
+  }
+  .search{
+    width: 90/75rem;
+    height: 74/75rem;
+    text-align: center;
+    border-left: 2/75rem solid #DADADA;
+  }
+  ul{
+    overflow: hidden;
+    padding-right: 30/75rem;
+    li{
+      height: 74/75rem;
+      line-height:74/75rem;
+      text-align: center;
+      width: 33.3%;
+      float: left;
+      i{
+        margin-left: 10/75rem;
+        color: #565656;
+      }
+    }
+  }
+}
+/* 筛选 */
+/* 下拉列表 */
+.popBox{
+  position: absolute;
+  left: 0;
+  top: 78/75rem;
+  width: 100%;
+  ul{
+    background: #fff;
+    li{
+      height: 80/75rem;
+      line-height:  80/75rem;
+      border-bottom: 1/75rem solid #DADADA;
+      padding: 0 25/75rem;
+      &.on{
+        i{
+          display: block;
+        }
+      }
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        i{
+          float: right;
+          color: @redColor;
+          display: none;
+        }
+      }
+    }
+  }
+}
+/* 下拉列表 */
+/* 商品详情列表 */
+.gsProductList{
+  ul{
+    background: #F1F1F1;
+    li{
+      float: left;
+      width: 47%;
+      margin: 2% 0 0 2%;
+      background: white;
+      img{
+        width: 100%;
+        height: 340/75rem;
+      }
+      .title{
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        padding: 0 10/75rem;
+        margin-bottom: 10/75rem;
+        color: #333;
+      }
+      .other{
+        padding: 0 10/75rem;
+        height: 60/75rem;
+        line-height:  60/75rem;
+      }
+      .price{
+        color: #F86047;
+        &:first-letter{
+          font-size: 12px;
+        }
+      }
+      .btn{
+        height: 48/75rem;
+        width: 120/75rem;
+        background: #FF9501;
+        color: #ffffff;
+        border-radius: 5/75rem;
+        text-align: center;
+        line-height: 48/75rem;
+      }
+    }
+  }
+}
+/* 商品详情列表 */

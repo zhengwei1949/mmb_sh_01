@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>慢慢买省钱控页面</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/savemoney.css"/>
+    <script src="js/base.js"></script>
+    <script src="lib/jquery-1.12.2.min.js"></script>
+    <script src="lib/template.js"></script>
+    <script src="flexible/flexible.js"></script>
+    <script type="text/html" id="savemoney">
+        {{if result}}
+        {{each result as value i}}
+        <a class="product_content" href="discount_soy.html?productid={{value.productId}}">
+            <div class="product_img">
+                <div href="javascript:;">{{#value.productImgSm }}</div>
+            </div>
+            <div class="product_intro">
+                <div class="product_name" href="#">
+                    <span>{{value.productName}}</span>
+                    <span class="spec">{{value.productPinkage}}</span>
+                </div>
+                <p class="product_time">
+                    <span>{{value.productFrom}}</span>
+                    <span>{{value.productTime}}</span>
+                    <span class="ping"><i></i>{{value.productComCount.replace(/[^0-9]/ig,"")}}</span>
+                </p>
+            </div>
+        </a>
+        {{/each}}
+        {{/if}}
+    </script>
+    <script src="js/savemoney.js"></script>
+</head>
+<body>
+<!--顶部部分B-->
+<header class="header">
+    <div class="logo">
+        <a onclick="javascript:history.go(-1)" title="慢慢买">
+            <span class='glyphicon glyphicon-menu-left'></span>
+        </a>
+    </div>
+    <p class='center_word'>省钱控-最新优惠</p>
+
+    <div class="appdown">
+        <a href="javascript:;" title="手机app下载">
+            <img src="images/header_app.png" alt="手机app下载"/>
+        </a>
+    </div>
+</header>
+<!--顶部部分E-->
+
+<!--主体部分B-->
+<section class="mmb_save">
+    <div class="product_box">
+        <div class="product_content">
+            <div class="product_img">
+                <a href="javascript:;"><img src="" alt=""/></a>
+            </div>
+            <div class="product_intro">
+                <p class="product_name">
+                    <span></span>
+                    <span id="spec"></span>
+                </p>
+
+                <p class="product_time">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="save_page">
+        <span class="w33 prev-page"><a>上一页</a></span>
+        <select class="selectPage" name="select" selected="">
+
+        </select>
+        <span class="w33 next-page"><a>下一页</a></span>
+    </div>
+</section>
+<!--主体部分E-->
+
+
+<!--底部部分B-->
+<footer class="mmb_footer">
+    <div class="footer_top">
+        <a href="javascript:;" class="w1">登录</a>
+        <a href="javascript:;" class="w2">注册</a>
+        <a href="javascript:;" class="w3"><img src="images/go-top.png" alt=""/>返回顶部</a>
+    </div>
+    <div class="footer_content">
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<!--底部部分E-->
+
+
+</body>
+</html>

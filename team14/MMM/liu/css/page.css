@@ -1,0 +1,334 @@
+.all {
+    background: #EFEFEF;
+}
+
+/* -----------------顶部通栏1111上--------------- */
+
+.header {
+    height: 1.28rem;
+    width: 100%;
+    background: #ff841d;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+
+.header .header_left {
+    float: left;
+    padding-left: 0.373333rem;
+    padding-top: 0.24rem;
+
+}
+
+.header .header_left img {
+    height: 0.8rem;
+}
+
+.header .header_right {
+    float: right;
+    padding-top: 0.24rem;
+    padding-right: 0.373333rem;
+
+}
+
+.header .header_right img {
+    height: 0.8rem;
+
+}
+
+/* -----------------顶部通栏1111下--------------- */
+
+.headerSearch {
+    margin-top: 1.28rem;
+    width: 100%;
+    height: 1.28rem;
+    border-left-width: 0.05333333rem;
+    border-right-width: 0.05333333rem;
+    padding: 0.21333333rem;
+    background: #fff;
+}
+
+.headerSearch form {
+    width: 100%;
+    height: 100%;
+}
+
+.headerSearch form .search {
+    height: 100%;
+    width: 7.6rem;
+    background-color: #F1F1F1;
+    border: none;
+    border-radius: 3rem;
+    padding-left: 0.56rem;
+
+}
+
+.headerSearch form .search_btn {
+    height: 100%;
+    width: 1.733333rem;
+    float: right;
+    background: #FF841D;
+    border: none;
+    color: #fff;
+    border-radius: 0.333333rem;
+}
+
+/* -----------------导航栏222--------------- */
+
+.nav {
+    width: 100%;
+    margin-top: 0.24rem;
+    height: 4.266667rem;
+    overflow: hidden;
+    background: #fff;
+}
+
+.nav ul {
+    width: 100%;
+}
+
+.nav ul li {
+    float: left;
+    width: 25%;
+    margin-top: 0.24rem;
+}
+
+.nav ul li a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.nav ul li img {
+    width: 1.133333rem;
+    height: 1.133333rem;
+}
+
+.nav ul li p {
+    text-align: center;
+    margin-top: 0.106667rem;
+}
+
+/* -----------------超值折扣推荐333--------------- */
+
+.product {
+    width: 100%;
+    margin-top: 0.133333rem;
+    background: #fff;
+}
+
+.product .product_top {
+    height: 0.933333rem;
+    background: #FFAC40;
+    width: 100%;
+    line-height: 0.933333rem;
+
+}
+
+.product .product_top span {
+    color: #fff;
+    margin-left: 0.266667rem;
+    font-size: 0.533333rem;
+    float: left;
+}
+
+.product .product_top b {
+    margin-right: 0.266667rem;
+    float: right;
+    color: #fff;
+}
+
+.iconfonts::before {
+    font-size: 0.533333rem;
+}
+
+/*-------------------商品部分333--------------------- */
+
+.product .product_list ul li {
+    border-bottom: 1px solid #E7E7E7;
+    padding: 0.266667rem 0;
+}
+
+/*--------------------左边部分333--------------------- */
+
+.product .product_list ul li .list_left {
+    height: 100%;
+    float: left;
+}
+
+.product .product_list ul li .list_left a {
+    display: block;
+    width: 3.133333rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.product .product_list ul li .list_left a img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+/*-----------------右面部分333------------------------ */
+
+.product .product_list ul li .list_right {
+    width: 100%;
+    padding-left: 3.14666667rem;
+    padding-right: 0.13333333rem;
+}
+
+.product .product_list ul li .list_right .list_title {
+    line-height: 0.53333333rem;
+}
+
+.product .product_list ul li .list_right .list_title span {
+    color: #FF6C00;
+}
+
+/*----------------- 右下面部分333---------------------- */
+
+.product .product_list ul li .list_right .list_bottom {
+    margin-top: 1.666667rem;
+    height: 0.53333333rem;
+    line-height: 0.53333333rem;
+}
+
+/*----------------- 右下左边部分333---------------------- */
+
+.product .product_list ul li .list_right .list_bottom .list_b_left {
+    color: #A6A6A3;
+    float: left;
+}
+
+/*----------------- 右下右边部分333---------------------- */
+
+.product .product_list ul li .list_right .list_bottom .list_b_right {
+    height: 0.53333333rem;
+    line-height: 0.53333333rem;
+}
+
+.product .product_list ul li .list_right .list_bottom .list_b_righ i {
+    color: #a1a3a3;
+    display: inline-block;
+    height: 0.53333333rem;
+    line-height: 0.53333333rem;
+}
+
+.product .product_list ul li .list_right .list_bottom .list_b_righ i::before {
+    display: inline-block;
+    height: 0.53333333rem;
+    line-height: 0.53333333rem;
+    margin-top: 0.05333333rem;
+    vertical-align: middle;
+}
+
+.product .product_list ul li .list_right .list_bottom .list_b_righ span {
+    color: #a1a3a3;
+    display: inline-block;
+    height: 0.53333333rem;
+    line-height: 0.53333333rem;
+    vertical-align: top;
+}
+
+/*-----------------------更多优惠信息333----------------------*/
+
+.product .more {
+    width: 100%;
+    padding: 0.26666667rem 0.26666667rem;
+}
+
+.product .more .more_info {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 0.08rem;
+    text-align: center;
+    line-height: 0.8rem;
+    background: #F8F8F8;
+}
+
+/*--------------------------品牌排行444----------------------- */
+
+.brand .brand_row {
+    height: 0.933333rem;
+    background: #FFAC40;
+    width: 100%;
+    line-height: 0.933333rem;
+    margin-top: 0.133333rem;
+}
+
+.brand .brand_row span {
+    color: #fff;
+    margin-left: 0.266667rem;
+    font-size: 0.533333rem;
+    float: left;
+}
+
+.brand .brand_row b {
+    margin-right: 0.266667rem;
+    float: right;
+    color: #fff;
+}
+
+.iconfonts::before {
+    font-size: 0.533333rem;
+}
+
+/*--------------------------底部部分555----------------------- */
+
+.foot {
+    height: 3.253333rem;
+    padding-top: 0.666667rem;
+    background: #F1F1F1;
+}
+
+.foot .foot_top {
+    border-top: 1px solid #C4C4C4;
+    border-bottom: 1px solid #C4C4C4;
+    width: 100%;
+}
+
+.foot .foot_top a {
+    display: inline-block;
+    width: 2.986667rem;
+    border-right: 1px solid #C4C4C4;
+    text-align: center;
+    height: 0.853333rem;
+    line-height: 0.853333rem;
+}
+
+.foot .foot_top a:last-child {
+    border-right: none;
+}
+
+.foot .foot_top a i {
+    opacity: 0.4;
+    position: fixed;
+    bottom: 0.133333rem;
+    right: 0.133333rem;
+}
+
+.foot .foot_top a i::before {
+    font-size: 0.9rem;
+}
+
+/*--------------------------底部下半部分----------------------- */
+.foot .foot_bottom {
+    text-align: center;
+}
+
+.foot p span:first-child {
+    color: #FF0000
+}
+
+.foot p span:last-child {
+    color: #727272
+}
+
+.foot .foot_bottom p:nth-child(1) {
+    margin-top: 0.4rem;
+}
+
+.foot .foot_bottom p:nth-child(2) {
+    color: #727272;
+    height: 0.4rem;
+} 

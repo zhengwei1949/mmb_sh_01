@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* 导航栏 */
+.mmb-nav {
+  border-top: 1px solid #EBEBEB;
+  border-bottom: 1px solid #EBEBEB;
+  padding: 0.06666667rem;
+  background: #F5F5F5;
+  font-size: 0.18666667rem;
+}
+/* 排行栏 */
+.mmb-paihang {
+  margin-top: 0.13333333rem;
+  height: 0.50666667rem;
+  line-height: 0.50666667rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  color: #874604;
+  padding-left: 0.2rem;
+  background: #EDEDED;
+}
+/* 分类栏 */
+.mmb-fenlei span {
+  backgroundColor: 'red';
+}

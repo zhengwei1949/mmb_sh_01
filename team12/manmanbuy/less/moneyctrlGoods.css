@@ -1,0 +1,263 @@
+.layer {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 640px;
+  min-width: 320px;
+  border: 1px solid #E2E2E3;
+}
+.layer header {
+  width: 100%;
+  color: #FFF;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.3125rem;
+}
+[data-dpr="2"] .layer header {
+  font-size: 35px;
+}
+[data-dpr="2.5"] .layer header {
+  font-size: 44px;
+}
+[data-dpr="2.75"] .layer header {
+  font-size: 48px;
+}
+[data-dpr="3"] .layer header {
+  font-size: 53px;
+}
+[data-dpr="4"] .layer header {
+  font-size: 70px;
+}
+.layer header a {
+  display: block;
+  color: #FFF;
+}
+.layer header a:first-child {
+  margin: 0.171875rem 0 0 0.1875rem;
+}
+.layer header a:first-child span {
+  display: block;
+  font-size: 25px;
+  width: 0.90625rem;
+  height: 0.90625rem;
+  line-height: 0.9375rem;
+}
+.layer header a:last-child {
+  margin: 0.171875rem 0.1875rem 0 0;
+}
+.layer header a:last-child img {
+  width: 0.90625rem;
+  height: 0.90625rem;
+}
+.layer header a img {
+  display: block;
+}
+.layer .sqk_main {
+  width: 100%;
+  padding: 0 0.21333333rem;
+}
+.layer .sqk_main .sqk-title {
+  width: 100%;
+  padding: 0.53333333rem 0;
+  font-size: 0.53333333rem;
+  color: #5A5A5A;
+}
+.layer .sqk_main .sqk-title .spk_ml {
+  color: #5A5A5A;
+  font-weight: 900;
+}
+.layer .sqk_main .sqk_mes {
+  width: 100%;
+  color: #999999;
+  padding-bottom: 0.53333333rem;
+}
+.layer .sqk_main .sqk_explain {
+  width: 100%;
+}
+.layer .sqk_main .sqk_explain img {
+  width: 3.6rem;
+  height: 4.66666667rem;
+  float: right;
+}
+.layer .sqk_main .sqk_explain .explain_word {
+  overflow: hidden;
+  font-size: 0.48rem;
+  color: #606060;
+}
+.layer .sqk_main .sqk_Ad {
+  width: 100%;
+}
+.layer .sqk_main .sqk_Ad .sqk_adWord {
+  margin-top: 0.26666667rem;
+  font-size: 0.48rem;
+  color: #606060;
+}
+.layer .sqk_main .sqk_Ad img {
+  display: block;
+  margin: 0 auto;
+}
+.layer .sqk_main .sqk_city {
+  width: 100%;
+}
+.layer .sqk_main .sqk_city #disstorck {
+  width: 3.62666667rem;
+  padding: 0.32rem 0.21333333rem;
+  margin: 0 auto;
+  box-shadow: 1px -2px 10px #C0C0C0;
+}
+.layer .sqk_main .sqk_city #disstorck li {
+  width: 100%;
+  height: 0.53333333rem;
+  line-height: 0.53333333rem;
+  padding: 0 0.21333333rem;
+  border-bottom: 1px dashed #C0C0C0;
+}
+.layer .sqk_main .sqk_city #disstorck li span {
+  font-size: 0.37333333rem;
+  color: #373F3F;
+}
+.layer .sqk_main .sqk_city #disstorck li span strong {
+  float: right;
+  font-size: 0.37333333rem;
+  color: #F27B1B;
+}
+.layer .sqk_main .sqk_buy {
+  width: 100%;
+  padding: 0 0.53333333rem;
+}
+.layer .sqk_main .sqk_buy a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 1.06666667rem;
+  border-radius: 0.13333333rem;
+  font-size: 0.42666667rem;
+  background: #F27B1B;
+  color: #f7f7f8;
+}
+.layer .sqk_main .sqk_ewm {
+  width: 100%;
+  margin-top: 0.53333333rem;
+}
+.layer .sqk_main .sqk_ewm img {
+  width: 100%;
+}
+.layer .sqk_main .spk_assess {
+  width: 100%;
+  margin-top: 0.48rem;
+}
+.layer .sqk_main .spk_assess .ass_num {
+  width: 100%;
+  padding: 0.26666667rem 0;
+}
+.layer .sqk_main .spk_assess .ass_num .ass_title,
+.layer .sqk_main .spk_assess .ass_num .ass_word {
+  font-size: 0.48rem;
+  color: #000000;
+}
+.layer .sqk_main .spk_assess .ass_area {
+  position: relative;
+  width: 100%;
+}
+.layer .sqk_main .spk_assess .ass_area #assess {
+  width: 100%;
+  border: 2px solid #ECEAE8;
+  font-size: 0.42666667rem;
+  color: #000000;
+}
+.layer .sqk_main .spk_assess .ass_area .ass_btn {
+  position: absolute;
+  width: 100%;
+  bottom: 0.13333333rem;
+  border-top: 1px solid #ECEAE8;
+}
+.layer .sqk_main .spk_assess .ass_area .ass_btn span {
+  display: block;
+  width: 2.66666667rem;
+  line-height: 1.06666667rem;
+  text-align: center;
+  background: #F27B1B;
+  float: right;
+  border: 1px solid #ECEAE8;
+  font-size: 0.37333333rem;
+  color: #FFFFFF;
+}
+.layer .sqk_main .spk_assess .ass_new {
+  font-size: 0.48rem;
+  color: #000000;
+}
+.layer .sqk_main .spk_assess .mess_assess {
+  width: 100%;
+}
+.layer .sqk_main .spk_assess .mess_assess ul {
+  width: 100%;
+  border: 1px solid #CCCCCC;
+  margin-bottom: 0.53333333rem;
+}
+.layer .sqk_main .spk_assess .mess_assess ul li {
+  width: 100%;
+  padding: 0.05333333rem 0.13333333rem;
+  font-size: 0.37333333rem;
+  overflow: hidden;
+}
+.layer .sqk_main .spk_assess .mess_assess ul li input {
+  font-size: 0.37837838rem;
+  color: #000000;
+  float: right;
+}
+.layer .sqk_main .spk_assess .mess_assess ul li .userimg {
+  width: 2.66666667rem;
+  height: 2.66666667rem;
+  float: left;
+}
+.layer .sqk_main .spk_assess .mess_assess ul li .con {
+  overflow: hidden;
+  padding-left: 0.13333333rem;
+}
+.layer .sqk_main .spk_assess .mess_assess ul li .con .name {
+  margin-bottom: 0.26666667rem;
+}
+.layer footer {
+  width: 100%;
+  height: 2.625rem;
+  background-color: #EFEFEF;
+}
+.layer footer .operate {
+  width: 100%;
+  line-height: 0.953125rem;
+  border-top: 1px solid #C4C4C4;
+  border-bottom: 1px solid #C4C4C4;
+}
+.layer footer .operate ul li {
+  float: left;
+  width: 30%;
+  text-align: center;
+  border-right: 1px solid #C4C4C4;
+}
+.layer footer .operate ul li:last-child {
+  width: 40%;
+  border-right: none;
+}
+.layer footer .operate ul li span {
+  font-size: 13px;
+}
+[data-dpr="2"] .layer footer .operate ul li span {
+  font-size: 25px;
+}
+[data-dpr="2.5"] .layer footer .operate ul li span {
+  font-size: 31px;
+}
+[data-dpr="2.75"] .layer footer .operate ul li span {
+  font-size: 34px;
+}
+[data-dpr="3"] .layer footer .operate ul li span {
+  font-size: 38px;
+}
+[data-dpr="4"] .layer footer .operate ul li span {
+  font-size: 50px;
+}
+.layer footer .introduce {
+  width: 100%;
+  height: 1.671875rem;
+  text-align: center;
+  padding-top: 0.46875rem;
+}

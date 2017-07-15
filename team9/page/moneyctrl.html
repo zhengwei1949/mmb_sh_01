@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>省钱控</title>
+    <script src="../lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="../css/font-awesome.css"/>
+    <link rel="stylesheet" href="../less/savemoney.css"/>
+    <link rel="stylesheet" href="../less/base.css"/>
+
+</head>
+<body>
+    <div class="cc_savebox">
+        <!-- 顶部通栏部分start-->
+        <header class="save_header">
+            <a href="../index.html" class="h_back icon-angle-left f_left"></a>
+            <p>省钱控-最新优惠</p>
+            <a href="#" class="h_download f_right">
+                <img src="../images/header_app.png" alt=""/>
+            </a>
+        </header>
+        <!-- 顶部通栏部分end-->
+
+        <!-- 商品列表部分start-->
+        <div class="cc_goods">
+             <!--商品部分-->
+            <ul class="goods_list" id="goods_list">
+                <!-- 各个商品在下面的template模板中-->
+
+            </ul>
+             <!--底部翻页按钮-->
+            <div class="goods_page">
+                <ul>
+                    <!-- 上一页按钮-->
+                    <li>
+                        <input type="button" value="上一页" class="previous"/>
+                    </li>
+                    <!-- 下拉框-->
+                    <li>
+                        <label>
+                            <select id="turnPage">
+                                <!-- option选项在js中动态创建-->
+                                <!--<option value="">1/10</option>-->
+                            </select>
+                        </label>
+                    </li>
+                    <!-- 下一页按钮-->
+                    <li>
+                        <input type="button" value="下一页" class="next"/></li>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- 商品列表部分end-->
+
+        <!-- 底部部分start -->
+        <footer class="clearfix">
+            <!-- 登录 注册 返回 -->
+            <ul class="login">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li>
+                    <a href="moneyctrl.html">
+                        <span>↑</span>返回顶部
+                    </a>
+                </li>
+            </ul>
+            <!-- 底部文字信息 -->
+            <div class="phone">
+                <p>
+                    <a href="#">手机APP下载 </a>慢慢买手机版
+                    <span>--掌上比价平台</span>
+                </p>
+                <p>
+                    <a href="#">m.manmanbuy.com</a>
+                </p>
+            </div>
+        </footer>
+        <!-- 底部部分end -->
+    </div>
+</body>
+
+
+<script src="../lib/jquery/jquery-1.12.2.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../lib/art/template.js"></script>
+<!--<script src="../js/savemoney.js"></script>-->
+<script src="../js/savemoney.js"></script>
+<!--商品列表-->
+<script id="productList" type="text/html">
+    {{each result as value i}}
+    <li>
+        <a href="./savemoney1.html?productid={{ value.productId }}" class="clearfix">
+            <div class="list_pic">
+                {{#value.productImgSm}}
+            </div>
+            <div class="list_info">
+                <div class="info_tit">
+                    <span class="tit_txt1">{{value.productName}}</span>
+                    <span class="tit_price">{{value.productPinkage}}</span>
+                </div>
+                <div class="info_shop clearfix">
+                    <p class="shop_sort">
+                        <span class="sort_txt2">{{value.productFrom}}&nbsp;|</span>
+                        <span class="sort_date">{{value.productTime}}</span>
+                    </p>
+                    <p class="shop_comment">
+                        <span class="comment_icon">✉</span>
+                        <span class="comment_num">{{value.productComCount}}</span>
+                        <!--<span class="comment_num">2</span>-->
+                    </p>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<!--底部翻页按钮-->
+<!--<script id="page" type="text/html">-->
+<!--</script>-->
+
+</html>

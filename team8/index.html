@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="less/base.css">
+    <link rel="stylesheet" href="less/index.css">
+    <title>慢慢买首页</title>
+</head>
+<body>
+<div class="MMB_index">
+    <!--页面头部导航栏START-->
+    <header class="topHeader">
+        <div class="f_left logo">
+            <a href="#" title="慢慢买比价网--手机版">
+                <img src="images/header_logo.png" alt="慢慢买比价网--手机版">
+            </a>
+        </div>
+        <div class="f_right appdown">
+            <a href="#" title="慢慢买比价网--手机版">
+                <img src="images/header_app.png" alt="慢慢买比价网--手机版">
+            </a>
+        </div>
+    </header>
+    <!--页面头部导航栏END-->
+    <!--页面搜索框START-->
+    <form class="topSearch">
+        <div class="searchMMB">
+            <input type="text" class="searchTxt" placeholder="请输入你想比价的商品">
+            <input type="button" class="searchBtn" value="搜索">
+        </div>
+    </form>
+    <!--页面搜索框END-->
+    <!--页面菜单显示栏START-->
+    <div class="classify clearfix hide"></div>
+    <!--页面菜单显示栏END-->
+    <!--超值折扣推荐START-->
+    <div class="discount">
+        <nav class="MMB_Nav">
+            <a href="moneyctrl.html" class="clearfix">
+                <span class="navTxt f_left">超值折扣推荐</span>
+                <img class="navRight f_right" src="images/more.png" alt="">
+            </a>
+        </nav>
+        <!--产品展示部分START-->
+        <div class="productBox"></div>
+        <!--产品展示部分END-->
+    </div>
+    <!--超值折扣推荐END-->
+    <!--更多优惠品牌排名START-->
+        <div class="more_bar">
+            <a href="moneyctrl.html">更多优惠信息<i class="iconfont">&#xe64f;</i></a>
+        </div>
+        <div class="brand">
+            <nav class="MMB_Nav">
+                <a href="brandTitle.html" class="clearfix">
+                    <span class="navTxt f_left">品牌排名</span>
+                    <img class="navRight f_right" src="images/more.png" alt="">
+                </a>
+            </nav>
+        </div>
+    <!--更多优惠品牌排名END-->
+    <!--页面底部START-->
+        <div class="MMB_foot">
+            <div class="footTop clearfix">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="javascript:scroll(0,0)"><i class="iconfont">&#xe668;</i>返回顶部</a>
+            </div>
+            <div class="footBottom">
+                <p>
+                    <a href="#">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p>m.mananbuy.com</p>
+            </div>
+        </div>
+    <!--页面底部END-->
+</div>
+
+<script type="text/html" id="classifyTmp">
+    {{if result}}
+        {{each result as value}}
+            <a href="{{value.titlehref}}" class="area-item">
+                {{#value.img}}
+                <div>{{value.name}}</div>
+            </a>
+        {{/each}}
+    {{/if}}
+</script>
+
+<script type="text/html" id="productTmp">
+    {{if result}}
+        {{each result as value}}
+            <a class="product clearfix" href="moneyproduct.html?productid={{value.productId}}">
+                {{#value.productImgSm}}
+                <div class="allInfo">
+                    <div class="info">
+                        <p>{{value.productName}}<span>{{value.productPinkage}}</span></p>
+                    </div>
+                    <div class="txt clearfix">
+                        <span class="f_left">{{value.productFrom}}&nbsp;|&nbsp;{{value.productTime}}</span>
+                        <span class="f_right"><i class="iconfont xiangshang4"></i>&nbsp;0</span>
+                    </div>
+                </div>
+            </a>
+        {{/each}}
+    {{/if}}
+
+</script>
+<script src="lib/flexible/flexible.js"></script>
+<script src="lib/jQuery/jquery-1.12.2.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

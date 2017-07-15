@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>慢慢买首页</title>
+    <script src="./lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="./less/index.css"/>
+    <link rel="stylesheet" href="./less/base.css"/>
+</head>
+<body>
+<div class="cc_layout">
+    <!-- 顶部通栏部分start-->
+    <header class="cc_header clearfix">
+        <a href="#" class="h_logo">
+            <img src="./images/header_logo.png" alt=""/>
+        </a>
+        <a href="#" class="h_download">
+            <img src="./images/header_app.png" alt=""/>
+        </a>
+    </header>
+    <!-- 顶部通栏部分end-->
+    <!-- 搜索框部分start-->
+    <div class="cc_searchbox clearfix">
+        <!-- 左边搜索框-->
+        <form action="#">
+            <input type="button" class="btn f_right" value="搜索"/>
+            <input type="search" class="search" placeholder="请输入你想比价的商品"/>
+        </form>
+    </div>
+    <!-- 搜索框部分end-->
+
+    <!-- 菜单栏start-->
+    <div class="cc_menu" id="cc_menu">
+
+    </div>
+    <!-- 菜单栏end-->
+
+    <!-- 折扣商品列表部分start-->
+    <div class="cc_goods">
+        <!-- 标题-->
+        <div class="goods_head">
+            <p>超值折扣推荐</p>
+            <a href="#">
+                <span class="head_back">&gt;</span>
+            </a>
+        </div>
+        <!-- 商品列表-->
+        <ul class="goods_list" id="goods_list">
+
+
+        </ul>
+        <!--更多优惠信息-->
+        <a href="page/moneyctrl.html" class="cc_info">
+            <p>更多优惠信息&gt;&gt;</p>
+        </a>
+    </div>
+    <!-- 折扣商品列表部分end-->
+
+
+    <!-- 品牌排行部分start-->
+    <div class="goods_rank">
+        <p>品牌排行</p>
+        <a href="#" class="rank_back">
+            <span>&gt;</span>
+        </a>
+    </div>
+    <!-- 品牌排行部分end-->
+
+
+    <!-- 底部部分start -->
+    <footer>
+        <!-- 登录 注册 返回 -->
+        <ul class="login">
+            <li><a href="#">登录</a></li>
+            <li><a href="#">注册</a></li>
+            <li><a href="index.html"><span>↑</span>返回顶部</a></li>
+        </ul>
+        <!-- 底部文字信息 -->
+        <div class="phone">
+            <p>
+                <a href="#">手机APP下载 </a>慢慢买手机版
+                <span>--掌上比价平台</span>
+            </p>
+            <p>
+                <a href="index.html">m.manmanbuy.com</a>
+            </p>
+        </div>
+    </footer>
+    <!-- 底部部分end -->
+</div>
+</body>
+<script src="./lib/jquery/jquery-1.12.2.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./lib/art/template.js"></script>
+<script src="./js/index.js"></script>
+<!--菜单栏模板-->
+<script id="template" type="text/html">
+    <ul class="menu_list clearfix">
+        {{each result as value i}}
+        <li>
+            <a href=./page/{{value.titlehref}}>
+                {{=value.img}}
+                <p>{{value.name}}</p>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<!--商品列表-->
+<script id="productList" type="text/html">
+    {{each result as value i}}
+    <li>
+        <a href="./page/savemoney1.html?productid={{ value.productId }}" class="clearfix">
+            <div class="list_pic">
+                <!--<img src="" alt=""/>-->
+                {{#value.productImgSm}}
+            </div>
+            <div class="list_info">
+                <div class="info_tit">
+                    <span class="tit_txt1">{{value.productName}}</span>
+                    <span class="tit_price">{{value.productPinkage}}</span>
+                </div>
+                <div class="info_shop clearfix">
+                    <p class="shop_sort">
+                        <span class="sort_txt2">{{value.productFrom}}&nbsp;|</span>
+                        <span class="sort_date">{{value.productTime}}</span>
+                    </p>
+                    <p class="shop_comment">
+                        <span class="comment_icon">✉</span>
+                        <span class="comment_num">{{value.productComCount}}</span>
+                        <!--<span class="comment_num">2</span>-->
+                    </p>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+</html>

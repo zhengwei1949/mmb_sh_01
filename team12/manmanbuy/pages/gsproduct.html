@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>凑单品</title>
+    <!--引入zepto插件-->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/zepto/fx.js"></script>
+    <script src="../lib/zepto/selector.js"></script>
+    <script src="../lib/zepto/touch.js"></script>
+    <!--引入flexible文件-->
+    <script src="../lib/flexible/flexible.js"></script>
+    <!--公共样式-->
+    <link rel="stylesheet" href="../css/base.css"/>
+    <!--本页样式-->
+    <link rel="stylesheet" type="text/less" href="../less/gsproduct.less"/>
+    <!--引入模板引擎-->
+    <script src="../lib/artTemplate/template.js"></script>
+    <!--店铺栏模板-->
+    <script type="text/html" id="list0">
+        {{if result}}
+        {{each result as value i}}
+        <li id="{{value.shopId}}">
+            <span class="text">{{value.shopName}}</span>
+            <span class="iconfont icon-gangbi fr"></span>
+        </li>
+        {{/each}}
+        {{/if}}
+    </script>
+    <!--地区栏模板-->
+    <script type="text/html" id="list1">
+        {{if result}}
+        {{each result as value i}}
+        <li id="{{value.areaId}}">
+            <span class="text">{{value.areaName}}</span>
+            <span class="iconfont icon-gangbi fr"></span>
+        </li>
+        {{/each}}
+        {{/if}}
+    </script>
+    <!--商品栏模板-->
+    <script type="text/html" id="products">
+        <ul class="clearfix">
+            {{if result}}
+            {{each result as value i}}
+            <li>
+                <div class="product-box">
+                    <img src='{{value.productImg}}' alt="aaa"/>
+                    <h3>{{value.productName}}</h3>
+
+                    <div class="product-price">
+                        <span class="product-purchase fr">去凑单</span>
+
+                        <p>{{value.productPrice}}</p>
+                    </div>
+                </div>
+            </li>
+            {{/each}}
+            {{/if}}
+        </ul>
+    </script>
+</head>
+<body>
+<div class="layout">
+    <!--********** 头部---start **********-->
+    <header class="colorB">
+        <a href="../index.html" class="fl">
+            <span class="iconfont icon-fanhui"></span>
+        </a>
+        <h4>凑单品</h4>
+        <a href="javascript:;" class="fr">
+            <img src="../images/header_app.png" alt=""/>
+        </a>
+    </header>
+    <!--***** 头部---end *****-->
+
+    <!--********** 内容栏---start **********-->
+    <div class="content">
+        <div class="content-tabs">
+            <ul class="clearfix tabs-header">
+                <li class="fl" id="header0">
+                    <span id="shop">京东</span>
+                    <span></span>
+                </li>
+                <li class="fl" id="header1">
+                    <span id="area">华北</span>
+                    <span></span>
+                </li>
+                <li class="fl" id="header2">
+                    <span>1元</span>
+                    <span></span>
+                </li>
+                <li class="fr">
+                    <span class="iconfont icon-sousuo"></span>
+                </li>
+            </ul>
+            <ul class="tabs-list">
+
+            </ul>
+        </div>
+        <div class="content-products">
+
+        </div>
+    </div>
+    <!--***** 内容栏---end *****-->
+
+    <!--********** 底部---start **********-->
+    <footer>
+        <div class="operate clearfix">
+            <ul>
+                <li>
+                    <span>登录</span>
+                </li>
+                <li><span>注册</span></li>
+                <li id="reTop"><span class="iconfont icon-xiangshang-copy"></span><span>返回顶部</span></li>
+            </ul>
+        </div>
+        <div class="introduce">
+            <p><span class="colorRed">手机APP下载</span>
+                <span>慢慢买手机版</span>
+                <span class="colorGray">-- 掌上比价平台</span>
+            </p>
+
+            <p class="colorGray">m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!--***** 底部---end *****-->
+</div>
+</body>
+<!--引入less-->
+<script src="../lib/less/less.min.js"></script>
+<!--公用js-->
+<script src="../js/base.js"></script>
+<!--本页js-->
+<script src="../js/gsproduct.js"></script>
+</html>

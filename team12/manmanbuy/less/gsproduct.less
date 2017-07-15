@@ -1,0 +1,213 @@
+//设置字体大小，兼容各种屏幕
+.font-size(@px) {
+  font-size: round(@px / 2) * 1px;
+  [data-dpr="2"] & {
+    font-size: @px * 1px;
+  }
+  [data-dpr="2.5"] & {
+    font-size: round(@px * 2.5 / 2) * 1px;
+  }
+  [data-dpr="2.75"] & {
+    font-size: round(@px * 2.75 / 2) * 1px;
+  }
+  [data-dpr="3"] & {
+    font-size: round(@px * 3 / 2) * 1px;
+  }
+  [data-dpr="4"] & {
+    font-size: @px * 2px;
+  }
+}
+
+@colorO: #FF841D;
+
+.layout {
+  width: 100%;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  border: 1px solid #E2E2E3;
+  //********** 头部 **********
+  header {
+    width: 100%;
+    color: #FFF;
+    .font-size(35);
+    text-align: center;
+    line-height: 84/64rem;
+    h4 {
+      display: inline-block;
+      font-weight: normal;
+    }
+    a {
+      display: block;
+      color: #FFF;
+      &:first-child {
+        margin: 11/64rem 0 0 12/64rem;
+        span {
+          display: block;
+          font-size: 30px;
+          //width: 58/64rem;
+          //height: 58/64rem;
+          line-height: 60/64rem;
+        }
+      }
+      &:last-child {
+        margin: 11/64rem 12/64rem 0 0;
+        img {
+          width: 58/64rem;
+          height: 58/64rem;
+        }
+      }
+      img {
+        display: block;
+      }
+    }
+  }
+
+//********** 内容栏---start **********
+  .content {
+    width: 100%;
+    color: #535353;
+    .content-tabs {
+      border-bottom: 1px solid #D7D7D7;
+      .tabs-header {
+        width: 100%;
+        li {
+          display: block;
+          width: 175/64rem;
+          .font-size(30);
+          color: #565656;
+          text-align: center;
+          line-height: 64/64rem;
+          margin-right: 10/64rem;
+          &:last-child {
+            width: 80/64rem;
+            border-left: 1px solid #D7D7D7;
+            margin-right: 0;
+          }
+          span {
+            &:nth-child(1) {
+              display: inline-block;
+            }
+            &:nth-child(2) {
+              display: inline-block;
+              width: 12/64rem;
+              height: 12/64rem;
+              border-width: 6px;
+              border-style: solid;
+              border-color: #565656 transparent transparent transparent;
+              transform: translateY(5/64rem);
+              transform-origin: 6px 4px;
+            }
+          }
+        }
+      }
+      .tabs-list {
+        //display: none;
+        width: 100%;
+        max-width: 640px;
+        position: absolute;
+        background-color: #FFF;
+        border-top: 1px solid #E1E1E1;
+        border-right: 1px solid #E1E1E1;
+        li {
+          max-width: 640px;
+          .font-size(30);
+          line-height: 70/64rem;
+          border-bottom: 1px solid #E1E1E1;
+          padding: 0 28/64rem 0 18/64rem;
+          span:last-child {
+            color: @colorO;
+            display: none;
+          }
+          //&:first-child{
+          //  span:last-child{
+          //    display: block;
+          //  }
+          //}
+        }
+      }
+    }
+    .content-products {
+      background-color: #F1F1F1;
+      ul {
+        width: 100%;
+        padding-top: 17/64rem;
+        li {
+          float: left;
+          width: 50%;
+          padding: 0 7/64rem 14/64rem;
+          .product-box {
+            width: 100%;
+            background-color: #FFF;
+            border: 1px solid #E9E9E9;
+            padding-bottom: 11/64rem;
+            img {
+              display: block;
+              width: 100%;
+              height: 301/64rem;
+              background-color: pink;
+            }
+            h3 {
+              height: 44/64rem;
+              .font-size(30);
+              text-align: center;
+              line-height: 44/64rem;
+              overflow: hidden;
+            }
+            .product-price {
+              .font-size(35);
+              line-height: 47/64rem;
+              padding: 0 11/64rem;
+              .product-purchase {
+                .font-size(30);
+                color: #FFF;
+                padding: 0 18/64rem;
+                background-color: #FF9501;
+                border-radius: 5/64rem;
+              }
+              p {
+                color: #F85D19;
+                //span{
+                //  .font-size(20);
+                //}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    width: 100%;
+    height: 168/64rem;
+    background-color: #EFEFEF;
+    .operate {
+      width: 100%;
+      line-height: 61/64rem;
+      border-top: 1px solid #C4C4C4;
+      border-bottom: 1px solid #C4C4C4;
+      ul {
+        li {
+          float: left;
+          width: 30%;
+          text-align: center;
+          border-right: 1px solid #C4C4C4;
+          &:last-child {
+            width: 40%;
+            border-right: none;
+          }
+          span {
+            .font-size(25);
+          }
+        }
+      }
+    }
+    .introduce {
+      width: 100%;
+      height: 107/64rem;
+      text-align: center;
+      padding-top: 30/64rem;
+    }
+  }
+}

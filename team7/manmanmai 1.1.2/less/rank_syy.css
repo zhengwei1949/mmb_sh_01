@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* =====各产品销量排行===== */
+.layout .b_list .r_sort .r_title {
+  border-top: 1px solid #E7E7E7;
+  padding: 14px;
+}
+.layout .b_list .r_sort .r_title .r_left {
+  width: 30%;
+  height: 100%;
+}
+.layout .b_list .r_sort .r_title .r_left img {
+  width: 100%;
+}
+.layout .b_list .r_sort .r_title .r_right {
+  width: 65%;
+  height: 100%;
+}
+.layout .b_list .r_sort .r_title .r_right p {
+  color: #000000;
+  font-size: 14px;
+}
+.layout .b_list .r_sort .r_title .r_right .price {
+  padding: 12px;
+}
+.layout .b_list .r_sort .r_title .r_right .price i {
+  font-size: 14px;
+  color: #EA3900;
+}
+.layout .b_list .r_sort .r_title .r_right .price .start {
+  color: #FF9000;
+}
+.layout .b_list .r_sort .r_title .r_right .comment {
+  color: #A1A1A1;
+  font-size: 14px;
+}

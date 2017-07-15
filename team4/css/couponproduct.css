@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* 头部 */
+header h3 {
+  font-weight: normal;
+}
+/* 优惠券提示信息 */
+.msg-title {
+  color: #999;
+  text-align: center;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-weight: normal;
+}
+/* 优惠券提示信息 */
+/* 商品主题内容 */
+.coupon-product {
+  color: #333333;
+}
+.coupon-product li {
+  position: relative;
+  border-bottom: 0.02666667rem solid #e7e7e7;
+  padding: 0.26666667rem 0;
+}
+.coupon-product li img {
+  width: 2.66666667rem;
+  height: 2.13333333rem;
+  margin: 0 0.2rem;
+  float: left;
+}
+.coupon-product li .con {
+  overflow: hidden;
+  padding-right: 0.53333333rem;
+}
+.coupon-product li .con p {
+  line-height: 0.53333333rem;
+}
+.coupon-product li .con .price {
+  color: #5a5a5a;
+  line-height: 0.8rem;
+}
+.coupon-product li .con .validTime {
+  color: #ee7700;
+  line-height: 0.8rem;
+}
+.coupon-product li .arrow {
+  position: absolute;
+  right: 0.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a5a5a5;
+}
+/* 商品主题内容 */
+/* 返回上页 */
+.home {
+  height: 0.93333333rem;
+  background: #f4f4f4;
+  border-bottom: 0.02666667rem solid #cccccc;
+  border-top: 0.02666667rem solid #ebebeb;
+  line-height: 0.93333333rem;
+}
+.home a {
+  padding: 0 0.13333333rem;
+}
+/* 返回上页 */
+/* 遮罩层 */
+.container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.container img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 5.33333333rem;
+  height: 4.26666667rem;
+}
+/* 遮罩层 */

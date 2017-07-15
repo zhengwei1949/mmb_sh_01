@@ -1,0 +1,75 @@
+body header {
+    background: red
+}
+
+.tips {
+	height: 40px;
+	font-size: 24px;
+	line-height: 40px;
+	text-align: center;
+	color:#ccc;
+}
+
+.screen {
+	overflow: hidden;
+	width: 60%;
+	/*height: 300px;*/
+	background: #FFF;
+	margin: 50% auto;
+}
+
+.showPic {
+	// display: none;
+}
+
+/*.screen .wrapper {
+	width: 10000px;
+}*/
+
+/*.screen img {
+	width: auto;
+	height: auto;
+	float: left;
+}*/
+.screen .slideBox .bd li img{
+	width: 100%;
+}
+
+
+.product {
+	position: relative;
+	height: 300px;
+	border-bottom: 2px solid #ccc;
+	padding: 20px;
+}
+
+.product img {
+	float: left;
+	width: 200px;
+	height: 200px;
+}
+
+.detail {
+	overflow: hidden;
+	padding: 0 15px;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: url(../images/icon-backtotop.png) 0 0 no-repeat;
+    width: 100px;
+    height: 100px
+}
+
+.detail p {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.detail span {
+	position: absolute;
+	bottom: 15px;
+	color: red;
+}

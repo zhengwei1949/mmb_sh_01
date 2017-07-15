@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>凑单品页面</title>
+    <link rel="stylesheet" href="./css/caobase.css"/>
+    <link rel="stylesheet" href="./css/coudanpin.css"/>
+    <script src="js/base.js"></script>
+    <script src="./js/flexible/flexible.js"></script>
+    <script src="./js/jquery-1.12.2.js"></script>
+    <script src="./js/template.js"></script>
+    <script src="./js/common.js" ></script>
+    <script src="./js/coudanpin.js" ></script>
+    <!--店铺列表模版-->
+    <script type="text/html" id="shop-moban">
+        {{if result}}
+            {{each result as value i}}
+                <li shopId="{{value.shopId}}">{{value.shopName}}</li>
+            {{/each}}
+        {{/if}}
+    </script>
+    <!--地区列表模版-->
+    <script type="text/html" id="area-moban">
+        {{if result}}
+            {{each result as value i}}
+        <li areaId="{{value.areaId}}">{{value.areaName}}</li>
+            {{/each}}
+        {{/if}}
+    </script>
+     <script type="text/html" id="pro-moban">
+        {{if result}}
+            {{each result as value i}}
+                <li>
+                    <div class="img-box"><img src="{{value.productImg}}" alt=""/></div>
+                    <p>{{value.productName}}</p>
+                    <div class="pro-order-buttom clearfix">
+                        <span >{{value.productPrice}}</span>
+                        <a href="javascript:;" class="coudan ">去凑单</a>
+                    </div>
+                </li>
+            {{/each}}
+        {{/if}}
+    </script>
+</head>
+<body>
+    <div class="layout">
+        <!--顶部通栏-->
+        <header class="cou-header">
+            <h3 class="">凑单品</h3>
+            <a class="back" onclick="javascript:history.go(-1)"></a>
+            <a class="fx"  href="javascript:;"><img src="./images/header_app.png" alt=""/></a>
+        </header>
+        <!--mian-->
+        <div class="main">
+            <div class="top clearfix">
+                <div id="store">京东</div>
+                <div id="area">华北（北京、山西等）</div>
+                <div id="price">全部价格</div>
+                <input type="search" class="search" />
+                <!--存放动态加载数据的ul-->
+                <ul class="store-drop hide"></ul>
+                <ul class="area-drop hide"></ul>
+                <ul class="price-drop hide"></ul>
+            </div>
+            <div >
+                <ul class="pro-order clearfix"></ul>
+            </div>
+
+        </div>
+        <!--footer-->
+        <footer class="middle-fz">
+            <div class="f-move">
+                <a href="javascript:;" class="login">登录</a>
+                <a href="javascript:;" class="register">注册</a>
+                <a href="javascript:;" class="footer-back"><span class=""></span>返回顶部</a>
+            </div>
+            <div class="f-info">
+                <p><span>手机app下载</span> 慢慢买手机版-掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+        <!--固定浮动的箭头-->
+        <div id="arow"><span></span></div>
+    </div>
+</body>
+</html>

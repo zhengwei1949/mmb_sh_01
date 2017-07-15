@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="../lib/flexible/flexible.js"></script>
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="../css/l.css"/>
+    <link rel="stylesheet" href="../fonts/iconfont.css"/>
+    <link rel="stylesheet" href="../less/base.css"/>
+    <link rel="stylesheet" href="../less/productList.css"/>
+    <script src="../lib/template/template.js"></script>
+
+</head>
+<body>
+<!--顶部通栏start-->
+<div class="top_header">
+    <div class="logo">
+        <h1>慢慢买</h1>
+        <img src="../images/header_logo.png" alt=""/>
+    </div>
+    <div class="app_download">
+        <img src="../images/header_app.png" alt=""/>
+    </div>
+</div>
+<!--顶部通栏end-->
+
+<!--搜索栏start-->
+<div class="top_search">
+    <form action="#">
+        <input type="search" placeholder="请输入你想比价的商品" class="search_content"/>
+        <input type="button" value="搜索" class="search_btn"/>
+    </form>
+</div>
+<!--搜索栏end-->
+
+<!--导航栏start-->
+<div class="nav">
+    <ul>
+        <li><a href="index1.html">首页&gt;</a></li>
+        <li><a href="brandTitle.html">全部分类&gt;</a></li>
+        <li><a href="javascript:;">返回上级&gt;</a></li>
+    </ul>
+</div>
+<!--导航end-->
+
+<!--销量排行start-->
+<div class="navTitle">平板电视产品销量排行</div>
+<div class="salelist">
+    <ul>
+        <!--<li class="clearfix">
+            <a href="#" class="productImg">
+                <img src="images/gengduo.png" alt=""/>
+            </a>
+            <div class="pro_right">
+                <a href="#">乐视TV(Letv)超3 X55阿姆斯特朗螺旋加速外太空超级电离子炮</a>
+                <ul class="star">
+                    <li class="iconfont icon-biaoxingfill"></li>
+                    <li class="iconfont icon-biaoxingfill"></li>
+                    <li class="iconfont icon-biaoxingfill"></li>
+                    <li class="iconfont icon-biaoxingfill"></li>
+                    <li class="iconfont icon-biaoxingfill"></li>
+                </ul>
+                <span class="price">3266.00</span>
+                <p><span>报价(6)</span><span>评论(3522)</span></p>
+            </div>
+        </li>-->
+    </ul>
+</div>
+<!--销量排行end-->
+
+
+
+<!--底部区域start-->
+<footer>
+    <ul class="clearfix">
+        <li>登录</li>
+        <li>注册</li>
+        <li id="toTop"><span class="iconfont icon-xiangshang4"></span>返回顶部</li>
+    </ul>
+    <div class="footer_info">
+        <p><a href="#">手机APP下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<!--底部区域end-->
+</body>
+<script src="../lib/jQuery/jquery-1.12.2.js"></script>
+<script id="brandlist" type="text/html">
+    {{if result}}
+    {{each result as value}}
+    <li class="clearfix">
+        <a href={{value.skipUrl}} class="productImg">
+            {{=value.productImg}}
+        </a>
+        <div class="pro_right">
+            <a href={{value.skipUrl}}>{{value.productName}}</a>
+            <ul class="star">
+                <li class="iconfont icon-biaoxingfill"></li>
+                <li class="iconfont icon-biaoxingfill"></li>
+                <li class="iconfont icon-biaoxingfill"></li>
+                <li class="iconfont icon-biaoxingfill"></li>
+                <li class="iconfont icon-biaoxingfill"></li>
+            </ul>
+            <span class="price">{{value.productPrice}}</span>
+            <p><span>{{value.productQuote}}</span><span>{{value.productCom}}</span></p>
+        </div>
+    </li>
+    {{/each}}
+    {{/if}}
+</script>
+<script src="../js/common.js"></script>
+<script src="../js/brandproductList.js"></script>
+</html>

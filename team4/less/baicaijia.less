@@ -1,0 +1,260 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+.layout {
+  height: 100%;
+}
+@font-face {
+  font-family: "iconfont2";
+  src: url('../fonts/fonts2/iconfont.eot?t=1480082756781'); /* IE9*/
+  src: url('../fonts/fonts2/iconfont.eot?t=1480082756781#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/fonts2/iconfont.woff?t=1480082756781') format('woff'), /* chrome, firefox */
+  url('../fonts/fonts2/iconfont.ttf?t=1480082756781') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/fonts2/iconfont.svg?t=1480082756781#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont2 {
+  font-family:"iconfont2" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconfontjiazai2:before { content: "\e78b"; }
+
+.top_fixed {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /* 顶部通栏 */
+  .top {
+    width: 100%;
+    height: 88/75rem;
+    background-color: #f4483e;
+    position: relative;
+    line-height: 88/75rem;
+    a {
+      display: block;
+      width: 104/75rem;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      color: #fff;
+      text-align: center;
+    }
+    h3 {
+      font-weight: normal;
+      color: #fff;
+      padding: 0 104/75rem 0 104/75rem;
+      text-align: center;
+    }
+    i {
+      display: block;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 104/75rem;
+      background: url("../images/header_app.png") no-repeat center;
+    }
+  }
+  /* nav导航栏 */
+  .nav {
+    height: 74/75rem;
+    line-height: 74/75rem;
+    position: relative;
+    background-color: #fff;
+    .iconfont2 {
+      display: inline-block;
+      width: 100/75rem;
+      height: 100/75rem;
+      text-align: center;
+      line-height: 100/75rem;
+      position: absolute;
+      left: 50%;
+      top: 20/75rem;
+      margin-left: -50/75rem;
+      color: #666;
+      -webkit-transform-origin: center;
+      transform-origin: center;
+      animation:  rotate 2s linear infinite;
+    }
+    ul {
+      white-space: nowrap;
+      position: absolute;
+      left: 0;
+      li {
+        display: inline-block;
+        padding: 0 25/75rem;
+        a {
+          display: block;
+          &.active {
+            color: #e4393c;
+            border-bottom: 2/75rem solid #e4393c;
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes rotate {
+  0% {transform: rotateZ(0deg)}
+  50% {transform: rotateZ(180deg)}
+  100% {transform: rotateZ(360deg)}
+}
+/* 主商品栏 */
+.main {
+  position: relative;
+  .iconfont2 {
+    display: inline-block;
+    width: 100/75rem;
+    height: 100/75rem;
+    text-align: center;
+    line-height: 100/75rem;
+    position: absolute;
+    left: 50%;
+    top: 20/75rem;
+    margin-left: -50/75rem;
+    color: #666;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    animation:  rotate 2s linear infinite;
+  }
+  .main_goods {
+    border-left: 6/75rem solid #f1f1f1;
+    border-right: 6/75rem solid #f1f1f1;
+    margin-top: 4/75rem;
+    li {
+      border-top: 12/75rem solid #f7f7f7;
+      padding: 15/75rem 0;
+      height: 300/75rem;
+      .good_left {
+        padding-left: 12/75rem;
+        width: 270/75rem;
+        float: left;
+        a {
+          display: block;
+          img {
+            width: 260/75rem;
+            height: 260/75rem;
+            vertical-align: middle;
+          }
+        }
+      }
+      .good_right {
+        float: right;
+        width: 460/75rem;
+        padding: 0 12/75rem;
+        position: relative;
+        p{
+          &:nth-child(1) {
+            line-height: 44/75rem;
+          }
+          &:nth-child(2) {
+            i {
+              color: #fc353a;
+              font-size: 28px;
+            }
+            em {
+              font-size: 28px;
+              color: #fc353a;
+              margin: 0 8/75rem;
+            }
+            del {
+              font-size: 28px;
+              margin-left: 24/75rem;
+            }
+
+          }
+          &:nth-child(4) {
+            a {
+              display: inline-block;
+              width: 280/75rem;
+              height: 54/75rem;
+              border: 2/75rem #fc353a dotted;
+              color: #fc353a;
+              text-align: center;
+              line-height: 54/75rem;
+              margin-top: 26/75rem;
+            }
+          }
+        }
+        div {
+          height: 30/75rem;
+          a{
+
+          }
+          i {
+            width: 116/75rem;
+            height: 30/75rem;
+            display: inline-block;
+            background-color: #ffb7b7;
+            border: 2/75rem solid #fc353a;
+            position: relative;
+            border-radius: 12/75rem;
+            vertical-align: middle;
+            em {
+              display: inline-block;
+              background-color: #fc353a;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              border-radius: 12/75rem;
+            }
+            span {
+              font-weight: 900;
+              color: #fff;
+              position: absolute;
+              width: 100%;
+              top: 0;
+              left: 0;
+              text-align: center;
+              font-size: 24px;
+            }
+
+          }
+          b {
+            margin-left: 20/75rem;
+            font-size: 24px;
+            color: #fc353a;
+            font-weight: normal;
+            display: inline-block;
+            height: 100%;
+            line-height: 30/75rem;
+          }
+        }
+        &>span {
+          display: block;
+          width: 120/75rem;
+          height: 60/75rem;
+          background-color: #ff5e5d;
+          line-height: 60/75rem;
+          text-align: center;
+          color: #fff;
+          border-radius: 8/75rem;
+          position: absolute;
+          bottom: 0rem;
+          right: 12/75rem;
+        }
+      }
+    }
+  }
+  .foot {
+    position: relative;
+  }
+}
+/* 返回顶部 */
+.return_top {
+  position: fixed;
+  right: 30/75rem;
+  bottom: 40/75rem;
+  color: #808080;
+  z-index: 100;
+}

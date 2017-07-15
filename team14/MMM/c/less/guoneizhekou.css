@@ -1,0 +1,194 @@
+/*�����庯��*/
+/*���Ϻ���ʹ��*/
+/*��������*/
+html,
+body {
+  background: #CFCCC5;
+  overflow-y: scroll;
+  width: 100%;
+}
+/*���Ƕ���....star*/
+.tops {
+  color: #fff;
+  height: 1.26666667rem;
+  width: 100%;
+  background: #F4483E;
+  text-align: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+.tops > h3 {
+  display: inline-block;
+  line-height: 1.26666667rem;
+}
+.tops .tops_l {
+  display: block;
+  height: 100%;
+  line-height: 1.17333333rem;
+  text-align: center;
+  width: 1.57333333rem;
+  font-size: 24px;
+  /*for mx3*/
+  /*forС��node*/
+  /*for ����note4*/
+  float: left;
+}
+[data-dpr="2"] .tops .tops_l {
+  font-size: 48px;
+}
+[data-dpr="2.5"] .tops .tops_l {
+  font-size: 60px;
+}
+[data-dpr="2.75"] .tops .tops_l {
+  font-size: 66px;
+}
+[data-dpr="3"] .tops .tops_l {
+  font-size: 72px;
+}
+[data-dpr="4"] .tops .tops_l {
+  font-size: 96px;
+}
+.tops .tops_r {
+  display: block;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  padding: 0.26666667rem;
+  margin-right: 0.06666667rem;
+  float: right;
+}
+.tops .tops_r s {
+  display: block;
+  text-decoration: none;
+  font-size: 10px;
+  /*for mx3*/
+  /*forС��node*/
+  /*for ����note4*/
+}
+[data-dpr="2"] .tops .tops_r s {
+  font-size: 20px;
+}
+[data-dpr="2.5"] .tops .tops_r s {
+  font-size: 25px;
+}
+[data-dpr="2.75"] .tops .tops_r s {
+  font-size: 28px;
+}
+[data-dpr="3"] .tops .tops_r s {
+  font-size: 30px;
+}
+[data-dpr="4"] .tops .tops_r s {
+  font-size: 40px;
+}
+.tops .tops_r i {
+  display: block;
+  font-style: normal;
+  font-size: 10px;
+  /*for mx3*/
+  /*forС��node*/
+  /*for ����note4*/
+  width: 100%;
+  height: 0.53333333rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+[data-dpr="2"] .tops .tops_r i {
+  font-size: 20px;
+}
+[data-dpr="2.5"] .tops .tops_r i {
+  font-size: 25px;
+}
+[data-dpr="2.75"] .tops .tops_r i {
+  font-size: 28px;
+}
+[data-dpr="3"] .tops .tops_r i {
+  font-size: 30px;
+}
+[data-dpr="4"] .tops .tops_r i {
+  font-size: 40px;
+}
+/*���Ƕ���....end*/
+main ul {
+  margin-top: 1.26666667rem;
+}
+main ul li {
+  margin-top: 0.13333333rem;
+  height: 7.01333333rem;
+  width: 48.5%;
+  background-color: #fff;
+  float: left;
+  margin-left: 1%;
+}
+main ul li img {
+  width: 100%;
+  height: 4.26666667rem;
+}
+main ul li div {
+  width: 100%;
+  padding: 0 5%;
+  height: 2.74666667rem;
+}
+main ul li div p {
+  font-size: 13px;
+  /*for mx3*/
+  /*forС��node*/
+  /*for ����note4*/
+  font-weight: 600;
+  height: 1rem;
+  overflow: hidden;
+}
+[data-dpr="2"] main ul li div p {
+  font-size: 25px;
+}
+[data-dpr="2.5"] main ul li div p {
+  font-size: 31px;
+}
+[data-dpr="2.75"] main ul li div p {
+  font-size: 34px;
+}
+[data-dpr="3"] main ul li div p {
+  font-size: 38px;
+}
+[data-dpr="4"] main ul li div p {
+  font-size: 50px;
+}
+main ul li div i {
+  font-style: normal;
+  display: block;
+  color: #FF6C00;
+  font-size: 13px;
+  /*for mx3*/
+  /*forС��node*/
+  /*for ����note4*/
+  line-height: 1.01333333rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+[data-dpr="2"] main ul li div i {
+  font-size: 25px;
+}
+[data-dpr="2.5"] main ul li div i {
+  font-size: 31px;
+}
+[data-dpr="2.75"] main ul li div i {
+  font-size: 34px;
+}
+[data-dpr="3"] main ul li div i {
+  font-size: 38px;
+}
+[data-dpr="4"] main ul li div i {
+  font-size: 50px;
+}
+main ul li div span:nth-of-type(1) {
+  padding-right: 0.17333333rem;
+  border-right: 1px solid red;
+}
+section {
+  width: 100%;
+}
+section img {
+  display: block;
+  margin: 0 auto;
+}

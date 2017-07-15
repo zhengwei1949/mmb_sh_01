@@ -1,0 +1,37 @@
+@charset "utf-8";
+/*主体部分样式*/
+main .list {
+  /*标题样式*/
+  /*内容样式*/
+}
+main .list .listTitle {
+  padding: 0.266667rem;
+  font-weight: 400;
+}
+main .list .listTitle .icon_expand_more {
+  color: #666;
+  font-size: 60px;
+}
+[data-dpr="2"] main .list .listTitle .icon_expand_more {
+  font-size: 120px;
+}
+[data-dpr="3"] main .list .listTitle .icon_expand_more {
+  font-size: 180px;
+}
+main .list .listCont {
+  background-color: #fff;
+}
+main .list .listCont ul {
+  flex-wrap: wrap;
+}
+main .list .listCont ul li {
+  width: 33.333%;
+}
+main .list .listCont ul li:nth-of-type(3n) {
+  border-right: none;
+}
+main .list .listCont ul li a {
+  display: block;
+  padding: 0.333333rem 0;
+  text-align: center;
+}

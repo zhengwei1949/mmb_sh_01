@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>classify</title>
+    <script src="../lib/flexible/flexible_css.js" charset="utf-8"></script>
+    <script src="../lib/flexible/flexible.js"></script>
+    <script src="../lib/template/template.js"></script>
+    <link rel="stylesheet" href="../css/basez.css">
+    <link rel="stylesheet" href="../css/base1z.css">
+    <link rel="stylesheet" href="../less/list.css">
+</head>
+<body>
+<!--页面头部-->
+<header>
+    <div class="top"><a href="#" class="fr"></a></div>
+    <!--搜索栏-->
+    <div class="search">
+        <input type="text" placeholder="请输入你想要比价的商品" class="text">
+        <input type="button" value="搜索" class="btn">
+    </div>
+</header>
+<!--菜单分类-->
+<div class="menu">
+    <a href="#" class="fl">首页></a>
+    <a href="#" class="fl">全部分类></a>
+    <a href="#" class="fl new"></a>
+    <div class="fr">筛选</div>
+</div>
+<!--主体内容-->
+<div class="main">
+    <ul class="son_main">
+
+    </ul>
+</div>
+<div class="bottom">
+    <input type="button" value="上一页" class="fl prv">
+    <select>
+
+    </select>
+    <input type="button" value="下一页" class="fr nex">
+</div>
+<footer>
+    <div class="fl">登录</div>
+    <div class="fl">注册</div>
+    <div class="fr icon-xiangshangjiantou iconfont">返回顶部</div>
+    <a href="">手机app下载</a>
+    <a href="">慢慢买手机版</a>
+    <a href="">--掌上比价平台</a>
+    <p>m.manmanbuy.com</p>
+</footer>
+</body>
+<script type="text/html" id="pro">
+    {{each result as value}}
+    <li>
+        {{#value.productImg}}
+        <a href="#" class="tex">{{value.productName}}</a>
+        <p>{{value.productPrice}}</p>
+        <span>{{value.productQuote}}</span>
+        <span>
+            <a href="review.html?productid={{value.productId }}&productName={{value.productName}}&productImg={{value.productImg}}">
+                {{value.productCom}}</a></span>
+    </li>
+    {{/each}}
+</script>
+<script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+<script src="../js/list.js"></script>
+</html>

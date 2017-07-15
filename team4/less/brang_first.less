@@ -1,0 +1,125 @@
+@charset "utf-8";
+//定义背景色
+@headColor:#FF841D;
+@bgColor:#EDEDED;
+@border: 1px solid #E6E6E6;
+/* ----头部区域------- */
+.yayout{
+  min-width: 640/75rem;
+  width:100%;
+    .head{
+      background: @headColor;
+      height: 100 / 75rem;
+      width: 100%;
+      overflow: hidden;
+      border: @border;
+      .head_left{
+        width: 400/75rem;
+        height: 56/75rem;
+        background-image: url("../images/header_logo.png");
+        background-size:400/75rem 56/75rem;
+        display: inline-block;
+        margin-left: 20/75rem;
+        margin-top: 20/75rem;
+      }
+      .app_dowload{
+        display: block;
+        width: 120/75rem;
+        height: 100/75rem;
+        padding:12/75rem 14/75rem 14/75rem 38/75rem;
+        background-image: url("../images/header_app.png");
+        background-size: 68/75rem 76/75rem;
+        background-origin: content-box;
+        background-clip: content-box;
+      }
+    }
+ /* 搜索区域*/
+  .search{
+    width: 100%;
+    height: 100 / 75rem;
+    overflow: hidden;
+    border: 1px solid #E6E6E6;
+    form{
+      width: 570 /75rem;
+      height:60/75rem ;
+      margin-top: 20 / 75rem;
+      margin-left: 12/75rem;
+      display: inline-block;
+      input{
+        width: 100%;
+        height: 100%;
+        border-radius:40/ 75rem;
+        background-color: #F1F1F1;
+        padding-left: 40 / 75rem;
+        font-size: 32 / 75rem;
+        border-width: 0;
+      }
+    }
+    /* 搜索按钮*/
+    button{
+      width:126 / 75rem;
+      height: 58/75rem;
+      background-color: #FF841D;
+      font-size: 36/75rem;
+      border: 1px solid #FF841D;
+      border-radius:0.4rem;
+      color: #fff;
+      margin-top: 20/75rem;
+      margin-right: 20/75rem;
+    }
+  }
+  /* 分类*/
+  .scale{
+    height: 68/75rem;
+    width: 100%;
+    background-color: #F7F7F7;
+    border: @border;
+    border-top: none;
+      p{
+        line-height: 76/75rem;
+        padding-left: 8/75rem;
+      }
+  }
+  /*热门排行标题*/
+  .hot{
+    height: 68/75rem;
+    width: 98%;
+    border: @border;
+    margin-top: 16/75rem;
+    background: @bgColor;
+    p{
+      line-height:  66/75rem;
+      font-size: 16/75rem;
+      color: #874604;
+      padding-left: 20 / 75rem;
+    }
+  }
+  /* 请求数据*/
+  .sort{
+    width: 100%;
+    background-color: red;
+    margin-top: 20 / 75rem;
+    ul{
+      width: 100%;
+      li{
+        border-top: @border;
+        height: 78/75rem;
+        width: 100%;
+        background-color: @bgColor;
+        font-size: 18/75rem;
+        font-weight: 600;
+        line-height: 78/75rem;
+        a{
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding-left: 24/75rem;
+          span{
+            padding-right:28/75rem;
+            font-size: 18/75rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>品牌大全功能页</title>
+    <!-- <link rel="stylesheet" href="css/base.css"> -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- <link rel="stylesheet" href="css/common.css"> -->
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/brandproductlist.css">
+    <script src="lib/template/template.js"></script>
+    <script src="lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+    <!--header 页面通栏-->
+    <header class="flexBox ac">
+        <div class="logo">
+            <a href="index.html"><img src="images/header_logo.png" /></a>
+        </div>
+        <div class="appDown">
+            <a href="index.html"><img src="images/header_app.png" /></a>
+        </div>
+    </header>
+    <!--search_bar 搜索通栏-->
+        <section class="search">
+            <form action="">
+                <input type="text" name="" id="" placeholder="请输入您想搜索的商品" />
+                <button>搜索</button>
+            </form>
+        </section>
+    <!--main 页面内容-->
+    <div class="main">
+        <div class="nav_index">
+            <script id="catebyid" type="text/html">
+                <a href="index.html">首 页</a>><a href="category.html">全部分类</a>> {{each result as v i}}
+                <a class="nav-list-3" href="#">{{v.category}}</a>> {{/each}}
+            </script>
+        </div>
+        <ul id="gstvrank" class="product_hot_info">
+            <script id="gstv" type="text/html">
+                {{each result as value i}}
+                <li data-productid="{{value.productId}}" dt-img="{{value.productImg}}" pt-name="{{value.productName}}" class="product_rank">
+                    <a href="categoryinfo.html?productId={{value.productId}}">{{#value.productImg}}</a>
+                    <div>
+                        <h4>{{value.productName}}</h4>
+                        <p>{{value.productPrice}}</p>
+                        <p><span>{{value.productQuote}}</span>&nbsp;&nbsp;&nbsp;<span>{{value.productCom}}</span></p>
+                    </div>
+                </li>
+                {{/each}}
+            </script>
+        </ul>
+    </div>
+    <!--上下页下拉框-->
+    <div class="page_select clearfix">
+        <form action="#">
+            <input class="prev" type="button" value="上一页">
+            <select class="select_area" name="" id=""></select>
+            <input class="next" type="button" value="下一页">
+        </form>
+    </div>
+<!--footer 页脚通栏-->
+<footer>
+    <div class="footTop">
+        <ul class="clearfix bt bb">
+            <li class="br">
+                <a href="javascript:;">登录</a>
+            </li>
+            <li class="br">
+                <a href="javascript:;">注册</a>
+            </li>
+            <li class="backTop">
+                <a href="javascript:;"><span class="icon_shift"></span>返回顶部</a>
+            </li>
+        </ul>
+    </div>
+    <div class="footBottom">
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>
+            <span class="scolor"> -- 掌上比价平台</span>
+        </p>
+        <p class="scolor"> m.manmanbuy.com</p>
+    </div>
+</footer>
+
+</body>
+<script src="lib/jquery/jquery.js"></script>
+<script src="js/categorylist.js"></script>
+
+
+</html>

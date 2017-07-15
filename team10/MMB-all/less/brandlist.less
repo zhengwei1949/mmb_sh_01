@@ -1,0 +1,99 @@
+@fs: 75rem;
+html {
+  font-size: 75px;
+}
+
+html, body {
+  height: 100%;
+}
+
+//公用函数
+.font-size(@size) {
+  [data-dpr="1"] & {
+    font-size: unit(@size, px);
+  }
+;
+  [data-dpr="2"] & {
+    font-size: unit(@size*2, px);
+  }
+;
+  [data-dpr="3"] & {
+    font-size: unit(@size*3, px);
+  }
+}
+
+
+//品牌详情
+.navTitle {
+  height: 1rem;
+  color: #874604;
+  line-height: 1rem;
+  padding-left: 30/@fs;
+  background: #EEEEEE;
+  margin-top: 20/@fs;
+  .font-size(14px);
+  border: 1/@fs solid #CCC;
+}
+
+.wrap {
+  width: 100%;
+  min-height: 60%;
+  ul {
+    width: 100%;
+    li {
+      width: 100%;
+      height: 1.2rem;
+      position: relative;
+      border-bottom: 1px solid #CCC;
+      .listnum {
+        float: left;
+        margin-top: 15/@fs;
+        margin-left: 15/@fs;
+        width: 30/@fs;
+        height: 30/@fs;
+        line-height: 30/@fs;
+        background: #ddd;
+        .font-size(12px);
+        text-align: center;
+        color: #FFF;
+      }
+      .brand {
+        float: left;
+        margin-top:5/@fs;
+        margin-left: 20/@fs;
+        color: #000;
+        .font-size(14px);
+        span {
+          display: block;
+          &:nth-child(2){
+            color: #999;
+            .font-size(12px);
+          }
+        }
+      }
+      .arrow {
+        .font-size(20px);
+        line-height:1.2rem;
+        color: #999999;
+        margin-right: 10/@fs;
+      }
+      &:nth-child(1){
+        .listnum {
+          background: red;
+        }
+      };
+      &:nth-child(2){
+        .listnum {
+          background: orange;
+        }
+      };
+      &:nth-child(3){
+        .listnum {
+          background: lawngreen;
+        }
+      };
+    }
+  }
+}
+
+

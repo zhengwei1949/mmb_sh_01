@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>比价搜索</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/category.css" />
+		
+		<!--<script src="less/less.js"></script>-->
+		<script src="lib/flexible/flexible.js"></script>
+		<script src="lib/jQuery/jquery.js"></script>
+		<script src="js/base.js"></script>
+		<script src="lib/template/template.js"></script>
+        <script type="text/html" id="listTitle">
+        	{{each result as value}}
+        	   <div class="list">
+				<h3 class="listTitle bb">{{value.title}}
+					<span class="icon_expand_more fr expandMore" data-id="{{value.titleId}}"></span> 
+				</h3>
+				<div class="listCont">
+					<ul class="flexBox">
+						<!--{{include 'list' value}}-->
+					</ul>
+				</div>
+			</div>
+        	{{/each}}
+        </script>
+        <script type="text/html" id="list">
+        	 {{each result as v}}
+        	     <li class="br bb"><a href="categorylist.html?categoryId={{v.categoryId}}">{{v.category}}</a></li>
+        	{{/each}}
+        </script>
+        <script src="js/category.js"></script>
+
+	</head>
+	<body>
+		<script type="text/javascript" src="js/header.js"></script>
+		<main class="main">
+						
+		</main>
+		 <script src="js/footer.js"></script>
+
+	</body>
+	
+</html>

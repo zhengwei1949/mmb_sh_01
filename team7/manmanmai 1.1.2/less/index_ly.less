@@ -1,0 +1,157 @@
+@charset "utf-8";
+.m_top {
+  .m_left {
+    width: 56%;
+    span {
+      width: 100%;
+      display: block;
+      height: 50px;
+      padding: 10px;
+      img {
+        width:100%;
+        max-width: 190px;
+        max-height: 25px;
+        display: block;
+      }
+    }
+  }
+}
+.main-order {
+  font-family: '微软雅黑';
+  /* 首页菜单栏 */
+  .moreHeight {
+    height: 260px;
+  }
+  ul {
+    padding: 10px;
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    li {
+      width: 25%;
+      float: left;
+      padding-bottom: 10px;
+      a {
+        width: 100%;
+        padding: 10% 10%;
+        display: block;
+        height: 70px;
+        min-height: 70px;
+        text-align: center;
+        img {
+          display: block;
+          margin: 0 auto;
+          width: 60%;
+        }
+        p {
+          height: 30px;
+          line-height: 30px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+.count {
+  /* 超值折扣特价通栏 */
+  font-family: '微软雅黑';
+  width: 100%;
+  .countTitle {
+    width: 100%;
+    height: 40px;
+    background:linear-gradient(#ffb029, #ee9625);
+    position: static;
+    h4 {
+      padding-left: 10px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 16px;
+      color: #fff;
+      position: relative;
+      span {
+        position: absolute;
+        padding: 12px 0;
+        top: 0;
+        right: 10px;
+      }
+    }
+  }
+  .countList {
+    /* 折扣商品列表 */
+    padding: 10px 0;
+    li {
+      border-bottom: 1px solid #dddddd;
+      a {
+        display: block;
+        padding: 5px;
+
+        .left_pic {
+          width: 30%;
+          float: left;
+          height: 100px;
+          margin-right: 10px;
+          padding: 10px;
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+        .right_desc {
+          width: 65%;
+          float: left;
+          b {
+            font-weight: normal;
+            display: block;
+          }
+          .pro_title {
+            color: #333;
+            float: left;
+            margin: 5px 0 20px 0;
+            font-size: 14px;
+            .pro_price {
+              color: #FF822C;
+            }
+          }
+          .pro_time{
+            display: block;
+            width: 60%;
+            float: left;
+            font-size: 12px;
+            color: #828181;
+          }
+          .pro_comment {
+            display: block;
+            width: 36%;
+            float: right;
+            color: #828181;
+            font-size: 12px;
+            span {
+              padding-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.moreSale {
+  /* 点击加载更多优惠信息 */
+  width: 100%;
+  background: linear-gradient(#ffffff,#dddddd);
+  border: 1px solid #dddddd;
+  margin: 10px 0;
+  a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+  }
+}

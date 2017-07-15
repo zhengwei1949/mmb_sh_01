@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>白菜价</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/baicaijia.css">
+</head>
+<body>
+	
+	<!-- 头部部分 -->
+	<header class='cheap-header'>
+		<a href="#" class='icon-back'></a>
+		<p>白菜价-内部优惠券</p>
+		<a href="javascript:;" class='appdown'>
+				<img src="images/header_app.png" alt="">
+		</a>
+	</header>
+	<!-- 白菜价标题部分 -->
+	<div class="cheap-tit">
+		<ul class='tit-box'>
+			
+		</ul>
+	</div>
+	<!-- 商品列表部分 -->
+	<div class="product-list">
+		
+	</div>
+	
+ <!-- 底部部分 -->
+ <footer>
+ 	<div class='footer-ranking'>
+ 		<p>品牌排行</p>
+ 		<span></span>
+ 	</div>
+ 	<div class='info clearfix'>
+ 	<a href="#">登录</a>
+ 	<a href="#">注册</a>
+
+ 	<a href="#">返回顶部</a>
+   </div>
+   <div class='mobile'>
+   	 	<a href="#">手机APP下载</a>
+   	 	<a href="#">慢慢买手机版</a>、
+   	 	<a href="#">--掌上比价平台</a>
+   	 	<p class='net'>m.manmanbuy.com</p>
+   </div>
+ 	
+ </footer>
+
+	<script src='lib/zepto/zepto.min.js'></script>
+	<script src='lib/zepto/touch.js'></script>
+	<script src='lib/zepto/selector.js'></script>
+	<script src='lib/zepto/fx.js'></script>
+	<script src='js/url.js'></script>
+	<script src='lib/template-native.js'></script>
+	<script src='js/swipe.js'></script>
+	<script src='js/baicaijia.js'></script>
+	<script type="text/template" id='tpl'>
+		<% for(var i = 0;i<result.length;i++){ %> 
+			<li class="info" data-id="<%= result[i].titleId%>">
+				<a href="javascript:;">
+				  
+				  <%= result[i].title%>
+				</a>
+			</li>
+		<% } %>
+		
+	</script>
+	<script type="text/template" id='item'>
+	 	<% for(var i = 0;i<result.length;i++) { %>
+		<div class='product'>
+			<div class='imgBox'>
+				<a href="#"><%== result[i].productImg%></a>
+			</div>
+			<div class='infoBox'>
+				<p><%== result[i].productName%></p>
+				<p class='price'><%== result[i].productPrice%></p>
+				<div class='progress'>
+				 
+				 <%== result[i].productCouponRemain%>
+				</div>
+				<div class='ticket'>
+					<%== result[i].productCoupon%>
+					<%== result[i].productHref%>
+				</div>
+			</div>
+		</div>
+		<% } %>
+	</script>
+	
+</body>
+</html>

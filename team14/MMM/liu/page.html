@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/flexible.js"></script>
+
+    <title></title>
+    <style>
+        .nav {
+            transition: all .5s;
+        }
+
+        .nav img {
+            transition: all 0.8s ease-in-out;
+        }
+
+        .nav img:active {
+            transform: rotate(360deg) scale(8);
+        }
+
+    </style>
+    <!-- [if lt IE 9]>-->
+    <script src="lib/html5shiv/html5shiv.min.js"></script>
+    <!--  <![endif] -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/page.css">
+</head>
+<body>
+
+
+<div class="all">
+
+    <!-- 顶部通栏111 -->
+    <header class="header clearfix">
+        <a href="#" class="header_left">
+            <img src="images/header_logo.png" alt="">
+        </a>
+        <a href="#" class="header_right">
+            <img src="images/header_app.png" alt=""/>
+        </a>
+        <!--   </div> -->
+    </header>
+
+    <div class="headerSearch clearfix">
+        <form>
+            <input class="search fs12" types="search" placeholder="请输入你想比价的商品"/>
+            <input class="search_btn fs16" type="button" value="搜索"/>
+        </form>
+    </div>
+
+
+    <!-- 导航栏222 -->
+    <div class="nav">
+        <ul class="clearfix">
+            <li>
+                <a href="" id="">
+                    <img src="images/ic_search.png" alt="">
+
+                    <p>比价搜索</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- 超值折扣推荐333 -->
+    <div class="product clearfix">
+        <div class="product_top">
+            <span>超值折扣推荐</span>
+            <b class="iconfonts icon-xiangyou3"></b>
+        </div>
+
+        <div class="product_list">
+            <ul>
+                <li id="">
+                    <!-- 左边部分 -->
+                    <div class="list_left fl">
+                        <a href="#">
+                            <img src="" alt="">
+                        </a>
+                    </div>
+                    <!-- 右面部分 -->
+                    <div class="list_right ">
+                        <!-- 右上面 -->
+                        <a class="list_title fs14">
+                            移动端凑单品：海天 鲜味 生抽</br>
+                            <!--1.28L<span>10.9元</span>-->
+                        </a>
+
+                        <!-- 右下面部分 -->
+                        <div class="list_bottom clearfix">
+                            <!-- 右下左边部分 -->
+                            <div class="list_b_left fl fs12 ">
+                                京东商城 | 10-25 14:10
+                            </div>
+                            <!-- 右下右边部分 -->
+                            <div class="list_b_right fr">
+                                <i class="iconfonts icon-liuyan"></i>
+                                <span class="fs12">1</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 更多优惠信息 -->
+        <div class="more">
+            <a href="dong/shengqiankong.html" class="more_info fs14">更多优惠信息 <span class="fs12">&gt;&gt;</span></a>
+        </div>
+    </div>
+
+
+    <!-- 品牌排行444 -->
+    <div class="brand">
+        <div class="brand_row">
+            <span>品牌排行</span>
+            <b class="iconfonts icon-xiangyou3"></b>
+        </div>
+    </div>
+
+    <!-- 底部555 -->
+    <div class="foot">
+        <div class="foot_top">
+            <a href="#" class="fs14">登录</a>
+            <a href="#" class="fs14">注册</a>
+            <a href="#top" class="fs14"><i class="iconfonts icon-xiangshang4"></i>返回顶部</a>
+
+        </div>
+        <!-- 底部下半部分 -->
+        <div class="foot_bottom">
+            <p class="fs12">
+                <span>手机APP下载</span>
+                慢慢买手机版
+                <span>-- 掌上比价平台</span>
+            </p>
+
+            <p class="fs12">m.manmanbuy.com</p>
+        </div>
+    </div>
+
+
+    <!-- 导航栏的模板对象 -->
+    <script id="navList" type="text/html">
+        {{if result}}
+        <ul class="clearfix">
+            {{each result as value i}}
+            <li>
+                <a href="#" id="{{value.couponLink}}">
+                    {{#value.img}}
+                    <p class="fs12">{{value.name}}</p>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </script>
+    <!--超值折扣推荐模板对象-->
+    <script id="product" type="text/html">
+        {{if result}}
+        <ul>
+            {{each result as value}}
+            <li id="{{value.productId}}">
+                <!-- 左边部分 -->
+                <div class="list_left fl">
+                    <a href="#">
+                        {{#value.productImgSm}}
+                    </a>
+                </div>
+                <!-- 右面部分 -->
+                <div class="list_right ">
+                    <!--  右上面部分 -->
+                    <a class="list_title fs14">
+                        {{value.productName}}</br>
+                        1.28L<span>{{value.productPinkage}}</span>
+                    </a>
+
+                    <!-- 右下面部分 -->
+                    <div class="list_bottom clearfix">
+                        <!-- 右下左边部分 -->
+                        <div class="list_b_left fl fs12 ">
+                            {{value.productFrom}}|{{value.productTime}}
+                        </div>
+                        <!-- 右下右边部分 -->
+                        <div class="list_b_right fr">
+                            <i class="iconfonts icon-liuyan"></i>
+                            <span class="fs12">{{value.productComCount}}</span>
+                        </div>
+                    </div>
+                    <!-- {{#value.productComment}} -->
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </script>
+
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/page.js"></script>
+
+
+</body>
+</html>

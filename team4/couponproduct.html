@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>肯德基优惠券</title>
+    <script src="libs/flexible.js"></script>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/couponproduct.css"/>
+</head>
+<body>
+<div class="layout" style="max-height: 9999px">
+    <!--优惠券商品头部-->
+    <header id="header">
+        <a href="javascript:history.go(-1)" class="icon-back fs24 iconfont icon-jiantouyoujiantou1"></a>
+
+        <h3 class="fs20">肯德基优惠券</h3>
+        <a href="#" class="app-download"><img src="images/header_app.png" alt="#"/></a>
+    </header>
+    <!--优惠券商品头部-->
+    <!--优惠提示-->
+    <h4 class="fs12 msg-title">--点餐前出示手中的优惠券，即可享受优惠--</h4>
+    <!--优惠提示-->
+    <!--优惠券商品 -->
+    <main class="coupon-product fs14"></main>
+    <!--优惠券商品 -->
+    <!--遮罩图片-->
+    <div class="container">
+        <img src="" alt=""/>
+    </div>
+    <!--遮罩图片-->
+    <!--返回首页-->
+    <div class="home fs14">
+        <a href="index.html">首页</a>><a href="coupon.html">优惠券</a>><a href="javascript:;" class="curr">优惠券</a>
+    </div>
+    <!--返回首页-->
+    <!--优惠券商品底部-->
+    <div class="foot">
+        <div>
+            <a href="#" class="fs14">登录</a>
+            <a href="#" class="fs14">注册</a>
+            <a href="#top" class="fs14"><i class="iconfont icon-xiangshangjiantou fs16"></i>返回顶部</a>
+        </div>
+        <p class="fs12">
+            <span>手机APP下载</span>
+            慢慢买手机版
+            <span>-- 掌上比价平台</span>
+        </p>
+
+        <p class="fs12">m.manmanbuy.com</p>
+    </div>
+    <!--优惠券商品底部-->
+</div>
+<!--art模板-->
+<script type="text/html" id="coupon-product">
+    {{each result as value}}
+    <ul>
+        <li class="clearfix">
+            {{#value.couponProductImg}}
+
+            <div class="con">
+                <p>{{value.couponProductName}}</p>
+                <span class="price">{{value.couponProductPrice}}</span>
+
+                <div class="validTime">{{value.couponProductTime}}</div>
+            </div>
+            <i class="iconfont icon-jiantouyoujiantou arrow fs20"></i>
+        </li>
+    </ul>
+    {{/each}}
+</script>
+<!--art模板-->
+<script src="libs/template.js"></script>
+<script src="libs/jquery.min.js"></script>
+<script>
+    (function ($) {
+        $.getUrlParam = function (name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+    })(jQuery);
+</script>
+<script src="js/common.js"></script>
+<script src="js/couponproduct.js"></script>
+</body>
+</html>

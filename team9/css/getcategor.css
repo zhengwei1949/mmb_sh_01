@@ -1,0 +1,117 @@
+@charset "utf-8";
+html,
+body {
+  height: 100%;
+}
+.yayout .menu {
+  width: 100%;
+  height: 0.93333333rem;
+  background-color: #F4F4F4;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.yayout .menu ul {
+  width: 100%;
+  line-height: 0.93333333rem;
+  padding-left: 0.26666667rem;
+  overflow: hidden;
+}
+.yayout .menu ul li {
+  float: left;
+  line-height: 0.93333333rem;
+}
+.yayout .goods {
+  width: 100%;
+}
+.yayout .goods ul {
+  width: 100%;
+  overflow: hidden;
+}
+.yayout .goods ul li {
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid #E7E7E7;
+  border-top: none;
+}
+.yayout .goods ul li .img {
+  width: 2.66666667rem;
+  height: 1.73333333rem;
+  float: left;
+}
+.yayout .goods ul li .goods_right {
+  padding-left: 3.2rem;
+}
+.yayout .goods ul li .goods_right .info {
+  font-size: 0.37333333rem;
+  padding-top: 0.26666667rem;
+  height: 1.28rem;
+  display: block;
+}
+.yayout .goods ul li .goods_right .prive {
+  font-size: 0.42666667rem;
+  color: red;
+  margin-top: 0.37333333rem;
+  display: block;
+}
+.yayout .goods ul li .goods_right .goods_b {
+  margin-top: 0.29333333rem;
+  overflow: hidden;
+}
+.yayout .goods ul li .goods_right .goods_b .offer {
+  padding-right: 0.26666667rem;
+}
+.yayout .goods ul li .goods_right .goods_b .offer a {
+  color: #A1A1A1;
+}
+.yayout .goods ul li .goods_right .goods_b .review a {
+  color: #A1A1A1;
+}
+.yayout .goods ul li .review_box {
+  width: 100%;
+  background-color: #F8F8F8;
+  border: 1px solid #F8F8F8;
+  float: left;
+}
+.yayout .goods ul li .review_box .info_title {
+  margin-top: 0.4rem;
+}
+.yayout .goods ul li .review_box .info_title .name {
+  padding-left: 0.29333333rem;
+}
+.yayout .goods ul li .review_box .info_title .wjx {
+  color: #FF9000;
+  padding-left: 0.29333333rem;
+}
+.yayout .goods ul li .review_box .info_title .date {
+  padding-right: 0.29333333rem;
+}
+.yayout .goods ul li .review_box p {
+  padding: 0 0.29333333rem;
+}
+.yayout .bt {
+  width: 100%;
+  margin-top: 0.48rem;
+}
+.yayout .bt input {
+  width: 2.18666667rem;
+  height: 0.85333333rem;
+  border: #BABABA;
+  background-color: #DBDBDB;
+  text-align: center;
+  border-radius: 0.18666667rem;
+}
+.yayout .bt input:nth-child(1) {
+  margin-left: 0.53333333rem;
+}
+.yayout .bt input:nth-child(3) {
+  float: right;
+  margin-right: 0.53333333rem;
+}
+.yayout .bt select {
+  width: 2rem;
+  height: 0.90666667rem;
+  margin-left: 12%;
+}
+.yayout .bt select option {
+  font-size: 0.26666667rem;
+}

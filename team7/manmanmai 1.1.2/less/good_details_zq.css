@@ -1,0 +1,211 @@
+@charset "UTF-8";
+html {
+  font-size: 37px;
+}
+.m_top .m_left {
+  width: 56%;
+}
+.m_top .m_left span {
+  width: 100%;
+  display: block;
+  height: 50px;
+  padding: 10px;
+}
+.m_top .m_left span img {
+  width: 100%;
+  display: block;
+}
+.m_top .m_right span {
+  font-size: 16px;
+  top: -8px;
+}
+.layout {
+  margin: 0 auto;
+  position: relative;
+}
+form {
+  width: 100%;
+  height: 1.35135135rem;
+  list-style: none;
+  position: relative;
+  padding: 0 0.27027027rem;
+}
+form input {
+  width: 80%;
+  height: 0.81081081rem;
+  background: #F1F1F1 ;
+  border-radius: 0.27027027rem;
+  padding-left: 0.13513514rem;
+  border: none;
+  margin-top: 0.27027027rem;
+  font-size: 0.37837838rem;
+  float: left;
+}
+button {
+  width: 1.67567568rem;
+  height: 0.81081081rem;
+  background: #FF841D;
+  border-radius: 0.27027027rem;
+  color: white;
+  border: none;
+  font-size: 0.37837838rem;
+  float: left;
+  margin-top: 0.27027027rem;
+  margin-left: 0.13513514rem;
+}
+/*主体导航部分*/
+.laber {
+  width: 100%;
+  height: 1.02702703rem;
+  background: #EDEDED;
+  line-height: 1.02702703rem;
+  padding: 0 0.27027027rem;
+  font-size: 0.37837838rem;
+}
+.laber ul {
+  float: left;
+}
+.laber ul li {
+  float: left;
+  text-align: center;
+  line-height: 1.02702703rem;
+  padding-left: 0.13513514rem;
+}
+.laber .select {
+  float: right;
+  width: 1.67567568rem;
+  height: 0.75675676rem;
+  line-height: 0.75675676rem;
+  background: #E1E1E1 ;
+  margin-top: 0.13513514rem;
+  text-align: center;
+  border-radius: 0.05405405rem;
+}
+/*详细信息部分*/
+.detail {
+  display: block;
+  font-size: 0.37837838rem;
+  padding: 0 0.27027027rem;
+}
+.detail .detail_text {
+  padding-top: 0.21621622rem;
+  height: 0.80851064rem;
+  width: 100%;
+  text-align: center;
+}
+.detail .picture {
+  height: 5.24324324rem;
+  text-align: center;
+}
+.detail .picture a {
+  display: block;
+  margin-top: 0.67567568rem;
+}
+.detail .picture .a_right {
+  width: 1.08108108rem;
+  height: 1.08108108rem;
+  line-height: 1.08108108rem;
+  border-radius: 0.54054054rem;
+  background: #8BC800 ;
+  color: white;
+  text-align: center;
+  float: right;
+  margin-right: 0.81081081rem;
+  margin-bottom: 0.2rem;
+}
+.detail .red {
+  color: orangered;
+}
+/*商品描述*/
+.describe {
+  width: 100%;
+  height: 0.91891892rem;
+}
+.describe span {
+  float: left;
+  display: inline-block;
+  line-height: 0.91891892rem;
+  width: 33.3%;
+  background: #FFCA3A ;
+  color: white;
+  border-bottom: 1px solid #C14D00;
+  border-right: 1px solid #C14D00 ;
+  text-align: center;
+}
+.describe .active {
+  background: #FF9812 ;
+}
+.buy {
+  height: 1.18918919rem;
+  line-height: 1.18918919rem;
+  padding: 0 0.27027027rem;
+  border-bottom: 1px solid #DBDBDB ;
+}
+.buy b {
+  position: relative;
+  display: inline-block;
+  float: left;
+  list-style: none;
+  font-weight: 400;
+}
+.buy i {
+  float: right;
+  width: 1.48648649rem;
+  height: 0.67567568rem;
+  line-height: 0.67567568rem;
+  background: #FF5500 ;
+  color: white;
+  text-align: center;
+  margin-top: 0.27027027rem;
+  border-radius: 2px;
+}
+.buy n {
+  color: red;
+  margin-left: 3.94594595rem;
+}
+.detail .true_price {
+  margin-top: 0.21621622rem;
+  height: 1.18918919rem;
+  width: 100%;
+  line-height: 1.18918919rem;
+  font-size: 0.32432432rem;
+  text-align: left;
+  color: #666666 ;
+  display: inline-block;
+  padding: 0 0.27027027rem;
+  border-top: 1px solid #dddddd;
+}
+.evaluate {
+  border: 1px solid #DBDBDB ;
+}
+.evaluate .evaluate_title {
+  height: 1rem;
+  line-height: 1rem;
+  background: #DBDBDB ;
+  text-align: center;
+  font-size: 0.43243243rem;
+}
+.evaluate .information {
+  font-size: 0.32432432rem;
+}
+.evaluate .information .c_box {
+  padding: 0.27027027rem;
+  box-shadow: 0 1px 4px #dddddd;
+}
+.evaluate .information b {
+  font-weight: 400;
+  display: block;
+  text-align: right;
+  color: #666666;
+}
+.evaluate .information p {
+  font-size: 0.37837838rem;
+}
+.more {
+  height: 0.91891892rem;
+  line-height: 0.91891892rem;
+  font-size: 0.43243243rem;
+  text-align: center;
+  background: linear-gradient(#ffffff, #dddddd);
+  margin: 0 auto;
+}

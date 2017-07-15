@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>全网比价</title>
+    <!--引入zepto插件-->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/zepto/fx.js"></script>
+    <script src="../lib/zepto/selector.js"></script>
+    <script src="../lib/zepto/touch.js"></script>
+    <!--引入flexible文件-->
+    <script src="../lib/flexible/flexible.js"></script>
+    <!--公共样式-->
+    <link rel="stylesheet" href="../css/base.css"/>
+    <!--本页样式-->
+    <link rel="stylesheet" type="text/less" href="../less/category.less"/>
+    <!--引入模板引擎-->
+    <script src="../lib/artTemplate/template.js"></script>
+    <!--导航栏标题模板-->
+    <script type="text/html" id="navTitle">
+        <ul class="nav-box">
+            {{if result}}
+            {{each result as value i}}
+            <li class="clearfix">
+                <div class="nav-title" id="{{value.titleId}}">
+                    <p>{{value.title}}</p>
+                    <span class="fr iconfont icon-xiangxia01"></span>
+                </div>
+                <div class="nav-content">
+
+                </div>
+            </li>
+            {{/each}}
+            {{/if}}
+        </ul>
+    </script>
+    <!--导航栏子标题模板-->
+    <script type="text/html" id="navContent">
+        <ul class="clearfix">
+            {{if result}}
+            {{each result as value i}}
+            <li>
+                <a href="./searchGoods.html?categoryId={{value.categoryId}}">{{value.category}}</a>
+            </li>
+            {{/each}}
+            {{/if}}
+        </ul>
+    </script>
+</head>
+<body>
+<div class="layout">
+    <!--********** 头部---start **********-->
+    <header class="colorB">
+        <a href="../index.html" class="fl">
+            <img src="../images/header_logo.png" alt=""/>
+        </a>
+        <a href="javascript:;" class="fr">
+            <img src="../images/header_app.png" alt=""/>
+        </a>
+    </header>
+    <!--***** 头部---end *****-->
+    <!--********** 搜索栏---start **********-->
+    <div class="search">
+        <form action="#">
+            <input class="s-ser" type="search" placeholder="请输入你想比价的商品"/>
+            <input class="s-btn" type="button" value="搜索"/>
+        </form>
+    </div>
+    <!--***** 搜索栏---end *****-->
+    <!--********** 导航栏---start **********-->
+    <div class="nav">
+
+    </div>
+    <!--***** 导航栏---end *****-->
+    <!--********** 底部---start **********-->
+    <footer>
+        <div class="operate clearfix">
+            <ul>
+                <li><span>登录</span></li>
+                <li><span>注册</span></li>
+                <li><span class="iconfont icon-xiangshang-copy"></span><span>返回顶部</span></li>
+            </ul>
+        </div>
+        <div class="introduce">
+            <p><span class="colorRed">手机APP下载</span>
+                <span>慢慢买手机版</span>
+                <span class="colorGray">-- 掌上比价平台</span>
+            </p>
+            <p class="colorGray">m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!--***** 底部---end *****-->
+</div>
+</body>
+<!--引入less-->
+<script src="../lib/less/less.min.js"></script>
+<!--公用js-->
+<script src="../js/base.js"></script>
+<!--本页js-->
+<script src="../js/category.js"></script>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>比价分类</title>
+    <!--引入zepto插件-->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/zepto/fx.js"></script>
+    <script src="../lib/zepto/selector.js"></script>
+    <script src="../lib/zepto/touch.js"></script>
+    <!--引入flexible文件-->
+    <script src="../lib/flexible/flexible.js"></script>
+    <!--公共样式-->
+    <link rel="stylesheet" href="../css/base.css"/>
+    <!--本页样式-->
+    <link rel="stylesheet" type="text/less" href="../less/searchGoods.less"/>
+    <!--引入模板引擎-->
+    <script src="../lib/artTemplate/template.js"></script>
+    <!--层级模板-->
+    <script type="text/html" id="layer">
+        <div class="layer-left fl">
+            <a href="../index.html">
+                <span>首页 &gt;</span>
+            </a>
+            <a href="./category.html">
+                <span>全部分类 &gt;</span>
+            </a>
+            <a href="javascript:;">
+                <span>{{result[0].category}} &gt;</span>
+            </a>
+        </div>
+        <form action="#" class="fr">
+            <input type="button" value="筛选"/>
+        </form>
+    </script>
+    <!--商品模板-->
+    <script type="text/html" id="goods">
+        <ul>
+            {{if result}}
+            {{each result as value i}}
+            <li class="clearfix">
+                <a class="href" href="./searchDetail.html?productId={{value.productId}}&com={{value.productCom}}">
+                    {{#value.productImg}}
+                    <div class="goods-intro">
+                        <h3>{{value.productName}}</h3>
+                        <p>{{value.productPrice}}</p>
+                            <span class="comment">
+                                <span>{{value.productQuote}}</span>
+                                <span>&nbsp;{{value.productCom}}</span>
+                            </span>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+            {{/if}}
+        </ul>
+    </script>
+</head>
+<body>
+<div class="layout" id="layout">
+    <!--********** 头部---start **********-->
+    <header class="colorB">
+        <a href="../index.html" class="fl">
+            <img src="../images/header_logo.png" alt=""/>
+        </a>
+        <a href="javascript:;" class="fr">
+            <img src="../images/header_app.png" alt=""/>
+        </a>
+    </header>
+    <!--***** 头部---end *****-->
+    <!--********** 搜索栏---start **********-->
+    <div class="search">
+        <form action="#">
+            <input class="s-ser" type="search" placeholder="请输入你想比价的商品"/>
+            <input class="s-btn" type="button" value="搜索"/>
+        </form>
+    </div>
+    <!--***** 搜索栏---end *****-->
+    <!--********** 主体部分---start **********-->
+    <div class="content">
+        <!--***** 层级部分 *****-->
+        <div class="layer clearfix">
+
+        </div>
+        <!--***** 商品部分 *****-->
+        <div class="goods">
+
+        </div>
+        <!--***** 转业栏部分 *****-->
+        <div class="pages">
+            <!--<form action="#">-->
+                <!--<input type="button" value="上一页" class="fl"/>-->
+                <!--<select name="" id="">-->
+                    <!--<option value="">1</option>-->
+                <!--</select>-->
+                <!--<input type="button" value="下一页" class="fr"/>-->
+            <!--</form>-->
+        </div>
+    </div>
+    <!--***** 主体部分---end *****-->
+    <!--********** 底部---start **********-->
+    <footer>
+        <div class="operate clearfix">
+            <ul>
+                <li><span>登录</span></li>
+                <li><span>注册</span></li>
+                <li id="reTop"><span class="iconfont icon-xiangshang-copy"></span><span>返回顶部</span></li>
+            </ul>
+        </div>
+        <div class="introduce">
+            <p><span class="colorRed">手机APP下载</span>
+                <span>慢慢买手机版</span>
+                <span class="colorGray">-- 掌上比价平台</span>
+            </p>
+
+            <p class="colorGray">m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!--***** 底部---end *****-->
+</div>
+</body>
+<!--引入less-->
+<script src="../lib/less/less.min.js"></script>
+<!--公用js-->
+<script src="../js/base.js"></script>
+<!--本页-->
+<script src="../js/searchGoods.js"></script>
+</html>

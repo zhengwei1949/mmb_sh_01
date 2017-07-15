@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"> -->
+    <title>品牌大全</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <script src="lib/jQuery/jquery.js"></script>
+    <script src="lib/template/template.js"></script>
+    <script src="lib/flexible/flexible.js"></script>
+</head>
+<body>
+    <!--header 页面通栏-->
+       
+       <script src="js/header.js"></script>
+       <!--main 页面内容-->
+    <div class="main">
+        <div class="nav_index">
+            <a href="index.html">首 页</a>><a href="#">品牌大全</a>>
+        </div>
+        <h3 class="product_tlt">热门品牌排行</h3>
+        <div class="product_list">
+            <script id="test" type="text/html">
+                {{each result as value i}}
+                    <a id="{{}}" href="brandproductlist.html?brandTitleId={{value.brandTitleId}}">{{value.brandTitle}}<span class="icon_arrow"></span></a>
+                {{/each}}
+            </script>
+        </div>
+    </div>
+    <!--footer 页脚通栏-->
+       <script src="js/footer.js"></script>
+</body>
+
+
+<script src="js/brand.js"></script>
+</html>

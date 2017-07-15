@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>省钱控 - 最新优惠</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/moneyctrl.css">
+</head>
+<body>
+    <div class="layout">
+        <!-- 顶部通栏 -->
+        <header>
+            <div class="back f_left">
+                <a href="index.html" title='慢慢买比价网--手机版'>&lt;</a>
+            </div>
+            <h1>省钱控 - 最新优惠</h1>
+            <div class="appdown f_right">
+                <a href="#" title='手机app下载'>
+                    <img src="./images/header_app.png" alt="手机app下载">
+                </a>
+            </div>
+        </header>
+
+        <!-- 推荐列表 -->
+        <div class="discountList">
+            <div class="productList">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- 分页部分 -->
+        <div class="page">
+            <table width='100%'>
+                <tbody>
+                <tr>
+                    <td>
+                        <a href="javascript:;" class='prevPage'>上一页</a>
+                    </td>
+                    <td>
+                        <select id="selectPage">
+
+                        </select>
+                    </td>
+                    <td>
+                        <a href="javascript:;" class='nextPage'>下一页</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 底部信息 -->
+        <div class="foot">
+            <div class="foot_top">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="javascript:;" id='backToTop'>
+                    <img src="./images/top.jpg" alt="">返回顶部
+                </a>
+            </div>
+            <footer>
+                <p>
+                    <a href="#">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </footer>
+        </div>
+    </div>
+
+</body>
+<script src="./lib/jquery.min.js"></script>
+<script src="./lib/template-native.js"></script>
+<script src="./js/moneyctrl.js"></script>
+<script type="text/html" id='temp1'>
+    <% for(var i = 0;i<result.length;i++){ %>
+    <li class="productItem clearfix">
+        <a href="moneyctrlproduct.html">
+            <div class="pic">
+                <%=#result[i].productImgSm %>
+            </div>
+            <div class="info">
+                <div class="title">
+                    <img src="" alt="">
+                    <span><%= result[i].productPinkage %></span>
+                </div>
+                <div class="other">
+                    <span class="mall"><%= result[i].productFrom %></span>
+                    <span class="comment">
+                            <i class="icon-comment"></i>
+                            <%= result[i].productComCount %>
+                    </span>
+                </div>
+            </div>
+        </a>
+    </li>
+    <% } %>
+
+</script>
+</html>

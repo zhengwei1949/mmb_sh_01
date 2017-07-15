@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>慢慢买项目</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/inlanddiscount.css">
+	<script src="lib/zepto/zepto.min.js"></script>
+	<script src="lib/template.js"></script>
+	<script src="js/inlanddiscount.js"></script>
+	<!-- <script src="js/index.js"></script> -->
+</head>
+<body>
+	<!-- 顶部通栏 -->
+	<div class="top">
+		<div class="left fl">&lt;</div>
+		<span>国内折扣</span>
+		<div class="download fr"></div>
+	</div>
+	<!-- ************************商品信息栏************************ -->
+	<div class="goods clearfix">
+		<ul>
+
+		</ul>
+	</div>
+	<!-- ************************页面底部************************ -->
+	<div class="footer">
+		<div class="top">
+			<div class="denglu fl"><a href="#">登陆</a></div>
+			<div class="zhuce fl"><a href="#">注册</a></div>
+			<div class="backtop fr" id="back" onclick="back()">
+				<div class="back">&nbsp;返回顶部</div>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="txt">
+				<span class="left">手机APP下载</span>
+				<span class="center">慢慢买手机版</span>
+				<span class="right">--掌上比价平台</span>
+			</div>
+			<div class="net">m.manmanbuy.com</div>
+		</div>
+	</div>
+</body>
+
+
+<script type="text/html" id="goods">
+	<!-- ************************用模板引擎写的ajax部分************************ -->
+	{{ if result }}
+		{{ each result as value }}
+			<li  data-id="{{ value.productId }}">
+				<div class="biggest">
+					<a href="details.html">
+						<!-- value.productImg前面加上#的目的是为了将html标签转化成字符串 -->
+						<div class="pic">{{# value.productImg }}</div>
+						<div class="info">
+							<div class="desc">{{ value.productName }}</div>
+							<div class="date">
+							<div class="price">{{ value.productPrice }}</div>
+								<div class="from fl">{{ value.productFrom }}</div>|
+								<div class="time fr">{{ value.productTime }}</div> 
+							</div>
+						</div>
+					</a>
+				</div>
+			</li>
+		{{ /each }}
+	{{ /if }}
+</script>
+</html>

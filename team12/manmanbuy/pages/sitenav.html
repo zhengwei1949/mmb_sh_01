@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>商场导航</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../less/sitenav.css">
+    <link rel="stylesheet" href="../fonts/font_ZY/iconfont.css">
+    <script src="../lib/flexible/flexible.js"></script>
+    <script type="text/less" src="../less/sitenav.less"></script>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/artTemplate/template.js"></script>
+    <script type="text/html" id="sitenav">
+        <ul class='clearfix'>
+            {{each result as value i}}
+            <li>
+                <a href='{{=value.navHref}}'>
+                    {{=value.navTitle}}
+                    <img src='{{value.navImg}}' alt="">
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+
+</head>
+<body>
+<div class="layout">
+    <!--header-->
+    <header class="mm_header">
+        <a href="../index.html">
+            <span class='mm_toleft iconfont_z icon-xiangzuo1'></span>
+        </a>
+        <h3 class="mm_marketnav">商场导航</h3>
+
+        <div class="mm_download "></div>
+    </header>
+    <!--section-->
+    <section>
+        <div class='mm_sitenav'>
+
+        </div>
+    </section>
+    <!--底部-->
+    <footer>
+        <div class="operate clearfix">
+            <ul>
+                <li>
+                    <span>登录</span>
+                </li>
+                <li><span>注册</span></li>
+                <li id="reTop"><span class="iconfont icon-xiangshang-copy"></span><span>返回顶部</span></li>
+            </ul>
+        </div>
+        <div class="introduce">
+            <p><span class="colorRed">手机APP下载</span>
+                <span>慢慢买手机版</span>
+                <span class="colorGray">-- 掌上比价平台</span>
+            </p>
+
+            <p class="colorGray">m.manmanbuy.com</p>
+        </div>
+    </footer>
+</div>
+</body>
+
+<script src="../lib/less/less.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/sitenav.js"></script>
+</html>

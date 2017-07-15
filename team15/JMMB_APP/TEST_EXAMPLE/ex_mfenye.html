@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src='../lib/flexible/flexible.js'></script>
+    <script src='../lib/flexible/flexible_css.js'></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <title>分页</title>
+</head>
+<body>
+    <!-- 分页选择 -->
+    <div class='mfenye'>
+        <div><a class='mfenye-last' href="javascript:;">上一页</a></div>
+        <div>
+            <select name="mfenye-select" class="mfenye-select">
+                <option value="1">1/1</option>
+            </select>
+        </div>
+        <div><a class='mfenye-next' href="javascript:;">下一页</a></div>
+    </div>
+</body>
+<script src='../lib/jquery/jquery-1.12.0.min.js'></script>
+<script src='../js/common/tools.js'></script>
+<script>
+//    tools.fenye( { pageNum : 100 } );
+    tools.fenye({
+        pageNum : 100,    // 总共几页，不传默认置为 1
+        pageVal : 'pageid',     // 控制页面切换的参数,不传默认使用 pageid，根据 pageid 切页
+        start: 1,      // 参数从几开始，默认为 1
+        pageUrl : 'ex_mfenye.html',// 不赋值默认跳到 index.html？pageVal=x
+        extraStr: ''     // 默认为空，额外需要传在 url 中的值  &name=123...
+    });
+</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>白菜价</title>
+    <script type="text/javascript" src="lib/jQuery/jquery.js"></script>
+    <script type="text/javascript" src="lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/baicaijia.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <script type="text/javascript" src="js/baicaijia.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="lib/template/template.js"></script>
+    <script type="text/html" id="titleRender">
+        {{if result}}
+        <ul>
+            {{each result as value i}}
+            <li>
+                <a href="javascript:">{{value.title}}</a>
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </script>
+    <script type="text/html" id="productRender">
+        {{if result}}
+        <ul>
+            {{each result as value i}}
+            <li class="bcj-product">
+                <a href="javascript:" class="bcj-product-img">
+                        {{#value.productImg}}
+                </a>
+                <div class="bcj-product-detail">
+                <a class="bcj-product-name" href="javascript:">{{#value.productName}}</a>
+                <p class="bcj-product-price">{{#value.productPrice}}</p>
+                {{#value.productCouponRemain}} {{#value.productCoupon}} {{#value.productHref}}
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </script>
+</head>
+
+<body>
+    <header class="flexBox ac">
+        <div>
+        <a href="" class="goback icon_navigate_before"></a>
+        </div>
+        <span class="title">白菜价-淘宝内部券</span>
+        <div class="appDown">
+            <a href="index.html"><img src="images/header_app.png" /></a>
+        </div>
+    </header>
+    <div class="bcj-nav">
+    </div>
+    <div class="bcj-content">
+    </div>
+    <script src="js/footer.js"></script>
+</body>
+
+</html>

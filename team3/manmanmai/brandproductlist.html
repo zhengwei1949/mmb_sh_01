@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"> -->
+    <title>品牌大全</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/brandproductlist.css">
+    <script src="lib/jQuery/jquery.js"></script>
+    <script src="lib/template/template.js"></script>
+    <script src="lib/flexible/flexible.js"></script>
+</head>
+<body>
+<!--header 页面通栏-->
+        <script src="js/header.js"> </script>
+<!--main 页面内容-->
+<div class="main">
+    <div class="nav_index">
+        <a href="index.html">首 页</a>><a href="brandTitle.html">品牌大全</a>><a class="nav-list-3" href="#"><span>平板电视</span>哪个品牌好</a>
+    </div>
+    <h3 class="product_hot_tlt"><span>平板电视</span>哪个品牌好</h3>
+    <ul class="product_hot_info active">
+        <script id="gsbrand" type="text/html">
+            {{each result as value i}}
+            <li data-brandtitid="{{value.brandTitleId}}"  class="product_list">
+                <span>{{i+1}}</span>
+                <h4>{{value.brandName}}</h4>
+                <p>{{value.brandInfo}}</p>
+            </li>
+            {{/each}}
+        </script>
+
+    </ul>
+    <h3 class="product_hot_tlt"><span>平板电视</span>销量排行榜</h3>
+    <ul id="gstvrank"  class="product_hot_info">
+        <script id="gstv" type="text/html">
+        {{each result as value i}}
+            {{if i<4}}
+        <li data-productid="{{value.productId}}" dt-img="{{value.productImg}}" pt-name="{{value.productName}}" class="product_rank">
+            <a href="#">{{#value.productImg}}</a>
+            <div>
+                <h4>{{value.productName}}</h4>
+                <p>{{value.productPrice}}</p>
+                <p><span>{{value.productQuote}}</span>&nbsp;&nbsp;&nbsp;<span>{{value.productCom}}</span></p>
+                <p><em class="font_favorite"></em><em class="font_favorite"></em><em class="font_favorite"></em><em class="font_favorite"></em><em class="font_favorite"></em></p>
+            </div>
+        </li>
+            {{/if}}
+        {{/each}}
+        </script>
+    </ul>
+    <h3 class="product_hot_tlt"><span>平板电视</span>最新评论</h3>
+    <ul class="product_hot_score">
+        <script id="gsscore" type="text/html">
+            {{each result as v i}}
+                <li class="product_score">
+                    <a href="#"></a>
+                    <h4></h4>
+                    <dl>
+                        <span class="date fr">{{v.comTime}}</span>
+                        <dt><span class="user">{{v.comName}} :</span><span><em class="font_favorite"></em><em class="font_favorite"></em><em class="font_favorite"></em><em class="font_favorite"></em><em class="font_favorite"></em></span></dt>
+                        <dd>{{v.comContent}}</dd>
+                    </dl>
+                </li>
+            {{/each}}
+        </script>
+    </ul>
+
+
+</div>
+<!--footer 页脚通栏-->
+       <script src="js/footer.js"></script>
+</body>
+
+<script src="js/brandproductlist.js"></script>
+</html>

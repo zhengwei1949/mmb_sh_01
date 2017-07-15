@@ -1,0 +1,98 @@
+html {
+  font-size: 75px;
+}
+html,
+body {
+  height: 100%;
+}
+.navTitle {
+  margin-top: 0.26666667rem;
+  background: #F7F7F7;
+  border-bottom: 0.01333333rem solid #CCC;
+  border-top: 0.01333333rem solid #CCC;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  padding-left: 0.26666667rem;
+  color: #b81900;
+}
+[data-dpr="1"] .navTitle {
+  font-size: 12px;
+}
+[data-dpr="2"] .navTitle {
+  font-size: 24px;
+}
+[data-dpr="3"] .navTitle {
+  font-size: 36px;
+}
+.comment {
+  width: 100%;
+}
+.comment .comment_title {
+  width: 100%;
+}
+.comment .comment_title img {
+  float: left;
+  width: 2.4rem;
+  height: 2rem;
+  margin: 0.4rem 0.26666667rem 0.4rem;
+}
+.comment .comment_title p {
+  color: #AAA;
+  padding-top: 0.4rem;
+  max-height: 100%;
+}
+[data-dpr="1"] .comment .comment_title p {
+  font-size: 14px;
+}
+[data-dpr="2"] .comment .comment_title p {
+  font-size: 28px;
+}
+[data-dpr="3"] .comment .comment_title p {
+  font-size: 42px;
+}
+.comment .comment_content {
+  background: #F7F7F7;
+  border: 0.01333333rem solid #CCC;
+  margin: 0.13333333rem;
+  max-height: 100%;
+  padding: 0.2rem;
+}
+.comment .comment_content .content_top {
+  margin-bottom: 0.26666667rem;
+}
+.comment .comment_content .content_top .user {
+  float: left;
+}
+.comment .comment_content .content_top .user span:nth-child(n+3) {
+  color: gold;
+}
+[data-dpr="1"] .comment .comment_content .content_top .user span:nth-child(n+3) {
+  font-size: 14px;
+}
+[data-dpr="2"] .comment .comment_content .content_top .user span:nth-child(n+3) {
+  font-size: 28px;
+}
+[data-dpr="3"] .comment .comment_content .content_top .user span:nth-child(n+3) {
+  font-size: 42px;
+}
+.comment .comment_content .content_top .comment_time {
+  float: right;
+  padding-top: 0.06666667rem;
+}
+.comment .comment_content .content_main {
+  color: #000;
+}
+[data-dpr="1"] .comment .comment_content .content_main {
+  font-size: 14px;
+}
+[data-dpr="2"] .comment .comment_content .content_main {
+  font-size: 28px;
+}
+[data-dpr="3"] .comment .comment_content .content_main {
+  font-size: 42px;
+}
+.comment .comment_content .content_bottom {
+  padding-top: 0.13333333rem;
+  padding-right: 0.13333333rem;
+  text-align: right;
+}

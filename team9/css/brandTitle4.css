@@ -1,0 +1,106 @@
+ 
+/* author :wzp
+date :2016-11-25
+ */
+ html,body{
+ 	width: 100%;
+ 	height: 100%;
+ 	min-width:320px;
+ }
+ .productCom {
+ 	width: 100%;
+ 	position: relative;
+	height: 100%;
+	padding-top:15rem;
+  transition: all .6s ease;
+  animation: move .6s ease-in-out;
+ }
+
+
+   /*顶部通栏*/
+ .productCom .topBar {
+ 	width: 100%;
+  	height: 3.83rem;
+  	background:linear-gradient(to top ,orange 50%, yellow);
+  	position: fixed;
+  	top: 0;
+  	padding: 0 0.851rem;
+  	font:bold 1.5rem/3.83rem "simsum";
+	  color:#dc4503;
+	  text-shadow: 1px 1px 5px #fff;
+    z-index: 100;
+ 
+ }
+ /*商品简讯*/
+  .productCom .product {
+  	width: 100%;
+  	position: absolute;
+  	top:3.83rem;
+  	padding:0.851rem;
+  }
+  .productCom .product img {
+		background-color: #ccc;
+		width: 30%;
+  }
+  .productCom .product div {
+  	display: inline-block;
+  	width: 63%;
+  	vertical-align: top;
+  	margin:1rem 0 0 1rem;
+  	font-size: 1.5rem;
+  	word-break:break-all; /*单词内换行*/
+  }
+  /*评论框顶部*/
+  .com_infoTop {
+  	padding:0 0.851rem;
+  	/*height: 1.277rem;*/
+  	position: relative;	
+  	margin: 1rem 0;
+  }
+ /*评论框*/
+  .com_infoTop .arrow {
+  	background-color: #eee;
+  	border:1px solid #ccc;
+  	border-radius: 0.3rem;
+  	padding:0.8rem;
+  }
+  .com_infoTop .arrow span:nth-child(2){
+    color:orange;
+
+  }
+  .com_infoTop .arrow span:nth-child(3){
+    float: right;
+  }
+  .com_infoTop .arrow span:nth-child(-n+3){
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .com_infoTop .square {
+  	display: inline-block;
+  	width: 0.851rem;
+  	height: 0.851rem;
+  	background-color: #eee;
+    -webkit-transform: rotate(40deg);
+    -o-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+  	transform:rotate(45deg);
+  	position: absolute;
+  	top:-0.421rem;
+  	left:2rem;
+  	border-left:1px solid #ccc;
+  	border-top:1px solid #ccc;
+  }
+ @keyframes  move{
+  0% {
+    transform:translate(100%);
+  }
+  60% {
+    transform:translate(-10%);
+  }
+  80% {
+    transform:translate(5%);
+  }
+  100%{
+    transform:opacity(0%);
+  }
+}

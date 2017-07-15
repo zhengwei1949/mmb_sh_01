@@ -1,0 +1,73 @@
+html {
+  font-size: 75px;
+}
+html,
+body {
+  height: 100%;
+}
+.navTitle {
+  height: 1rem;
+  color: #874604;
+  line-height: 1rem;
+  padding-left: 0.4rem;
+  background: #EEEEEE;
+  margin: 0.33333333rem 0.06666667rem;
+  border: 0.01333333rem solid #CCC;
+}
+[data-dpr="1"] .navTitle {
+  font-size: 16px;
+}
+[data-dpr="2"] .navTitle {
+  font-size: 32px;
+}
+[data-dpr="3"] .navTitle {
+  font-size: 48px;
+}
+.wrap {
+  min-height: 60%;
+}
+.wrap ul {
+  margin-bottom: 0.4rem;
+}
+.wrap ul li {
+  border-top: 0.01333333rem solid #CCC;
+  border-left: 0.01333333rem solid #CCC;
+  border-right: 0.01333333rem solid #CCC;
+  background: #EDEDED;
+  width: 9.86666667rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  color: #000;
+  font-family: "SimSun";
+  font-weight: bold;
+  margin: 0 0.06666667rem;
+}
+[data-dpr="1"] .wrap ul li {
+  font-size: 16px;
+}
+[data-dpr="2"] .wrap ul li {
+  font-size: 32px;
+}
+[data-dpr="3"] .wrap ul li {
+  font-size: 48px;
+}
+.wrap ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #000;
+  padding-left: 0.46666667rem;
+  padding-right: 0.26666667rem;
+}
+.wrap ul li a span {
+  float: right;
+}
+[data-dpr="1"] .wrap ul li a span {
+  font-size: 18px;
+}
+[data-dpr="2"] .wrap ul li a span {
+  font-size: 36px;
+}
+[data-dpr="3"] .wrap ul li a span {
+  font-size: 54px;
+}

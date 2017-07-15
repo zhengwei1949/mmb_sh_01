@@ -1,0 +1,162 @@
+//header部分
+#head{
+  text-align: center;
+  .back{
+    float: left;
+    a{
+      width: 40px;
+      font-size: 28px;
+      color: #fff;
+      line-height: 50px;
+      text-align: center;
+      display: inline-block;
+    }
+  }
+  h1{
+     color: #fff;
+     font-size: 22px;
+     display: inline-block;
+     line-height: 50px;
+   }
+}
+//商品菜单部分
+
+#list{
+  .list_box{
+    .box_top{
+      ul{
+        li{
+          width: 30%;
+          float: left;
+          height: 36px;
+          line-height: 36px;
+          padding-left: 10px;
+          .godown{
+            transform: rotate(0deg);
+          }
+          span{
+            font-size: 12px;
+            padding: 4px;
+            transform: rotate(-180deg);
+            display: inline-block;
+            transition: transform .3s;
+          }
+        }
+        :nth-child(4){
+          display: inline-block;
+          width: 10%;
+          background: url("../images/search.svg") no-repeat;
+          background-repeat: no-repeat;
+          color: #ffffff;
+          background-size: 22px 22px;
+          background-position: center center;
+        }
+      }
+    }
+  }
+}
+
+//下拉列表
+.list_down{
+  width: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0px;
+  top: 86px;
+  box-shadow: 0px 3px 6px #dddddd;
+  >ul{
+    li{
+      border-bottom: 1px solid #dadada;
+      border-width: 0 0 1px 0;
+      position: relative;
+      a{
+        display: block;
+        line-height: 40px;
+        padding: 0px 10px;
+      }
+    }
+  }
+}
+//红色勾勾
+.red_right{
+  background: url("../images/gou.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+//商品内容
+.list_content {
+  background-color: #f1f1f1;
+  padding: 6px 0px;
+}
+
+.list_content ul {
+  width: 98%;
+  margin: 0px auto;
+}
+
+.list_content ul li {
+  float: left;
+  width: 50%;
+}
+
+.list_content a {
+  display: block;
+  margin: 4px;
+  background-color: #ffffff;
+}
+
+.list_content .pic {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.list_content .pic img {
+  max-width: 100%;
+  height: auto;
+}
+
+.list_content .title {
+  color: #333333;
+  word-break: break-all;
+  padding: 0 6px;
+  height: 14px;
+  overflow: hidden;
+  font-size: 12px;
+  margin-top: 10px;
+  line-height: 14px;
+  font-weight: normal;
+  text-align: left;
+  margin-top: 6px;
+}
+
+.list_content .other {
+  padding: 6px;
+}
+
+.list_content .other .price {
+  float: left;
+  color: #f8601d;
+  font-size: 20px;
+}
+
+.list_content .other .price em {
+  font-style: normal;
+  font-size: 10px;
+  color: #f8601d;
+}
+
+.list_content .other .btn {
+  float: right;
+  font-size: 14px;
+  color: #FFFFFF;
+  border-radius: 3px;
+  background-color: #ff9501;
+  padding: 4px 10px;
+  text-decoration: none;
+  display: inline-block;
+}

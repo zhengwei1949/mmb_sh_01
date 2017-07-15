@@ -1,0 +1,9 @@
+/* 顶部通栏 */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+}
+/* 页面主体 */
+#contentBox {
+  padding: 20px;
+}

@@ -1,0 +1,51 @@
+header .top {
+  height: 1.3333rem;
+  width: 100%;
+  background-color: #FF841D;
+  line-height: 1.3333rem;
+  text-align: center;
+  color: white;
+  font-size: 22px;
+  font-weight: 900;
+}
+header .top a:first-child {
+  display: block;
+  height: 1.3333rem;
+  width: 1.3333rem;
+  transform: rotate(180deg);
+  font-size: 22px;
+  font-weight: 100;
+  color: white;
+}
+
+header .top a:last-child {
+  display: block;
+  height: 100%;
+  width: 1.2rem;
+  background: url("../images/header_app.png") center left no-repeat;
+  background-size: 0.906644rem, 0.906644rem;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  padding-left: 1.146638rem;
+  padding-right: 1.06664rem;
+}
+.main div {
+  position: relative;
+  height: 1.06664rem;
+  background-color: #F4F4F4;
+  border: 1px solid #bfbfbf;
+  text-align: center;
+  line-height: 1.06664rem;
+  float: left;
+  padding-left: 0.906644rem;
+  padding-right: 0.26666rem;
+  margin-right: 0.159996rem;
+  margin-top: 0.159996rem;
+}
+.main div img {
+  position: absolute;
+  top: 0.26666rem;
+  left: 0.26666rem;
+}

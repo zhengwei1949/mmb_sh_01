@@ -1,0 +1,164 @@
+@charset "utf-8";
+.nav {
+  height: 0.9rem;
+  background-color: #ebebeb;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ccc;
+  line-height: 0.9rem;
+  padding-left: 0.106rem;
+  border-bottom: 1px solid #cccccc;
+  position: relative;
+}
+[data-dpr='1'] .nav {
+  font-size: 7px;
+}
+[data-dpr='2'] .nav {
+  font-size: 14px;
+}
+[data-dpr='3'] .nav {
+  font-size: 21px;
+}
+.nav a {
+  max-height: 100%;
+  color: #000;
+}
+[data-dpr='1'] .nav a {
+  font-size: 12px;
+}
+[data-dpr='2'] .nav a {
+  font-size: 24px;
+}
+[data-dpr='3'] .nav a {
+  font-size: 36px;
+}
+main {
+  width: 100%;
+}
+main .box {
+  width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  max-height: 100%;
+}
+[data-dpr='1'] main .box {
+  font-size: 12px;
+}
+[data-dpr='2'] main .box {
+  font-size: 24px;
+}
+[data-dpr='3'] main .box {
+  font-size: 36px;
+}
+main .box ul li {
+  padding: 0.37rem 0.213rem;
+  position: relative;
+}
+main .box ul li .top {
+  width: 2.934rem;
+  height: 2.66rem;
+}
+main .box ul li .top img {
+  width: 95%;
+}
+main .box ul li .bottom {
+  overflow: hidden;
+  height: 2.66rem;
+  max-height: 100%;
+  line-height: 0.64rem;
+}
+[data-dpr='1'] main .box ul li .bottom {
+  font-size: 12px;
+}
+[data-dpr='2'] main .box ul li .bottom {
+  font-size: 24px;
+}
+[data-dpr='3'] main .box ul li .bottom {
+  font-size: 36px;
+}
+main .box ul li .bottom .title {
+  color: #333333;
+  word-break: break-all;
+  line-height: 0.533rem;
+  min-height: 1.52rem;
+  text-align: left;
+  font-weight: 500;
+  max-height: 100%;
+}
+[data-dpr='1'] main .box ul li .bottom .title {
+  font-size: 14px;
+}
+[data-dpr='2'] main .box ul li .bottom .title {
+  font-size: 28px;
+}
+[data-dpr='3'] main .box ul li .bottom .title {
+  font-size: 42px;
+}
+main .box ul li .bottom .title p {
+  margin-top: 0.26rem;
+  color: red;
+  max-height: 100%;
+}
+[data-dpr='1'] main .box ul li .bottom .title p {
+  font-size: 15px;
+}
+[data-dpr='2'] main .box ul li .bottom .title p {
+  font-size: 30px;
+}
+[data-dpr='3'] main .box ul li .bottom .title p {
+  font-size: 45px;
+}
+main .box ul li .bottom .other {
+  margin-top: 0.3rem;
+  color: #333;
+  max-height: 100%;
+}
+[data-dpr='1'] main .box ul li .bottom .other {
+  font-size: 9px;
+}
+[data-dpr='2'] main .box ul li .bottom .other {
+  font-size: 18px;
+}
+[data-dpr='3'] main .box ul li .bottom .other {
+  font-size: 27px;
+}
+main .box .btn {
+  width: 100%;
+  margin-top: 0.5333rem;
+}
+main .box .btn .w33 {
+  width: 29%;
+  float: left;
+  text-align: center;
+  padding-left: 0.333rem;
+}
+main .box .btn .w33 input {
+  padding: 0.32rem 0.533rem;
+  height: 1rem;
+  box-shadow: 1px 1px 1px 1px #333;
+  background-color: #f1f1f1;
+  border-radius: 0.12rem;
+  overflow: hidden;
+  text-align: center;
+}
+[data-dpr='1'] main .box .btn .w33 input {
+  font-size: 12px;
+}
+[data-dpr='2'] main .box .btn .w33 input {
+  font-size: 24px;
+}
+[data-dpr='3'] main .box .btn .w33 input {
+  font-size: 36px;
+}
+main .box .btn .w33 select {
+  border: 1px solid #cccccc;
+  padding: 0.32rem 0.533rem;
+}
+[data-dpr='1'] main .box .btn .w33 select {
+  font-size: 9px;
+}
+[data-dpr='2'] main .box .btn .w33 select {
+  font-size: 18px;
+}
+[data-dpr='3'] main .box .btn .w33 select {
+  font-size: 27px;
+}

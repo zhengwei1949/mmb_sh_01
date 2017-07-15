@@ -1,0 +1,101 @@
+@charset "utf-8";
+/*菜单栏*/
+.nav {
+  background-color: #fff;
+}
+.nav .content {
+  flex-wrap: wrap;
+  padding-top: 0.266667rem;
+  padding-bottom: 0.133333rem;
+}
+.nav .content .list {
+  width: 25%;
+}
+.nav .content .list a {
+  padding: 0.133333rem 0.32rem;
+  flex-wrap: wrap;
+}
+.nav .content .list a img {
+  width: 100%;
+}
+.nav .content .list a p {
+  text-align: center;
+  width: 100%;
+}
+
+/*超值折扣*/
+.container {
+  background-color: #fff;
+}
+/*超值折扣标题*/
+.container > .listTitle {
+  height: 0.933333rem;
+  background-color: #FF841C;
+  color: #fff;
+  line-height: 0.933333rem;
+  padding: 0 0.266667rem 0 0.533333rem;
+  font-weight: 400;
+}
+.container > .listTitle a {
+  display: block;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 0.666667rem;
+  height: 0.666667rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 0.666667rem;
+  font-family: sisum;
+  margin-top: 0.133333rem;
+}
+
+/*超值折扣列表*/
+.container .listItems .listCont {
+  padding: 0.266667rem;
+  display: block;
+}
+.container .listItems .listCont .listImg {
+  width: 2.666667rem;
+  height: 2.666667rem;
+}
+.container .listItems .listCont .listImg img {
+  width: 100%;
+  height: 100%;
+}
+.container .listItems .listCont .desc {
+  width: 6.8rem;
+  padding-left: 0.133333rem;
+}
+.container .listItems .listCont .desc .listTitle {
+  font-size: 16px;
+}
+[data-dpr="2"] .container .listItems .listCont .desc .listTitle {
+  font-size: 32px;
+}
+[data-dpr="3"] .container .listItems .listCont .desc .listTitle {
+  font-size: 48px;
+}
+.container .listItems .listCont .desc .price {
+  color: #FF841C;
+}
+.container .listItems .listCont .desc .other {
+  font-size: 10px;
+}
+[data-dpr="2"] .container .listItems .listCont .desc .other {
+  font-size: 20px;
+}
+[data-dpr="3"] .container .listItems .listCont .desc .other {
+  font-size: 30px;
+}
+.container .preferMore {
+  padding: 0.266667rem 10%;
+}
+
+/*更多优惠信息*/
+.container .preferMore > a {
+  display: block;
+  border: 1px solid #c4c4c4;
+  text-align: center;
+  padding: 0.266667rem 0;
+  border-radius: 0.133333rem;
+}

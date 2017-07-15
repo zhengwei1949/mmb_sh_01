@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>慢慢买项目</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/details.css">
+	<script src="lib/zepto/zepto.min.js"></script>
+	<script src="lib/template.js"></script>
+	<script src="js/details.js"></script>
+	<!-- <script src="js/index.js"></script> -->
+</head>
+<body>
+	<!-- 顶部通栏 -->
+	<div class="top">
+		<a href="inlanddiscount.html"><div class="left fl">&lt;</div></a>
+		<span>国内折扣</span>
+		<div class="download fr"></div>
+	</div>
+	<!-- ************************商品信息栏************************ -->
+	<!-- 详细商品信息栏 -->
+	<div class="details">
+		
+	</div>
+	<!-- 前往购买 -->
+	<div class="buy">前往购买</div>
+	<!-- 二维码 -->
+	<div class="erweima"></div>
+	<!-- 评论区 -->
+	<div class="huoqu">
+		
+	</div>
+	<!-- ************************页面底部************************ -->
+	<div class="footer">
+		<div class="top">
+			<div class="denglu fl"><a href="#">登陆</a></div>
+			<div class="zhuce fl"><a href="#">注册</a></div>
+			<div class="backtop fr" id="back" >
+				<a href="#"><div class="back">&nbsp;返回顶部</div></a>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="txt">
+				<span class="left">手机APP下载</span>
+				<span class="center">慢慢买手机版</span>
+				<span class="right">--掌上比价平台</span>
+			</div>
+			<div class="net">m.manmanbuy.com</div>
+		</div>
+	</div>
+</body>
+<script type="text/html" id="goods">
+	<!-- ************************用模板引擎写的ajax部分************************ -->
+	{{ if result }}
+		{{ each result as value }}
+		<!-- 标题部分 -->
+			<div class="header">
+				<div class="productName">{{ value.productName }}</div>
+				<div class="productPinkage">{{ value.productPinkage }}</div>
+				<div class="tt">
+					<div class="productTime">{{ value.productTime }}</div>
+					<div class="productTips">{{ value.productTips }}</div>
+				</div>
+			</div>
+			<!-- 详细描述 -->
+			<div class="small_pic fr">{{# value.productImgSm }}</div>
+			<div class="info">{{ value.productInfo2 }}</div>
+			<div class="big_pic">{{# value.productImgLg }}</div>
+		{{ /each }}
+	{{ /if }}
+</script>
+<script type="text/html" id="saying">
+	<!-- ************************用模板引擎写的ajax部分************************ -->
+	{{ if result }}
+		{{ each result as value }}
+			<!-- 获取到最新评论的内容 -->
+			{{# value.productComment }}
+		{{ /each }}
+	{{ /if }}
+
+</script>
+
+</html>

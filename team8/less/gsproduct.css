@@ -1,0 +1,291 @@
+/*根字体函数*/
+/*混合函数使用*/
+/*基本颜色*/
+/*字体设置*/
+/*主页设置*/
+html,
+body {
+  background: #f1f1f1;
+  width: 100%;
+}
+.gsproduct {
+  position: relative;
+}
+/*顶部导航栏START*/
+.productNav {
+  height: 1.06666667rem;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 0.01333333rem solid #8c8c8c;
+}
+.productNav .productTitle {
+  width: 90%;
+  height: 1.06666667rem;
+}
+.productNav .productTitle li {
+  float: left;
+  list-style: none;
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  width: 33.3333%;
+  text-align: center;
+}
+.productNav .productTitle li a {
+  display: inline-block;
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  font-size: 15px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  vertical-align: middle;
+  width: 60%;
+  overflow: hidden;
+}
+[data-dpr="2"] .productNav .productTitle li a {
+  font-size: 30px;
+}
+[data-dpr="2.5"] .productNav .productTitle li a {
+  font-size: 38px;
+}
+[data-dpr="2.75"] .productNav .productTitle li a {
+  font-size: 41px;
+}
+[data-dpr="3"] .productNav .productTitle li a {
+  font-size: 45px;
+}
+[data-dpr="4"] .productNav .productTitle li a {
+  font-size: 60px;
+}
+.productNav .productTitle li i {
+  font-size: 15px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  color: #222222;
+  vertical-align: middle;
+}
+[data-dpr="2"] .productNav .productTitle li i {
+  font-size: 30px;
+}
+[data-dpr="2.5"] .productNav .productTitle li i {
+  font-size: 38px;
+}
+[data-dpr="2.75"] .productNav .productTitle li i {
+  font-size: 41px;
+}
+[data-dpr="3"] .productNav .productTitle li i {
+  font-size: 45px;
+}
+[data-dpr="4"] .productNav .productTitle li i {
+  font-size: 60px;
+}
+.productNav a.f_right {
+  border-left: 0.01333333rem solid #8c8c8c;
+  height: 1.06666667rem;
+  padding: 0.21333333rem;
+  list-style: none;
+  width: 10%;
+  text-align: center;
+}
+.productNav a.f_right i {
+  display: block;
+  font-size: 25px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  color: #a1a1a1;
+}
+[data-dpr="2"] .productNav a.f_right i {
+  font-size: 50px;
+}
+[data-dpr="2.5"] .productNav a.f_right i {
+  font-size: 63px;
+}
+[data-dpr="2.75"] .productNav a.f_right i {
+  font-size: 69px;
+}
+[data-dpr="3"] .productNav a.f_right i {
+  font-size: 75px;
+}
+[data-dpr="4"] .productNav a.f_right i {
+  font-size: 100px;
+}
+.store,
+.address {
+  width: 100%;
+  background: #ffffff;
+  position: absolute;
+  top: 2.34666667rem;
+  left: 0;
+  z-index: 1;
+}
+.store li,
+.address li {
+  width: 100%;
+  height: 1.06666667rem;
+  border-bottom: 0.01333333rem solid #8c8c8c;
+}
+.store li a,
+.address li a {
+  display: block;
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  font-size: 10px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  padding-left: 0.21333333rem;
+  font-size: 15px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+}
+[data-dpr="2"] .store li a,
+[data-dpr="2"] .address li a {
+  font-size: 20px;
+}
+[data-dpr="2.5"] .store li a,
+[data-dpr="2.5"] .address li a {
+  font-size: 25px;
+}
+[data-dpr="2.75"] .store li a,
+[data-dpr="2.75"] .address li a {
+  font-size: 28px;
+}
+[data-dpr="3"] .store li a,
+[data-dpr="3"] .address li a {
+  font-size: 30px;
+}
+[data-dpr="4"] .store li a,
+[data-dpr="4"] .address li a {
+  font-size: 40px;
+}
+[data-dpr="2"] .store li a,
+[data-dpr="2"] .address li a {
+  font-size: 30px;
+}
+[data-dpr="2.5"] .store li a,
+[data-dpr="2.5"] .address li a {
+  font-size: 38px;
+}
+[data-dpr="2.75"] .store li a,
+[data-dpr="2.75"] .address li a {
+  font-size: 41px;
+}
+[data-dpr="3"] .store li a,
+[data-dpr="3"] .address li a {
+  font-size: 45px;
+}
+[data-dpr="4"] .store li a,
+[data-dpr="4"] .address li a {
+  font-size: 60px;
+}
+/*顶部导航栏END*/
+/*商品展示部分start*/
+.product {
+  width: 100%;
+  padding: 0.32rem;
+}
+.product .productShow {
+  width: 48%;
+  background: #ffffff;
+  margin-bottom: 0.32rem;
+}
+.product .productShow:nth-child(2n) {
+  margin-left: 4%;
+}
+.product .productShow .imgBox {
+  display: block;
+  width: 100%;
+}
+.product .productShow .imgBox img {
+  width: 100%;
+}
+.product .productTxt {
+  padding: 0.13333333rem;
+}
+.product .productTxt span {
+  display: block;
+  color: #000;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  font-size: 13px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  margin: 0.13333333rem;
+  width: 98%;
+  overflow: hidden;
+}
+[data-dpr="2"] .product .productTxt span {
+  font-size: 26px;
+}
+[data-dpr="2.5"] .product .productTxt span {
+  font-size: 33px;
+}
+[data-dpr="2.75"] .product .productTxt span {
+  font-size: 36px;
+}
+[data-dpr="3"] .product .productTxt span {
+  font-size: 39px;
+}
+[data-dpr="4"] .product .productTxt span {
+  font-size: 52px;
+}
+.product .productTxt i {
+  float: left;
+  height: 0.66666667rem;
+  line-height: 0.66666667rem;
+  font-style: normal;
+  color: red;
+  font-size: 20px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+}
+[data-dpr="2"] .product .productTxt i {
+  font-size: 40px;
+}
+[data-dpr="2.5"] .product .productTxt i {
+  font-size: 50px;
+}
+[data-dpr="2.75"] .product .productTxt i {
+  font-size: 55px;
+}
+[data-dpr="3"] .product .productTxt i {
+  font-size: 60px;
+}
+[data-dpr="4"] .product .productTxt i {
+  font-size: 80px;
+}
+.product .productTxt a {
+  float: right;
+  height: 0.66666667rem;
+  width: 1.6rem;
+  line-height: 0.66666667rem;
+  text-align: center;
+  background: #ff841d;
+  color: #ffffff;
+  font-size: 15px;
+  /*for mx3*/
+  /*for小米node*/
+  /*for 三星note4*/
+  border-radius: 0.13333333rem;
+}
+[data-dpr="2"] .product .productTxt a {
+  font-size: 30px;
+}
+[data-dpr="2.5"] .product .productTxt a {
+  font-size: 38px;
+}
+[data-dpr="2.75"] .product .productTxt a {
+  font-size: 41px;
+}
+[data-dpr="3"] .product .productTxt a {
+  font-size: 45px;
+}
+[data-dpr="4"] .product .productTxt a {
+  font-size: 60px;
+}
+/*商品展示部分end*/

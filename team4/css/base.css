@@ -1,0 +1,283 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ol,
+ul {
+  list-style: none;
+}
+input,
+select,
+form,
+image,
+button {
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  zoom: 1;
+}
+textarea {
+  width: 95%;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+em,
+i {
+  font-style: normal;
+}
+img {
+  border: none;
+}
+html {
+  width: 100%;
+  font-size: 75px;
+}
+body {
+  color: #000;
+  font-family: "微软雅黑 arial";
+  background: #FFF;
+  overflow-x: hidden;
+}
+[data-dpr="1"] .layout {
+  font-size: 16px;
+}
+[data-dpr="2"] .layout {
+  font-size: 32px;
+}
+[data-dpr="3"] .layout {
+  font-size: 48px;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+/* 字体大小 */
+[data-dpr="1"] .fs12 {
+  font-size: 12px;
+}
+[data-dpr="2"] .fs12 {
+  font-size: 24px;
+}
+[data-dpr="3"] .fs12 {
+  font-size: 36px;
+}
+[data-dpr="1"] .fs14 {
+  font-size: 14px;
+}
+[data-dpr="2"] .fs14 {
+  font-size: 28px;
+}
+[data-dpr="3"] .fs14 {
+  font-size: 42px;
+}
+[data-dpr="1"] .fs16 {
+  font-size: 16px;
+}
+[data-dpr="2"] .fs16 {
+  font-size: 32px;
+}
+[data-dpr="3"] .fs16 {
+  font-size: 48px;
+}
+[data-dpr="1"] .fs18 {
+  font-size: 18px;
+}
+[data-dpr="2"] .fs18 {
+  font-size: 36px;
+}
+[data-dpr="3"] .fs18 {
+  font-size: 54px;
+}
+[data-dpr="1"] .fs20 {
+  font-size: 20px;
+}
+[data-dpr="2"] .fs20 {
+  font-size: 40px;
+}
+[data-dpr="3"] .fs20 {
+  font-size: 60px;
+}
+[data-dpr="1"] .fs24 {
+  font-size: 24px;
+}
+[data-dpr="2"] .fs24 {
+  font-size: 48px;
+}
+[data-dpr="3"] .fs24 {
+  font-size: 72px;
+}
+[data-dpr="1"] .fs40 {
+  font-size: 40px;
+}
+[data-dpr="2"] .fs40 {
+  font-size: 80px;
+}
+[data-dpr="3"] .fs40 {
+  font-size: 120px;
+}
+/* 字体大小 */
+/* 字体图标 */
+@font-face {
+  font-family: "iconfont";
+  src: url('../fonts/iconfont.eot?t=1479796363060');
+  src: url('../fonts/iconfont.eot?t=1479796363060#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/iconfont.woff?t=1479796363060') format('woff'), /* chrome, firefox */ url('../fonts/iconfont.ttf?t=1479796363060') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../fonts/iconfont.svg?t=1479796363060#iconfont') format('svg');
+  
+  /* IE9*/
+  /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-shangjiantou:before {
+  content: "\e61b";
+}
+.icon-xiajiantou:before {
+  content: "\e61c";
+}
+.icon-jiantouxia:before {
+  content: "\e6a1";
+}
+.icon-jiantoushang:before {
+  content: "\e6a2";
+}
+.icon-wujiaoxing:before {
+  content: "\e673";
+}
+.icon-sousuocaidan:before {
+  content: "\e64f";
+}
+.icon-jiantou2:before {
+  content: "\e69a";
+}
+.icon-guanbi:before {
+  content: "\e610";
+}
+.icon-pinglun:before {
+  content: "\e641";
+}
+.icon-shangjiantou1:before {
+  content: "\e669";
+}
+.icon-jiantouyoujiantou:before {
+  content: "\e615";
+}
+.icon-xiangshangjiantou:before {
+  content: "\e62b";
+}
+.icon-dagou:before {
+  content: "\e6c8";
+}
+.icon-jingdong:before {
+  content: "\e60d";
+}
+.icon-jiantouyoujiantou1:before {
+  content: "\e501";
+}
+/* 字体图标 */
+/* 头部公用 */
+#header {
+  height: 1.2rem;
+  background: #FF841D;
+  position: relative;
+  line-height: 1.2rem;
+}
+#header .icon-back {
+  position: absolute;
+  left: 0.26666667rem;
+  top: 0;
+  line-height: 1.2rem;
+  color: #fff;
+}
+#header h3 {
+  text-align: center;
+  color: #fff;
+  font-weight: normal;
+}
+#header .app-download {
+  position: absolute;
+  right: 0.26666667rem;
+  top: 0;
+  line-height: 1.2rem;
+}
+#header .app-download img {
+  width: 0.90666667rem;
+  height: 0.90666667rem;
+  vertical-align: middle;
+}
+/* 底部 */
+/* 底部公用 */
+.foot {
+  margin-top: 0.69333333rem;
+}
+.foot div {
+  border-top: 0.02666667rem solid #c4c4c4;
+  border-bottom: 0.02666667rem solid #c4c4c4;
+  width: 100%;
+}
+.foot div a {
+  display: inline-block;
+  line-height: 0.88rem;
+  height: 0.88rem;
+  text-align: center;
+  width: 2.96rem;
+  border-right: 0.02666667rem solid #c4c4c4;
+}
+.foot div a:last-child {
+  border: none;
+}
+.foot div a i {
+  color: #757575;
+}
+.foot p:nth-child(2) {
+  margin-top: 0.53333333rem;
+  height: 0.32rem;
+  text-align: center;
+}
+.foot p:nth-child(2) span:nth-child(1) {
+  color: #f00;
+}
+.foot p:nth-child(2) span:nth-child(2) {
+  color: #757575;
+}
+.foot p:nth-child(3) {
+  text-align: center;
+  color: #757575;
+  margin-top: 0.21333333rem;
+}
+/* 底部公用 */
+/* 返回上页 */

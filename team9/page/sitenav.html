@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>商品导航</title>
+    <script src="../libs/flexible.js"></script>
+    <link rel="stylesheet" href="../css/base2.css">
+    <link rel="stylesheet" href="../css/sitenav.css">
+    <!-- <script src="libs/less.js"></script> -->
+
+</head>
+<body>
+<div class="layout">
+    <!-- 顶部区域 start -->
+    <header id="header">
+        <a href="../index.html" class="icon-back iconfont icon-jiantouyoujiantou1 fs24"></a>
+        <h3 class="fs20">商品导航</h3>
+        <a href="#" class="app-download"><img src="../images/header_app.png" alt="#"/></a>
+    </header>
+    <!-- 顶部区域 end-->
+    <!-- 商品导航区域 start-->
+    <section>
+        <div class="main">
+
+        </div>
+    </section>
+    <!-- 商品导航区域 end -->
+
+    <!-- 底部区域 start -->
+    <footer>
+        <footer id="ctl00_foot">
+            <div class="foot_top">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#header" style="width: 40%; border: 0;">
+                    <span class="icon-bottom iconfont icon-xiangshangjiantou"></span>
+                   返回顶部</a>
+            </div>
+            <div class="footer">
+                <p>
+                    <a href="#" onclick="trackEvent('footer下载');" style="color: Red;">手机APP下载   </a> <a href="index.htm" tppabs="http://m.manmanbuy.com/">
+                        慢慢买手机版</a> -- 掌上比价平台</p>
+                <p>
+                    m.manmanbuy.com
+                    <img src="https://z11.cnzz.com/stat.htm-id=1256699064&amp;r=&amp;iw=1&amp;  showp=0x0&amp;lg=undefined&amp;cnzz_eid=none&amp;p=http---m.manmanbuy.com-&amp;   rnd=453668140.gif" width="0" height="0">
+                </p>
+            </div>
+        </footer>
+    </footer>
+    <!-- 底部区域 end -->
+    <script src="../libs/template.js"></script>
+    <!-- 商品导航的模板区域 start -->
+    <script type="text/html" id="template">
+        <div class="link">
+        {{if result}}
+            {{each result as value}}
+                <a href="{{value.navHref}}" id="{{value.navId}}"><img src="{{value.navImg}}" alt="">{{value.navTitle}}</a>
+            {{/each}}
+        {{/if}}
+        </div>
+    </script>
+     <!-- 商品导航的模板区域 end -->
+    <script src="../libs/jquery.min.js"></script>
+    <script src="../js/sitenav.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="../lib/flexible/flexible.js"></script>
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="../css/l.css"/>
+    <link rel="stylesheet" href="../fonts/iconfont.css"/>
+    <link rel="stylesheet" href="../less/base.css"/>
+    <link rel="stylesheet" href="../less/brandProductcomment.css"/>
+    <script src="../lib/template/template.js"></script>
+
+</head>
+<body>
+<!--顶部通栏start-->
+<div class="top_header">
+    <div class="logo">
+        <h1>慢慢买</h1>
+        <img src="../images/header_logo.png" alt=""/>
+    </div>
+    <div class="app_download">
+        <img src="../images/header_app.png" alt=""/>
+    </div>
+</div>
+<!--顶部通栏end-->
+
+<!--搜索栏start-->
+<div class="top_search">
+    <form action="#">
+        <input type="search" placeholder="请输入你想比价的商品" class="search_content"/>
+        <input type="button" value="搜索" class="search_btn"/>
+    </form>
+</div>
+<!--搜索栏end-->
+
+<!--导航栏start-->
+<div class="nav">
+    <ul>
+        <li><a href="index1.html">首页&gt;</a></li>
+        <li><a href="brandTitle.html">全部分类&gt;</a></li>
+        <li><a href="javascript:;" class="goback">返回上级&gt;</a></li>
+    </ul>
+</div>
+<!--导航end-->
+
+<!--销量排行start-->
+<div class="navTitle">平板电视最新评论</div>
+<div class="comment">
+    <!--<div class="comment_title clearfix">
+        <img src="images/gengduo.png" alt=""/>
+
+        <p>乐视TV（letv）超3超级电视 4k超清电视 超级电视 超级电视 超级电视</p>
+    </div>
+    <div class="comment_content">
+        <div class="content_top clearfix">
+            <div class="user">
+                <span class="username">ggmfd</span>
+                <span>:</span>
+                <span class="iconfont icon-biaoxingfill"></span>
+                <span class="iconfont icon-biaoxingfill"></span>
+                <span class="iconfont icon-biaoxingfill"></span>
+                <span class="iconfont icon-biaoxingfill"></span>
+                <span class="iconfont icon-biaoxingfill"></span>
+            </div>
+            <div class="comment_time">2016/2/11</div>
+        </div>
+        <div class="content_main">
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+            用来获取品牌大全的标题信息 并渲染到列表用来获取品牌大全的标题信息 并渲染到列表
+        </div>
+        <div class="content_bottom">来自京东商城</div>
+    </div>-->
+</div>
+<!--销量排行end-->
+
+
+<!--底部区域start-->
+<footer>
+    <ul class="clearfix">
+        <li>登录</li>
+        <li>注册</li>
+        <li id="toTop"><span class="iconfont icon-xiangshang4"></span>返回顶部</li>
+    </ul>
+    <div class="footer_info">
+        <p><a href="#">手机APP下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<!--底部区域end-->
+</body>
+<script src="../lib/jQuery/jquery-1.12.2.js"></script>
+<script id="brandProductComment" type="text/html">
+    {{if result}}
+    <div class="comment_title clearfix">
+        {{=result[0].img}}
+
+        <p>{{result[0].name}}</p>
+    </div>
+    <div class="comment_content">
+        <div class="content_top clearfix">
+            <div class="user">
+                <span class="username">{{result[0].comName}}</span>
+                <span>:</span>
+                <span class="iconfont icon-biaoxingfill"></span>
+                <span class="iconfont icon-biaoxingfill"></span>
+                <span class="iconfont icon-biaoxingfill"></span>
+                <span class="iconfont icon-biaoxingfill"></span>
+                <span class="iconfont icon-biaoxingfill"></span>
+            </div>
+            <div class="comment_time">{{result[0].comTime}}</div>
+        </div>
+        <div class="content_main">{{result[0].comContent}}</div>
+        <div class="content_bottom">{{result[0].comFrom}}</div>
+    </div>
+    {{/if}}
+</script>
+<script src="../js/common.js"></script>
+<script src="../js/brandProductcomment.js"></script>
+</html>

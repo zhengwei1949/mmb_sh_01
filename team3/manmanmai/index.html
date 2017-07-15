@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />-->
+		<title>主页</title>
+		<!--引用重置与公用css文件-->
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/public.css" />
+		<!-- 引用本页样式文件-->
+		<link rel="stylesheet" href="css/index.css" />
+		<!--<script src="less/less.js"></script>-->
+		<!--引用flexible布局文件-->
+		<script src="lib/flexible/flexible.js" type="text/javascript"></script>
+		<!--引用Jquery公用文件-->
+		<script src="lib/jQuery/jquery.js"></script>
+		<!--引入头部和底部的效果-->
+		<script src="js/base.js"></script>
+		<!--模板文件-->
+		<script src="lib/template/template.js"></script>
+		<!--菜单栏模板-->
+		<script type="text/html" id="navList">
+			{{if result}}
+			<div class="content flexBox">
+				{{each result as value}}
+				<div class="list">
+					<a class="flexBox ac jsc" href="{{value.titlehref}}">
+						{{#value.img}}
+						<p>{{value.name}}</p>
+					</a>
+				</div>
+				{{/each}}
+			</div>
+			{{/if}}
+		</script>
+		<!--折扣推荐模板-->
+		<script type="text/html" id="moneyCtrl">
+			{{if result}}
+			<ul>
+				{{each result as v}}
+				<li class="listItem bb">
+					<a class="listCont clearfix" href="getmoneyctrlproduct.html?productid={{v.productId}}" >
+						<div class="listImg fl flexBox jcs ac">
+							{{#v.productImgSm}}
+						</div>
+						<div class="desc fl">
+							<p class="listTitle">{{v.productName}}</p>
+							<p class="price">{{v.productPinkage}}</p>
+							<div class="other">
+								<span>{{v.productFrom}} | {{v.productTime}}</span>
+								<span class="comment fr">
+		   	   					        <i class="icon_comment"></i>{{v.productComCount}}
+		   	   				        </span>
+							</div>
+						</div>
+
+					</a>
+				</li>
+				{{/each}}
+			</ul>
+			{{/if}}
+		</script>
+		<!--本页js-->
+		<script src="js/index.js"></script>
+	</head>
+
+	<body>
+		<script src="js/header.js"></script>
+		
+		
+		<!--导航栏-->
+		<section class="nav mt">
+              <!--模板渲染菜单-->
+		</section>
+		<!--主体部分-->
+		<main class="container">
+			<h3 class="listTitle">
+			  超值折扣推荐
+			  <a class="fr" href="javascript:;">&gt;</a>
+		   </h3>
+			<section class="listItems">
+                  <!--模板渲染折扣内容-->
+			</section>
+			<section class="preferMore">
+				<a href="javascript:;">更多优惠信息&gt;&gt;</a>
+			</section>
+               <!--品牌排行标题-->
+			<h3 class="listTitle">
+			         品牌排行
+			  <a class="fr" href="javascript:;">&gt;</a>
+		   </h3>
+		</main>
+      
+      
+      <script src="js/footer.js"></script>
+		
+
+	</body>
+
+</html>

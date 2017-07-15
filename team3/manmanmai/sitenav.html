@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>daohang</title>
+    <script type="text/javascript" src="lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="lib/flexible/flexible.js"></script>
+    <script src="js/base.js"></script>
+    <script src="lib/template/template.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/sitenav.css">
+    <script type="text/javascript" src="js/sitenav.js"></script>
+    <!-- 内容模板 -->
+    <script type="text/html" id="sitenav">
+        {{if result}} {{each result as value}}
+        <a href="{{value.navHref}}"><img src="{{value.navImg}}" alt=""><span>{{value.navTitle}}</span></a>
+        {{/each}} {{/if}}
+    </script>
+</head>
+
+<body>
+    <!-- 头部内容 -->
+    <header class="flexBox ac">
+        <div>
+        <a href="" class="goback icon_navigate_before"></a>
+        </div>
+        <span class="title">商城导航</span>
+        <div class="appDown">
+            <a href="index.html"><img src="images/header_app.png" /></a>
+        </div>
+    </header>
+    <!-- 中间内容 -->
+    <div class="container clearfix">
+    </div>
+    <!-- 底部内容 -->
+     <script src="js/footer.js"></script>
+</body>
+
+</html>

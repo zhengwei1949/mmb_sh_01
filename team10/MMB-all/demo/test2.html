@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title></title>
+    <style>
+        body {
+            height:5000px;
+        }
+        a {
+            display: block;
+            padding-top: 2000px;
+        }
+    </style>
+</head>
+<body>
+<a href="#">1111111111111111111111111111</a>
+</body>
+<script src="../lib/jQuery/jquery-1.12.2.js"></script>
+<script>
+    /*var y0=0;
+    window.onscroll= function () {
+        var y1=window.pageYOffset;
+        var distance=y1-y0;
+        console.log(distance);
+        var arr=["blue","red","green","yellow"]
+        if(distance>500){
+            y0=y1;
+            document.body.style.backgroundColor=arr[(Math.floor(Math.random()*4))];
+        }
+    }*/
+    $(function () {
+        $.ajax({
+            url:"http://mmb.ittun.com/api/getbaicaijiatitle",
+            type:"get",
+            dataType:"Json",
+            success:function(data){
+                for(var i=0;i<data.result.length;i++){
+                    console.log(data.result[i].titleId);
+                }
+
+            }
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,70 @@
+.tv {
+  width: 100%;
+  height: 1.01333333rem;
+  background-color: #F3F3F3;
+  font-size: 0.42666667rem;
+  padding-left: 0.26666667rem;
+  line-height: 1.01333333rem;
+  color: #A24604;
+  border-bottom: 1px solid #C8C8C8;
+}
+.listing {
+  width: 100%;
+}
+.listing ul {
+  width: 100%;
+}
+.listing ul li {
+  width: 100%;
+  height: 1.57333333rem;
+  border-bottom: 1px solid #E7E7E7;
+  position: relative;
+}
+.listing ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.listing ul li a .box_left {
+  width: 6.66666667rem;
+  float: left;
+}
+.listing ul li a .box_left .box {
+  width: 0.53333333rem;
+  height: 0.53333333rem;
+  display: block;
+  float: left;
+  margin-top: 0.26666667rem;
+  margin-left: 0.26666667rem;
+  background-color: #C9C9C9;
+  color: white;
+  text-align: center;
+  line-height: 0.53333333rem;
+}
+.listing ul li a .box_left p:nth-child(2) {
+  margin-top: 0.34666667rem;
+  margin-left: 1.09333333rem;
+  color: #999;
+  font-size: 0.43243243rem;
+}
+.listing ul li a .box_left p:nth-child(3) {
+  margin-top: 0.08rem;
+  margin-left: 1.09333333rem;
+  clolor: #000;
+  font-size: 0.37333333rem;
+  padding-right: 0.37333333rem;
+}
+.listing ul li a .jiantou {
+  height: 1.57333333rem;
+  line-height: 1.57333333rem;
+  font-size: 0.53333333rem;
+}
+.listing ul li:nth-child(1) a .box_left .box {
+  background-color: #F10E0E;
+}
+.listing ul li:nth-child(2) a .box_left .box {
+  background-color: #FF9314;
+}
+.listing ul li:nth-child(3) a .box_left .box {
+  background-color: #8ADF5B;
+}

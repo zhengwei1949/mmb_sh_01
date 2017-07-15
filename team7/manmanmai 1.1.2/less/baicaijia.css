@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/* ---- 页面容器 ----  */
+.m_top {
+  background-color: #F4483E;
+  z-index: 1000;
+}
+.layout {
+  width: 100%;
+  position: relative;
+  /* ---- 顶部通栏白菜价背景色  ---- */
+}
+.layout nav.nav-cabbage {
+  /*---- 白菜价导航栏 ----*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+  background-color: #fff;
+  width: 100%;
+  z-index: 990;
+}
+.layout nav.nav-cabbage ul {
+  width: 210%;
+  padding: 0 5px;
+  border-bottom: 1px solid #dddddd;
+}
+.layout nav.nav-cabbage ul li {
+  float: left;
+  text-align: center;
+  padding: 5px 12px;
+}
+.layout nav.nav-cabbage ul li a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.1s;
+}
+.layout nav.nav-cabbage ul li a.active {
+  border-bottom: 4px solid red;
+}
+.layout .product-list {
+  padding: 40px 0 10px 0;
+  /* ---- 白菜价商品列表 --- */
+}
+.layout .product-list ul {
+  width: 100%;
+  padding-bottom: 10px;
+  background-color: #f3f3f3;
+}
+.layout .product-list ul li {
+  width: 100%;
+  padding: 12px 5px;
+  background-color: #fff;
+  margin-top: 10px;
+  height: 175px;
+}
+.layout .product-list ul li .product-wrapper .imgBox {
+  float: left;
+  width: 38%;
+  line-height: 160px;
+  padding: 10px;
+}
+.layout .product-list ul li .product-wrapper .imgBox img {
+  display: block;
+  width: 100%;
+}
+.layout .product-list ul li .product-wrapper .productText {
+  float: right;
+  padding: 5px;
+  width: 62%;
+}
+.layout .product-list ul li .product-wrapper .productText h5 {
+  font-size: 14px;
+  font-weight: normal;
+  height: 38px;
+}
+.layout .product-list ul li .product-wrapper .productText h5 .b {
+  font-weight: normal;
+}
+.layout .product-list ul li .product-wrapper .productText p {
+  color: red;
+  margin-top: 5px;
+  font-size: 20px;
+}
+.layout .product-list ul li .product-wrapper .productText p i {
+  font-size: 16px;
+}
+.layout .product-list ul li .product-wrapper .productText p em {
+  font-size: 20px;
+  color: red;
+}
+.layout .product-list ul li .product-wrapper .productText p del {
+  font-size: 14px;
+  padding-left: 10px;
+  color: #333333;
+}
+.layout .product-list ul li .product-wrapper .productText .progress-bar .bar {
+  width: 100px;
+  float: left;
+  position: relative;
+  border: 1px solid red;
+  background-color: pink;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+.layout .product-list ul li .product-wrapper .productText .progress-bar .bar .goquan {
+  display: block;
+  width: 100%;
+  height: 20px;
+  position: absolute;
+}
+.layout .product-list ul li .product-wrapper .productText .progress-bar .bar i {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 21px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  overflow: hidden;
+}
+.layout .product-list ul li .product-wrapper .productText .progress-bar .bar i em {
+  float: left;
+  height: 21px;
+  background: red;
+}
+.layout .product-list ul li .product-wrapper .productText .progress-bar .bar i span {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  position: absolute;
+  z-index: 5;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+}
+.layout .product-list ul li .product-wrapper .productText .progress-bar .bar b {
+  font-size: 12px;
+  color: #E43A3D;
+  font-weight: normal;
+  margin-right: -183%;
+}
+.layout .product-list ul li .product-wrapper .productText .getCount {
+  margin-top: 10px;
+}
+.layout .product-list ul li .product-wrapper .productText .getCount a:first-child {
+  display: block;
+  float: left;
+  height: 30px;
+  line-height: 20px;
+  color: #E43A3D;
+  font-size: 12px;
+  padding: 5px;
+  border: 1px dashed #E43A3D;
+}
+.layout .product-list ul li .product-wrapper .productText .getCount a:last-child {
+  display: block;
+  float: right;
+  width: 35%;
+  height: 30px;
+  line-height: 30px;
+  background-color: #FF5E5D;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 5px;
+}
+.layout div.backTop {
+  /* ---- 回到顶部 ---- */
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+}
+.layout div.backTop span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: rgba(76, 76, 76, 0.7);
+  border-radius: 20px;
+  font-size: 20px;
+  color: #fff;
+}

@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* =====商品评价===== */
+.layout {
+  /* =====小三角===== */
+}
+.layout .c_box {
+  position: relative;
+}
+.layout .c_box:before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  display: block;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #F8F8F8 transparent;
+  position: absolute;
+  left: 30px;
+  top: -20px;
+}
+.layout .b_list .c_part {
+  background: #F8F8F8;
+  padding: 10px;
+}
+.layout .b_list .c_part .start {
+  color: #FF9000;
+}
+.layout .b_list .c_part .c_left {
+  font-size: 14px;
+}
+.layout .b_list .c_part .c_right {
+  color: #999999;
+  font-size: 14px;
+}
+.layout .b_list .c_part .content {
+  margin-top: 12px;
+  font-size: 14px;
+}

@@ -1,0 +1,50 @@
+section {
+  background: #e0e0e0;
+  width: 100%;
+}
+section > ul {
+  width: 100%;
+}
+section > ul > li {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+}
+section > ul > li span {
+  line-height: 0.53333333rem;
+  margin-left: 10px;
+}
+section > ul > li > a {
+  display: block;
+  width: 0.2rem;
+  height: 0.10666667rem;
+  margin-top: 15px;
+  margin-right: 10px;
+  overflow: hidden;
+  font-family: monospace;
+  font-weight: 900;
+  position: relative;
+}
+section > ul > li .down {
+  width: 100%;
+  background: #fff;
+  /*display: none;*/
+}
+section > ul > li .down li {
+  float: left;
+  width: 33.333%;
+  height: 0.53333333rem;
+  line-height: 0.53333333rem;
+  text-align: center;
+  border-bottom: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+}
+footer {
+  background: #e0e0e0;
+}
+.hide {
+  display: none;
+}
+.show{
+  display: block;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/commodity.css">
+    <script src='lib/flexible/flexible.js'></script>
+    <script src='lib/less/less.min.js'></script>
+    <script src='lib/jquery-1.12.0/jquery-1.12.0.js'></script>
+    <script src='js/commodity.js'></script>
+</head>
+<body>
+<!-- 头部通栏 -->
+<header class='header'>
+    <div class='logo'>
+        <a href="#" title='慢慢买'>
+            <img src="img/header_logo.png" alt="">
+        </a>
+    </div>
+    <div class='appdown'>
+        <a href="#"><img src="img/header_app.png" alt=""></a>
+    </div>
+</header>
+<!-- 搜索框 -->
+<section id="form-search">
+    <form action="#" class="search">
+        <input type="search" name="" id="" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+    </form>
+</section>
+<section>
+    <!-- 导航栏 -->
+    <div class='nav'>
+            <span><a href="../index1.html">首页</a> >
+                <a href="TVbuy.html">全部分类</a> ></span>
+        <input type="button" value='筛选'>
+    </div>
+    <!-- 产品页 -->
+    <div class='product-bijia'>
+        <div class="product-name">
+            <!--乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视-->
+        </div>
+        <div class='product-img'>
+            <img src="img/Thumb_2016060015515937123.png" alt="乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视" width=170>
+        </div>
+        <!-- 收藏按钮 -->
+        <div class='product-collect'>
+            <a href="#">
+                <img src="img/sc.jpg" alt="">
+            </a>
+        </div>
+        <!--tab 栏-->
+        <div class='tab'>
+            <ul>
+                <li class="cur"><a href="#">比价购买</a></li>
+                <li class="mtab"><a href="#">产品参数</a></li>
+                <li class=""><a href="#" class="">评价(2322)</a></li>
+            </ul>
+        </div>
+        <div class="plist">
+            <div class="note">
+                * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+            </div>
+        </div>
+    </div>
+    <!-- 网友评价 -->
+    <div class='product-com-title'>
+        <div>网友评价</div>
+    </div>
+    <!--评论-->
+    <div class='product-com-list'>
+        <ul class="style">
+        </ul>
+    </div>
+    <div class="more">
+        <a class="morein" href="JavaScript:">显示更多评价</a>
+    </div>
+</section>
+<!-- 底部通栏 -->
+<footer>
+    <div class='foot_top'>
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" style="width :40%; border:0" ;>
+            <img src="img/top.jpg" alt="">返回顶部</a>
+    </div>
+    <div class='foot_bottom'>
+        <p>
+            <a href="">手机app下载</a><a href="">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+
+        <p>
+            m.manmanbuy.com
+        </p>
+    </div>
+</footer>
+</body>
+<script id="gata" type='text/html'>
+    {{each result as v i}}
+    <li>
+        <div class="clearfix"><span class="pull-left com-name">{{v.comName}}</span>
+
+            <div class="pull-right com-time fr">{{v.comTime}}</div>
+        </div>
+        <div class="clearfix"><span class="star pull-left com-star"><em class="star5"></em></span> <span
+                class="pull-right com-from fr">{{ v.comFrom}}</span></div>
+        <div class="com-content">{{v.comContent}}</div>
+    </li>
+    {{/each}}
+</script>
+<script src='js/template-debug.js'></script>
+</html>

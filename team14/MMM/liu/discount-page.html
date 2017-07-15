@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <title></title>
+    <!-- [if lt IE 9]> -->
+    <script src="lib/html5shiv/html5shiv.min.js"></script>
+    <!--   <![endif] -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/discount-page.css">
+</head>
+<body>
+
+<div class="all">
+
+    <!-- 顶部通栏 -->
+    <header id="header" class="header">
+        <a class="iconfonts icon-xiangzuo1" href=""></a>
+        <a href="#" class="header_right">
+            <img src="images/header_app.png" alt=""/>
+        </a>
+
+        <p>优惠券</p>
+    </header>
+
+    <!-- 优惠券标题列表 -->
+    <div class="coupon">
+        <ul class="clearfix">
+            <li>
+                <a href="#">
+                    <img src="" alt="">
+                    <span>肯德基</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+
+    <!-- 首页>优惠券 -->
+    <div class="brand">
+        <span>首页>优惠券</span>
+    </div>
+
+
+    <!-- 底部 -->
+    <div class="foot">
+        <div class="foot_top">
+            <a href="#" class="fs14">登录</a>
+            <a href="#" class="fs14">注册</a>
+            <a href="#top" class="fs14"><i class="iconfonts icon-xiangshang4"></i>返回顶部</a>
+        </div>
+        <!-- 底部下半部分 -->
+        <div class="foot_bottom">
+            <p class="fs12">
+                <span>手机APP下载</span>
+                慢慢买手机版
+                <span>-- 掌上比价平台</span>
+            </p>
+
+            <p class="fs12">m.manmanbuy.com</p>
+        </div>
+    </div>
+
+
+    <!-- 优惠券标题列表 -->
+    <script id="couponlist" type="text/html">
+        {{if result}}
+        <ul class="clearfix">
+            {{each result as value}}
+            <li>
+                <a href="{{value.couponLink}}?couponid={{value.couponId}}" id="{{value.couponId}}">
+                    <img src="{{value.couponImg}}" alt=""/>
+                    <span>{{value.couponTitle}}</span>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </script>
+
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/discount-page.js"></script>
+</body>
+</html>

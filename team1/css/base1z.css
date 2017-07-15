@@ -1,0 +1,56 @@
+/*头部样式*/
+/*******************头部css*/
+header .top {
+  height: 1.333333rem;
+  width: 100%;
+  background: url("../images/header_logo.png") center left no-repeat;
+  background-size: 4.93321rem, 0.66665rem;
+  background-origin: content-box;
+  padding-left: 0.373324rem;
+  background-color: #FF841D;
+}
+header .top a {
+  display: block;
+  height: 100%;
+  width: 1.2rem;
+  background: url("../images/header_app.png") center left no-repeat;
+  background-size: 0.906644rem, 0.906644rem;
+}
+header .search {
+  height: 1.333333rem;
+  width: 100%;
+  padding: 0.26666rem 0 0.53332rem 0.26666rem;
+}
+header .search .text {
+  height: 0.8rem;
+  width: 7.626667rem;
+  background-color: #f1f1f1;
+  color: #a9a9a9;
+  border: none;
+  border-radius: 0.39999rem;
+  line-height: 0.79998rem;
+  padding-left: 0.53332rem;
+}
+header .search .btn {
+  height: 0.8rem;
+  width: 1.653333rem;
+  border: none;
+  border-radius: 0.39999rem;
+  background-color: #FF841D;
+  color: white;
+}
+/**********************上菜单*/
+.menu {
+  height: 1.06664rem;
+  width: 100%;
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+  padding-left: 0.13333rem;
+  background: #f1f1f1;
+  background-image: linear-gradient(to bottom, #fff 0%, #f1f1f1 100%);
+}
+.menu a {
+  display: block;
+  height: 100%;
+  line-height: 1.06664rem;
+}

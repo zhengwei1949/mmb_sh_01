@@ -1,0 +1,123 @@
+@charset "utf-8";
+/*页面顶部通栏 公用模块*/
+.head {
+    background-color: #FF841D;
+    padding:0 16px;
+}
+
+.head .icon_logo {
+    width: 185px;
+    height: 50px;
+    float: left;
+    background-position: 0 12px;
+    background-size: 250px 100px;
+}
+.head .icon_appdown {
+    width: 34px;
+    height: 50px;
+    background-position: 0 -58px;
+    background-size: 250px 100px;
+    float: right;
+}
+
+
+/*页面搜索通栏 公用模块*/
+.search_bar form {
+    padding:10px;
+    height: 50px;
+    border-bottom:1px solid #E6E6E6;
+}
+
+.search_bar .search {
+    float: left;
+    width: 658px;
+    height: 30px;
+    font-size:16px;
+    color:#707070;
+    padding-left:37px;
+    border-radius: 15px;
+    background-color: #F1F1F1;
+}
+
+.search_bar .btn {
+    float: right;
+    width: 63px;
+    height: 30px;
+    font-size:16px;
+    color:#fff;
+    border-radius: 15px;
+    background-color: #FF841D;
+}
+
+/*=======底部上下页下拉框模块============*/
+.page_select .select_area,
+.page_select .prev,
+.page_select .next{
+    float: left;
+    width: 26.66%;
+    height: 40px;
+    margin:10px 3.33%;
+    font-size:18px;
+    border-style: none;
+    /*-webkit-appearance: none;*/
+}
+.page_select .prev{
+    border-radius: 10px;
+}
+.page_select .next{
+    border-radius: 10px;
+}
+
+/*页脚底部通栏 用模块*/
+.footer {
+    background-color: #EFEFEF;
+}
+.footer .navbar{
+    height: 36px;
+}
+
+.footer .navbar a{
+    float: left;
+    width: 30%;
+    height: 36px;
+    text-align: center;
+    font:400 12px/36px "microsoft yahei";
+    border-top: 1px solid #C4C4C4;
+    border-right: 1px solid #C4C4C4;
+    border-bottom: 1px solid #C4C4C4;
+}
+
+.footer .navbar a:nth-child(3) {
+    position: relative;
+    padding-left:15px;
+    width: 40%;
+    border-right: none;
+}
+
+.footer .navbar .icon_backTOP{
+    position: absolute;
+    top:9px;
+    margin-left:-15px;
+    width: 30px;
+    height: 16px;
+    background-position: -105px -45px;
+    background-size:250px 100px;
+}
+
+.footer .appinfo{
+    padding-top:17px;
+    text-align: center;
+    height: 56px;
+    font-size:10px;
+}
+
+.footer .appinfo span:nth-of-type(1){
+    color:red;
+    font-weight: 600;
+}
+
+.footer .appinfo span:nth-of-type(2){
+    font-weight: 600;
+}
+
+

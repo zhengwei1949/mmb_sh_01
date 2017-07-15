@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>category</title>
+    <link rel="stylesheet" href="less/base.css">
+    <link rel="stylesheet" href="less/category.css">
+</head>
+<body>
+<div class="MMB_category">
+    <!--页面头部导航栏START-->
+    <header class="topHeader">
+        <div class="f_left logo">
+            <a href="#" title="慢慢买比价网--手机版">
+                <img src="images/header_logo.png" alt="慢慢买比价网--手机版">
+            </a>
+        </div>
+        <div class="f_right appdown">
+            <a href="#" title="慢慢买比价网--手机版">
+                <img src="images/header_app.png" alt="慢慢买比价网--手机版">
+            </a>
+        </div>
+    </header>
+    <!--页面头部导航栏END-->
+    <!--页面搜索框START-->
+    <form class="topSearch">
+        <div class="searchMMB">
+            <input type="text" class="searchTxt" placeholder="请输入你想比价的商品">
+            <input type="button" class="searchBtn" value="搜索">
+        </div>
+    </form>
+    <!--页面搜索框END-->
+    <!--产品分类START-->
+    <div class="briefAll">
+        <div class="brief">
+            <div class="briefList">
+                <div class="listNav">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--产品分类END-->
+
+
+    <!--页面底部START-->
+    <div class="MMB_foot">
+        <div class="footTop clearfix">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#"><i class="iconfont">&#xe668;</i>返回顶部</a>
+        </div>
+        <div class="footBottom">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="#">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <p>m.mananbuy.com</p>
+        </div>
+    </div>
+    <!--页面底部END-->
+</div>
+
+
+<script type="text/html" id="briefTitle">
+    {{if result}}
+        {{each result as value}}
+            <p class="listTitle clearfix" title="{{value.titleId}}">
+                <span class="f_left">{{value.title}}</span>
+                <i class="iconfont ic_list f_right icon-xiangxia2"></i>
+            </p>
+            <ul class="clearfix ulist" ></ul>
+        {{/each}}
+    {{/if}}
+</script>
+<script type="text/html" id="briefTable">
+    {{if result}}
+        {{each result as value}}
+            <li><a href="productlist.html?categoryid={{value.categoryId}}&category={{value.category}}">{{value.category}}</a></li>
+        {{/each}}
+    {{/if}}
+</script>
+
+<script src="lib/flexible/flexible.js"></script>
+<script src="lib/jQuery/jquery-1.12.2.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common.js"></script>
+<script src="js/category.js"></script>
+</body>
+</html>

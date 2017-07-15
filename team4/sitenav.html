@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>商品导航</title>
+    <script src="libs/flexible.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sitenav.css">
+    <!-- <script src="libs/less.js"></script> -->
+
+</head>
+<body>
+<div class="layout">
+    <!-- 顶部区域 start -->
+    <header id="header">
+        <a href="javascript:history.go(-1)" class="icon-back iconfont icon-jiantouyoujiantou1 fs24"></a>
+        <h3 class="fs20">商品导航</h3>
+        <a href="#" class="app-download"><img src="images/header_app.png" alt="#"/></a>
+    </header>
+    <!-- 顶部区域 end-->
+    <!-- 商品导航区域 start-->
+    <section>
+        <div class="main">
+            
+        </div>
+    </section>
+    <!-- 商品导航区域 end -->
+
+    <!-- 底部区域 start -->
+    <div class="foot">
+        <div>
+            <a href="#" class="fs14">登录</a>
+            <a href="#" class="fs14">注册</a>
+            <a href="#top" class="fs14"><i class="iconfont icon-xiangshangjiantou fs16"></i>返回顶部</a>
+        </div>
+        <p class="fs12">
+            <span>手机APP下载</span>
+            慢慢买手机版
+            <span>-- 掌上比价平台</span>
+        </p>
+        <p class="fs12">m.manmanbuy.com</p>
+    </div>
+    <!-- 底部区域 end -->
+    <script src="libs/template.js"></script>
+    <!-- 商品导航的模板区域 start -->
+    <script type="text/html" id="template">
+        <div class="link clearfix">
+        {{if result}}
+            {{each result as value}}
+                <a href="{{value.navHref}}" id="{{value.navId}}"><img src="{{value.navImg}}" alt="">{{value.navTitle}}</a>
+            {{/each}}    
+        {{/if}}
+        </div>
+    </script>
+     <!-- 商品导航的模板区域 end -->
+    <script src="libs/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/sitenav.js"></script>
+</div>
+</body>
+</html>

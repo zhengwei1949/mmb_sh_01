@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>产品分类 - 慢慢买比价网</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/productList.css">
+</head>
+<body>
+    <div class="layout">
+        <!-- 顶部通栏 -->
+        <header>
+            <div class="logo f_left">
+                <a href="index.html" title='慢慢买比价网--手机版'>
+                    <img src="./images/header_logo.png" alt='慢慢买比价网--手机版'>
+                </a>
+            </div>
+            <div class="appdown f_right">
+                <a href="#" title='手机app下载'>
+                    <img src="./images/header_app.png" alt="手机app下载">
+                </a>
+            </div>
+        </header>
+
+        <!-- 搜索框 -->
+        <form action="#">
+            <div class="search">
+                <div class="searchtxt">
+                    <input type="search" name="keyword" placeholder='请输入你想比价的商品'>
+                </div>
+                <div class="searchbtn">
+                    <input type="submit" value="搜索">
+                </div>
+            </div>
+        </form>
+
+        <!-- 3级菜单 -->
+        <nav>
+            <div class="menu f_left">
+                <a href="index.html">首页&nbsp;</a>&gt;
+                <a href="./category.html">全部分类&nbsp;</a>&gt;
+                <a href="./productList.html" class='currentCategory'>电视</a>
+            </div>
+            <div class="filter f_right">
+                <input type="button" value="筛选">
+            </div>
+        </nav>
+
+        <!-- 商品列表 -->
+        <section class="product_list">
+            <!--<ul>
+                <li class='item'>
+                    <a href="#" class='goto'></a>
+                    <div class="pic">
+                        <img src="./images/product-img.jpg" alt="商品">
+                    </div>
+                    <div class="info">
+                        <div class="title">神舟 战神Z7M-SL7D2 酷睿i7-6700HQ/8GB/128GB+1TB/GTX965M 2G独显</div>
+                        <div class="price"><em>￥</em>5288</div>
+                        <div class="other">
+                            <div class="mall">4商城报价</div>
+                            <div class="sales">有2881人评论</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>-->
+        </section>
+
+        <!-- 分页部分 -->
+        <div class="page">
+            <table width='100%'>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="javascript:;" class='prevPage'>上一页</a>
+                        </td>
+                        <td>
+                            <select id="selectPage">
+
+                            </select>
+                        </td>
+                        <td>
+                            <a href="javascript:;" class='nextPage'>下一页</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- 底部信息 -->
+        <div class="foot">
+            <div class="foot_top">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="javascript:;" id='backToTop'>
+                    <img src="./images/top.jpg" alt="">返回顶部
+                </a>
+            </div>
+            <footer>
+                <p>
+                    <a href="#">手机APP下载</a>
+                    <a href="index.html">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+<script src='./lib/jquery.min.js'></script>
+<script src='js/url.js'></script>
+<script src='./js/productList.js' ></script>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+	<title>商品详情</title>
+	 <script src="../libs/flexible.js"></script>
+    <link rel="stylesheet" href="../css/base2.css">
+    <link rel="stylesheet" href="../css/getproduct.css">
+</head>
+<body>
+    <!-- 顶部区域 start -->
+	<header id="header">
+          <div class="logo">
+            <a href="#" title="慢慢买">
+                <img src="../images/header_logo.png" alt="">
+            </a>
+        </div>
+        <!--  <h3 class="fs20">商品导航</h3> -->
+        <a href="#" class="app-download"><img src="../images/header_app.png" alt="#"/></a>
+    </header>
+        <!-- 顶部搜索栏 start -->
+	<section id="form-search">
+        <form action="#" class="search">
+            <input type="search" name="" id="" placeholder="请输入你想比价的商品">
+            <input type="button" value="搜索">
+        </form>
+    </section>
+        <!-- 顶部搜索栏 end -->
+    <!-- 顶部区域 end -->
+
+    <!-- 内容区域 start -->
+    <section id="product">
+        <!-- 内容导航部分 start -->
+    	<nav class="product_title">
+    		<a href="#" class="list-title1">首页</a>>
+    		<a href="#" class="list-title2">电视</a>>
+    		<a href="#" class="list-title2">乐视TV(Letv)S50</a>>
+    	</nav>
+        <!-- 内容导航部分 end -->
+
+        <!-- 内容详情部分 start -->
+            <!-- 内容信息部分 start-->
+    	    <div class="product_message">
+    	    </div>
+            <!-- 内容信息部分 end-->
+
+            <!--内容比价购买部分01 start -->
+    	    <div class="tab">
+            <ul>
+                <li class="cur"><a href="#">比价购买</a></li>
+                <li class="mtab">
+                    <a href="#">产品参数</a></li>
+                <li class=""><a href="#" class="">评价(2322)</a></li>
+            </ul>
+            </div>
+            <!--内容比价购买部分 end -->
+
+            <!--内容比价购买部分02 start -->
+            <div class="plist">
+            <a href="redirect.aspx?webid=1&amp;bjid=76069915&amp;tourl=http://item.jd.com/1162187.html&amp;y=bijia" target="_blank" onclick="trackLog('商品购买','比价页面');">
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="p_pic" valign="top">
+                            <a href="redirect.aspx?webid=1&amp;bjid=76069915&amp;tourl=http://item.jd.com/1162187.html&amp;y=bijia" target="_blank" onclick="trackLog('商品购买','比价页面');"> <img src="http://sf.manmanbuy.com/images/sitelogo/1.png"></a>
+                        </td>
+                        <td> <a href="redirect.aspx?webid=1&amp;bjid=76069915&amp;tourl=http://item.jd.com/1162187.html&amp;y=bijia" target="_blank" onclick="trackLog('商品购买','比价页面');">京东商城</a> </td>
+                        <td class="red"> ￥1999.00 </td>
+                        <td align="center" width="60"> <span style="display: inline-block;width: 56px;height: 24px;border-radius: 6px;text-align: center;line-height: 24px;background-color: #ff5500;color: #fff;font-size: 14px;">去购买</span> </td>
+                    </tr>
+                </tbody>
+            </table>
+            </a>
+            <div class="note">
+                * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+            </div>
+            </div>
+            <!--内容比价购买部分 end -->
+        <!-- 内容详情部分 end -->
+
+        <!-- 内容评价部分 start-->
+            <!-- 内容评论标题部分 start -->
+            <div class="product-com-title">
+                <div>网友评价</div>
+            </div>
+            <!-- 内容评论标题部分 end -->
+
+            <!-- 内容评论内容部分 start -->
+            <div class="product-com-list">
+
+
+            </div>
+            <!-- 内容评论内容部分 end -->
+        <!-- 内容评价部分 end-->
+    </section>
+    <!-- 内容区域 end -->
+
+    <!-- 底部区域 start -->
+     <footer>
+        <footer id="ctl00_foot">
+        <div class="foot_top">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#header" style="width: 40%; border: 0;">
+                <span class="icon-bottom iconfont icon-xiangshangjiantou"></span>
+               返回顶部</a>
+        </div>
+        <div class="footer">
+            <p>
+                <a href="#" onclick="trackEvent('footer下载');" style="color: Red;">手机APP下载</a> <a href="#">
+                    慢慢买手机版</a> -- 掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+                <img src="https://z11.cnzz.com/stat.htm-id=1256699064&amp;r=&amp;iw=1&amp;showp=0x0&amp;lg=undefined&amp;cnzz_eid=none&amp;p=http---m.manmanbuy.com-&amp;rnd=453668140.gif" width="0" height="0">
+            </p>
+        </div>
+    </footer>
+    </footer>
+    <!-- 底部区域 end -->
+    <!-- 内容详情部分模板 start-->
+    <script type="text/html" id="template">
+    {{each result as value}}
+    <div class="product_name" id="{{value.productId}}"> {{#value.productName}}</div>
+    <div class="product_img"> {{#value.productImg}}</div>
+    <div class="product_collect"><a href="#">
+            <img src="http://www.zuyushop.com/wap/images/sc.jpg" width="39" height="39"></a>
+    </div>
+    {{/each}}
+    </script>
+    <!-- 内容详情部分模板 end-->
+
+    <!-- 内容评论部分模板 start -->
+    <script type="text/html" id="template1">
+        {{each result as value}}
+        <ul>
+            <li>
+                <div class="clearfix">
+                    <span class="pull-left com-name">{{value.comName}}</span>
+                    <span class="pull-right com-time">{{value.comTime}}</span>
+                </div>
+                <div class="clearfix">
+                    <!-- <span class="pull-left"></span> -->
+                    <span class="pull-right com-from">{{value.comFrom}}</span>
+                </div>
+                <div class="com-content">{{value.comContent}}</div>
+            </li>
+        </ul>
+           {{/each}}
+         <div class="more">
+                <a class="morein" href="#">查看更多评价</a>
+        </div>
+    </script>
+    <!-- 内容评论部分模板 start -->
+    <script src="../libs/jquery.min.js"></script>
+    <script src="../libs/template.js"></script>
+    <script src="../js/getproduct.js"></script>
+</body>
+</html>

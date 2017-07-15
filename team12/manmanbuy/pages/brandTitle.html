@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <script src="../lib/flexible/flexible.js"></script>
+    <title>品牌大全</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../less/brandTitle.css">
+    <link rel="stylesheet" href="../fonts/font_ZY/iconfont.css">
+    <script type="text/less" src="../less/brandTitle.less"></script>
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/artTemplate/template.js"></script>
+    <!--模板引擎-->
+    <!--第一页-->
+    <script type="text/html" id="brandTitle">
+        {{each result as value i}}
+        <li>
+            <a href="#" id={{value.brandTitleId}}>{{value.brandTitle}}</a>
+            <span class="iconfont_z icon-xiangxia2"></span>
+        </li>
+        {{/each}}
+    </script>
+    <!--第二页-->
+    <script type="text/html" id="brandTitleId">
+        {{each result as value i}}
+        <li id={{value.brandId}}>
+            <b class='fl'>{{i+1}}</b>
+
+            <div class='mm_t_box'>
+                <p class='mm_tv'>{{value.brandName}}</p>
+                <span class='thirty'>{{value.brandInfo}}</span>
+            </div>
+            <span class="iconfont_z icon-xiangxia2"></span>
+        </li>
+        {{/each}}
+    </script>
+    <!--第三页-->
+    <script type="text/html" id="brandproductlist">
+        {{each result as value i}}
+        <div class='mm_goodsbox clearfix' id={{value.productId}}>
+            <a href="#" class='mm_img clearfix'>{{=value.productImg}}</a>
+
+            <div class='mm_goodstxt'>
+                <p class='mm_goodstext1'>{{value.productName}}</p>
+
+                <p class='mm_goodstext2'><span>{{value.productPrice}}</span>
+                    <span class='iconfont_z icon-biaoxingfill'></span>
+                    <span class='iconfont_z icon-biaoxingfill'></span>
+                    <span class='iconfont_z icon-biaoxingfill'></span>
+                    <span class='iconfont_z icon-biaoxingfill'></span>
+                    <span class='iconfont_z icon-biaoxingfill'></span>
+                </p>
+
+                <p class='mm_goodstext3'>{{value.productQuote}}&nbsp;{{value.productCom}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <!--第四页-->
+    <script type="text/html" id="productid">
+        {{each result as value i}}
+        <div class='mm_goods_com'>
+            <p class='mm_goodscomment'>
+                <span>{{value.comName}}:&nbsp;</span><!--用户名-->
+                <span class='iconfont_z icon-biaoxingfill'></span>
+                <span class='iconfont_z icon-biaoxingfill'></span>
+                <span class='iconfont_z icon-biaoxingfill'></span>
+                <span class='iconfont_z icon-biaoxingfill'></span>
+                <span class='iconfont_z icon-biaoxingfill'></span>
+                <b>{{value.comTime}}</b><!--time-->
+            </p>
+        <span id="mm_goodscomment_txt">
+            {{value.comContent}}<!--评论内容-->
+        </span>
+        </div>
+        {{/each}}
+    </script>
+</head>
+<body>
+<div class="layout">
+    <!--头部-->
+    <header class="mm_header">
+        <div class="mm_logo">
+            <a href="../index.html">
+                <img src="../images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="mm_download "></div>
+    </header>
+    <!--搜索部分-->
+    <div class="mm_search">
+        <div class="search_box">
+            <input type="text" class="inp1" placeholder='请输入你想比价的商品'>
+            <input type="button" class="inp2" value=搜索>
+        </div>
+    </div>
+    <!--分类标题部分-->
+    <div class="sort">
+        <a href="../index.html">
+            <span>首页 ></span>
+        </a>
+        <a href="">
+            <span>全部分类 ></span>
+        </a>
+        <a href="javascript:;">
+            <span class="sort-last"></span>
+        </a>
+    </div>
+    <!--分类内容部分-->
+    <div class='mm_hot'>热门品牌排行</div>
+    <!--商品列表部分(第三层)-->
+    <div class="mm_brand">
+        <ul class='mm_brandBox'>
+        </ul>
+    </div>
+    <!--底部-->
+    <footer>
+        <div class="operate clearfix">
+            <ul>
+                <li>
+                    <span>登录</span>
+                </li>
+                <li><span>注册</span></li>
+                <li id="reTop"><span class="iconfont icon-xiangshang-copy"></span><span>返回顶部</span></li>
+            </ul>
+        </div>
+        <div class="introduce">
+            <p><span class="colorRed">手机APP下载</span>
+                <span>慢慢买手机版</span>
+                <span class="colorGray">-- 掌上比价平台</span>
+            </p>
+
+            <p class="colorGray">m.manmanbuy.com</p>
+        </div>
+    </footer>
+</div>
+</body>
+<script src="../lib/less/less.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/brandTitle.js"></script>
+</html>

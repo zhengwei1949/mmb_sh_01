@@ -1,0 +1,15 @@
+/* ����ͨ�� */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  background: #F4483E;
+}
+/* ���� */
+.maintitle {
+  background: #F3F3F3;
+  padding: 3px;
+  border: 1px solid #CCCCCC;
+}
+.maintitle span {
+  margin-left: 5px;
+}

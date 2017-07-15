@@ -1,0 +1,140 @@
+/*根字体函数*/
+@bs: 75*1rem;
+/*混合函数使用*/
+.px2rem(@name,@px) {
+  @{name}: @px/@baseFontSize *1rem;
+}
+@white:#fff;
+/*字体设置*/
+.font-size(@px) {
+  font-size: round(@px /2)*1px;
+  [data-dpr="2"] & {
+    font-size: @px *1px;
+  }
+  /*for mx3*/
+  [data-dpr="2.5"] & {
+    font-size: round(@px *2.5/2)*1px;
+  }
+  /*for小米node*/
+  [data-dpr="2.75"] & {
+    font-size: round(@px *2.75/2)*1px;
+  }
+  [data-dpr="3"] & {
+    font-size: round(@px /2*3)*1px;
+  }
+  /*for 三星note4*/
+  [data-dpr="4"] & {
+    font-size: @px *2px;
+  }
+}
+
+html, body {
+  background:#CFCCC5;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+/*这是顶部....star*/
+.tops {
+  color:@white;
+  height: 95/@bs;
+  width: 100%;
+  background: #F4483E;
+  text-align: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  >h3{
+    display: inline-block;
+    line-height:95/@bs;
+
+  }
+  .tops_l {
+    display: block;
+    height: 100%;
+    line-height: 88/@bs;
+    text-align: center;
+    width: 118/@bs;
+    .font-size(48);
+    float: left;
+  }
+  .tops_r {
+    display: block;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    padding: 20/@bs;
+    margin-right: 5/@bs;
+    float: right;
+    s {
+      display: block;
+      text-decoration: none;
+      .font-size(20);
+    }
+    i {
+      display: block;
+      font-style: normal;
+      .font-size(20);
+      width: 100%;
+      height: 40/@bs;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+  }
+}
+/*这是顶部....end*/
+
+main{
+  ul{
+    margin-top: 95/@bs;
+    li{
+      margin-top: 10/@bs;
+      height: 526/@bs;
+      width: 48.5%;
+      background-color: #fff;
+      float: left;
+      margin-left:1%;
+      img{
+        width: 100%;
+        height: 320/@bs;
+      }
+      div{
+        width: 100%;
+        padding:0 5%;
+        height: 206/@bs;
+        p{
+          .font-size(25);
+          font-weight: 600;
+          height: 75/@bs;
+          overflow: hidden;
+        }
+        i{
+          font-style:normal;
+          display:block;
+          color:#FF6C00;
+          .font-size(25);
+          line-height: 76/@bs;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        span{
+          &:nth-of-type(1){
+            padding-right: 13/@bs;
+            border-right:1px solid red;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+section{
+  width: 100%;
+  img{
+   display: block;
+   margin: 0 auto;
+ }
+}

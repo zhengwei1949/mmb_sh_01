@@ -1,0 +1,110 @@
+@mainColor:#ff841d;
+.hide{
+  display: none;
+}
+section{
+  .free{
+    width: 100%;
+    height:30/75rem;
+    background: @mainColor;
+    padding: 0 10/75rem;
+    span{
+      line-height: 30/75rem;
+      color: #fff;
+    }
+    a{
+      display: block;
+      color: #fff;
+      font-family: monospace;
+      border:1px solid #fff;
+      padding: 1px 4px;
+      border-radius: 14/75rem;
+      margin-top: 5/75rem;
+    }
+  }
+  //菜单栏
+  .mainnav{
+      width: 100%;
+    .list{
+      width: 100%;
+      li{
+        float: left;
+        width: 25%;
+        height: 90/75rem;
+        text-align: center;
+        margin: 20/75rem 0;
+        a{
+          display: block;
+          width: 70/75rem;
+          height: 70/75rem;
+          margin: 0 auto;
+
+          img{
+            display: block;
+            width:100% ;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  //折扣商品类目
+  .shopping{
+    .goods{
+      width: 100%;
+      height: 150/75rem;
+      border-bottom: 1px solid #cccccc;
+      .goods-img{
+        float: left;
+        width: 150/75rem;
+        height: 100%;
+        a{
+          display: block;
+          width: 100%;
+          height: 100%;
+          img{
+            display: block;
+            width: 100%;
+            height: 100%;
+
+          }
+        }
+      }
+      .goods-txt{
+        width: 100%;
+        height: 100%;
+        padding-left: 160/75rem;
+        p{
+          &:nth-child(1){
+            margin-top: 10/75rem;
+
+            span{
+              color: red;
+            }
+          }
+          &:nth-child(2){
+            margin-top: 50/75rem;
+            color: #ccc;
+            span{
+              margin-right: 10/75rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .downmore{
+    height: 50/75rem;
+    width: 100%;
+    text-align: center;
+    padding: 8/75rem 15/75rem;
+    a{
+      display: block;
+      padding: 5/75rem 0;
+      border:1px solid #ccc;
+
+      border-radius: 8px;
+      //line-height: 50/75rem;
+    }
+  }
+}

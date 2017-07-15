@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>review</title>
+    <script src="../lib/flexible/flexible_css.js" charset="utf-8"></script>
+    <script src="../lib/flexible/flexible.js"></script>
+    <script src="../lib/template/template.js"></script>
+    <link rel="stylesheet" href="../css/basez.css">
+    <link rel="stylesheet" href="../css/base1z.css">
+    <link rel="stylesheet" href="../less/review.css">
+</head>
+<body>
+<!--页面头部-->
+<header>
+    <div class="top"><a href="#" class="fr"></a></div>
+    <!--搜索栏-->
+    <div class="search">
+        <input type="text" placeholder="请输入你想要比价的商品" class="text">
+        <input type="button" value="搜索" class="btn">
+    </div>
+</header>
+<!--菜单分类-->
+<div class="menu">
+    <a href="#" class="fl">首页></a>
+    <a href="#" class="fl">全部分类></a>
+    <a href="#" class="fl">排行></a>
+    <a href="#" class="fl">销量></a>
+</div>
+<!--主体内容-->
+<div class="main">
+    <div class="title">平板电视最新评论</div>
+    <div class="title1 clearfix">
+        <div></div>
+    </div>
+    <ul class="son_main">
+
+    </ul>
+</div>
+</body>
+<script type="text/html" id="pro">
+    {{each result as value}}
+    <li class="clearfix">
+        <div class="fl">{{value.comName}}:</div>
+        <i class="fl">★★★★★</i>
+        <div class="fr">{{value.comTime}}</div>
+        <p>{{value.comContent}}</p>
+    </li>
+    {{/each}}
+</script>
+<script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+<script src="../js/review.js"></script>
+</html>

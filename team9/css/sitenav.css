@@ -1,0 +1,16 @@
+.link {
+  width: 8rem;
+  margin: 0.13333333rem auto;
+  float: none;
+}
+.link a {
+  padding: 0.13333333rem 0.10666667rem;
+  background: #f4f4f4;
+  border: 0.01333333rem solid #bfbfbf;
+  float: left;
+  margin: 0 0 0.06666667rem 0.06666667rem;
+}
+.link a span {
+  margin-right: 0.06666667rem;
+  font-size: 15px;
+}

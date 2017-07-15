@@ -1,0 +1,154 @@
+@charset "utf-8";
+.m_top .m_left {
+  width: 56%;
+}
+.m_top .m_left span {
+  width: 100%;
+  display: block;
+  height: 50px;
+  padding: 10px;
+}
+.m_top .m_left span img {
+  width: 100%;
+  max-width: 190px;
+  max-height: 25px;
+  display: block;
+}
+.main-order {
+  font-family: '微软雅黑';
+  /* 首页菜单栏 */
+}
+.main-order .moreHeight {
+  height: 260px;
+}
+.main-order ul {
+  padding: 10px;
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.main-order ul li {
+  width: 25%;
+  float: left;
+  padding-bottom: 10px;
+}
+.main-order ul li a {
+  width: 100%;
+  padding: 10% 10%;
+  display: block;
+  height: 70px;
+  min-height: 70px;
+  text-align: center;
+}
+.main-order ul li a img {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+}
+.main-order ul li a p {
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+}
+.count {
+  /* 超值折扣特价通栏 */
+  font-family: '微软雅黑';
+  width: 100%;
+}
+.count .countTitle {
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(#ffb029, #ee9625);
+  position: static;
+}
+.count .countTitle h4 {
+  padding-left: 10px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+}
+.count .countTitle h4 span {
+  position: absolute;
+  padding: 12px 0;
+  top: 0;
+  right: 10px;
+}
+.count .countList {
+  /* 折扣商品列表 */
+  padding: 10px 0;
+}
+.count .countList li {
+  border-bottom: 1px solid #dddddd;
+}
+.count .countList li a {
+  display: block;
+  padding: 5px;
+}
+.count .countList li a .left_pic {
+  width: 30%;
+  float: left;
+  height: 100px;
+  margin-right: 10px;
+  padding: 10px;
+}
+.count .countList li a .left_pic img {
+  display: block;
+  width: 100%;
+}
+.count .countList li a .right_desc {
+  width: 65%;
+  float: left;
+}
+.count .countList li a .right_desc b {
+  font-weight: normal;
+  display: block;
+}
+.count .countList li a .right_desc .pro_title {
+  color: #333;
+  float: left;
+  margin: 5px 0 20px 0;
+  font-size: 14px;
+}
+.count .countList li a .right_desc .pro_title .pro_price {
+  color: #FF822C;
+}
+.count .countList li a .right_desc .pro_time {
+  display: block;
+  width: 60%;
+  float: left;
+  font-size: 12px;
+  color: #828181;
+}
+.count .countList li a .right_desc .pro_comment {
+  display: block;
+  width: 36%;
+  float: right;
+  color: #828181;
+  font-size: 12px;
+}
+.count .countList li a .right_desc .pro_comment span {
+  padding-right: 5px;
+}
+.moreSale {
+  /* 点击加载更多优惠信息 */
+  width: 100%;
+  background: linear-gradient(#ffffff, #dddddd);
+  border: 1px solid #dddddd;
+  margin: 10px 0;
+}
+.moreSale a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+}

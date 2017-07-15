@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>优惠券</title>
+    <script type="text/javascript" src="lib/jQuery/jquery.js"></script>
+    <script type="text/javascript" src="lib/flexible/flexible.js"></script>
+    <script src="js/base.js"></script>
+    <script src="lib/SuperSlide2.1/TouchSlide.1.0.js"></script>
+    <script src="lib/template/template.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/couponproduct.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <script src="js/couponproduct.js"></script>
+    <script type="text/html" id="couponproduct">
+        {{if result}} {{each result as value i}}
+        <div class="product">
+            {{#value.couponProductImg}}
+            <div class="detail">
+                <p>{{value.couponProductName}}</p>
+                <p>{{value.couponProductPrice}}</p>
+                <span>{{value.couponProductTime}}</span>
+            </div>
+        </div>
+        {{/each}} {{/if}}
+    </script>
+</head>
+
+<body>
+    <!-- 头部内容 -->
+    <header class="flexBox ac">
+        <div>
+            <a href="coupon.html" class="goback icon_navigate_before"></a>
+        </div>
+        <span class="title">优惠券</span>
+        <div class="appDown">
+            <a href="index.html"><img src="images/header_app.png" /></a>
+        </div>
+    </header>
+    <!-- 中间内容 -->
+    <div class="container">
+        <p class="tips">--点餐前出示手机中的优惠券，即可享受优惠--</p>
+    </div>
+    <div class="showPic">
+        <div class="screen">
+            <!--<div class="wrapper">
+                <!--<img sr/c="">-->
+            <!--</div>-->
+            <!--轮播图-->
+            <div id="slideBox" class="slideBox">
+                <div class="bd">
+                    <!--<ul>
+                            <li>
+                                <a href="#" ><img src="images/a0274434970a304e05afa001d1c8a786c8175c77.jpg" /></a>
+                            </li>
+                            <li>
+                                <a href="#" ><img src="images/a0274434970a304e05afa001d1c8a786c8175c77.jpg" /></a>
+                            </li>
+                        </ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部内容 -->
+    <script type="text/javascript" src="js/footer.js"></script>
+</body>
+
+</html>

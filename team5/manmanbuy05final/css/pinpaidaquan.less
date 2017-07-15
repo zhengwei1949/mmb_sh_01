@@ -1,0 +1,304 @@
+@charset "utf-8";
+/*-转换rem单位-*/
+@fz:37rem;
+/*开始*/
+body{
+  background-color: #fff;
+}
+/*----------私有头部header样式----------*/
+.pp-header{
+  height: 50/@fz;
+}
+/*--搜索部分--*/
+.pp-search{
+  height: 50/@fz;
+}
+/*----------main主体部分----------*/
+.pp-main {
+  font-size: 14/@fz;
+  div {
+    line-height:  40/@fz;
+  }
+  .options {
+    background-color: #EEEEEE;
+    height: 40/@fz;
+    font-size: 14/@fz;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    padding:0 10/@fz;
+  }
+/*第一个ｂｏｘ*/
+  .order-box {
+    font-size: 16/@fz;
+    .pp-title {
+      background-color: #EEEEEE;
+      height: 40/@fz;
+      margin: 5/@fz 0;
+      color: brown;
+      border-top: 1px solid #999;
+      border-bottom: 1px solid #999;
+      padding:0 10/@fz;
+    }
+    .order-ul {
+      li:first-child{
+        border-top: 1px solid #999;
+      }
+      li {
+        font-weight: bolder;
+        font-size:8/@fz;
+        background-color: #EEEEEE;
+        height: 40/@fz;
+        border-bottom: 1px solid #999;
+        padding:0 10/@fz;
+      }
+      li:last-child{
+        border: none;
+      }
+    }
+  }
+/*第二个ｂｏｘ*/
+  .order-box2　{
+    .pp-title2{
+      height: 40/@fz;
+      color: brown;
+      padding: 0 5/@fz;
+    }
+    .order-ul2 {
+      li:first-child{
+        border-top: 1px solid #999;
+      }
+      li {
+        height: 60/@fz;
+        border-bottom: 1px solid #999;
+        padding: 10/@fz 0  10/@fz 40/@fz;
+        position: relative;
+        p {
+          height: 20/@fz;
+          line-height: 20/@fz;
+          overflow: hidden;
+          &:last-child{
+            color: #C9C9C9;
+          }
+        }
+        span {
+          position: absolute;
+
+        }
+        .num {
+          left: 5/@fz;
+          top: 10/@fz;
+          width: 20/@fz;
+          height: 20/@fz;
+          line-height:20/@fz ;
+          background-color: #C9C9C9;
+          color: #fff;
+          text-align: center;
+        }
+        &:nth-child(1) .num{
+          background-color: #F10E0E;
+        }
+        &:nth-child(2) .num{
+          background-color: #FF9314;
+        }
+        &:nth-child(3) .num{
+          background-color: #8ADF5B;
+        }
+        .skip2 {
+          right: 5/@fz;
+          top: 10/@fz;
+          font-size: 20/@fz;
+        }
+      }
+    }
+  }
+/*第三个ｂｏｘ*/
+  .order-box3 {
+    font-size: 14/@fz;
+    .pp-title2 {
+      color: brown;
+      padding-left: 10/@fz;
+      background-color: #F3F3F3;
+    }
+    .pro-order {
+      border-top: 1px solid #333;
+      height: 120/@fz;
+      padding: 15/@fz 10/@fz;
+      .img-box {
+        width: 100/@fz;
+        height: 90/@fz;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .pro-desc {
+        height: 90/@fz;
+        width: 240/@fz;
+        overflow: hidden;
+        .pro-name{
+          height: 40/@fz;
+          line-height: 20/@fz;
+        }
+        .pr {
+          height:35/@fz;
+          line-height: 35/@fz;
+          .price {
+            color: red;
+            font-size: 16/@fz;
+          }
+          span {
+            float: right;
+            font-size: 16/@fz;
+            color: #FF9000;
+          }
+        }
+        .pro-f {
+          height: 16/@fz;
+          line-height: 16/@fz;
+        }
+      }
+    }
+  }
+/*第四个ｂｏｘ*/
+  .order-box4{
+    font-size: 14/@fz;
+    .pp-title2 {
+      color: brown;
+      padding-left: 10/@fz;
+      background-color: #F3F3F3;
+    }
+    .pro-box{
+      margin-bottom: 10/@fz;
+      .pro-order {
+        height: 120/@fz;
+        padding: 15/@fz 10/@fz;
+        .img-box {
+          width: 100/@fz;
+          height: 90/@fz;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .pro-desc {
+          height: 90/@fz;
+          width: 240/@fz;
+          .pro-name{
+            height: 40/@fz;
+            line-height: 20/@fz;
+          }
+        }
+      }
+      .comment {
+        position: relative;
+        &:before{
+          content: "";
+          position: absolute;
+          left: 40/@fz;
+          top: -8/@fz;
+          width: 15/@fz;
+          height: 15/@fz;
+          border: 1px solid #333;
+          transform: rotate(45deg);
+        }
+        &:after{
+          content: "";
+          position: absolute;
+          left: 38/@fz;
+          top: -1/@fz;
+          width: 19.5/@fz;
+          height: 15/@fz;
+          background-color: #fff;
+        }
+        border: 1px solid #666;
+        margin: 0 5/@fz;
+        padding:  5/@fz;
+        .comment-top{
+          b{
+            color: #FF9000;
+          }
+          .date {
+            font-size: 14/@fz;
+            opacity: 0.5;
+          }
+        }
+        .comFrom {
+          font-size: 8/@fz;
+          opacity: 0.5;
+        }
+        p {
+          font-size: 12/@fz;
+        }
+      }
+    }
+
+  }
+}
+/*----------footer部分----------*/
+footer{
+  margin: 0;
+}
+
+
+
+
+
+//补丁
+/*头部*/
+header {
+  background: #FF841D;
+  height: 1.35135135rem;
+  position: relative;
+}
+header .logo {
+  padding: 0.32432432rem;
+  height: 100%;
+  float: left;
+}
+header .logo a img {
+  max-height: 0.67567568rem;
+  overflow: hidden;
+}
+header .appdown {
+  position: absolute;
+  width: 1.35135135rem;
+  height: 1.35135135rem;
+  right: 0;
+  top: 0;
+  padding: 0.18918919rem;
+}
+header .appdown a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+header .appdown a img {
+  width: 100%;
+  height: 100%;
+}
+
+/*搜索*/
+.form-search form {
+  position: relative;
+  padding: 10px;
+  text-align: center;
+}
+.form-search form input {
+  border-radius: 0.40540541rem;
+  height: 0.81081081rem;
+  line-height: 0.81081081rem;
+  font-size: 0.35135135rem;
+}
+.form-search form input[type="search"] {
+  background: #F1F1F1;
+  width: 6.75675676rem;
+  font-size: 0.35135135rem;
+  padding-right: 1.35135135rem;
+  padding-left: 0.54054054rem;
+}
+.form-search form input[type="button"] {
+  background: #FF841D;
+  width: 1.62162162rem;
+  margin-left: 0.27027027rem;
+}
+

@@ -1,0 +1,232 @@
+/*reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致*/
+/*所有的标签和伪类  before after*/
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+
+    /*在移动端特殊的设置*/
+    /*清除点击高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+    /*设置所有的盒子的宽度以边框开始计算*/
+    -webkit-box-sizing: border-box;
+    /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+    font-family: "MicroSoft YaHei", "sans-serif"; /*是设备默认的字体*/
+}
+
+@font-face {
+    font-family: MMB;
+    src: url('../fonts/fontawesome-webfont.eot?v=3.2.1');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('../fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*自定义字体*/
+.MMB_icon {
+    font-family: MMB;
+}
+
+.MMB_icon_back::before {
+    content: "\f104";
+}
+.MMB_icon_arrow_up::before{
+    content: '\f062';
+}
+.MMB_icon_arrow_right::before{
+    content: '\f105';
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #333;
+}
+
+input, textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    /*特殊的属性定义  清除浏览器给input自带的样式*/
+    -webkit-appearance: none; /*组件默认的样式空*/
+}
+
+/*common css  也就是我们公用的css*/
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: "";
+    line-height: 0;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.m_r10 {
+    margin-right: 10px;
+}
+
+.m_l10 {
+    margin-left: 10px;
+}
+
+.m_t10 {
+    margin-top: 10px;
+}
+
+.m_b10 {
+    margin-bottom: 10px;
+}
+
+.MMBColor {
+    color: #ff841d;
+}
+
+/*========公共样式=========*/
+/*顶部通栏*/
+header.MMB_topBar {
+    width: 100%;
+    height: 44px;
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ff841d;
+    z-index: 101;
+}
+/*顶部一*/
+header.MMB_topBar a.MMB_icon_back {
+    display: block;
+    position: absolute;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 20px;
+}
+
+header.MMB_topBar h3 {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}
+/*顶部二*/
+header.MMB_topBar .MMB_logo{
+    display: block;
+    padding-left:  17px;
+    height: 44px;
+    line-height: 44px;
+    padding-top: 8px;
+    overflow: hidden;
+}
+header.MMB_topBar .MMB_logo img{
+    display: inline-block;
+    height: 70%;
+}
+header.MMB_topBar a.download {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    padding: 7px;
+}
+
+header.MMB_topBar a.download img {
+    display: block;
+    max-height: 34px;
+    overflow: hidden;
+}
+
+/*页面底部*/
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 35px;
+    background-color: #efefef;
+    z-index: 100;
+}
+
+.footer .btn {
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.footer .btn a {
+    display: block;
+    float: left;
+    width: 30%;
+    font-size: 14px;
+    text-align: center;
+    border-right: 1px solid #c4c4c4;
+}
+
+.footer .btn a:last-child {
+    width: 40%;
+    border-right: 0;
+}
+
+/*app下载*/
+.version {
+    text-align: center;
+
+    color: #666;
+}
+
+.version p:first-child {
+    font-size: 14px;
+    padding-top: 16px;
+}
+
+.version p:first-child .app{
+    color: #ff0000;
+    padding-right: 4px;
+}
+
+.version p:first-child .telv{
+    color: #000;
+}
+
+.version p:last-child {
+    font-size: 14px;
+    padding: 5px 0 15px;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,137 @@
+/*reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致*/
+/*所有的标签和伪类  before after*/
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+
+    /*在移动端特殊的设置*/
+    /*清除点击高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+    /*设置所有的盒子的宽度以边框开始计算*/
+    -webkit-box-sizing: border-box;
+    /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    color: #333;
+    font-family: "MicroSoft YaHei","sans-serif";/*是设备默认的字体*/
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+a:hover{
+    color: #333;
+}
+input,textarea{
+    border: none;
+    outline: none;
+    resize: none;
+    /*特殊的属性定义  清除浏览器给input自带的样式*/
+    -webkit-appearance: none;/*组件默认的样式空*/
+}
+/*common css  也就是我们公用的css*/
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix::after,
+.clearfix::before{
+    content: ".";
+    line-height: 0;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.m_r10{
+    margin-right: 0.909rem;
+}
+.m_l10{
+    margin-left: 0.909rem;
+}
+.m_t10{
+    margin-top: 0.909rem;
+}
+.m_b10{
+    margin-bottom: 0.909rem;
+}
+.mianColor{
+    color: #d8505c;
+}
+
+
+/*顶部通栏start*/
+.top {
+    width: 100%;
+    height: 1.33rem;
+    background: #F4483E;
+    // display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.top .return {
+    width: 10%;
+    height: 100%;
+    text-align: center;
+    line-height: 1.33rem;
+    // font-size: 20px;
+    color: white;
+}
+.top h3 {
+    width: 70%;
+    height: 1.33rem;
+    line-height: 1.33rem;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+}
+[data-dpr='1'] .top h3{
+    font-size: 16px;
+}
+[data-dpr='2'] .top h3{
+    font-size: 32px;
+}
+[data-dpr='3'] .top h3{
+    font-size: 48px;
+}
+.top .download {
+    width: 20%;
+    height: 100%;
+}
+.top  img {   
+    margin-top: 0.208333rem;
+    margin-right: 0.208333rem;
+    width: 0.833333rem;
+    height: 0.833333rem;
+}
+/*顶部通栏end*/
+
+
+

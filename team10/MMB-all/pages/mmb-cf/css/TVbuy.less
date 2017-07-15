@@ -1,0 +1,110 @@
+@charset "utf-8";
+.font-size(@size) {
+  [data-dpr = '1'] & {
+    font-size: unit(@size/2,px);
+  };
+  [data-dpr = '2'] & {
+    font-size: unit(@size,px);
+  };
+  [data-dpr = '3'] & {
+    font-size: unit(@size/2*3,px);
+  };
+}
+.nav {
+  height: 0.9rem;
+  background-color: #ebebeb;
+  //background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ccc;
+  line-height:0.9rem;
+  padding-left:0.106rem;
+  .font-size(14px);
+  border-bottom: 1px solid #cccccc;
+  position: relative;
+  a {
+    max-height: 100%;
+    .font-size(24px);
+    color: #000;
+  }
+}
+main {
+  width: 100%;
+  .box {
+    width: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    max-height:100%;
+    max-height:100%;
+    .font-size(24px);
+    ul {
+      li {
+        padding: 0.37rem 0.213rem;
+        position: relative;
+        .top {
+          width: 2.934rem;
+          height: 2.66rem;
+          img{
+            width:95%;
+          }
+        }
+        .bottom {
+          overflow: hidden;
+          height: 2.66rem;
+          max-height:100%;
+          .font-size(24px);
+          line-height: 0.64rem;
+          .title {
+            color: #333333;
+            word-break: break-all;
+            line-height: 0.533rem;
+            min-height: 1.52rem;
+            text-align: left;
+            font-weight: 500;
+            max-height:100%;
+            .font-size(28px);
+            p {
+              margin-top: 0.26rem;
+              color: red;
+              max-height:100%;
+              .font-size(30px)
+            }
+          }
+          .other {
+            margin-top: 0.3rem;
+            color: #333;
+            max-height:100%;
+            .font-size(18px)
+          }
+        }
+      }
+    }
+    .btn{
+      width: 100%;
+      margin-top: 0.5333rem;
+      .w33 {
+        width:29%;
+        float: left;
+        text-align: center;
+        padding-left: 0.333rem;
+        //height:1rem;
+        input{
+          padding: 0.32rem 0.533rem;
+          height: 1rem;
+          box-shadow: 1px 1px 1px 1px #333;
+          background-color: #f1f1f1;
+          border-radius: 0.12rem;
+          .font-size(24px);
+          overflow: hidden;
+          text-align: center;
+        }
+        select {
+          border:1px solid #cccccc;
+          .font-size(18px);
+          padding: 0.32rem 0.533rem;
+          //height:;
+        }
+      }
+    }
+  }
+}
+

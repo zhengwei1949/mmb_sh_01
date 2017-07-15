@@ -1,0 +1,330 @@
+@fs: 75rem;
+html {
+  font-size: 75px;
+}
+
+html, body {
+  height: 100%;
+}
+
+//公用函数
+.font-size(@size) {
+  [data-dpr="1"] & {
+    font-size: unit(@size, px);
+  }
+;
+  [data-dpr="2"] & {
+    font-size: unit(@size*2, px);
+  }
+;
+  [data-dpr="3"] & {
+    font-size: unit(@size*3, px);
+  }
+}
+
+//顶部通栏
+.top_header {
+  width: 100%;
+  height: 100/@fs;
+  background: #FF841D;
+  position: relative;
+  overflow: hidden;
+  a {
+    position: absolute;
+    .font-size(20);
+    left: 0.1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.2rem;
+    color: #FFF;
+  }
+  h1 {
+    position: absolute;
+    color: #FFF;
+    line-height: 100/@fs;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "MicroSoft YaHei";
+    .font-size(18);
+  }
+
+  .app_download {
+    position: absolute;
+    right: 0;
+    margin-top: 20/@fs;
+    margin-right: 15/@fs;
+    img {
+      height: 68/@fs;
+      width: auto;
+    }
+  }
+}
+
+//内容区域
+.main_content {
+  min-height: 80%;
+  .main_title {
+    .font-size(16);
+    font-weight: 400;
+    line-height: 50/@fs;
+    padding-top: 25/@fs;
+    padding-left: 25/@fs;
+    font-family: "SimSun";
+    font-weight: bold;
+    color: #000;
+    max-height: 100%;
+  }
+  .product_price {
+    .font-size(14);
+    line-height: 1rem;
+    padding-left: 25/@fs;
+    color:#FF841D;
+  }
+  .sub_title {
+    .font-size(12);
+    padding-left: 25/@fs;
+    color: #BBB;
+    max-height: 100%;
+  }
+  .artical {
+    padding-top: 30/@fs;
+    padding-left: 20/@fs;
+    img {
+      &:nth-child(1) {
+        float: right;
+        width: 3rem;
+        height: 4rem;
+        padding: 0.5rem;
+      }
+      &:nth-last-child(1) {
+        display: block;
+        margin: 10/@fs auto;
+        width: 4rem;
+        height: 6rem;
+      }
+    }
+    p {
+      .font-size(14px);
+      font-family: "MicroSoft YaHei";
+      letter-spacing: 2/@fs;
+      text-indent: 2em;
+      max-height: 100%;
+    }
+  }
+  .toBuy {
+    width: 8.5rem;
+    height: 1.6rem;
+    line-height: 0.8rem;
+    margin: 30/@fs auto;
+    position: relative;
+    .store {
+      position: absolute;
+      /*overflow: scroll;
+      -webkit-overflow-scrolling:touch;*/
+      overflow: hidden;
+      width: 2.2rem;
+      height: 0rem;
+      bottom: 1.5rem;
+      left: 0;
+      &.active {
+        border: 1px solid #CCC;
+        border-bottom: none;
+        height: 4.2rem;
+        transition: height 0.2s;
+      }
+      #disstorck {
+        width: 100%;
+        font-family: "Microsoft YaHei", "sans-serif";
+        li {
+          height: 0.7rem;
+          line-height: 0.7rem;
+          width: 2rem;
+          margin: 0 auto;
+          border-bottom: 1/@fs solid #CCC;
+          .font-size(12px);
+          a {
+            display: block;
+            width: 100%;
+            color: #333;
+            strong {
+              font-weight: normal;
+              color: #FF841D;
+              float: right;
+            }
+          }
+        }
+      }
+    }
+
+    button {
+      padding: 0 0.2rem;
+      height: 0.6rem;
+      line-height: 0.6rem;
+      .font-size(12px);
+      color: #FFF;
+      background: #FF841D;
+      font-family: "MicroSoft YaHei";
+
+    }
+    .go {
+      display: block;
+      width: 100%;
+      height:0.8rem;
+      background: #FF841D;
+      border-radius: 4/@fs;
+      color: #FFF;
+      .font-size(14px);
+      text-align: center;
+    }
+  }
+  .erweima {
+    width: 9rem;
+    height: 4rem;
+    margin: 0.6rem auto;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .cu-content-pl {
+    .tit {
+      .font-size(16px);
+      margin-left: 20/@fs;
+      color: #000;
+      line-height: 0.8rem;
+    }
+    .reply {
+      width: 9rem;
+      height: 3.5rem;
+      margin: 0 auto;
+      position: relative;
+
+      textarea {
+        resize: none;
+        width: 100%;
+        height: 2.5rem;
+        .font-size(14px);
+        font-family: "MicroSoft YaHei";
+        color: #666;
+        border: 1/@fs solid #666;
+        border-bottom: none;
+        padding: 10/@fs;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .ctrl {
+        width: 100%;
+        height: 1rem;
+        background: #F7F7F7;
+        border: 1/@fs solid #666;
+        border-top: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        .tjdp {
+          display: block;
+          width: 2.5rem;
+          height: 1rem;
+          line-height: 1rem;
+          text-align: center;
+          background: #FF841D;
+          color: #FFF;
+          .font-size(16px);
+          font-family: "SimSun";
+          float: right;
+        }
+      }
+    }
+  }
+  .newcomment {
+    .font-size(16px);
+    margin-left: 20/@fs;
+    color: #000;
+    line-height: 0.8rem;
+  }
+  .list {
+
+    ul {
+      padding: 40/@fs 25/@fs 0;
+      width: 100%;
+      li {
+        width: 100%;
+        padding-bottom: 1rem;
+        overflow: hidden;
+        .userimg {
+          width: 1rem;
+          height: 1rem;
+          float: left;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .con {
+          float: left;
+          margin-left: 30/@fs;
+          width: 7.8rem;
+          .name {
+            width: 100%;
+            .username {
+              color: skyblue;
+              .font-size(12px);
+              float: left;
+            }
+            .time {
+              color: #666;
+              .font-size(12px);
+              float: right;
+            }
+          }
+          .content {
+            .font-size(14px);
+            font-family: "MicroSoft YaHei";
+            color: #333;
+            max-height: 100%;
+            margin-top: 10/@fs;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: #F1F1F1;
+  width: 100%;
+  height: 3.2rem;
+  overflow: hidden;
+  ul {
+    width: 100%;
+    margin-top: 0.6rem;
+    li {
+      float: left;
+      width: 33.333%;
+      height: 0.8rem;
+      line-height: 0.8rem;
+      border: 1/@fs solid #CCC;
+      border-left: none;
+      color: #000;
+      text-align: center;
+      .font-size(12px);
+      &:nth-child(3) {
+        border-right: none;
+        span {
+          .font-size(14px);
+        }
+      }
+    }
+  }
+  .footer_info {
+    margin-top: 20/@fs;
+    p {
+      text-align: center;
+      .font-size(12px);
+      a {
+        color: #FF0000;
+      }
+    }
+  }
+}

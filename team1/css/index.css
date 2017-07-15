@@ -1,0 +1,247 @@
+/* 头部 */
+	header {
+		  width: 100%;
+		  height: 50px;
+		  background-color: #FF841D;
+		  border: 2px solid #99D9EA;
+		  border-bottom: none;
+		}
+	header .lBeijing {
+		  width: 60%;
+		  float: left;
+		  height: 50px;
+		  background: url(../images/header_logo.png) no-repeat;
+		  background-size: 185px ,25px;
+		  margin-left: 17px;
+		  margin-top: 10px;
+		}
+	header .rBeijing {
+		  width: 10%;
+		  height: 36px;
+		  float: right;
+		  background: url(../images/header_app.png) no-repeat;
+		  background-size: 36px ,36px;
+		  margin-top: 5px;
+		  margin-right: 8px;
+		}
+	/* 搜索 */
+	.search {
+		  height: 50px;
+		  line-height: 50px;
+		  margin-left: 10px;
+		  margin-right: 10px;
+		}
+	.search .ls {
+		  padding-left: 20px;
+		  float: left;
+		  width: 81%;
+		  height: 30px;
+		  background-color: #F1F1F1;
+		  border-radius: 15px 15px;
+		}
+	.search .rs {
+		  float: right;
+		  width: 15%;
+		  height: 30px;
+		  background-color: #AFAB14;
+		  border-radius: 15px 15px;
+		  color: white;
+		}
+	   /*菜单 -->*/
+	.menu {
+		  margin-top: 10px;
+		  margin-bottom: 5px;
+		 /*  height: 273px; */
+		  width: 100%;
+		  text-align: center;
+		}
+    .menu .mmore{
+				z-index: 5;
+				/* position:absolute; */
+				width: 100%;
+				height: 80px;
+				line-height: 100px;
+				text-align: center;
+				font-style: 16px;
+			}
+			.menu ul{
+				overflow: hidden;
+			}
+	.menu ul li {
+		 margin-top: 20px;
+		position:relative;
+		width: 25%;
+		height:80px;
+		float:left;
+		}
+
+	
+	.hide li:nth-child(n+9) {
+		display: none;
+	}
+	.menu ul li a {
+		  display: block;
+		}
+	.menu ul li a img {
+		  display: inline-block;
+		  width: 50px;
+		  height: 50px;
+		}
+   /* <!-- 超值折扣推荐 --> */
+   .zhekou{
+	   	width: 100%;
+	    overflow: hidden;
+	   }
+  .zhekou .title{
+	  	width: 100%;
+	  	height: 34px;
+	  	background-color: #FFA025;
+	  	line-height: 34px;
+	  	color: white;
+
+  }
+   .zhekou .title span{
+	   	padding-left: 10px;
+	   }
+   .zhekou .title a{
+    	 line-height: 20px；
+     	text-align: center;
+	    margin-right: 10px;
+	   	margin-top: 7px;
+	   	display: inline-block;
+	   	float: right;
+	   	width: 20px;
+	   	height: 20px;
+	   	border-radius: 10px 10px;
+	   	border: 1px solid white;
+	   	color: white;
+   }
+   .zhekou .title a span {
+   	display: inline-block;
+   	   padding-left: 3px;
+   	   position: relative;
+   	   bottom: 9px;
+   }
+
+   /* 折扣 */
+.center ul li{
+	height:130px;
+	/* border-bottom: 1px solid gay; */
+}
+.center ul li img{
+
+	float: left;
+	width: 120px;
+	height: 130px;
+}
+
+.center ul li .jy{
+	width: 338px;
+	padding-top: 20px;
+	padding-bottom: 24px;
+	
+} 
+.center ul li .jy p span:nth-child(1){
+	color: #FF7987;
+} 
+.center ul li .jy p:last-child{
+	padding-top: 7px;
+	font-size: 12px;
+    color: #A1A9C1;
+}
+/* .center ul li .jy p:nth-child(2){
+	/* color: red; */
+	
+} */
+/* ******************************* */
+/* .zhekou .center .right{
+	padding-top: 16px;
+}
+.zhekou .center .right .last{
+	margin-top: 35px;
+	font-size: 12px;
+	color: #A1A3A3;
+}
+.zhekou .center .right p span {
+	color: #FF6C00;
+}
+.zhekou .center .right p b {
+	float: right;
+	color: #A1A3A3;
+} */
+/* 更多 */
+.more{
+	width: 100%;
+	/* line-height: 50px; */
+}
+.more .more1{
+	background-color: #FAFAFA;
+	margin:10px 0;
+	margin-left: 3%;
+	line-height: 30px;
+	text-align: center;
+	width:94%;
+	height: 30px;
+	border: 1px solid #DDDDDD ;
+	border-radius: 9px;
+    font-style: 12px;
+}
+/* 底部  */
+.bottom{
+	height: 124px;
+	width: 100%;
+	background-color: #F1F1F1;
+	overflow: hidden;
+}
+.bottom .denglu{
+	margin-top: 26px;
+	height: 34px;
+	line-height: 34px;
+	border-bottom: 1px solid #C4C4C4;
+	border-top: 1px solid #C4C4C4;
+}
+
+.bottom .denglu span{
+	display: inline-block;
+	text-align: center;	
+}
+.bottom .denglu .span1{
+	width: 30%;
+	height: 32px;
+	border-right: 1px solid #C4C4C4;
+}
+.bottom .denglu .span3{
+   width: 36%;
+}
+
+/* .bottom .but1{
+	width: 100%;
+	height: 124px;
+	line-height: 124;
+	text-align: center;
+} */
+
+
+
+
+
+
+.bottom p{
+	font-size: 8px;
+	width: 100%;
+	text-align: center;
+	
+}
+.bottom p .class1{
+ color: #FF0000;
+}
+.bottom p .class2{
+	color: #666666;
+}
+.bottom .p1{
+	margin-top: 20px;
+}
+.bottom .p2{
+	margin-bottom: 20px;
+	color: #666666;
+}

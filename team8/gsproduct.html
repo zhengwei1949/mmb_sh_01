@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gsproduct</title>
+    <link rel="stylesheet" href="less/base.css">
+    <link rel="stylesheet" href="less/gsproduct.css">
+</head>
+<body>
+<div class="gsproduct">
+    <!--页面头部导航栏START-->
+    <header class="topHeader">
+        <div class="f_left logo">
+            <a href="index.html" title="慢慢买比价网--手机版">
+                <i class="iconfont icon-xiangzuo1"></i>
+            </a>
+        </div>
+        <div class="topTitle">
+            <h1>凑单品</h1>
+        </div>
+        <div class="f_right appdown">
+            <a href="#" title="慢慢买比价网--手机版">
+                <img src="images/header_app.png" alt="慢慢买比价网--手机版">
+            </a>
+        </div>
+    </header>
+    <!--页面头部导航栏END-->
+    <div class="product_imp clearfix">
+        <!--顶部导航栏START-->
+        <nav class="productNav clearfix">
+            <div class="productTitle f_left clearfix">
+                <li class="titleList title1"><a href="#" shopId="0">京东</a><i class="iconfont icon-xiangshang1"></i></li>
+                <li class="titleList title2"><a href="#" areaId="0">华北</a><i class="iconfont icon-xiangshang1"></i></li>
+                <li class="titleList"><a href="#">全部价格</a><i class="iconfont icon-xiangshang1"></i></li>
+            </div>
+            <a href="#" class="f_right"><i class="iconfont icon-sousuoleimu"></i></a>
+        </nav>
+        <!--各种下拉菜单start-->
+        <div class="store"></div>
+        <div class="address"></div>
+        <!--各种下拉菜单end-->
+        <!--顶部导航栏END-->
+    </div>
+
+    <!--商品展示部分start-->
+    <div class="product clearfix"></div>
+    <!--商品展示部分end-->
+
+    <!--各类模板引擎start-->
+    <script type="text/html" id="productStore">
+        {{if result}}
+            {{each result as value}}
+                <li class="storeList"><a href="#" shopId="{{value.shopId}}">{{value.shopName}}</a></li>
+            {{/each}}
+        {{/if}}
+    </script>
+    <script type="text/html" id="productAddress">
+        {{if result}}
+            {{each result as value}}
+                <li class="addressList" ><a href="#" areaId="{{value.areaId}}">{{value.areaName}}</a></li>
+            {{/each}}
+        {{/if}}
+    </script>
+    <script type="text/html" id="productShow">
+        {{if result}}
+            {{each result as value}}
+                <div class="productShow f_left">
+                    <a href="http://item.m.jd.com/ware/view.action?wareId=1274360" class="imgBox"><img src="{{value.productImg}}" alt=""></a>
+                    <div class="productTxt clearfix">
+                        <span>{{value.productName}}</span>
+                        <i>{{value.productPrice}}</i>
+                        <a href="#">去凑单</a>
+                    </div>
+                </div>
+            {{/each}}
+        {{/if}}
+    </script>
+    <!--各类模板引擎end-->
+
+</div>
+
+<script src="lib/flexible/flexible.js"></script>
+<script src="lib/jQuery/jquery-1.12.2.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common.js"></script>
+<script src="js/gsproduct.js"></script>
+</body>
+</html>

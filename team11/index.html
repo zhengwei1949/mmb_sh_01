@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="css/rem.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--顶部通栏-->
+    <header>
+       <div class="logo fl m_l10">
+           <a href="indexH.html">
+               <img src="images/header_logo.png" title="慢慢买">
+           </a>
+       </div>
+        <div class="download fr m_r10">
+            <a href="#">
+                <img src="images/header_app.png" title="下载">
+            </a>
+        </div>
+    </header>
+<!--主体部分-->
+<section>
+    <!--搜索框-->
+    <div class="search">
+        <input type="button" value="搜索" class="btn fr">
+        <input type="text" placeholder="请输入你想比价的商品" class="txt">
+    </div>
+    <!--菜单栏-->
+    <div class="mainnav">
+        <ul class="list clearfix">
+            <li>
+                <a href='z/category.html'>
+                    <img src="images/ic_search.png" alt="">
+                </a>
+                <span>比价搜索</span>
+            </li>
+            <li>
+                <a href='#'>
+                    <img src="images/ic_cu.png" alt="">
+                </a>
+                <span>省钱控</span>
+            </li>
+            <li>
+                <a href='#'>
+                    <img src="images/ic_coudanpin.png" alt="">
+                </a>
+                <span>国内折扣</span>
+            </li>
+            <li>
+                <a href='z/baicaijia.html'>
+                    <img src="images/ic_bcj.png" alt="">
+                </a>
+                <span>白菜价</span>
+            </li>
+            <li>
+                <a href='#'>
+                    <img src="images/haitao.png" alt="">
+                </a>
+                <span>海淘折扣</span>
+            </li>
+            <li>
+                <a href='y/youhuiquan.html'>
+                    <img src="images/ic_temai.png" alt="">
+                </a>
+                <span>优惠券</span>
+            </li>
+            <li>
+                <a href='#'>
+                    <img src="images/ic_trend.png" alt="">
+                </a>
+                <span>查历史价</span>
+            </li>
+            <li>
+                <a href='#'>
+                    <img src="images/gengduo.png" alt="">
+                </a>
+                <span>更多</span>
+            </li>
+            <li>
+                <a href='y/coudanpin.html'>
+                    <img src="images/ic_coudanpin.png" alt="">
+                </a>
+                <span>凑单品</span>
+            </li>
+            <li>
+                <a href='#'>
+                    <img src="images/ic_kb.png" alt="">
+                </a>
+                <span>口碑品牌</span>
+            </li>
+            <li>
+                <a href='nav.html'>
+                    <img src="images/ic_mall.png" alt="">
+                </a>
+                <span>商场导航</span>
+            </li>
+            <li>
+                <a href='w/brandTitle.html'>
+                    <img src="images/ic_pp.png" alt="">
+                </a>
+                <span>品牌大全</span>
+            </li>
+
+        </ul>
+
+
+    </div>
+    <!--超值折扣推荐-->
+    <div class="free">
+        <span>超值折扣推荐</span>
+        <a href="#" class="fr">&gt;</a>
+    </div>
+    <!--折扣商品类目-->
+    <div class="shopping"></div>
+    <!--加载更多-->
+    <div class="downmore">
+        <a href="#">更多优惠信息>></a>
+    </div>
+</section>
+
+<!--底部-->
+<footer>
+    <div class="pingpai">
+        <span>品牌排行</span>
+        <a href="#" class="fr">&gt;</a>
+    </div>
+    <ul>
+        <li><a href="#">登录</a></li>
+        <li><a href="#">注册</a></li>
+        <li class="top"><a href="#"><span>↑</span>返回顶部</a></li>
+    </ul>
+    <div class="phone">
+        <p>
+            <a href="#">手机APP下载 </a>慢慢买手机版
+            <span>--掌上比价平台</span>
+        </p>
+        <p>
+            <a href="indexH.html">m.manmanbuy.com</a>
+        </p>
+    </div>
+</footer>
+</body>
+<script src="js/jquery.js"></script>
+<script src='./lib/art/template.js' type="text/javascript"></script>
+<script src="js/index.js"></script>
+<!--<script id="item" type="text/html">-->
+    <!--{{if result}}-->
+            <!--<ul class="list clearfix">-->
+                <!--{{each result as value i}}-->
+                <!--<li>-->
+                    <!--<a href={{value.titlehref}}>-->
+                        <!--{{#value.img}}-->
+                    <!--</a>-->
+                    <!--<span>{{value.name}}</span>-->
+                <!--</li>-->
+                <!--{{/each}}-->
+            <!--</ul>-->
+    <!--{{/if}}-->
+<!--</script>-->
+<script id="goods" type="text/html">
+    {{if result}}
+        {{each result as value}}
+            <div class="goods">
+                <div class="goods-img">
+                    <a href="#">{{#value.productImgSm}}</a>
+                </div>
+                <div class="goods-txt">
+                    <p> {{value.productName}}<span>{{value.productPinkage}}</span></p>
+                    <p><span>{{value.productFrom}}</span>|<span>{{value.productTime}}</span><span class="fr">✉&nbsp;1</span></p>
+                </div>
+
+            </div>
+         {{/each}}
+    {{/if}}
+</script>
+
+</html>

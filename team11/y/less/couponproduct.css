@@ -1,0 +1,127 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.MMB_category .topHeader {
+  background-color: #f4483e;
+  color: white;
+  position: relative;
+}
+.MMB_category .topHeader .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin-left: 0.2rem;
+}
+.MMB_category .topHeader .back a {
+  display: inline-block;
+  font-size: 0.53333333rem;
+  line-height: 1.28rem;
+  height: 100%;
+  color: white;
+  width: .8rem;
+}
+.MMB_category .topHeader h1 {
+  line-height: 1.28rem;
+  font-size: 0.4rem;
+  text-align: center;
+}
+.MMB_category .topHeader .appdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+main {
+  width: 100%;
+}
+main .tishi {
+  margin-top: 0.13333333rem;
+  text-align: center;
+  color: #cccccc;
+  font-size: 0.24rem;
+}
+main ul {
+  width: 100%;
+}
+main ul li {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+main ul li a {
+  position: relative;
+  display: block;
+  padding: 0.26666667rem;
+  width: 100%;
+  height: 3.2rem;
+  overflow: hidden;
+}
+main ul li a img {
+  height: 2.66666667rem;
+  float: left;
+  margin-right: 0.13333333rem;
+}
+main ul li a p {
+  font-size: 0.21333333rem;
+  text-align: left;
+  color: #0f0f0f;
+}
+main ul li a span {
+  font-size: 0.18666667rem;
+  color: #EE7700;
+}
+main ul li a strong {
+  font-size: 0.18666667rem;
+}
+main ul li a .right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+main ul li a .right i {
+  line-height: 3.2rem;
+}
+.zhezhao {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.zhezhao .tupian {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  transform: translateX(-50%) translateY(-50%);
+  height: 160px;
+  width: 200px;
+}
+.zhezhao .tupian span {
+  background-color: white;
+}
+.zhezhao .tupian span i {
+  font-size: 1rem;
+}
+.zhezhao .tupian span:nth-child(1) {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateX(-100%) translateY(-50%);
+}
+.zhezhao .tupian span:nth-child(2) {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateX(100%) translateY(-50%);
+}
+.zhezhao .tupian #juti {
+  width: 100%;
+  height: 100%;
+}

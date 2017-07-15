@@ -1,0 +1,111 @@
+.layout {
+  width: 100%;
+  min-width: 5rem;
+  max-width: 10rem;
+  margin: 0 auto;
+  border: 1px solid #E2E2E3;
+  /*-----头部----*/
+  /*-----section----*/
+}
+.layout header {
+  height: 1.375rem;
+  background-color: #FF841D;
+  position: relative;
+}
+.layout header .mm_toleft {
+  font-size: 0.53125rem;
+  color: #fff;
+  position: absolute;
+  top: 0.421875rem;
+  left: 0.3125rem;
+}
+.layout header .mm_marketnav {
+  width: 100%;
+  height: 1.375rem;
+  line-height: 1.375rem;
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: normal;
+}
+.layout header .mm_download {
+  background: url("../images/header_app.png") no-repeat;
+  width: 0.90625rem;
+  height: 0.90625rem;
+  position: absolute;
+  top: 0.1875rem;
+  right: 0.1875rem;
+  background-size: cover;
+}
+.layout .mm_sitenav ul {
+  padding: 0.15625rem;
+  border: 1px solid #CCCCCC;
+}
+.layout .mm_sitenav ul li {
+  float: left;
+  width: 50%;
+  padding: 0.3125rem;
+  text-align: center;
+  border-top: 1px solid #FF841D;
+  border-left: 1px solid #FF841D;
+}
+.layout .mm_sitenav ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 0.390625rem;
+  padding-left: 0.15625rem;
+}
+.layout .mm_sitenav ul li a span {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.layout .mm_sitenav ul li:nth-child(2n) {
+  border-right: 1px solid #FF841D;
+}
+.layout footer {
+  width: 100%;
+  height: 2.625rem;
+  background-color: #EFEFEF;
+}
+.layout footer .operate {
+  width: 100%;
+  line-height: 0.953125rem;
+  border-top: 1px solid #C4C4C4;
+  border-bottom: 1px solid #C4C4C4;
+}
+.layout footer .operate ul li {
+  float: left;
+  width: 30%;
+  text-align: center;
+  border-right: 1px solid #C4C4C4;
+}
+.layout footer .operate ul li:last-child {
+  width: 40%;
+  border-right: none;
+}
+.layout footer .operate ul li span {
+  font-size: 13px;
+}
+[data-dpr="2"] .layout footer .operate ul li span {
+  font-size: 25px;
+}
+[data-dpr="2.5"] .layout footer .operate ul li span {
+  font-size: 31px;
+}
+[data-dpr="2.75"] .layout footer .operate ul li span {
+  font-size: 34px;
+}
+[data-dpr="3"] .layout footer .operate ul li span {
+  font-size: 38px;
+}
+[data-dpr="4"] .layout footer .operate ul li span {
+  font-size: 50px;
+}
+.layout footer .introduce {
+  width: 100%;
+  height: 1.671875rem;
+  text-align: center;
+  padding-top: 0.46875rem;
+}

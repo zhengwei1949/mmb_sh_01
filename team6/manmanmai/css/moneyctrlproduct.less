@@ -1,0 +1,254 @@
+body {
+	padding-bottom:0;
+}
+
+/* 头部返回重置 */
+header {
+	text-align: center;
+	.back {
+		width: 50px;
+		height: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			color: #fff;
+			font-size: 18px;
+			text-align: center;
+			line-height: 50px;
+		}
+
+	}
+	h1 {
+		display: inline-block;
+		color: #fff;
+		font-size:20px;
+		line-height:50px;
+	}
+}
+
+/* 商品详情 */
+.productinfo {
+	padding: 4px 10px;
+	background: #FFFFFF;
+	.title {
+		font-size: 18px;
+		margin: 10px auto 5px auto;
+		font-weight: 800;
+		text-align: left;
+		text-align-last: left;
+		word-break: break-all;
+		color: #5a5a5a;
+		line-height: normal;
+	}
+	h4 {
+		color: #ff6c00;
+		display: block;
+		font-size: 15px;
+	}
+	.info {
+		margin: 12px auto;
+		color: #999999;
+		font-size: 12px;
+		span {
+			margin-right: 4px;
+		}
+		span:first-child {
+			margin-left: 4px;
+		}
+	}
+	.content {
+		.smpic {
+			width: 120px;
+			float: right;
+			margin: 12px auto auto 10px;
+			overflow: hidden;
+			img {
+				width: 120px;
+				height: 120px;
+			}
+		}
+		.cont {
+			font-size: 16px;
+			word-break: break-all;
+			line-height: 24px;
+			color: #606060;
+			padding-bottom: 20px;
+			p {
+				line-height: 24px;
+				color: #606060;
+				word-break: break-all;
+				margin: 6px auto;
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+	.productcity {
+		left: -6px;
+		padding: 0px 0px 10px 0px;
+		background-color: #ffffff;
+		width: 138px;
+		box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+		border-color: #f1f1f1 #f1f1f1 #dbdbdb #f1f1f1;
+		border-width: 0px 1px 1px 1px;
+		border-style: solid;
+		margin: 0 auto;
+		ul li {
+			font-size: 12px;
+			font-family: "Microsoft Yahei";
+			line-height: 20px;
+			a {
+				display: block;
+				padding: 0px 10px;
+				span {
+					border-bottom: 1px dotted #c0c0c0;
+					display: block;
+					padding: 0px 10px;
+					text-align: left;
+					strong {
+						float: right;
+						font-weight:normal;
+						color: #f27b04;
+					}
+				}
+			}
+		}
+	}
+	.gobuy {
+		a {
+			height: 40px;
+			line-height: 40px;
+			display: block;
+			margin: 20px 10px;
+			background: #FF9000;
+			border-radius: 4px;
+			text-align: center;
+			font-size: 14px;
+			color: #ffffff;
+			i {
+				background-image: url("../images/shoppingcar.svg");
+				width: 16px;
+				height: 16px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				vertical-align: -2px;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+/* 二维码 */
+.weixin {
+	text-align: center;
+	margin: 20px 10px;
+	img {
+		width: 100%;
+		height: auto;
+		vertical-align: middle;
+	}
+}
+
+/* 评论区块 */
+.comment {
+	.tit {
+		font-size: 16px;
+		padding: 6px 8px;
+	}
+	.reply {
+		padding: 6px 8px;
+		.form {
+			border: 2px solid #ECEAE8;
+			border-radius: 2px;
+			padding: 4px 0 0 4px;
+			background-color: #fff;
+			position: relative;
+			width: 98%;
+			margin: 0px auto;
+			textarea {
+				width: 100%;
+				resize: none;
+				overflow-x: hidden;
+				overflow-y: auto;
+				border: none;
+				line-height: 22px;
+				font-size: 14px;
+				outline: 0;
+				color: #666;
+				height: 68px;
+			}
+			.sbmt {
+				background-color: #fbfbfb;
+				height: 36px;
+				margin-left: -4px;
+				border-top: solid 1px #f2f2f2;
+				input {
+					position: absolute;
+					right: -2px;
+					bottom: -2px;
+					background: #ff841d;
+					border: 2px solid #ff841d;
+					border-left: none;
+					border-top: none;
+					padding: 0px;
+					width: 100px;
+					height: 39px;
+					color: #fff;
+					outline: 0;
+					border-radius: 0 0 2px 0;
+					font-size: 16px;
+					-webkit-appearance: none;
+				}
+			}
+
+		}
+	}
+	.list {
+		ul li {
+			padding: 18px 10px;
+			background-color: #FFFFFF;
+			.userimg {
+				width: 40px;
+				float: left;
+				overflow: hidden;
+				img {
+					width: 40px;
+					background-position: top;
+					border-radius: 20px;
+					height: 40px;
+				}
+			}
+			.con {
+				overflow: hidden;
+				padding-left: 10px;
+				.name {
+					margin-bottom: 6px;
+					color: #2e8b01;
+					font-size: 14px;
+					.username {
+						color: #5997c0;
+						font-size: 13px !important;
+						float: left;
+					}
+					.time {
+						color: #999999;
+						font-size: 13px !important;
+						float: right;
+					}
+				}
+				.content {
+					word-break: break-all;
+					font-size: 15px !important;
+					color: #606060;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+}
